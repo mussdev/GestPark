@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF3ABDD9-C672-4EFC-B372-3F20EB84CF0A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GestPark</RootNamespace>
+    <AssemblyName>GestPark</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSetting.cs" />
+    <Compile Include="ConnectDB.cs" />
+    <Compile Include="FormAttributeCarModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAttributeCarModify.Designer.cs">
+      <DependentUpon>FormAttributeCarModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAttributeCarToPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAttributeCarToPerson.Designer.cs">
+      <DependentUpon>FormAttributeCarToPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConnectionUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConnectionUser.Designer.cs">
+      <DependentUpon>FormConnectionUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConnexionGestPark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConnexionGestPark.Designer.cs">
+      <DependentUpon>FormConnexionGestPark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsommationCarburant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsommationCarburant.Designer.cs">
+      <DependentUpon>FormConsommationCarburant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateAssurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateAssurance.Designer.cs">
+      <DependentUpon>FormCreateAssurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateAttributeCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateAttributeCar.Designer.cs">
+      <DependentUpon>FormCreateAttributeCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateConsoCarburant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateConsoCarburant.Designer.cs">
+      <DependentUpon>FormCreateConsoCarburant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateEntretient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateEntretient.Designer.cs">
+      <DependentUpon>FormCreateEntretient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateFourn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateFourn.Designer.cs">
+      <DependentUpon>FormCreateFourn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateMouvement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateMouvement.Designer.cs">
+      <DependentUpon>FormCreateMouvement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreatePanneCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreatePanneCar.Designer.cs">
+      <DependentUpon>FormCreatePanneCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreatePersonne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreatePersonne.Designer.cs">
+      <DependentUpon>FormCreatePersonne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreatePlaceParcking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreatePlaceParcking.Designer.cs">
+      <DependentUpon>FormCreatePlaceParcking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateRepairCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateRepairCar.Designer.cs">
+      <DependentUpon>FormCreateRepairCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateVisit.Designer.cs">
+      <DependentUpon>FormCreateVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateWatchCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateWatchCar.Designer.cs">
+      <DependentUpon>FormCreateWatchCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDisplayAssurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisplayAssurance.Designer.cs">
+      <DependentUpon>FormDisplayAssurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDisplayEntretien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisplayEntretien.Designer.cs">
+      <DependentUpon>FormDisplayEntretien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDisplayVisitTechCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDisplayVisitTechCar.Designer.cs">
+      <DependentUpon>FormDisplayVisitTechCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEntretienVehicule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEntretienVehicule.Designer.cs">
+      <DependentUpon>FormEntretienVehicule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestParcMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestParcMain.Designer.cs">
+      <DependentUpon>FormGestParcMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainAssurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainAssurance.Designer.cs">
+      <DependentUpon>FormMainAssurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainCleanCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainCleanCar.Designer.cs">
+      <DependentUpon>FormMainCleanCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainFournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainFournisseur.Designer.cs">
+      <DependentUpon>FormMainFournisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainGarage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainGarage.Designer.cs">
+      <DependentUpon>FormMainGarage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainMouvement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainMouvement.Designer.cs">
+      <DependentUpon>FormMainMouvement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainPanneCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainPanneCar.Designer.cs">
+      <DependentUpon>FormMainPanneCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainParking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainParking.Designer.cs">
+      <DependentUpon>FormMainParking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainPerson.Designer.cs">
+      <DependentUpon>FormMainPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainVehicule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainVehicule.Designer.cs">
+      <DependentUpon>FormMainVehicule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainVisiteTech.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainVisiteTech.Designer.cs">
+      <DependentUpon>FormMainVisiteTech.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMarque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMarque.Designer.cs">
+      <DependentUpon>FormMarque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModifyMouvement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifyMouvement.Designer.cs">
+      <DependentUpon>FormModifyMouvement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModifyPanCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifyPanCar.Designer.cs">
+      <DependentUpon>FormModifyPanCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModifyVehicule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifyVehicule.Designer.cs">
+      <DependentUpon>FormModifyVehicule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegisterVehicule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegisterVehicule.Designer.cs">
+      <DependentUpon>FormRegisterVehicule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRepairCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRepairCar.Designer.cs">
+      <DependentUpon>FormRepairCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuiviVehicule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuiviVehicule.Designer.cs">
+      <DependentUpon>FormSuiviVehicule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTypeConsommation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTypeConsommation.Designer.cs">
+      <DependentUpon>FormTypeConsommation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViewVehicule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewVehicule.Designer.cs">
+      <DependentUpon>FormViewVehicule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAttributeCarModify.resx">
+      <DependentUpon>FormAttributeCarModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAttributeCarToPerson.resx">
+      <DependentUpon>FormAttributeCarToPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConnectionUser.resx">
+      <DependentUpon>FormConnectionUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConnexionGestPark.resx">
+      <DependentUpon>FormConnexionGestPark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsommationCarburant.resx">
+      <DependentUpon>FormConsommationCarburant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateAssurance.resx">
+      <DependentUpon>FormCreateAssurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateAttributeCar.resx">
+      <DependentUpon>FormCreateAttributeCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateConsoCarburant.resx">
+      <DependentUpon>FormCreateConsoCarburant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateEntretient.resx">
+      <DependentUpon>FormCreateEntretient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateFourn.resx">
+      <DependentUpon>FormCreateFourn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateMouvement.resx">
+      <DependentUpon>FormCreateMouvement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreatePanneCar.resx">
+      <DependentUpon>FormCreatePanneCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreatePersonne.resx">
+      <DependentUpon>FormCreatePersonne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreatePlaceParcking.resx">
+      <DependentUpon>FormCreatePlaceParcking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateRepairCar.resx">
+      <DependentUpon>FormCreateRepairCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateVisit.resx">
+      <DependentUpon>FormCreateVisit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateWatchCar.resx">
+      <DependentUpon>FormCreateWatchCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisplayAssurance.resx">
+      <DependentUpon>FormDisplayAssurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisplayEntretien.resx">
+      <DependentUpon>FormDisplayEntretien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDisplayVisitTechCar.resx">
+      <DependentUpon>FormDisplayVisitTechCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEntretienVehicule.resx">
+      <DependentUpon>FormEntretienVehicule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestParcMain.resx">
+      <DependentUpon>FormGestParcMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainAssurance.resx">
+      <DependentUpon>FormMainAssurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainCleanCar.resx">
+      <DependentUpon>FormMainCleanCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainFournisseur.resx">
+      <DependentUpon>FormMainFournisseur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainGarage.resx">
+      <DependentUpon>FormMainGarage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainMouvement.resx">
+      <DependentUpon>FormMainMouvement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainPanneCar.resx">
+      <DependentUpon>FormMainPanneCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainParking.resx">
+      <DependentUpon>FormMainParking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainPerson.resx">
+      <DependentUpon>FormMainPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainVehicule.resx">
+      <DependentUpon>FormMainVehicule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainVisiteTech.resx">
+      <DependentUpon>FormMainVisiteTech.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMarque.resx">
+      <DependentUpon>FormMarque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifyMouvement.resx">
+      <DependentUpon>FormModifyMouvement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifyPanCar.resx">
+      <DependentUpon>FormModifyPanCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifyVehicule.resx">
+      <DependentUpon>FormModifyVehicule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegisterVehicule.resx">
+      <DependentUpon>FormRegisterVehicule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRepairCar.resx">
+      <DependentUpon>FormRepairCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuiviVehicule.resx">
+      <DependentUpon>FormSuiviVehicule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTypeConsommation.resx">
+      <DependentUpon>FormTypeConsommation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewVehicule.resx">
+      <DependentUpon>FormViewVehicule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\logoSicogi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel1">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\parc-auto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\logoPrincipal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\logoCon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

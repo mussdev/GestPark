@@ -23,11 +23,6 @@ namespace GestPark
             InitializeComponent();
         }
 
-        private void iconBtnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void iconBtnSavedPerson_Click(object sender, EventArgs e)
         {
             try

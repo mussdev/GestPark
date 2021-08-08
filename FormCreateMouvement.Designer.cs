@@ -29,8 +29,8 @@ namespace GestPark
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateMouvement));
             this.paneltitleFormCreateMvt = new System.Windows.Forms.Panel();
-            this.ItbnCloseFormCreateMvt = new FontAwesome.Sharp.IconButton();
             this.IbtnRegisterMvt = new FontAwesome.Sharp.IconButton();
             this.PanelFormMvt = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -64,28 +64,12 @@ namespace GestPark
             // paneltitleFormCreateMvt
             // 
             this.paneltitleFormCreateMvt.BackColor = System.Drawing.Color.DarkOrange;
-            this.paneltitleFormCreateMvt.Controls.Add(this.ItbnCloseFormCreateMvt);
             this.paneltitleFormCreateMvt.Controls.Add(this.IbtnRegisterMvt);
             this.paneltitleFormCreateMvt.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltitleFormCreateMvt.Location = new System.Drawing.Point(0, 0);
             this.paneltitleFormCreateMvt.Name = "paneltitleFormCreateMvt";
             this.paneltitleFormCreateMvt.Size = new System.Drawing.Size(933, 30);
             this.paneltitleFormCreateMvt.TabIndex = 0;
-            // 
-            // ItbnCloseFormCreateMvt
-            // 
-            this.ItbnCloseFormCreateMvt.BackColor = System.Drawing.Color.White;
-            this.ItbnCloseFormCreateMvt.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.ItbnCloseFormCreateMvt.IconColor = System.Drawing.Color.Red;
-            this.ItbnCloseFormCreateMvt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ItbnCloseFormCreateMvt.IconSize = 30;
-            this.ItbnCloseFormCreateMvt.Location = new System.Drawing.Point(895, 0);
-            this.ItbnCloseFormCreateMvt.Name = "ItbnCloseFormCreateMvt";
-            this.ItbnCloseFormCreateMvt.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.ItbnCloseFormCreateMvt.Size = new System.Drawing.Size(38, 30);
-            this.ItbnCloseFormCreateMvt.TabIndex = 1;
-            this.ItbnCloseFormCreateMvt.UseVisualStyleBackColor = false;
-            this.ItbnCloseFormCreateMvt.Click += new System.EventHandler(this.ItbnCloseFormCreateMvt_Click);
             // 
             // IbtnRegisterMvt
             // 
@@ -97,7 +81,7 @@ namespace GestPark
             this.IbtnRegisterMvt.IconSize = 25;
             this.IbtnRegisterMvt.Location = new System.Drawing.Point(0, 0);
             this.IbtnRegisterMvt.Name = "IbtnRegisterMvt";
-            this.IbtnRegisterMvt.Size = new System.Drawing.Size(118, 30);
+            this.IbtnRegisterMvt.Size = new System.Drawing.Size(107, 30);
             this.IbtnRegisterMvt.TabIndex = 0;
             this.IbtnRegisterMvt.Text = "Enregistrer";
             this.IbtnRegisterMvt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -296,8 +280,8 @@ namespace GestPark
             // 
             this.CbxStatutMvt.FormattingEnabled = true;
             this.CbxStatutMvt.Items.AddRange(new object[] {
-            "Sortir",
-            "Arriver"});
+            "",
+            "Sortir"});
             this.CbxStatutMvt.Location = new System.Drawing.Point(119, 77);
             this.CbxStatutMvt.Name = "CbxStatutMvt";
             this.CbxStatutMvt.Size = new System.Drawing.Size(278, 23);
@@ -398,7 +382,7 @@ namespace GestPark
             this.Controls.Add(this.PanelFormMvt);
             this.Controls.Add(this.paneltitleFormCreateMvt);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCreateMouvement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCreateMouvement";
@@ -415,7 +399,6 @@ namespace GestPark
 
         private System.Windows.Forms.Panel paneltitleFormCreateMvt;
         private FontAwesome.Sharp.IconButton IbtnRegisterMvt;
-        private FontAwesome.Sharp.IconButton ItbnCloseFormCreateMvt;
         private System.Windows.Forms.Panel PanelFormMvt;
         private System.Windows.Forms.RichTextBox RtbxNoteMvt;
         private System.Windows.Forms.ComboBox CbxStatutMvt;

@@ -597,6 +597,7 @@ namespace GestPark
             this.ClientSize = new System.Drawing.Size(1357, 731);
             this.Controls.Add(this.panelFormResultMenu);
             this.Controls.Add(this.panelMenuGestPark);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMainGestPark";
             this.Text = "GestPark";
             this.panelMenuGestPark.ResumeLayout(false);

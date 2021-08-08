@@ -60,5 +60,20 @@ namespace GestPark
                 MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void DataGridViewConsoCar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FormModifyConsoCarbCar modifyConsoCarbCar = new FormModifyConsoCarbCar();
+            modifyConsoCarbCar.TxtCodeConsoCarbModi.Text = this.DataGridViewConsoCar.CurrentRow.Cells[1].Value?.ToString();
+            modifyConsoCarbCar.TxtDescriptionConsoCarbModi.Text = this.DataGridViewConsoCar.CurrentRow.Cells[2].Value?.ToString();
+            modifyConsoCarbCar.TxtAmountConsoCarbModi.Text = this.DataGridViewConsoCar.CurrentRow.Cells[3].Value?.ToString();
+            modifyConsoCarbCar.TxtLiterConsoCarbModi.Text = this.DataGridViewConsoCar.CurrentRow.Cells[4].Value?.ToString();
+            modifyConsoCarbCar.CbxVehiConsoCabModi.Text = this.DataGridViewConsoCar.CurrentRow.Cells[5].Value?.ToString();
+            modifyConsoCarbCar.TxtStationConsoCarbModi.Text = this.DataGridViewConsoCar.CurrentRow.Cells[6].Value?.ToString();
+            modifyConsoCarbCar.TxtTypConsoCarbModi.Text = this.DataGridViewConsoCar.CurrentRow.Cells[7].Value?.ToString();
+            modifyConsoCarbCar.RtxtNoteConsoCarbModi.Text = this.DataGridViewConsoCar.CurrentRow.Cells[9].Value?.ToString();
+            modifyConsoCarbCar.DateRegisterConsoCarbModi.Text = this.DataGridViewConsoCar.CurrentRow.Cells[10].Value?.ToString();
+            modifyConsoCarbCar.ShowDialog();
+        }
     }
 }

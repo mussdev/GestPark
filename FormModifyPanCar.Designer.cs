@@ -29,9 +29,9 @@ namespace GestPark
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormModifyPanCar));
             this.CbxEtatModifyPanCar = new System.Windows.Forms.ComboBox();
             this.RichTxtoutheInfosModifyPanCar = new System.Windows.Forms.RichTextBox();
-            this.CbxVehiModifyPanCar = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.RtxtNoteModifyPanCar = new System.Windows.Forms.RichTextBox();
             this.DateRegisterModifyPanCar = new System.Windows.Forms.DateTimePicker();
@@ -43,10 +43,14 @@ namespace GestPark
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PanelMenuConsoCarb = new System.Windows.Forms.Panel();
-            this.IbtnRepaiCarPan = new FontAwesome.Sharp.IconButton();
             this.JointDocModifyPanCar = new FontAwesome.Sharp.IconButton();
             this.IcBtnSavedModifyPanCar = new FontAwesome.Sharp.IconButton();
-            this.IcBtnCloseFanModifyPanCar = new FontAwesome.Sharp.IconButton();
+            this.IbtnRepaiCarPan = new FontAwesome.Sharp.IconButton();
+            this.LbGarage = new System.Windows.Forms.Label();
+            this.LbMeacn = new System.Windows.Forms.Label();
+            this.CbxGarage = new System.Windows.Forms.ComboBox();
+            this.TxtMecanicien = new System.Windows.Forms.TextBox();
+            this.CbxVehiModifyPanCar = new System.Windows.Forms.ComboBox();
             this.PanelMenuConsoCarb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +60,8 @@ namespace GestPark
             this.CbxEtatModifyPanCar.Items.AddRange(new object[] {
             "",
             "Panne",
-            "Reparé"});
+            "En cours de reparation",
+            "Bon"});
             this.CbxEtatModifyPanCar.Location = new System.Drawing.Point(95, 106);
             this.CbxEtatModifyPanCar.Name = "CbxEtatModifyPanCar";
             this.CbxEtatModifyPanCar.Size = new System.Drawing.Size(240, 23);
@@ -66,19 +71,11 @@ namespace GestPark
             // 
             // RichTxtoutheInfosModifyPanCar
             // 
-            this.RichTxtoutheInfosModifyPanCar.Location = new System.Drawing.Point(396, 56);
+            this.RichTxtoutheInfosModifyPanCar.Location = new System.Drawing.Point(505, 56);
             this.RichTxtoutheInfosModifyPanCar.Name = "RichTxtoutheInfosModifyPanCar";
             this.RichTxtoutheInfosModifyPanCar.Size = new System.Drawing.Size(292, 108);
             this.RichTxtoutheInfosModifyPanCar.TabIndex = 59;
             this.RichTxtoutheInfosModifyPanCar.Text = "";
-            // 
-            // CbxVehiModifyPanCar
-            // 
-            this.CbxVehiModifyPanCar.FormattingEnabled = true;
-            this.CbxVehiModifyPanCar.Location = new System.Drawing.Point(95, 213);
-            this.CbxVehiModifyPanCar.Name = "CbxVehiModifyPanCar";
-            this.CbxVehiModifyPanCar.Size = new System.Drawing.Size(240, 23);
-            this.CbxVehiModifyPanCar.TabIndex = 58;
             // 
             // label5
             // 
@@ -94,7 +91,7 @@ namespace GestPark
             // 
             this.RtxtNoteModifyPanCar.Location = new System.Drawing.Point(95, 333);
             this.RtxtNoteModifyPanCar.Name = "RtxtNoteModifyPanCar";
-            this.RtxtNoteModifyPanCar.Size = new System.Drawing.Size(593, 130);
+            this.RtxtNoteModifyPanCar.Size = new System.Drawing.Size(702, 130);
             this.RtxtNoteModifyPanCar.TabIndex = 57;
             this.RtxtNoteModifyPanCar.Text = "";
             // 
@@ -173,30 +170,11 @@ namespace GestPark
             this.PanelMenuConsoCarb.BackColor = System.Drawing.Color.DarkOrange;
             this.PanelMenuConsoCarb.Controls.Add(this.JointDocModifyPanCar);
             this.PanelMenuConsoCarb.Controls.Add(this.IcBtnSavedModifyPanCar);
-            this.PanelMenuConsoCarb.Controls.Add(this.IcBtnCloseFanModifyPanCar);
             this.PanelMenuConsoCarb.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelMenuConsoCarb.Location = new System.Drawing.Point(0, 0);
             this.PanelMenuConsoCarb.Name = "PanelMenuConsoCarb";
-            this.PanelMenuConsoCarb.Size = new System.Drawing.Size(700, 30);
+            this.PanelMenuConsoCarb.Size = new System.Drawing.Size(809, 30);
             this.PanelMenuConsoCarb.TabIndex = 48;
-            // 
-            // IbtnRepaiCarPan
-            // 
-            this.IbtnRepaiCarPan.BackColor = System.Drawing.Color.White;
-            this.IbtnRepaiCarPan.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IbtnRepaiCarPan.ForeColor = System.Drawing.Color.DarkGreen;
-            this.IbtnRepaiCarPan.IconChar = FontAwesome.Sharp.IconChar.Tools;
-            this.IbtnRepaiCarPan.IconColor = System.Drawing.Color.DarkGreen;
-            this.IbtnRepaiCarPan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnRepaiCarPan.IconSize = 20;
-            this.IbtnRepaiCarPan.Location = new System.Drawing.Point(594, 230);
-            this.IbtnRepaiCarPan.Name = "IbtnRepaiCarPan";
-            this.IbtnRepaiCarPan.Size = new System.Drawing.Size(94, 23);
-            this.IbtnRepaiCarPan.TabIndex = 62;
-            this.IbtnRepaiCarPan.Text = "Reparer";
-            this.IbtnRepaiCarPan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IbtnRepaiCarPan.UseVisualStyleBackColor = false;
-            this.IbtnRepaiCarPan.Click += new System.EventHandler(this.IbtnRepaiCarPan_Click);
             // 
             // JointDocModifyPanCar
             // 
@@ -229,32 +207,83 @@ namespace GestPark
             this.IcBtnSavedModifyPanCar.Text = "Enregistrer";
             this.IcBtnSavedModifyPanCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IcBtnSavedModifyPanCar.UseVisualStyleBackColor = false;
+            this.IcBtnSavedModifyPanCar.Click += new System.EventHandler(this.IcBtnSavedModifyPanCar_Click);
             // 
-            // IcBtnCloseFanModifyPanCar
+            // IbtnRepaiCarPan
             // 
-            this.IcBtnCloseFanModifyPanCar.BackColor = System.Drawing.Color.White;
-            this.IcBtnCloseFanModifyPanCar.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.IcBtnCloseFanModifyPanCar.IconColor = System.Drawing.Color.Red;
-            this.IcBtnCloseFanModifyPanCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IcBtnCloseFanModifyPanCar.IconSize = 30;
-            this.IcBtnCloseFanModifyPanCar.Location = new System.Drawing.Point(662, 0);
-            this.IcBtnCloseFanModifyPanCar.Name = "IcBtnCloseFanModifyPanCar";
-            this.IcBtnCloseFanModifyPanCar.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.IcBtnCloseFanModifyPanCar.Size = new System.Drawing.Size(38, 30);
-            this.IcBtnCloseFanModifyPanCar.TabIndex = 0;
-            this.IcBtnCloseFanModifyPanCar.UseVisualStyleBackColor = false;
-            this.IcBtnCloseFanModifyPanCar.Click += new System.EventHandler(this.IcBtnCloseFanModifyPanCar_Click);
+            this.IbtnRepaiCarPan.BackColor = System.Drawing.Color.White;
+            this.IbtnRepaiCarPan.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IbtnRepaiCarPan.ForeColor = System.Drawing.Color.DarkGreen;
+            this.IbtnRepaiCarPan.IconChar = FontAwesome.Sharp.IconChar.Tools;
+            this.IbtnRepaiCarPan.IconColor = System.Drawing.Color.DarkGreen;
+            this.IbtnRepaiCarPan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IbtnRepaiCarPan.IconSize = 20;
+            this.IbtnRepaiCarPan.Location = new System.Drawing.Point(505, 288);
+            this.IbtnRepaiCarPan.Name = "IbtnRepaiCarPan";
+            this.IbtnRepaiCarPan.Size = new System.Drawing.Size(94, 23);
+            this.IbtnRepaiCarPan.TabIndex = 62;
+            this.IbtnRepaiCarPan.Text = "Reparer";
+            this.IbtnRepaiCarPan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IbtnRepaiCarPan.UseVisualStyleBackColor = false;
+            this.IbtnRepaiCarPan.Click += new System.EventHandler(this.IbtnRepaiCarPan_Click);
+            // 
+            // LbGarage
+            // 
+            this.LbGarage.AutoSize = true;
+            this.LbGarage.Location = new System.Drawing.Point(502, 197);
+            this.LbGarage.Name = "LbGarage";
+            this.LbGarage.Size = new System.Drawing.Size(50, 15);
+            this.LbGarage.TabIndex = 63;
+            this.LbGarage.Text = "Garage :";
+            // 
+            // LbMeacn
+            // 
+            this.LbMeacn.AutoSize = true;
+            this.LbMeacn.Location = new System.Drawing.Point(502, 240);
+            this.LbMeacn.Name = "LbMeacn";
+            this.LbMeacn.Size = new System.Drawing.Size(75, 15);
+            this.LbMeacn.TabIndex = 64;
+            this.LbMeacn.Text = "Mécanicien :";
+            // 
+            // CbxGarage
+            // 
+            this.CbxGarage.FormattingEnabled = true;
+            this.CbxGarage.Location = new System.Drawing.Point(597, 189);
+            this.CbxGarage.Name = "CbxGarage";
+            this.CbxGarage.Size = new System.Drawing.Size(200, 23);
+            this.CbxGarage.TabIndex = 65;
+            this.CbxGarage.SelectedIndexChanged += new System.EventHandler(this.CbxGarage_SelectedIndexChanged);
+            // 
+            // TxtMecanicien
+            // 
+            this.TxtMecanicien.Location = new System.Drawing.Point(597, 240);
+            this.TxtMecanicien.Name = "TxtMecanicien";
+            this.TxtMecanicien.Size = new System.Drawing.Size(200, 22);
+            this.TxtMecanicien.TabIndex = 66;
+            // 
+            // CbxVehiModifyPanCar
+            // 
+            this.CbxVehiModifyPanCar.FormattingEnabled = true;
+            this.CbxVehiModifyPanCar.Location = new System.Drawing.Point(95, 212);
+            this.CbxVehiModifyPanCar.Name = "CbxVehiModifyPanCar";
+            this.CbxVehiModifyPanCar.Size = new System.Drawing.Size(240, 23);
+            this.CbxVehiModifyPanCar.TabIndex = 67;
+            this.CbxVehiModifyPanCar.SelectedIndexChanged += new System.EventHandler(this.CbxVehiModifyPanCar_SelectedIndexChanged);
             // 
             // FormModifyPanCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(700, 469);
+            this.ClientSize = new System.Drawing.Size(809, 469);
+            this.Controls.Add(this.CbxVehiModifyPanCar);
+            this.Controls.Add(this.TxtMecanicien);
+            this.Controls.Add(this.CbxGarage);
+            this.Controls.Add(this.LbMeacn);
+            this.Controls.Add(this.LbGarage);
             this.Controls.Add(this.IbtnRepaiCarPan);
             this.Controls.Add(this.CbxEtatModifyPanCar);
             this.Controls.Add(this.RichTxtoutheInfosModifyPanCar);
-            this.Controls.Add(this.CbxVehiModifyPanCar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.RtxtNoteModifyPanCar);
             this.Controls.Add(this.DateRegisterModifyPanCar);
@@ -267,10 +296,10 @@ namespace GestPark
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PanelMenuConsoCarb);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormModifyPanCar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormModifyPanCar";
+            this.Text = "Editer une panne de vehicule";
             this.Load += new System.EventHandler(this.FormModifyPanCar_Load);
             this.PanelMenuConsoCarb.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -281,7 +310,6 @@ namespace GestPark
         #endregion
         private FontAwesome.Sharp.IconButton JointDocModifyPanCar;
         private FontAwesome.Sharp.IconButton IcBtnSavedModifyPanCar;
-        private FontAwesome.Sharp.IconButton IcBtnCloseFanModifyPanCar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
@@ -291,11 +319,15 @@ namespace GestPark
         private System.Windows.Forms.Panel PanelMenuConsoCarb;
         public System.Windows.Forms.ComboBox CbxEtatModifyPanCar;
         public System.Windows.Forms.RichTextBox RichTxtoutheInfosModifyPanCar;
-        public System.Windows.Forms.ComboBox CbxVehiModifyPanCar;
         public System.Windows.Forms.RichTextBox RtxtNoteModifyPanCar;
         public System.Windows.Forms.DateTimePicker DateRegisterModifyPanCar;
         public System.Windows.Forms.TextBox TxtDescriptionModifyPanCar;
         public System.Windows.Forms.TextBox TxtCodeModifyPanCar;
         private FontAwesome.Sharp.IconButton IbtnRepaiCarPan;
+        private System.Windows.Forms.Label LbGarage;
+        private System.Windows.Forms.Label LbMeacn;
+        private System.Windows.Forms.ComboBox CbxGarage;
+        private System.Windows.Forms.TextBox TxtMecanicien;
+        public System.Windows.Forms.ComboBox CbxVehiModifyPanCar;
     }
 }

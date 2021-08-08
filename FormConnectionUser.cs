@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using System.Security.Cryptography;
 
 namespace GestPark
 {
@@ -25,6 +26,14 @@ namespace GestPark
             this.Close();
         }
 
+        // Methode to encode user password
+        public static string EncryptData(string SimpleString)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] passwordHash = Encoding.UTF8.GetBytes(SimpleString);
+            return Encoding.UTF8.GetString(md5.ComputeHash(passwordHash));
+        }
+
         private void IcbtnValidFanCon_Click(object sender, EventArgs e)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
@@ -37,15 +46,16 @@ namespace GestPark
                     {
                         if (isValidCon())
                         {
-                            string Query = "SELECT * FROM UTILISATEURS WHERE PSEUDO_USERS = '" + TxtUsernameFanConUser.Text.Trim() + "' AND MOTPASS_USERS = '" + TxtPasswordFanConUser.Text.Trim() + "'";
+                            string passWordUser = EncryptData(TxtPasswordFanConUser.Text.Trim()); 
+                            string Query = "SELECT * FROM UTILISATEURS WHERE PSEUDO_USERS = '" + TxtUsernameFanConUser.Text.Trim() + "' AND MOTPASS_USERS = '" + passWordUser + "'";
                             SqlDataAdapter SqlAda = new SqlDataAdapter(Query, ConDb.cn);
                             DataTable Dta = new DataTable();
                             SqlAda.Fill(Dta);
                             if (Dta.Rows.Count == 1)
                             {
                                 FormMainGestPark FormHomeGestPark = new FormMainGestPark();
-                                FormHomeGestPark.ShowDialog();
                                 this.Hide();
+                                FormHomeGestPark.ShowDialog();
                             }
                         }
                     }
@@ -54,8 +64,6 @@ namespace GestPark
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                FormConnexionGestPark ConnGestParkDb = new FormConnexionGestPark();
-                ConnGestParkDb.ShowDialog();
             }
            
         }

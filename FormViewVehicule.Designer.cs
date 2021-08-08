@@ -56,6 +56,8 @@ namespace GestPark
             this.DESCRIPTION_PERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIPTION_FOUR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOTE_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STATUT_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SANTE_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATE_ACHA_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATE_VISITE_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ASSURANCE_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +69,7 @@ namespace GestPark
             // 
             // panelViewVehicule
             // 
+            this.panelViewVehicule.AutoScroll = true;
             this.panelViewVehicule.BackColor = System.Drawing.Color.DarkOrange;
             this.panelViewVehicule.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelViewVehicule.Controls.Add(this.iconBtnExportVehi);
@@ -95,7 +98,7 @@ namespace GestPark
             this.iconBtnExportVehi.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtnExportVehi.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnExportVehi.IconSize = 20;
-            this.iconBtnExportVehi.Location = new System.Drawing.Point(941, 88);
+            this.iconBtnExportVehi.Location = new System.Drawing.Point(1022, 90);
             this.iconBtnExportVehi.Name = "iconBtnExportVehi";
             this.iconBtnExportVehi.Size = new System.Drawing.Size(91, 23);
             this.iconBtnExportVehi.TabIndex = 13;
@@ -237,6 +240,8 @@ namespace GestPark
             this.DESCRIPTION_PERS,
             this.DESCRIPTION_FOUR,
             this.NOTE_VEHICULE,
+            this.STATUT_VEHICULE,
+            this.SANTE_VEHICULE,
             this.DATE_ACHA_VEHICULE,
             this.DATE_VISITE_VEHICULE,
             this.ASSURANCE_VEHICULE,
@@ -348,6 +353,20 @@ namespace GestPark
             this.NOTE_VEHICULE.Name = "NOTE_VEHICULE";
             this.NOTE_VEHICULE.ReadOnly = true;
             // 
+            // STATUT_VEHICULE
+            // 
+            this.STATUT_VEHICULE.DataPropertyName = "STATUT_VEHICULE";
+            this.STATUT_VEHICULE.HeaderText = "Statut";
+            this.STATUT_VEHICULE.Name = "STATUT_VEHICULE";
+            this.STATUT_VEHICULE.ReadOnly = true;
+            // 
+            // SANTE_VEHICULE
+            // 
+            this.SANTE_VEHICULE.DataPropertyName = "SANTE_VEHICULE";
+            this.SANTE_VEHICULE.HeaderText = "Etat";
+            this.SANTE_VEHICULE.Name = "SANTE_VEHICULE";
+            this.SANTE_VEHICULE.ReadOnly = true;
+            // 
             // DATE_ACHA_VEHICULE
             // 
             this.DATE_ACHA_VEHICULE.DataPropertyName = "DATE_ACHA_VEHICULE";
@@ -431,6 +450,8 @@ namespace GestPark
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_PERS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_FOUR;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOTE_VEHICULE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STATUT_VEHICULE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SANTE_VEHICULE;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATE_ACHA_VEHICULE;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATE_VISITE_VEHICULE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ASSURANCE_VEHICULE;

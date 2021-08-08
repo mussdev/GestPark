@@ -25,11 +25,6 @@ namespace GestPark
             FillComboboxVehiculeToWatch();
         }
 
-        private void BtnCloseFormWatchCar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         // Methode to generate code for watching
         private string generateCodeCar()
         {
@@ -82,7 +77,7 @@ namespace GestPark
                 {
                     if (Conn.IsConnection)
                     {
-                        SqlCmd = new SqlCommand("SELECT * FROM VEHICULE", Conn.cn);
+                        SqlCmd = new SqlCommand("SELECT * FROM VEHICULE WHERE SANTE_VEHICULE = 'Bon' ", Conn.cn);
                         MyReader = SqlCmd.ExecuteReader();
                         while (MyReader.Read())
                         {

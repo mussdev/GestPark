@@ -27,11 +27,6 @@ namespace GestPark
             FillComboboxVehicule();
         }
 
-        private void ItbnCloseFormCreateMvt_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void CbxConducMvt_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -117,12 +112,13 @@ namespace GestPark
                             if (Conn.IsConnection)
                             {
                                 string CodMouvement = generateCodeMvt();
-                                SqlCmd = new SqlCommand("INSERT INTO MOUVEMENTS (ID_PERS,ID_VEHICULE,CODE_MVTS,STATUT_MVTS,KILOMETRE_AVA_MVTS,DESCRIPTION_MVTS,LIEU_MVTS,NOTE_MVTS,DATEDEPART_MVTS,DATECREATE_MVTS) VALUES (@ID_PERS,@ID_VEHICULE,@CODE_MVTS,@STATUT_MVTS,@KILOMETRE_AVA_MVTS,@DESCRIPTION_MVTS,@LIEU_MVTS,@NOTE_MVTS,@DATEDEPART_MVTS,GETDATE()) ", Conn.cn);
+                                SqlCmd = new SqlCommand("INSERT INTO MOUVEMENTS (ID_PERS,ID_VEHICULE,CODE_MVTS,STATUT_MVTS,KILOMETRE_AVA_MVTS,KILO_APRES_MVTS,DESCRIPTION_MVTS,LIEU_MVTS,NOTE_MVTS,DATEDEPART_MVTS,DATECREATE_MVTS) VALUES (@ID_PERS,@ID_VEHICULE,@CODE_MVTS,@STATUT_MVTS,@KILOMETRE_AVA_MVTS,@KILO_APRES_MVTS,@DESCRIPTION_MVTS,@LIEU_MVTS,@NOTE_MVTS,@DATEDEPART_MVTS,GETDATE()) ", Conn.cn);
                                 SqlCmd.Parameters.AddWithValue("@ID_PERS", IdConducteur);
                                 SqlCmd.Parameters.AddWithValue("@ID_VEHICULE", IdVehicule);
                                 SqlCmd.Parameters.AddWithValue("@CODE_MVTS", CodMouvement);
                                 SqlCmd.Parameters.AddWithValue("@STATUT_MVTS", CbxStatutMvt.Text);
                                 SqlCmd.Parameters.AddWithValue("@KILOMETRE_AVA_MVTS", decimal.Parse(TbxKilometreAvantMvt.Text));
+                                SqlCmd.Parameters.AddWithValue("@KILO_APRES_MVTS", decimal.Parse(TbxKiloParcouApresMvt.Text));
                                 SqlCmd.Parameters.AddWithValue("@DESCRIPTION_MVTS", TbxDescriptionMvt.Text);
                                 SqlCmd.Parameters.AddWithValue("@LIEU_MVTS", CbxLieuMvts.Text);
                                 SqlCmd.Parameters.AddWithValue("@NOTE_MVTS", RtbxNoteMvt.Text);
@@ -131,7 +127,16 @@ namespace GestPark
                                 MessageBox.Show("Enregistré avec succès !");
                                 // Clear the fields
                                 TbxCodMvt.Clear();TbxDescriptionMvt.Clear();RtbxNoteMvt.Clear();CbxConducMvt.SelectedItem=null;CbxVehicule.SelectedItem = null;CbxLieuMvts.SelectedItem = null;
+                                
                             }
+
+                            // Update state car
+                            SqlCmd = new SqlCommand("UPDATE VEHICULE SET ETAT_VEHICULE=@ETAT_VEHICULE WHERE ID_VEHICULE='" + IdVehicule + "'", Conn.cn);
+                            SqlCmd.Parameters.AddWithValue("@ETAT_VEHICULE", CbxStatutMvt.Text);
+                            SqlCmd.ExecuteNonQuery();
+                            
+                            Conn.cn.Close();
+                            
                         }
                     }
                 }catch(Exception ex)
@@ -158,6 +163,14 @@ namespace GestPark
                         {
                             IdVehicule = MyReader[0].ToString();
                         }
+                        MyReader.Close();
+                        // Calculate total kilometers of car
+                        SqlCmd = new SqlCommand("SELECT SUM((KILO_APRES_MVTS + KILOMETRE_AVA_MVTS)) AS KILOTOTAL FROM MOUVEMENTS LEFT OUTER JOIN VEHICULE ON MOUVEMENTS.ID_VEHICULE=VEHICULE.ID_VEHICULE WHERE VEHICULE.ID_VEHICULE = '" + IdVehicule + "'", Conn.cn);
+                        MyReader = SqlCmd.ExecuteReader();
+                        while (MyReader.Read())
+                        {
+                            TbxKilometreAvantMvt.Text = MyReader[0].ToString();
+                        }
                     }
                 }
             }
@@ -178,14 +191,13 @@ namespace GestPark
                 {
                     if (Conn.IsConnection)
                     {
-                        SqlCmd = new SqlCommand("SELECT * FROM VEHICULE WHERE TYPE_VEHICULE = 'Pool' ", Conn.cn);
+                        SqlCmd = new SqlCommand("SELECT ID_VEHICULE,IMMATRICULATION_VEHICULE FROM VEHICULE WHERE TYPE_VEHICULE = 'Pool' AND ETAT_VEHICULE='Parking' ", Conn.cn);
                         MyReader = SqlCmd.ExecuteReader();
                         while (MyReader.Read())
                         {
                             CbxVehicule.Items.Add(MyReader["IMMATRICULATION_VEHICULE"].ToString());
                             CbxVehicule.DisplayMember = (MyReader["IMMATRICULATION_VEHICULE"].ToString());
                             CbxVehicule.ValueMember = (MyReader["ID_VEHICULE"].ToString());
-
                         }
                     }
                 }

@@ -32,7 +32,6 @@ namespace GestPark
             this.PanelMenuConsoCarb = new System.Windows.Forms.Panel();
             this.JointDocConsoCarb = new FontAwesome.Sharp.IconButton();
             this.IcBtnSavedConsoCarb = new FontAwesome.Sharp.IconButton();
-            this.IcBtnCloseFanCreateConsoCarb = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,7 +58,6 @@ namespace GestPark
             this.PanelMenuConsoCarb.BackColor = System.Drawing.Color.DarkOrange;
             this.PanelMenuConsoCarb.Controls.Add(this.JointDocConsoCarb);
             this.PanelMenuConsoCarb.Controls.Add(this.IcBtnSavedConsoCarb);
-            this.PanelMenuConsoCarb.Controls.Add(this.IcBtnCloseFanCreateConsoCarb);
             this.PanelMenuConsoCarb.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelMenuConsoCarb.Location = new System.Drawing.Point(0, 0);
             this.PanelMenuConsoCarb.Name = "PanelMenuConsoCarb";
@@ -76,7 +74,7 @@ namespace GestPark
             this.JointDocConsoCarb.IconSize = 25;
             this.JointDocConsoCarb.Location = new System.Drawing.Point(95, 0);
             this.JointDocConsoCarb.Name = "JointDocConsoCarb";
-            this.JointDocConsoCarb.Size = new System.Drawing.Size(128, 30);
+            this.JointDocConsoCarb.Size = new System.Drawing.Size(119, 30);
             this.JointDocConsoCarb.TabIndex = 2;
             this.JointDocConsoCarb.Text = "Joindre fichier";
             this.JointDocConsoCarb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -98,21 +96,6 @@ namespace GestPark
             this.IcBtnSavedConsoCarb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IcBtnSavedConsoCarb.UseVisualStyleBackColor = false;
             this.IcBtnSavedConsoCarb.Click += new System.EventHandler(this.IcBtnSavedConsoCarb_Click);
-            // 
-            // IcBtnCloseFanCreateConsoCarb
-            // 
-            this.IcBtnCloseFanCreateConsoCarb.BackColor = System.Drawing.Color.White;
-            this.IcBtnCloseFanCreateConsoCarb.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.IcBtnCloseFanCreateConsoCarb.IconColor = System.Drawing.Color.Red;
-            this.IcBtnCloseFanCreateConsoCarb.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IcBtnCloseFanCreateConsoCarb.IconSize = 30;
-            this.IcBtnCloseFanCreateConsoCarb.Location = new System.Drawing.Point(662, 0);
-            this.IcBtnCloseFanCreateConsoCarb.Name = "IcBtnCloseFanCreateConsoCarb";
-            this.IcBtnCloseFanCreateConsoCarb.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.IcBtnCloseFanCreateConsoCarb.Size = new System.Drawing.Size(38, 30);
-            this.IcBtnCloseFanCreateConsoCarb.TabIndex = 0;
-            this.IcBtnCloseFanCreateConsoCarb.UseVisualStyleBackColor = false;
-            this.IcBtnCloseFanCreateConsoCarb.Click += new System.EventHandler(this.IcBtnCloseFanCreateConsoCarb_Click);
             // 
             // label1
             // 
@@ -294,7 +277,6 @@ namespace GestPark
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PanelMenuConsoCarb);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCreateConsoCarburant";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -308,7 +290,6 @@ namespace GestPark
         #endregion
 
         private System.Windows.Forms.Panel PanelMenuConsoCarb;
-        private FontAwesome.Sharp.IconButton IcBtnCloseFanCreateConsoCarb;
         private FontAwesome.Sharp.IconButton IcBtnSavedConsoCarb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

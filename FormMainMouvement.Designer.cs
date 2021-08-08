@@ -32,7 +32,7 @@ namespace GestPark
             this.panelTitleFormMouvt = new System.Windows.Forms.Panel();
             this.IbtnCloseFormMvt = new FontAwesome.Sharp.IconButton();
             this.IbtnRegisterMvt = new FontAwesome.Sharp.IconButton();
-            this.panelSearchMvt = new System.Windows.Forms.Panel();
+            this.PanelSearchMvt = new System.Windows.Forms.Panel();
             this.IbtnExportMvt = new FontAwesome.Sharp.IconButton();
             this.IbtnSearchMvt = new FontAwesome.Sharp.IconButton();
             this.TbxSearchMvt = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@ namespace GestPark
             this.USERCREATE_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATECREATE_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelTitleFormMouvt.SuspendLayout();
-            this.panelSearchMvt.SuspendLayout();
+            this.PanelSearchMvt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewMvt)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,17 +99,19 @@ namespace GestPark
             this.IbtnRegisterMvt.UseVisualStyleBackColor = false;
             this.IbtnRegisterMvt.Click += new System.EventHandler(this.IbtnRegisterMvt_Click);
             // 
-            // panelSearchMvt
+            // PanelSearchMvt
             // 
-            this.panelSearchMvt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelSearchMvt.Controls.Add(this.IbtnExportMvt);
-            this.panelSearchMvt.Controls.Add(this.IbtnSearchMvt);
-            this.panelSearchMvt.Controls.Add(this.TbxSearchMvt);
-            this.panelSearchMvt.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSearchMvt.Location = new System.Drawing.Point(0, 32);
-            this.panelSearchMvt.Name = "panelSearchMvt";
-            this.panelSearchMvt.Size = new System.Drawing.Size(1118, 109);
-            this.panelSearchMvt.TabIndex = 1;
+            this.PanelSearchMvt.AutoScroll = true;
+            this.PanelSearchMvt.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelSearchMvt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PanelSearchMvt.Controls.Add(this.IbtnExportMvt);
+            this.PanelSearchMvt.Controls.Add(this.IbtnSearchMvt);
+            this.PanelSearchMvt.Controls.Add(this.TbxSearchMvt);
+            this.PanelSearchMvt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelSearchMvt.Location = new System.Drawing.Point(0, 32);
+            this.PanelSearchMvt.Name = "PanelSearchMvt";
+            this.PanelSearchMvt.Size = new System.Drawing.Size(1118, 109);
+            this.PanelSearchMvt.TabIndex = 1;
             // 
             // IbtnExportMvt
             // 
@@ -291,15 +293,15 @@ namespace GestPark
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1118, 731);
             this.Controls.Add(this.DataGridViewMvt);
-            this.Controls.Add(this.panelSearchMvt);
+            this.Controls.Add(this.PanelSearchMvt);
             this.Controls.Add(this.panelTitleFormMouvt);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMainMouvement";
             this.Text = "FormMainMouvement";
             this.panelTitleFormMouvt.ResumeLayout(false);
-            this.panelSearchMvt.ResumeLayout(false);
-            this.panelSearchMvt.PerformLayout();
+            this.PanelSearchMvt.ResumeLayout(false);
+            this.PanelSearchMvt.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewMvt)).EndInit();
             this.ResumeLayout(false);
 
@@ -310,7 +312,7 @@ namespace GestPark
         private System.Windows.Forms.Panel panelTitleFormMouvt;
         private FontAwesome.Sharp.IconButton IbtnCloseFormMvt;
         private FontAwesome.Sharp.IconButton IbtnRegisterMvt;
-        private System.Windows.Forms.Panel panelSearchMvt;
+        private System.Windows.Forms.Panel PanelSearchMvt;
         private FontAwesome.Sharp.IconButton IbtnExportMvt;
         private FontAwesome.Sharp.IconButton IbtnSearchMvt;
         private System.Windows.Forms.TextBox TbxSearchMvt;

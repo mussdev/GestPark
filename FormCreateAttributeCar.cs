@@ -26,10 +26,6 @@ namespace GestPark
             FillComboboxVehicule();
         }
 
-        private void IbtnCloseFormCreateAttribute_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         // Generate code of personne
         private string generateCodeAttributionCar()
@@ -210,14 +206,13 @@ namespace GestPark
                 {
                     if (Conn.IsConnection)
                     {
-                        SqlCmd = new SqlCommand("SELECT * FROM VEHICULE WHERE TYPE_VEHICULE = 'Privé' ", Conn.cn);
+                        SqlCmd = new SqlCommand("SELECT ID_VEHICULE, IMMATRICULATION_VEHICULE FROM VEHICULE WHERE STATUT_VEHICULE='Non attribué' AND TYPE_VEHICULE='Privé' ", Conn.cn);
                         MyReader = SqlCmd.ExecuteReader();
                         while (MyReader.Read())
                         {
                             CbxVehiculeAttr.Items.Add(MyReader["IMMATRICULATION_VEHICULE"].ToString());
                             CbxVehiculeAttr.DisplayMember = (MyReader["IMMATRICULATION_VEHICULE"].ToString());
                             CbxVehiculeAttr.ValueMember = (MyReader["ID_VEHICULE"].ToString());
-
                         }
                     }
                 }

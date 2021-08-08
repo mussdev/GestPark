@@ -69,6 +69,10 @@ namespace GestPark
             this.label11 = new System.Windows.Forms.Label();
             this.comboBoxEtatVehi = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CbxStatut_vehi = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.CbxSanteCar = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.panelRegistVehiTitle.SuspendLayout();
             this.PanelDateVehi.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -163,7 +167,7 @@ namespace GestPark
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(15, 86);
+            this.label10.Location = new System.Drawing.Point(15, 127);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 15);
@@ -199,7 +203,7 @@ namespace GestPark
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(18, 131);
+            this.label15.Location = new System.Drawing.Point(18, 172);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(86, 15);
@@ -296,7 +300,7 @@ namespace GestPark
             // textBoxCordGPSVehi
             // 
             this.textBoxCordGPSVehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCordGPSVehi.Location = new System.Drawing.Point(132, 75);
+            this.textBoxCordGPSVehi.Location = new System.Drawing.Point(132, 116);
             this.textBoxCordGPSVehi.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCordGPSVehi.Name = "textBoxCordGPSVehi";
             this.textBoxCordGPSVehi.Size = new System.Drawing.Size(287, 22);
@@ -319,7 +323,7 @@ namespace GestPark
             this.comboBoxEmplVehi.FormattingEnabled = true;
             this.comboBoxEmplVehi.Items.AddRange(new object[] {
             ""});
-            this.comboBoxEmplVehi.Location = new System.Drawing.Point(132, 119);
+            this.comboBoxEmplVehi.Location = new System.Drawing.Point(132, 160);
             this.comboBoxEmplVehi.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxEmplVehi.Name = "comboBoxEmplVehi";
             this.comboBoxEmplVehi.Size = new System.Drawing.Size(287, 23);
@@ -332,7 +336,7 @@ namespace GestPark
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(17, 561);
+            this.label16.Location = new System.Drawing.Point(18, 579);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(39, 15);
@@ -342,7 +346,7 @@ namespace GestPark
             // richTextBoxNoteVehi
             // 
             this.richTextBoxNoteVehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxNoteVehi.Location = new System.Drawing.Point(174, 561);
+            this.richTextBoxNoteVehi.Location = new System.Drawing.Point(175, 579);
             this.richTextBoxNoteVehi.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxNoteVehi.Name = "richTextBoxNoteVehi";
             this.richTextBoxNoteVehi.Size = new System.Drawing.Size(834, 131);
@@ -354,7 +358,7 @@ namespace GestPark
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(14, 479);
+            this.label17.Location = new System.Drawing.Point(13, 528);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(82, 15);
@@ -443,7 +447,7 @@ namespace GestPark
             // 
             this.comboBoxFourn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxFourn.FormattingEnabled = true;
-            this.comboBoxFourn.Location = new System.Drawing.Point(175, 467);
+            this.comboBoxFourn.Location = new System.Drawing.Point(174, 516);
             this.comboBoxFourn.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxFourn.Name = "comboBoxFourn";
             this.comboBoxFourn.Size = new System.Drawing.Size(275, 23);
@@ -458,7 +462,7 @@ namespace GestPark
             this.iconBtnSeachFourn.IconColor = System.Drawing.Color.DarkOrange;
             this.iconBtnSeachFourn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnSeachFourn.IconSize = 25;
-            this.iconBtnSeachFourn.Location = new System.Drawing.Point(450, 467);
+            this.iconBtnSeachFourn.Location = new System.Drawing.Point(449, 516);
             this.iconBtnSeachFourn.Margin = new System.Windows.Forms.Padding(2);
             this.iconBtnSeachFourn.Name = "iconBtnSeachFourn";
             this.iconBtnSeachFourn.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
@@ -513,7 +517,7 @@ namespace GestPark
             // 
             // PanelDateVehi
             // 
-            this.PanelDateVehi.BackColor = System.Drawing.Color.Transparent;
+            this.PanelDateVehi.BackColor = System.Drawing.Color.White;
             this.PanelDateVehi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelDateVehi.Controls.Add(this.DateTimePickerAssurance);
             this.PanelDateVehi.Controls.Add(this.label4);
@@ -531,7 +535,7 @@ namespace GestPark
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(16, 36);
+            this.label11.Location = new System.Drawing.Point(16, 77);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(59, 15);
@@ -546,7 +550,7 @@ namespace GestPark
             this.comboBoxEtatVehi.Items.AddRange(new object[] {
             "",
             "Parking"});
-            this.comboBoxEtatVehi.Location = new System.Drawing.Point(132, 28);
+            this.comboBoxEtatVehi.Location = new System.Drawing.Point(132, 69);
             this.comboBoxEtatVehi.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxEtatVehi.Name = "comboBoxEtatVehi";
             this.comboBoxEtatVehi.Size = new System.Drawing.Size(287, 23);
@@ -554,18 +558,76 @@ namespace GestPark
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.CbxSanteCar);
+            this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.comboBoxEtatVehi);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.textBoxCordGPSVehi);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.comboBoxEmplVehi);
-            this.panel1.Location = new System.Drawing.Point(610, 290);
+            this.panel1.Location = new System.Drawing.Point(610, 270);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(436, 178);
+            this.panel1.Size = new System.Drawing.Size(436, 217);
             this.panel1.TabIndex = 50;
+            // 
+            // CbxStatut_vehi
+            // 
+            this.CbxStatut_vehi.DisplayMember = "Pool";
+            this.CbxStatut_vehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxStatut_vehi.FormattingEnabled = true;
+            this.CbxStatut_vehi.Items.AddRange(new object[] {
+            "",
+            "Non attribué",
+            "Attribué"});
+            this.CbxStatut_vehi.Location = new System.Drawing.Point(174, 466);
+            this.CbxStatut_vehi.Margin = new System.Windows.Forms.Padding(2);
+            this.CbxStatut_vehi.Name = "CbxStatut_vehi";
+            this.CbxStatut_vehi.Size = new System.Drawing.Size(305, 23);
+            this.CbxStatut_vehi.TabIndex = 52;
+            this.CbxStatut_vehi.Text = "Non attribué";
+            this.CbxStatut_vehi.ValueMember = "Pool";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(13, 474);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(47, 15);
+            this.label13.TabIndex = 51;
+            this.label13.Text = "Statut :";
+            // 
+            // CbxSanteCar
+            // 
+            this.CbxSanteCar.DisplayMember = "Parking";
+            this.CbxSanteCar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxSanteCar.FormattingEnabled = true;
+            this.CbxSanteCar.Items.AddRange(new object[] {
+            "",
+            "Bon",
+            "Panne"});
+            this.CbxSanteCar.Location = new System.Drawing.Point(132, 23);
+            this.CbxSanteCar.Margin = new System.Windows.Forms.Padding(2);
+            this.CbxSanteCar.Name = "CbxSanteCar";
+            this.CbxSanteCar.Size = new System.Drawing.Size(287, 23);
+            this.CbxSanteCar.TabIndex = 28;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(16, 31);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(59, 15);
+            this.label18.TabIndex = 27;
+            this.label18.Text = "Etat véh. :";
             // 
             // FormRegisterVehicule
             // 
@@ -574,6 +636,8 @@ namespace GestPark
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1118, 731);
+            this.Controls.Add(this.CbxStatut_vehi);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelDateVehi);
             this.Controls.Add(this.label2);
@@ -604,7 +668,7 @@ namespace GestPark
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRegisterVehicule";
-            this.Text = "FormRegisterVehicule";
+            this.Text = "Créer un vehicule";
             this.Load += new System.EventHandler(this.FormRegisterVehicule_Load);
             this.panelRegistVehiTitle.ResumeLayout(false);
             this.PanelDateVehi.ResumeLayout(false);
@@ -657,5 +721,9 @@ namespace GestPark
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBoxEtatVehi;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox CbxStatut_vehi;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox CbxSanteCar;
+        private System.Windows.Forms.Label label18;
     }
 }

@@ -120,11 +120,13 @@ namespace GestPark
 
         private void iconBtnUsers_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormUtilisateur());
             hideSubMenu();
         }
 
         private void iconBtnRoles_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormRoles());
             hideSubMenu();
         }
 

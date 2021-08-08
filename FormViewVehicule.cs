@@ -8,8 +8,9 @@ namespace GestPark
 {
     public partial class FormViewVehicule : Form
     {
-        private SqlCommand sqlCmd;
-        private SqlDataAdapter sqlAda;
+        private SqlCommand SqlCmd;
+        private SqlDataAdapter SqlAda;
+        private SqlDataReader MyReader;
         public FormViewVehicule()
         {
             InitializeComponent();
@@ -28,92 +29,14 @@ namespace GestPark
                 ConnectDB conn = new ConnectDB(connectionString);
                 if (conn.IsConnection)
                 {
-                    if (!string.IsNullOrEmpty(checkedListBoxTypVehi.ToString()) && !string.IsNullOrEmpty(textBxSearchVehi.Text))
-                    {
-                        sqlCmd = new SqlCommand("select * from VEHICULE " +
-                            " left outer join PARKING on PARKING.ID_PARK = VEHICULE.ID_PARK" +
-                            " left outer join TYPECONSOMMATION on TYPECONSOMMATION.ID_TYPCONSO = VEHICULE.ID_TYPCONSO" +
-                            " left outer join FOURNISSEUR on FOURNISSEUR.ID_FOUR = VEHICULE.ID_FOUR" +
-                            " left outer join MARQUE on MARQUE.ID_MARQ = VEHICULE.ID_MARQ" +
-                            " left outer join APPARTENIR on APPARTENIR.ID_VEHICULE = VEHICULE.ID_VEHICULE" +
-                            " left outer join PERSONNELS on PERSONNELS.ID_PERS = APPARTENIR.ID_PERS" +
-                            " where VEHICULE.TYPE_VEHICULE = @TYPE_VEHICULE AND VEHICULE.IMMATRICULATION_VEHICULE LIKE @IMMATRICULATION_VEHICULE OR VEHICULE.CARTE_GRISE_VEHICULE LIKE @CARTE_GRISE_VEHICULE ", conn.cn);
-                        sqlCmd.Parameters.AddWithValue("@TYPE_VEHICULE", checkedListBoxTypVehi.ToString());
-                        sqlCmd.Parameters.AddWithValue("@IMMATRICULATION_VEHICULE", string.Format("%{0}%", textBxSearchVehi.Text));
-                        sqlCmd.Parameters.AddWithValue("@CARTE_GRISE_VEHICULE", string.Format("%{0}%", textBxSearchVehi.Text));
-                        sqlAda = new SqlDataAdapter(sqlCmd);
-                        DataSet tb = new DataSet();
-                        sqlAda.Fill(tb);
+                    SqlCmd = new SqlCommand("SELECT*FROM VEHICULE LEFT OUTER JOIN PARKING ON PARKING.ID_PARK = VEHICULE.ID_PARK LEFT OUTER JOIN TYPECONSOMMATION ON TYPECONSOMMATION.ID_TYPCONSO = VEHICULE.ID_TYPCONSO LEFT OUTER JOIN FOURNISSEUR ON FOURNISSEUR.ID_FOUR = VEHICULE.ID_FOUR LEFT OUTER JOIN MARQUE ON MARQUE.ID_MARQ = VEHICULE.ID_MARQ LEFT OUTER JOIN APPARTENIR ON APPARTENIR.ID_VEHICULE = VEHICULE.ID_VEHICULE LEFT OUTER JOIN PERSONNELS ON PERSONNELS.ID_PERS = APPARTENIR.ID_PERS ", conn.cn);
+                    SqlAda = new SqlDataAdapter(SqlCmd);
+                    DataSet tb = new DataSet();
+                    SqlAda.Fill(tb);
 
-                        // Fill DataGridView
-                        DataGridViewVehi.AutoGenerateColumns = false;
-                        DataGridViewVehi.DataSource = tb.Tables[0];
-
-                    }
-                    else if (!string.IsNullOrEmpty(comboBoxEtatVehi.Text) && !string.IsNullOrEmpty(textBxSearchVehi.Text))
-                    {
-                        sqlCmd = new SqlCommand("select * from VEHICULE " +
-                            " left outer join PARKING on PARKING.ID_PARK = VEHICULE.ID_PARK" +
-                            " left outer join TYPECONSOMMATION on TYPECONSOMMATION.ID_TYPCONSO = VEHICULE.ID_TYPCONSO" +
-                            " left outer join FOURNISSEUR on FOURNISSEUR.ID_FOUR = VEHICULE.ID_FOUR" +
-                            " left outer join MARQUE on MARQUE.ID_MARQ = VEHICULE.ID_MARQ" +
-                            " left outer join APPARTENIR on APPARTENIR.ID_VEHICULE = VEHICULE.ID_VEHICULE" +
-                            " left outer join PERSONNELS on PERSONNELS.ID_PERS = APPARTENIR.ID_PERS" +
-                            " where VEHICULE.ETAT_VEHICULE = @ETAT_VEHICULE AND VEHICULE.IMMATRICULATION_VEHICULE = @IMMATRICULATION_VEHICULE OR VEHICULE.CARTE_GRISE_VEHICULE = @CARTE_GRISE_VEHICULE OR VEHICULE.CODE_VEHICULE = @CODE_VEHICULE ", conn.cn);
-                        sqlCmd.Parameters.AddWithValue("@ETAT_VEHICULE", comboBoxEtatVehi.Text);
-                        sqlCmd.Parameters.AddWithValue("@IMMATRICULATION_VEHICULE", textBxSearchVehi.Text);
-                        sqlCmd.Parameters.AddWithValue("@CARTE_GRISE_VEHICULE", textBxSearchVehi.Text);
-                        sqlCmd.Parameters.AddWithValue("@CODE_VEHICULE", textBxSearchVehi.Text);
-                        sqlAda = new SqlDataAdapter(sqlCmd);
-                        DataSet tb = new DataSet();
-                        sqlAda.Fill(tb);
-
-                        // Fill DataGridView
-                        DataGridViewVehi.AutoGenerateColumns = false;
-                        DataGridViewVehi.DataSource = tb.Tables[0];
-                    }
-                    else if (!string.IsNullOrEmpty(comboBoxEtatVehi.Text) || !string.IsNullOrEmpty(checkedListBoxTypVehi.ToString()))
-                    {
-                        sqlCmd = new SqlCommand("select * from VEHICULE " +
-                            " left outer join PARKING on PARKING.ID_PARK = VEHICULE.ID_PARK" +
-                            " left outer join TYPECONSOMMATION on TYPECONSOMMATION.ID_TYPCONSO = VEHICULE.ID_TYPCONSO" +
-                            " left outer join FOURNISSEUR on FOURNISSEUR.ID_FOUR = VEHICULE.ID_FOUR" +
-                            " left outer join MARQUE on MARQUE.ID_MARQ = VEHICULE.ID_MARQ" +
-                            " left outer join APPARTENIR on APPARTENIR.ID_VEHICULE = VEHICULE.ID_VEHICULE" +
-                            " left outer join PERSONNELS on PERSONNELS.ID_PERS = APPARTENIR.ID_PERS" +
-                            " where VEHICULE.ETAT_VEHICULE = @ETAT_VEHICULE OR VEHICULE.TYPE_VEHICULE = @TYPE_VEHICULE ", conn.cn);
-                        sqlCmd.Parameters.AddWithValue("@ETAT_VEHICULE", comboBoxEtatVehi.Text);
-                        sqlCmd.Parameters.AddWithValue("@TYPE_VEHICULE", checkedListBoxTypVehi.ToString());
-                        sqlAda = new SqlDataAdapter(sqlCmd);
-                        DataSet tb = new DataSet();
-                        sqlAda.Fill(tb);
-
-                        // Fill DataGridView
-                        DataGridViewVehi.AutoGenerateColumns = false;
-                        DataGridViewVehi.DataSource = tb.Tables[0];
-
-                    }
-                    else if (!string.IsNullOrEmpty(textBxSearchVehi.Text))
-                    {
-                        sqlCmd = new SqlCommand("select * from VEHICULE " +
-                            " left outer join PARKING on PARKING.ID_PARK = VEHICULE.ID_PARK" +
-                            " left outer join TYPECONSOMMATION on TYPECONSOMMATION.ID_TYPCONSO = VEHICULE.ID_TYPCONSO" +
-                            " left outer join FOURNISSEUR on FOURNISSEUR.ID_FOUR = VEHICULE.ID_FOUR" +
-                            " left outer join MARQUE on MARQUE.ID_MARQ = VEHICULE.ID_MARQ" +
-                            " left outer join APPARTENIR on APPARTENIR.ID_VEHICULE = VEHICULE.ID_VEHICULE" +
-                            " left outer join PERSONNELS on PERSONNELS.ID_PERS = APPARTENIR.ID_PERS" +
-                            " where VEHICULE.IMMATRICULATION_VEHICULE LIKE @IMMATRICULATION_VEHICULE OR VEHICULE.CARTE_GRISE_VEHICULE LIKE @CARTE_GRISE_VEHICULE OR VEHICULE.CODE_VEHICULE LIKE @CODE_VEHICULE ", conn.cn);
-                        sqlCmd.Parameters.AddWithValue("@IMMATRICULATION_VEHICULE", string.Format("%{0}%", textBxSearchVehi.Text));
-                        sqlCmd.Parameters.AddWithValue("@CARTE_GRISE_VEHICULE", string.Format("%{0}%", textBxSearchVehi.Text));
-                        sqlCmd.Parameters.AddWithValue("@CODE_VEHICULE", string.Format("%{0}%", textBxSearchVehi.Text));
-                        sqlAda = new SqlDataAdapter(sqlCmd);
-                        DataSet tb = new DataSet();
-                        sqlAda.Fill(tb);
-
-                        // Fill DataGridView
-                        DataGridViewVehi.AutoGenerateColumns = false;
-                        DataGridViewVehi.DataSource = tb.Tables[0];
-                    }
+                    // Fill DataGridView
+                    DataGridViewVehi.AutoGenerateColumns = false;
+                    DataGridViewVehi.DataSource = tb.Tables[0];
                 }
                 
             }
@@ -174,11 +97,50 @@ namespace GestPark
             FormDisplayAndModifyCar.comboBoxModifyCarProprio.Text = this.DataGridViewVehi.CurrentRow.Cells[11].Value?.ToString();
             FormDisplayAndModifyCar.comboBoxModifyCarFourn.Text = this.DataGridViewVehi.CurrentRow.Cells[12].Value?.ToString();
             FormDisplayAndModifyCar.richTextBoxModifyCarNoteVehi.Text = this.DataGridViewVehi.CurrentRow.Cells[13].Value?.ToString();
-            FormDisplayAndModifyCar.dateTimePickModifyCarDatAchaVehi.Text = this.DataGridViewVehi.CurrentRow.Cells[14].Value?.ToString();
-            FormDisplayAndModifyCar.dateTimeModifyCarPickDatVisitVehi.Text = this.DataGridViewVehi.CurrentRow.Cells[15].Value?.ToString();
-            FormDisplayAndModifyCar.DateTimePickerModifyCarAssurance.Text = this.DataGridViewVehi.CurrentRow.Cells[16].Value?.ToString();
-            FormDisplayAndModifyCar.comboBoxModifyCarTypVitessVehi.Text = this.DataGridViewVehi.CurrentRow.Cells[17].Value?.ToString();
+            FormDisplayAndModifyCar.CbxStatutModifyCar.Text = this.DataGridViewVehi.CurrentRow.Cells[14].Value?.ToString();
+            FormDisplayAndModifyCar.CbxSanteCar.Text = this.DataGridViewVehi.CurrentRow.Cells[15].Value?.ToString();
+            FormDisplayAndModifyCar.dateTimePickModifyCarDatAchaVehi.Text = this.DataGridViewVehi.CurrentRow.Cells[16].Value?.ToString();
+            FormDisplayAndModifyCar.dateTimeModifyCarPickDatVisitVehi.Text = this.DataGridViewVehi.CurrentRow.Cells[17].Value?.ToString();
+            FormDisplayAndModifyCar.DateTimePickerModifyCarAssurance.Text = this.DataGridViewVehi.CurrentRow.Cells[18].Value?.ToString();
+            FormDisplayAndModifyCar.comboBoxModifyCarTypVitessVehi.Text = this.DataGridViewVehi.CurrentRow.Cells[19].Value?.ToString();
+            FormDisplayAndModifyCar.TxtKolimetrageCar.Text = ViewCarKilometer();
             FormDisplayAndModifyCar.ShowDialog();
+
         }
+
+
+        // Method to display the kilometer of car
+
+        private string ViewCarKilometer()
+        {
+            string KiloCar = null;
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
+                ConnectDB Conn = new ConnectDB(connectionString);
+                FormModifyVehicule FormDisplayAndModifyCar = new FormModifyVehicule();
+                using (Conn.cn)
+                {
+                    if (Conn.IsConnection)
+                    {
+                        // Calculate total kilometers of car
+                        SqlCmd = new SqlCommand("SELECT SUM((KILO_APRES_MVTS + KILOMETRE_AVA_MVTS)) AS KILOTOTAL FROM MOUVEMENTS LEFT OUTER JOIN VEHICULE ON MOUVEMENTS.ID_VEHICULE=VEHICULE.ID_VEHICULE WHERE VEHICULE.CODE_VEHICULE = '" + this.DataGridViewVehi.CurrentRow.Cells[0].Value?.ToString() + "'", Conn.cn);
+                        MyReader = SqlCmd.ExecuteReader();
+                        while (MyReader.Read())
+                        {
+                            KiloCar = MyReader[0].ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return KiloCar;
+        }
+
+
     }
 }

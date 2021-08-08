@@ -32,6 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IconParc.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
@@ -70,12 +76,6 @@
     </Compile>
     <Compile Include="FormConnectionUser.Designer.cs">
       <DependentUpon>FormConnectionUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormConnexionGestPark.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormConnexionGestPark.Designer.cs">
-      <DependentUpon>FormConnexionGestPark.cs</DependentUpon>
     </Compile>
     <Compile Include="FormConsommationCarburant.cs">
       <SubType>Form</SubType>
@@ -142,6 +142,12 @@
     </Compile>
     <Compile Include="FormCreateRepairCar.Designer.cs">
       <DependentUpon>FormCreateRepairCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateUser.Designer.cs">
+      <DependentUpon>FormCreateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCreateVisit.cs">
       <SubType>Form</SubType>
@@ -251,6 +257,12 @@
     <Compile Include="FormMarque.Designer.cs">
       <DependentUpon>FormMarque.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModifyConsoCarbCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifyConsoCarbCar.Designer.cs">
+      <DependentUpon>FormModifyConsoCarbCar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormModifyMouvement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,11 +275,23 @@
     <Compile Include="FormModifyPanCar.Designer.cs">
       <DependentUpon>FormModifyPanCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModifyUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifyUser.Designer.cs">
+      <DependentUpon>FormModifyUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormModifyVehicule.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormModifyVehicule.Designer.cs">
       <DependentUpon>FormModifyVehicule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModifyWatchCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifyWatchCar.Designer.cs">
+      <DependentUpon>FormModifyWatchCar.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRegisterVehicule.cs">
       <SubType>Form</SubType>
@@ -281,6 +305,12 @@
     <Compile Include="FormRepairCar.Designer.cs">
       <DependentUpon>FormRepairCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRoles.Designer.cs">
+      <DependentUpon>FormRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSuiviVehicule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +322,12 @@
     </Compile>
     <Compile Include="FormTypeConsommation.Designer.cs">
       <DependentUpon>FormTypeConsommation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUtilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtilisateur.Designer.cs">
+      <DependentUpon>FormUtilisateur.cs</DependentUpon>
     </Compile>
     <Compile Include="FormViewVehicule.cs">
       <SubType>Form</SubType>
@@ -309,9 +345,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConnectionUser.resx">
       <DependentUpon>FormConnectionUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormConnexionGestPark.resx">
-      <DependentUpon>FormConnexionGestPark.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsommationCarburant.resx">
       <DependentUpon>FormConsommationCarburant.cs</DependentUpon>
@@ -345,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreateRepairCar.resx">
       <DependentUpon>FormCreateRepairCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateUser.resx">
+      <DependentUpon>FormCreateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreateVisit.resx">
       <DependentUpon>FormCreateVisit.cs</DependentUpon>
@@ -400,14 +436,23 @@
     <EmbeddedResource Include="FormMarque.resx">
       <DependentUpon>FormMarque.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormModifyConsoCarbCar.resx">
+      <DependentUpon>FormModifyConsoCarbCar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormModifyMouvement.resx">
       <DependentUpon>FormModifyMouvement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormModifyPanCar.resx">
       <DependentUpon>FormModifyPanCar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormModifyUser.resx">
+      <DependentUpon>FormModifyUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormModifyVehicule.resx">
       <DependentUpon>FormModifyVehicule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifyWatchCar.resx">
+      <DependentUpon>FormModifyWatchCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegisterVehicule.resx">
       <DependentUpon>FormRegisterVehicule.cs</DependentUpon>
@@ -415,11 +460,17 @@
     <EmbeddedResource Include="FormRepairCar.resx">
       <DependentUpon>FormRepairCar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRoles.resx">
+      <DependentUpon>FormRoles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSuiviVehicule.resx">
       <DependentUpon>FormSuiviVehicule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTypeConsommation.resx">
       <DependentUpon>FormTypeConsommation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtilisateur.resx">
+      <DependentUpon>FormUtilisateur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormViewVehicule.resx">
       <DependentUpon>FormViewVehicule.cs</DependentUpon>
@@ -497,6 +548,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\logoCon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iconGestPak.ico" />
+    <Content Include="IconGestPark.ico" />
+    <Content Include="IconParc.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

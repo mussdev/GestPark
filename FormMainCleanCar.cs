@@ -63,5 +63,19 @@ namespace GestPark
                 MessageBox.Show(ex.ToString(), "GestPark : GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Dgv_WatchCar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FormModifyWatchCar ModiFyWatchCar = new FormModifyWatchCar();
+
+            ModiFyWatchCar.TbxCodeWatchCarModi.Text = this.Dgv_WatchCar.CurrentRow.Cells[1].Value?.ToString();
+            ModiFyWatchCar.CbxVehiculeWatchCarModi.Text = this.Dgv_WatchCar.CurrentRow.Cells[2].Value?.ToString();
+            ModiFyWatchCar.TxtBMontantModi.Text = this.Dgv_WatchCar.CurrentRow.Cells[3].Value?.ToString();
+            ModiFyWatchCar.TxtBLieuWatchCarModi.Text = this.Dgv_WatchCar.CurrentRow.Cells[4].Value?.ToString();
+            ModiFyWatchCar.RbtxNoteWatchCarModi.Text = this.Dgv_WatchCar.CurrentRow.Cells[5].Value?.ToString();
+            ModiFyWatchCar.DatePikerWatchCarModi.Text = this.Dgv_WatchCar.CurrentRow.Cells[6].Value?.ToString();
+            
+            ModiFyWatchCar.ShowDialog();
+        }
     }
 }

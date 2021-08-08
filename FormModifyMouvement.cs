@@ -26,11 +26,6 @@ namespace GestPark
             FillComboboxConducteurMod();
         }
 
-        private void ItbnCloseFormCreateMvtTbxCodMvtMod_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void CbxConducMvtMod_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -111,6 +106,11 @@ namespace GestPark
                             SqlCmd.Parameters.AddWithValue("@DATEARRIVE_MVTS", DateArriveeMvtMod.Value.ToString("dd/MM/yyyy"));
                             SqlCmd.ExecuteNonQuery();
                             MessageBox.Show("Les informations ont été modifiées avec succès !");
+
+                            // Update state car
+                            SqlCmd = new SqlCommand("UPDATE VEHICULE SET ETAT_VEHICULE=@ETAT_VEHICULE WHERE ID_VEHICULE='" + IdVehiculeMod + "'", Conn.cn);
+                            SqlCmd.Parameters.AddWithValue("@ETAT_VEHICULE", CbxStatutMvtMod.Text);
+                            SqlCmd.ExecuteNonQuery();
                         }
                     }
                     // Close the form
@@ -141,7 +141,6 @@ namespace GestPark
                             CbxVehiculeMod.Items.Add(MyReader["IMMATRICULATION_VEHICULE"].ToString());
                             CbxVehiculeMod.DisplayMember = (MyReader["IMMATRICULATION_VEHICULE"].ToString());
                             CbxVehiculeMod.ValueMember = (MyReader["ID_VEHICULE"].ToString());
-
                         }
                     }
                 }    

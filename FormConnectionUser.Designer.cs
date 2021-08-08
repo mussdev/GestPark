@@ -29,18 +29,65 @@ namespace GestPark
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.TxtPasswordFanConUser = new System.Windows.Forms.TextBox();
             this.TxtUsernameFanConUser = new System.Windows.Forms.TextBox();
-            this.IcbtnCancelFanCon = new FontAwesome.Sharp.IconButton();
-            this.IcbtnValidFanCon = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.IcbtnCloseFanCon = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.IcbtnCancelFanCon = new FontAwesome.Sharp.IconButton();
+            this.IcbtnValidFanCon = new FontAwesome.Sharp.IconButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.IcbtnCloseFanCon = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // TxtPasswordFanConUser
+            // 
+            this.TxtPasswordFanConUser.Location = new System.Drawing.Point(110, 81);
+            this.TxtPasswordFanConUser.Name = "TxtPasswordFanConUser";
+            this.TxtPasswordFanConUser.PasswordChar = '*';
+            this.TxtPasswordFanConUser.Size = new System.Drawing.Size(258, 21);
+            this.TxtPasswordFanConUser.TabIndex = 2;
+            // 
+            // TxtUsernameFanConUser
+            // 
+            this.TxtUsernameFanConUser.Location = new System.Drawing.Point(110, 27);
+            this.TxtUsernameFanConUser.Name = "TxtUsernameFanConUser";
+            this.TxtUsernameFanConUser.Size = new System.Drawing.Size(258, 21);
+            this.TxtUsernameFanConUser.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(13, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 15);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Mot de passe";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(13, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 15);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Nom utilisateur";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(141, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "GESTION DE PARC AUTO";
             // 
             // panel1
             // 
@@ -51,24 +98,10 @@ namespace GestPark
             this.panel1.Controls.Add(this.IcbtnValidFanCon);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(50, 60);
+            this.panel1.Location = new System.Drawing.Point(25, 29);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(381, 178);
             this.panel1.TabIndex = 0;
-            // 
-            // TxtPasswordFanConUser
-            // 
-            this.TxtPasswordFanConUser.Location = new System.Drawing.Point(110, 81);
-            this.TxtPasswordFanConUser.Name = "TxtPasswordFanConUser";
-            this.TxtPasswordFanConUser.Size = new System.Drawing.Size(258, 21);
-            this.TxtPasswordFanConUser.TabIndex = 23;
-            // 
-            // TxtUsernameFanConUser
-            // 
-            this.TxtUsernameFanConUser.Location = new System.Drawing.Point(110, 27);
-            this.TxtUsernameFanConUser.Name = "TxtUsernameFanConUser";
-            this.TxtUsernameFanConUser.Size = new System.Drawing.Size(258, 21);
-            this.TxtUsernameFanConUser.TabIndex = 22;
             // 
             // IcbtnCancelFanCon
             // 
@@ -81,7 +114,7 @@ namespace GestPark
             this.IcbtnCancelFanCon.Location = new System.Drawing.Point(222, 132);
             this.IcbtnCancelFanCon.Name = "IcbtnCancelFanCon";
             this.IcbtnCancelFanCon.Size = new System.Drawing.Size(93, 23);
-            this.IcbtnCancelFanCon.TabIndex = 21;
+            this.IcbtnCancelFanCon.TabIndex = 4;
             this.IcbtnCancelFanCon.Text = "ANNULER";
             this.IcbtnCancelFanCon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IcbtnCancelFanCon.UseVisualStyleBackColor = false;
@@ -97,33 +130,20 @@ namespace GestPark
             this.IcbtnValidFanCon.Location = new System.Drawing.Point(131, 132);
             this.IcbtnValidFanCon.Name = "IcbtnValidFanCon";
             this.IcbtnValidFanCon.Size = new System.Drawing.Size(85, 23);
-            this.IcbtnValidFanCon.TabIndex = 20;
+            this.IcbtnValidFanCon.TabIndex = 3;
             this.IcbtnValidFanCon.Text = "VALIDER";
             this.IcbtnValidFanCon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IcbtnValidFanCon.UseVisualStyleBackColor = false;
             this.IcbtnValidFanCon.Click += new System.EventHandler(this.IcbtnValidFanCon_Click);
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 15);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Mot de passe";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 15);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Nom utilisateur";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(174, 220);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 15);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "GestPark@2021";
             // 
             // IcbtnCloseFanCon
             // 
@@ -133,7 +153,7 @@ namespace GestPark
             this.IcbtnCloseFanCon.IconChar = FontAwesome.Sharp.IconChar.None;
             this.IcbtnCloseFanCon.IconColor = System.Drawing.Color.Black;
             this.IcbtnCloseFanCon.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IcbtnCloseFanCon.Location = new System.Drawing.Point(408, 0);
+            this.IcbtnCloseFanCon.Location = new System.Drawing.Point(353, 0);
             this.IcbtnCloseFanCon.Name = "IcbtnCloseFanCon";
             this.IcbtnCloseFanCon.Size = new System.Drawing.Size(75, 23);
             this.IcbtnCloseFanCon.TabIndex = 1;
@@ -141,32 +161,13 @@ namespace GestPark
             this.IcbtnCloseFanCon.UseVisualStyleBackColor = true;
             this.IcbtnCloseFanCon.Click += new System.EventHandler(this.IcbtnCloseFanCon_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "GESTION DE PARC AUTO";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 289);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "GestPark";
-            // 
             // FormConnectionUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GestPark.Properties.Resources.logoCon;
-            this.ClientSize = new System.Drawing.Size(483, 313);
-            this.Controls.Add(this.label4);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(428, 246);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.IcbtnCloseFanCon);
             this.Controls.Add(this.panel1);
@@ -184,8 +185,6 @@ namespace GestPark
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TxtPasswordFanConUser;
         private System.Windows.Forms.TextBox TxtUsernameFanConUser;
         private FontAwesome.Sharp.IconButton IcbtnCancelFanCon;
@@ -194,6 +193,7 @@ namespace GestPark
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton IcbtnCloseFanCon;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
     }
 }

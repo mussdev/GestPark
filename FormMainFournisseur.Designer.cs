@@ -32,7 +32,7 @@ namespace GestPark
             this.iconBtnCreateFourn = new FontAwesome.Sharp.IconButton();
             this.iconBtnSearchFourn = new FontAwesome.Sharp.IconButton();
             this.textBoxRecheFour = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.PanelTitleFour = new System.Windows.Forms.Panel();
             this.iconBtnCloseFormMainFour = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvProvider = new System.Windows.Forms.DataGridView();
@@ -51,25 +51,25 @@ namespace GestPark
             this.DATE_FOUR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.USERCREATE_FOUR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATECREATION_FOUR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
+            this.PanelTitleFour.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // iconBtnCreateFourn
             // 
-            this.iconBtnCreateFourn.BackColor = System.Drawing.Color.DarkGreen;
+            this.iconBtnCreateFourn.BackColor = System.Drawing.Color.White;
             this.iconBtnCreateFourn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconBtnCreateFourn.ForeColor = System.Drawing.Color.White;
+            this.iconBtnCreateFourn.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtnCreateFourn.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconBtnCreateFourn.IconColor = System.Drawing.Color.White;
+            this.iconBtnCreateFourn.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtnCreateFourn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnCreateFourn.IconSize = 25;
             this.iconBtnCreateFourn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBtnCreateFourn.Location = new System.Drawing.Point(0, 0);
+            this.iconBtnCreateFourn.Location = new System.Drawing.Point(-2, -2);
             this.iconBtnCreateFourn.Name = "iconBtnCreateFourn";
             this.iconBtnCreateFourn.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconBtnCreateFourn.Size = new System.Drawing.Size(145, 31);
+            this.iconBtnCreateFourn.Size = new System.Drawing.Size(140, 33);
             this.iconBtnCreateFourn.TabIndex = 1;
             this.iconBtnCreateFourn.Text = "Créer fournisseur";
             this.iconBtnCreateFourn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,17 +100,17 @@ namespace GestPark
             this.textBoxRecheFour.Size = new System.Drawing.Size(325, 26);
             this.textBoxRecheFour.TabIndex = 0;
             // 
-            // panel1
+            // PanelTitleFour
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.iconBtnCloseFormMainFour);
-            this.panel1.Controls.Add(this.iconBtnCreateFourn);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1118, 31);
-            this.panel1.TabIndex = 2;
+            this.PanelTitleFour.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelTitleFour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PanelTitleFour.Controls.Add(this.iconBtnCloseFormMainFour);
+            this.PanelTitleFour.Controls.Add(this.iconBtnCreateFourn);
+            this.PanelTitleFour.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelTitleFour.Location = new System.Drawing.Point(0, 0);
+            this.PanelTitleFour.Name = "PanelTitleFour";
+            this.PanelTitleFour.Size = new System.Drawing.Size(1118, 31);
+            this.PanelTitleFour.TabIndex = 2;
             // 
             // iconBtnCloseFormMainFour
             // 
@@ -129,7 +129,8 @@ namespace GestPark
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.AutoScroll = true;
+            this.panel2.BackColor = System.Drawing.Color.DarkOrange;
             this.panel2.Controls.Add(this.textBoxRecheFour);
             this.panel2.Controls.Add(this.iconBtnSearchFourn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -284,12 +285,12 @@ namespace GestPark
             this.ClientSize = new System.Drawing.Size(1118, 731);
             this.Controls.Add(this.dgvProvider);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PanelTitleFour);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMainFournisseur";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMainFournisseur";
-            this.panel1.ResumeLayout(false);
+            this.PanelTitleFour.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProvider)).EndInit();
@@ -301,7 +302,7 @@ namespace GestPark
         private FontAwesome.Sharp.IconButton iconBtnCreateFourn;
         private FontAwesome.Sharp.IconButton iconBtnSearchFourn;
         private System.Windows.Forms.TextBox textBoxRecheFour;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PanelTitleFour;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton iconBtnCloseFormMainFour;
         public System.Windows.Forms.DataGridView dgvProvider;

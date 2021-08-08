@@ -46,7 +46,6 @@ namespace GestPark
             this.panel1 = new System.Windows.Forms.Panel();
             this.IbtnJoindreDocAttrMod = new FontAwesome.Sharp.IconButton();
             this.IbtnRegisterAttributeCarToPersMod = new FontAwesome.Sharp.IconButton();
-            this.IbtnCloseFormCreateAttrMod = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,7 +193,6 @@ namespace GestPark
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
             this.panel1.Controls.Add(this.IbtnJoindreDocAttrMod);
             this.panel1.Controls.Add(this.IbtnRegisterAttributeCarToPersMod);
-            this.panel1.Controls.Add(this.IbtnCloseFormCreateAttrMod);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -235,26 +233,11 @@ namespace GestPark
             this.IbtnRegisterAttributeCarToPersMod.UseVisualStyleBackColor = false;
             this.IbtnRegisterAttributeCarToPersMod.Click += new System.EventHandler(this.IbtnRegisterAttributeCarToPersMod_Click);
             // 
-            // IbtnCloseFormCreateAttrMod
-            // 
-            this.IbtnCloseFormCreateAttrMod.BackColor = System.Drawing.Color.White;
-            this.IbtnCloseFormCreateAttrMod.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.IbtnCloseFormCreateAttrMod.IconColor = System.Drawing.Color.Red;
-            this.IbtnCloseFormCreateAttrMod.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnCloseFormCreateAttrMod.IconSize = 35;
-            this.IbtnCloseFormCreateAttrMod.Location = new System.Drawing.Point(672, 0);
-            this.IbtnCloseFormCreateAttrMod.Name = "IbtnCloseFormCreateAttrMod";
-            this.IbtnCloseFormCreateAttrMod.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.IbtnCloseFormCreateAttrMod.Size = new System.Drawing.Size(35, 30);
-            this.IbtnCloseFormCreateAttrMod.TabIndex = 1;
-            this.IbtnCloseFormCreateAttrMod.UseVisualStyleBackColor = false;
-            this.IbtnCloseFormCreateAttrMod.Click += new System.EventHandler(this.IbtnCloseFormCreateAttrMod_Click);
-            // 
             // FormAttributeCarModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(707, 399);
             this.Controls.Add(this.CbxProprietAttrMod);
             this.Controls.Add(this.CbxVehiculeAttrMod);
@@ -271,7 +254,6 @@ namespace GestPark
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAttributeCarModify";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAttributeCarModify";
@@ -283,7 +265,6 @@ namespace GestPark
 
         #endregion
         private FontAwesome.Sharp.IconButton IbtnRegisterAttributeCarToPersMod;
-        private FontAwesome.Sharp.IconButton IbtnCloseFormCreateAttrMod;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

@@ -25,11 +25,6 @@ namespace GestPark
             FillComboboxVehiculePan();
         }
 
-        private void IcBtnCloseFanCreatePanCarb_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         // Fill combobox vehicule
         private void FillComboboxVehiculePan()
         {
@@ -59,7 +54,7 @@ namespace GestPark
         }
 
         // Methode te generate code
-        private string generateCodeCarPan()
+        public string generateCodeCarPan()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
             ConnectDB Conn = new ConnectDB(connectionString);
@@ -137,6 +132,10 @@ namespace GestPark
 
                                 TxtCodePanCar.Clear(); TxtDescriptionPanCar.Clear(); RtxtNotePanCar.Clear(); RichTxtoutheInfos.Clear();
 
+                                // Request to change the state of car
+                                SqlCmd = new SqlCommand("UPDATE VEHICULE SET SANTE_VEHICULE=@SANTE_VEHICULE WHERE ID_VEHICULE = '" + IdVehiculePan + "' ", Conn.cn);
+                                SqlCmd.Parameters.AddWithValue("@SANTE_VEHICULE", CbxEtatCarPan.Text);
+                                SqlCmd.ExecuteNonQuery();
                             }
                         }
                     }

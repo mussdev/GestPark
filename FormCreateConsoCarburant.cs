@@ -25,11 +25,6 @@ namespace GestPark
             FillComboboxVehiculeCarb();
         }
 
-        private void IcBtnCloseFanCreateConsoCarb_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         // Methode te generate code
         private string generateCodeProvCarb()
         {

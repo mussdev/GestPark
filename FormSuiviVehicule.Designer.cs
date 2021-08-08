@@ -51,12 +51,12 @@ namespace GestPark
             this.DESCRIPTION_TYPCONSO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIPTION_MARQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIPTION_FOUR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATEDEPART_MVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATEARRIVEE_MVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATEDEPART_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATEARRIVE_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIPTION_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LIEU_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIPTION_PERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KILOMETRE_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KILOMETRE_AVA_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KILO_APRES_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelViewVehicule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSuiviVehicule)).BeginInit();
@@ -143,6 +143,7 @@ namespace GestPark
             // 
             // panelViewVehicule
             // 
+            this.panelViewVehicule.AutoScroll = true;
             this.panelViewVehicule.BackColor = System.Drawing.Color.DarkOrange;
             this.panelViewVehicule.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelViewVehicule.Controls.Add(this.checkedListBox1);
@@ -191,12 +192,12 @@ namespace GestPark
             this.DESCRIPTION_TYPCONSO,
             this.DESCRIPTION_MARQ,
             this.DESCRIPTION_FOUR,
-            this.DATEDEPART_MVT,
-            this.DATEARRIVEE_MVT,
+            this.DATEDEPART_MVTS,
+            this.DATEARRIVE_MVTS,
             this.DESCRIPTION_MVTS,
             this.LIEU_MVTS,
             this.DESCRIPTION_PERS,
-            this.KILOMETRE_MVTS,
+            this.KILOMETRE_AVA_MVTS,
             this.KILO_APRES_MVTS});
             this.DgvSuiviVehicule.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvSuiviVehicule.Location = new System.Drawing.Point(0, 135);
@@ -300,19 +301,19 @@ namespace GestPark
             this.DESCRIPTION_FOUR.ReadOnly = true;
             this.DESCRIPTION_FOUR.Width = 150;
             // 
-            // DATEDEPART_MVT
+            // DATEDEPART_MVTS
             // 
-            this.DATEDEPART_MVT.DataPropertyName = "DATEDEPART_MVT";
-            this.DATEDEPART_MVT.HeaderText = "Date depart";
-            this.DATEDEPART_MVT.Name = "DATEDEPART_MVT";
-            this.DATEDEPART_MVT.ReadOnly = true;
+            this.DATEDEPART_MVTS.DataPropertyName = "DATEDEPART_MVTS";
+            this.DATEDEPART_MVTS.HeaderText = "Date depart";
+            this.DATEDEPART_MVTS.Name = "DATEDEPART_MVTS";
+            this.DATEDEPART_MVTS.ReadOnly = true;
             // 
-            // DATEARRIVEE_MVT
+            // DATEARRIVE_MVTS
             // 
-            this.DATEARRIVEE_MVT.DataPropertyName = "DATEARRIVEE_MVT";
-            this.DATEARRIVEE_MVT.HeaderText = "Date arrivée";
-            this.DATEARRIVEE_MVT.Name = "DATEARRIVEE_MVT";
-            this.DATEARRIVEE_MVT.ReadOnly = true;
+            this.DATEARRIVE_MVTS.DataPropertyName = "DATEARRIVE_MVTS";
+            this.DATEARRIVE_MVTS.HeaderText = "Date arrivée";
+            this.DATEARRIVE_MVTS.Name = "DATEARRIVE_MVTS";
+            this.DATEARRIVE_MVTS.ReadOnly = true;
             // 
             // DESCRIPTION_MVTS
             // 
@@ -338,12 +339,12 @@ namespace GestPark
             this.DESCRIPTION_PERS.ReadOnly = true;
             this.DESCRIPTION_PERS.Width = 150;
             // 
-            // KILOMETRE_MVTS
+            // KILOMETRE_AVA_MVTS
             // 
-            this.KILOMETRE_MVTS.DataPropertyName = "KILOMETRE_MVTS";
-            this.KILOMETRE_MVTS.HeaderText = "Kilo. ava.";
-            this.KILOMETRE_MVTS.Name = "KILOMETRE_MVTS";
-            this.KILOMETRE_MVTS.ReadOnly = true;
+            this.KILOMETRE_AVA_MVTS.DataPropertyName = "KILOMETRE_AVA_MVTS";
+            this.KILOMETRE_AVA_MVTS.HeaderText = "Kilo. ava.";
+            this.KILOMETRE_AVA_MVTS.Name = "KILOMETRE_AVA_MVTS";
+            this.KILOMETRE_AVA_MVTS.ReadOnly = true;
             // 
             // KILO_APRES_MVTS
             // 
@@ -394,12 +395,12 @@ namespace GestPark
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_TYPCONSO;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_MARQ;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_FOUR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DATEDEPART_MVT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DATEARRIVEE_MVT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATEDEPART_MVTS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATEARRIVE_MVTS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_MVTS;
         private System.Windows.Forms.DataGridViewTextBoxColumn LIEU_MVTS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_PERS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KILOMETRE_MVTS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KILOMETRE_AVA_MVTS;
         private System.Windows.Forms.DataGridViewTextBoxColumn KILO_APRES_MVTS;
     }
 }

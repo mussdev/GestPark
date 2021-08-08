@@ -64,6 +64,7 @@ namespace GestPark
             // 
             // PanelSearchConsoCarbu
             // 
+            this.PanelSearchConsoCarbu.AutoScroll = true;
             this.PanelSearchConsoCarbu.BackColor = System.Drawing.Color.DarkOrange;
             this.PanelSearchConsoCarbu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelSearchConsoCarbu.Controls.Add(this.IcBtnExportPanCarb);

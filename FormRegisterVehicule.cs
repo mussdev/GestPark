@@ -303,17 +303,11 @@ namespace GestPark
                     DialogResult result = MessageBox.Show("Voulez vous enregister ?", "GESTPARK: CONFIRMATION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                       /* byte[] Images = null;
-                        FileStream Streem;
-                        Streem = new FileStream(ImgLocation, FileMode.Open, FileAccess.Read);
-                        BinaryReader brs = new BinaryReader(Streem);
-                        Images = brs.ReadBytes((int)Streem.Length);
-                       */
                         // Code car
                         string CodCar = generateCodeCar();
                         if (Conn.IsConnection)
                         {
-                            SqlCmd = new SqlCommand("INSERT INTO VEHICULE (ID_PARK,ID_TYPCONSO,ID_FOUR,ID_MARQ,CODE_VEHICULE,DATE_ACHA_VEHICULE,DATE_VISITE_VEHICULE,IMMATRICULATION_VEHICULE,MODELE_VEHICULE,CARTE_GRISE_VEHICULE,PRIX_VEHICULE,TYPEVITESSE_VEHICULE,TYPE_VEHICULE,ETAT_VEHICULE,CORDGPS_VEHICULE,DATECREATE_VEHICULE,ASSURANCE_VEHICULE,NOTE_VEHICULE) VALUES (@ID_PARK,@ID_TYPCONSO,@ID_FOUR,@ID_MARQ,@CODE_VEHICULE,@DATE_ACHA_VEHICULE,@DATE_VISITE_VEHICULE,@IMMATRICULATION_VEHICULE,@MODELE_VEHICULE,@CARTE_GRISE_VEHICULE,@PRIX_VEHICULE,@TYPEVITESSE_VEHICULE,@TYPE_VEHICULE,@ETAT_VEHICULE,@CORDGPS_VEHICULE,GETDATE(),@ASSURANCE_VEHICULE,@NOTE_VEHICULE)", Conn.cn);
+                            SqlCmd = new SqlCommand("INSERT INTO VEHICULE (ID_PARK,ID_TYPCONSO,ID_FOUR,ID_MARQ,CODE_VEHICULE,DATE_ACHA_VEHICULE,DATE_VISITE_VEHICULE,IMMATRICULATION_VEHICULE,MODELE_VEHICULE,CARTE_GRISE_VEHICULE,PRIX_VEHICULE,TYPEVITESSE_VEHICULE,TYPE_VEHICULE,ETAT_VEHICULE,CORDGPS_VEHICULE,DATECREATE_VEHICULE,ASSURANCE_VEHICULE,STATUT_VEHICULE,NOTE_VEHICULE,SANTE_VEHICULE) VALUES (@ID_PARK,@ID_TYPCONSO,@ID_FOUR,@ID_MARQ,@CODE_VEHICULE,@DATE_ACHA_VEHICULE,@DATE_VISITE_VEHICULE,@IMMATRICULATION_VEHICULE,@MODELE_VEHICULE,@CARTE_GRISE_VEHICULE,@PRIX_VEHICULE,@TYPEVITESSE_VEHICULE,@TYPE_VEHICULE,@ETAT_VEHICULE,@CORDGPS_VEHICULE,GETDATE(),@ASSURANCE_VEHICULE,@NOTE_VEHICULE,@STATUT_VEHICULE,@SANTE_VEHICULE)", Conn.cn);
                             SqlCmd.Parameters.AddWithValue("@ID_PARK", IdPark);
                             SqlCmd.Parameters.AddWithValue("@ID_TYPCONSO", IdTypeConso);
                             SqlCmd.Parameters.AddWithValue("@ID_FOUR", IdFour);
@@ -329,10 +323,10 @@ namespace GestPark
                             SqlCmd.Parameters.AddWithValue("@TYPE_VEHICULE", comboBoxTypVeh.Text);
                             SqlCmd.Parameters.AddWithValue("@ETAT_VEHICULE", comboBoxEtatVehi.Text);
                             SqlCmd.Parameters.AddWithValue("@CORDGPS_VEHICULE", textBoxCordGPSVehi.Text);
-                           // SqlCmd.Parameters.Add(new SqlParameter("@IMG_VEHICULE", Images));
-                            // SqlCmd.Parameters.AddWithValue("@DESCRIPTION_IMG_CAR", ImgLocation);
                             SqlCmd.Parameters.AddWithValue("@ASSURANCE_VEHICULE", DateTimePickerAssurance.Value.ToString("dd/MM/yyyy"));
                             SqlCmd.Parameters.AddWithValue("@NOTE_VEHICULE", richTextBoxNoteVehi.Text);
+                            SqlCmd.Parameters.AddWithValue("@STATUT_VEHICULE", CbxStatut_vehi.Text);
+                            SqlCmd.Parameters.AddWithValue("@SANTE_VEHICULE", CbxSanteCar.Text);
                             SqlCmd.ExecuteNonQuery();
                             MessageBox.Show("Enregistré avec succès");
                             textBoxCodVehi.Clear(); textBoxImmatVehi.Clear(); textBoxCartGriVehi.Clear(); textBoxModelVehi.Clear(); textBoxPrixVentVehi.Clear(); richTextBoxNoteVehi.Clear();

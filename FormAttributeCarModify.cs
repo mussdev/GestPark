@@ -77,11 +77,6 @@ namespace GestPark
             }
         }
 
-        private void IbtnCloseFormCreateAttrMod_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void IbtnRegisterAttributeCarToPersMod_Click(object sender, EventArgs e)
         {
             try

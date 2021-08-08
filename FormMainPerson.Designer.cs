@@ -112,7 +112,8 @@ namespace GestPark
             // 
             // panelSearchPers
             // 
-            this.panelSearchPers.BackColor = System.Drawing.Color.White;
+            this.panelSearchPers.AutoScroll = true;
+            this.panelSearchPers.BackColor = System.Drawing.Color.DarkOrange;
             this.panelSearchPers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelSearchPers.Controls.Add(this.iconBtnSearchPers);
             this.panelSearchPers.Controls.Add(this.textBxSearchPers);

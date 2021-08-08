@@ -265,6 +265,7 @@ namespace GestPark
             this.DataGridViewConsoCar.Name = "DataGridViewConsoCar";
             this.DataGridViewConsoCar.Size = new System.Drawing.Size(1118, 604);
             this.DataGridViewConsoCar.TabIndex = 37;
+            this.DataGridViewConsoCar.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewConsoCar_CellDoubleClick);
             // 
             // ID_PROV
             // 

@@ -20,8 +20,6 @@ namespace GestPark
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               // FormConnexionGestPark ConnGestParkDb = new FormConnexionGestPark();
-               //ConnGestParkDb.ShowDialog();
             }
         }
 

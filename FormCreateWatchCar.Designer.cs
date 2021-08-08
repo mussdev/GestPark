@@ -29,6 +29,7 @@ namespace GestPark
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateWatchCar));
             this.CbxVehiculeWatchCar = new System.Windows.Forms.ComboBox();
             this.RbtxNoteWatchCar = new System.Windows.Forms.RichTextBox();
             this.DatePikerWatchCar = new System.Windows.Forms.DateTimePicker();
@@ -40,7 +41,6 @@ namespace GestPark
             this.label1 = new System.Windows.Forms.Label();
             this.BtnJoindreWatchCar = new FontAwesome.Sharp.IconButton();
             this.IBtnRegisterWatchCar = new FontAwesome.Sharp.IconButton();
-            this.BtnCloseFormWatchCar = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtBMontant = new System.Windows.Forms.TextBox();
@@ -165,21 +165,6 @@ namespace GestPark
             this.IBtnRegisterWatchCar.UseVisualStyleBackColor = false;
             this.IBtnRegisterWatchCar.Click += new System.EventHandler(this.IBtnRegisterWatchCar_Click);
             // 
-            // BtnCloseFormWatchCar
-            // 
-            this.BtnCloseFormWatchCar.BackColor = System.Drawing.Color.White;
-            this.BtnCloseFormWatchCar.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.BtnCloseFormWatchCar.IconColor = System.Drawing.Color.Red;
-            this.BtnCloseFormWatchCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnCloseFormWatchCar.IconSize = 35;
-            this.BtnCloseFormWatchCar.Location = new System.Drawing.Point(672, 0);
-            this.BtnCloseFormWatchCar.Name = "BtnCloseFormWatchCar";
-            this.BtnCloseFormWatchCar.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.BtnCloseFormWatchCar.Size = new System.Drawing.Size(35, 30);
-            this.BtnCloseFormWatchCar.TabIndex = 1;
-            this.BtnCloseFormWatchCar.UseVisualStyleBackColor = false;
-            this.BtnCloseFormWatchCar.Click += new System.EventHandler(this.BtnCloseFormWatchCar_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -195,7 +180,6 @@ namespace GestPark
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
             this.panel1.Controls.Add(this.BtnJoindreWatchCar);
             this.panel1.Controls.Add(this.IBtnRegisterWatchCar);
-            this.panel1.Controls.Add(this.BtnCloseFormWatchCar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -236,10 +220,10 @@ namespace GestPark
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCreateWatchCar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormCreateWatchCar";
+            this.Text = "Enregistrer un véhicule lavé";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -259,7 +243,6 @@ namespace GestPark
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton BtnJoindreWatchCar;
         private FontAwesome.Sharp.IconButton IBtnRegisterWatchCar;
-        private FontAwesome.Sharp.IconButton BtnCloseFormWatchCar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TxtBMontant;

@@ -32,7 +32,6 @@ namespace GestPark
             this.panel1 = new System.Windows.Forms.Panel();
             this.IbtnJoindreDocAttr = new FontAwesome.Sharp.IconButton();
             this.IbtnRegisterAttributeCarToPersonn = new FontAwesome.Sharp.IconButton();
-            this.IbtnCloseFormCreateAttribute = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,7 +54,6 @@ namespace GestPark
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
             this.panel1.Controls.Add(this.IbtnJoindreDocAttr);
             this.panel1.Controls.Add(this.IbtnRegisterAttributeCarToPersonn);
-            this.panel1.Controls.Add(this.IbtnCloseFormCreateAttribute);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -94,21 +92,6 @@ namespace GestPark
             this.IbtnRegisterAttributeCarToPersonn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IbtnRegisterAttributeCarToPersonn.UseVisualStyleBackColor = false;
             this.IbtnRegisterAttributeCarToPersonn.Click += new System.EventHandler(this.IbtnRegisterAttributeCarToPersonn_Click);
-            // 
-            // IbtnCloseFormCreateAttribute
-            // 
-            this.IbtnCloseFormCreateAttribute.BackColor = System.Drawing.Color.White;
-            this.IbtnCloseFormCreateAttribute.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.IbtnCloseFormCreateAttribute.IconColor = System.Drawing.Color.Red;
-            this.IbtnCloseFormCreateAttribute.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnCloseFormCreateAttribute.IconSize = 35;
-            this.IbtnCloseFormCreateAttribute.Location = new System.Drawing.Point(672, 0);
-            this.IbtnCloseFormCreateAttribute.Name = "IbtnCloseFormCreateAttribute";
-            this.IbtnCloseFormCreateAttribute.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.IbtnCloseFormCreateAttribute.Size = new System.Drawing.Size(35, 30);
-            this.IbtnCloseFormCreateAttribute.TabIndex = 1;
-            this.IbtnCloseFormCreateAttribute.UseVisualStyleBackColor = false;
-            this.IbtnCloseFormCreateAttribute.Click += new System.EventHandler(this.IbtnCloseFormCreateAttribute_Click);
             // 
             // label1
             // 
@@ -182,8 +165,10 @@ namespace GestPark
             // 
             // TbxCodeAttr
             // 
+            this.TbxCodeAttr.BackColor = System.Drawing.Color.Khaki;
             this.TbxCodeAttr.Location = new System.Drawing.Point(98, 55);
             this.TbxCodeAttr.Name = "TbxCodeAttr";
+            this.TbxCodeAttr.ReadOnly = true;
             this.TbxCodeAttr.Size = new System.Drawing.Size(119, 22);
             this.TbxCodeAttr.TabIndex = 8;
             // 
@@ -256,7 +241,6 @@ namespace GestPark
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCreateAttributeCar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCreateAttributeCar";
@@ -269,7 +253,6 @@ namespace GestPark
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton IbtnCloseFormCreateAttribute;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

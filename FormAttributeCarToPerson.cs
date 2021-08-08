@@ -34,8 +34,8 @@ namespace GestPark
 
         private void IbtnSearchCarAttribute_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(TbxSearchAttribute.Text))
-            {
+           // if (!string.IsNullOrEmpty(TbxSearchAttribute.Text))
+          //  {
                 try
                 {
                     string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
@@ -44,9 +44,10 @@ namespace GestPark
                     {
                         if (Conn.IsConnection)
                         {
-                            SqlCmd = new SqlCommand("SELECT * FROM APPARTENIR LEFT OUTER JOIN PERSONNELS ON APPARTENIR.ID_PERS = PERSONNELS.ID_PERS LEFT OUTER JOIN VEHICULE ON APPARTENIR.ID_VEHICULE = VEHICULE.ID_VEHICULE WHERE PERSONNELS.DESCRIPTION_PERS LIKE @DESCRIPTION_PERS", Conn.cn);
-                            //  SqlCmd.Parameters.AddWithValue("@IMMATRICULATION_VEHICULE", string.Format("%{0}%", TbxSearchAttribute.Text));
-                            SqlCmd.Parameters.AddWithValue("@DESCRIPTION_PERS", string.Format("%{0}%", TbxSearchAttribute.Text));
+                            /* SqlCmd = new SqlCommand("SELECT * FROM APPARTENIR LEFT OUTER JOIN PERSONNELS ON APPARTENIR.ID_PERS = PERSONNELS.ID_PERS LEFT OUTER JOIN VEHICULE ON APPARTENIR.ID_VEHICULE = VEHICULE.ID_VEHICULE WHERE PERSONNELS.DESCRIPTION_PERS LIKE @DESCRIPTION_PERS", Conn.cn);
+                             //  SqlCmd.Parameters.AddWithValue("@IMMATRICULATION_VEHICULE", string.Format("%{0}%", TbxSearchAttribute.Text));
+                             SqlCmd.Parameters.AddWithValue("@DESCRIPTION_PERS", string.Format("%{0}%", TbxSearchAttribute.Text));  */
+                            SqlCmd = new SqlCommand("SELECT * FROM APPARTENIR LEFT OUTER JOIN PERSONNELS ON APPARTENIR.ID_PERS = PERSONNELS.ID_PERS LEFT OUTER JOIN VEHICULE ON APPARTENIR.ID_VEHICULE = VEHICULE.ID_VEHICULE", Conn.cn);
                             SqlAda = new SqlDataAdapter(SqlCmd);
                             DataSet Tb = new DataSet();
                             SqlAda.Fill(Tb);
@@ -61,7 +62,7 @@ namespace GestPark
                 {
                     MessageBox.Show(ex.ToString(), "GestPark : GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
+           // }
         }
 
         private void dataGridViewAttributeCar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

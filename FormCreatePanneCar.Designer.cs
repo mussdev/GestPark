@@ -29,6 +29,7 @@ namespace GestPark
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreatePanneCar));
             this.RtxtNotePanCar = new System.Windows.Forms.RichTextBox();
             this.DateRegisterPanCar = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@ namespace GestPark
             this.PanelMenuConsoCarb = new System.Windows.Forms.Panel();
             this.JointDocPanCar = new FontAwesome.Sharp.IconButton();
             this.IcBtnSavedPanCar = new FontAwesome.Sharp.IconButton();
-            this.IcBtnCloseFanCreatePanCarb = new FontAwesome.Sharp.IconButton();
             this.CbxVehiPanCar = new System.Windows.Forms.ComboBox();
             this.RichTxtoutheInfos = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -132,7 +132,6 @@ namespace GestPark
             this.PanelMenuConsoCarb.BackColor = System.Drawing.Color.DarkOrange;
             this.PanelMenuConsoCarb.Controls.Add(this.JointDocPanCar);
             this.PanelMenuConsoCarb.Controls.Add(this.IcBtnSavedPanCar);
-            this.PanelMenuConsoCarb.Controls.Add(this.IcBtnCloseFanCreatePanCarb);
             this.PanelMenuConsoCarb.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelMenuConsoCarb.Location = new System.Drawing.Point(0, 0);
             this.PanelMenuConsoCarb.Name = "PanelMenuConsoCarb";
@@ -172,21 +171,6 @@ namespace GestPark
             this.IcBtnSavedPanCar.UseVisualStyleBackColor = false;
             this.IcBtnSavedPanCar.Click += new System.EventHandler(this.IcBtnSavedPanCar_Click);
             // 
-            // IcBtnCloseFanCreatePanCarb
-            // 
-            this.IcBtnCloseFanCreatePanCarb.BackColor = System.Drawing.Color.White;
-            this.IcBtnCloseFanCreatePanCarb.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.IcBtnCloseFanCreatePanCarb.IconColor = System.Drawing.Color.Red;
-            this.IcBtnCloseFanCreatePanCarb.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IcBtnCloseFanCreatePanCarb.IconSize = 30;
-            this.IcBtnCloseFanCreatePanCarb.Location = new System.Drawing.Point(662, 0);
-            this.IcBtnCloseFanCreatePanCarb.Name = "IcBtnCloseFanCreatePanCarb";
-            this.IcBtnCloseFanCreatePanCarb.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.IcBtnCloseFanCreatePanCarb.Size = new System.Drawing.Size(38, 30);
-            this.IcBtnCloseFanCreatePanCarb.TabIndex = 0;
-            this.IcBtnCloseFanCreatePanCarb.UseVisualStyleBackColor = false;
-            this.IcBtnCloseFanCreatePanCarb.Click += new System.EventHandler(this.IcBtnCloseFanCreatePanCarb_Click);
-            // 
             // CbxVehiPanCar
             // 
             this.CbxVehiPanCar.FormattingEnabled = true;
@@ -219,8 +203,7 @@ namespace GestPark
             this.CbxEtatCarPan.FormattingEnabled = true;
             this.CbxEtatCarPan.Items.AddRange(new object[] {
             "",
-            "Panne",
-            "Reparé"});
+            "Panne"});
             this.CbxEtatCarPan.Location = new System.Drawing.Point(95, 101);
             this.CbxEtatCarPan.Name = "CbxEtatCarPan";
             this.CbxEtatCarPan.Size = new System.Drawing.Size(240, 23);
@@ -248,10 +231,10 @@ namespace GestPark
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PanelMenuConsoCarb);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCreatePanneCar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormCreatePanneCar";
+            this.Text = "Créer une panne de véhicule";
             this.PanelMenuConsoCarb.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -261,7 +244,6 @@ namespace GestPark
         #endregion
 
         private FontAwesome.Sharp.IconButton JointDocPanCar;
-        private FontAwesome.Sharp.IconButton IcBtnCloseFanCreatePanCarb;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
@@ -270,12 +252,12 @@ namespace GestPark
         private FontAwesome.Sharp.IconButton IcBtnSavedPanCar;
         private System.Windows.Forms.Panel PanelMenuConsoCarb;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RichTextBox RtxtNotePanCar;
         private System.Windows.Forms.DateTimePicker DateRegisterPanCar;
-        private System.Windows.Forms.TextBox TxtDescriptionPanCar;
-        private System.Windows.Forms.TextBox TxtCodePanCar;
-        private System.Windows.Forms.ComboBox CbxVehiPanCar;
-        private System.Windows.Forms.RichTextBox RichTxtoutheInfos;
-        private System.Windows.Forms.ComboBox CbxEtatCarPan;
+        public System.Windows.Forms.RichTextBox RtxtNotePanCar;
+        public System.Windows.Forms.TextBox TxtDescriptionPanCar;
+        public System.Windows.Forms.TextBox TxtCodePanCar;
+        public System.Windows.Forms.ComboBox CbxVehiPanCar;
+        public System.Windows.Forms.RichTextBox RichTxtoutheInfos;
+        public System.Windows.Forms.ComboBox CbxEtatCarPan;
     }
 }

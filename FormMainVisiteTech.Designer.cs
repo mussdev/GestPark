@@ -43,11 +43,10 @@ namespace GestPark
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.iconBtnExportReportCarVist);
             this.panel2.Controls.Add(this.iconBtnSearchFormVisit);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 32);
+            this.panel2.Location = new System.Drawing.Point(0, 26);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1118, 115);
             this.panel2.TabIndex = 3;
@@ -56,14 +55,16 @@ namespace GestPark
             // 
             this.iconBtnExportReportCarVist.BackColor = System.Drawing.Color.White;
             this.iconBtnExportReportCarVist.ForeColor = System.Drawing.Color.DarkGreen;
-            this.iconBtnExportReportCarVist.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconBtnExportReportCarVist.IconColor = System.Drawing.Color.Black;
+            this.iconBtnExportReportCarVist.IconChar = FontAwesome.Sharp.IconChar.FileExport;
+            this.iconBtnExportReportCarVist.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtnExportReportCarVist.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnExportReportCarVist.Location = new System.Drawing.Point(1019, 72);
+            this.iconBtnExportReportCarVist.IconSize = 20;
+            this.iconBtnExportReportCarVist.Location = new System.Drawing.Point(161, 0);
             this.iconBtnExportReportCarVist.Name = "iconBtnExportReportCarVist";
-            this.iconBtnExportReportCarVist.Size = new System.Drawing.Size(87, 27);
+            this.iconBtnExportReportCarVist.Size = new System.Drawing.Size(87, 26);
             this.iconBtnExportReportCarVist.TabIndex = 5;
             this.iconBtnExportReportCarVist.Text = "Exporter";
+            this.iconBtnExportReportCarVist.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnExportReportCarVist.UseVisualStyleBackColor = false;
             // 
             // iconBtnSearchFormVisit
@@ -90,25 +91,29 @@ namespace GestPark
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.Controls.Add(this.iconBtnExportReportCarVist);
             this.panel1.Controls.Add(this.iconBtnCloseFormVisit);
             this.panel1.Controls.Add(this.iconBtnCreateVisit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1118, 32);
+            this.panel1.Size = new System.Drawing.Size(1118, 26);
             this.panel1.TabIndex = 2;
             // 
             // iconBtnCloseFormVisit
             // 
+            this.iconBtnCloseFormVisit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.iconBtnCloseFormVisit.BackColor = System.Drawing.Color.White;
             this.iconBtnCloseFormVisit.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.iconBtnCloseFormVisit.IconColor = System.Drawing.Color.Red;
             this.iconBtnCloseFormVisit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnCloseFormVisit.IconSize = 35;
-            this.iconBtnCloseFormVisit.Location = new System.Drawing.Point(1077, 0);
+            this.iconBtnCloseFormVisit.IconSize = 25;
+            this.iconBtnCloseFormVisit.Location = new System.Drawing.Point(1087, 0);
             this.iconBtnCloseFormVisit.Name = "iconBtnCloseFormVisit";
             this.iconBtnCloseFormVisit.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
-            this.iconBtnCloseFormVisit.Size = new System.Drawing.Size(41, 32);
+            this.iconBtnCloseFormVisit.Size = new System.Drawing.Size(31, 20);
             this.iconBtnCloseFormVisit.TabIndex = 5;
             this.iconBtnCloseFormVisit.UseVisualStyleBackColor = false;
             this.iconBtnCloseFormVisit.Click += new System.EventHandler(this.iconBtnCloseFormVisit_Click);
@@ -121,10 +126,10 @@ namespace GestPark
             this.iconBtnCreateVisit.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.iconBtnCreateVisit.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtnCreateVisit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnCreateVisit.IconSize = 30;
+            this.iconBtnCreateVisit.IconSize = 20;
             this.iconBtnCreateVisit.Location = new System.Drawing.Point(0, 0);
             this.iconBtnCreateVisit.Name = "iconBtnCreateVisit";
-            this.iconBtnCreateVisit.Size = new System.Drawing.Size(177, 32);
+            this.iconBtnCreateVisit.Size = new System.Drawing.Size(155, 26);
             this.iconBtnCreateVisit.TabIndex = 3;
             this.iconBtnCreateVisit.Text = "Saisir visite technique";
             this.iconBtnCreateVisit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

@@ -69,11 +69,6 @@ namespace GestPark
             }
         }
 
-        private void IcbtnCloseFormCreateParking_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         // Display parking
         private void DisplayParking()
         {

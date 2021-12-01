@@ -69,6 +69,7 @@ namespace GestPark
             // 
             // DatePikerWatchCar
             // 
+            this.DatePikerWatchCar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DatePikerWatchCar.Location = new System.Drawing.Point(499, 61);
             this.DatePikerWatchCar.Name = "DatePikerWatchCar";
             this.DatePikerWatchCar.Size = new System.Drawing.Size(200, 22);
@@ -142,9 +143,9 @@ namespace GestPark
             this.BtnJoindreWatchCar.IconSize = 25;
             this.BtnJoindreWatchCar.Location = new System.Drawing.Point(98, 0);
             this.BtnJoindreWatchCar.Name = "BtnJoindreWatchCar";
-            this.BtnJoindreWatchCar.Size = new System.Drawing.Size(99, 30);
+            this.BtnJoindreWatchCar.Size = new System.Drawing.Size(106, 30);
             this.BtnJoindreWatchCar.TabIndex = 3;
-            this.BtnJoindreWatchCar.Text = "Joindre";
+            this.BtnJoindreWatchCar.Text = "Joindre doc.";
             this.BtnJoindreWatchCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnJoindreWatchCar.UseVisualStyleBackColor = false;
             // 

@@ -24,8 +24,13 @@ namespace GestPark
 
         private void iconBtnCreateEntretien_Click(object sender, EventArgs e)
         {
-            Form FormEntretien = new FormCreateEntretient();
+            Form FormEntretien = new FormCreateEntretien();
             FormEntretien.ShowDialog();
+        }
+
+        private void BtnExportCarEntretien_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

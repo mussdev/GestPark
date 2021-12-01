@@ -27,6 +27,38 @@ namespace GestPark
             this.Close();
         }
 
+        
+
+        // Display all brand car
+        private void displaybrandCar()
+        {
+
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
+                ConnectDB Conn = new ConnectDB(connectionString);
+                // Request
+                using (Conn.cn)
+                {
+                    if (Conn.IsConnection)
+                    {
+                        sqlAda = new SqlDataAdapter("SELECT*FROM MARQUE", Conn.cn);
+                        DataTable dtbl = new DataTable();
+                        sqlAda.Fill(dtbl);
+
+                        // Fill DataGridView dgvMarq
+                        dataGridViewMarq.AutoGenerateColumns = false;
+                        dataGridViewMarq.DataSource = dtbl;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
         private void btnValiderMarq_Click(object sender, EventArgs e)
         {
             try
@@ -68,41 +100,10 @@ namespace GestPark
                 }
 
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        // Display all brand car
-        private void displaybrandCar()
-        {
-
-            try
-            {
-                string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
-                ConnectDB Conn = new ConnectDB(connectionString);
-                // Request
-                using (Conn.cn)
-                {
-                    if (Conn.IsConnection)
-                    {
-                        sqlAda = new SqlDataAdapter("SELECT*FROM MARQUE", Conn.cn);
-                        DataTable dtbl = new DataTable();
-                        sqlAda.Fill(dtbl);
-
-                        // Fill DataGridView dgvMarq
-                        dataGridViewMarq.AutoGenerateColumns = false;
-                        dataGridViewMarq.DataSource = dtbl;
-                    }
-                }
-            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
-
     }
 }

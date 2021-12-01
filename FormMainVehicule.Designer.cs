@@ -163,6 +163,7 @@ namespace GestPark
             // 
             // panelMenuVehicule
             // 
+            this.panelMenuVehicule.BackColor = System.Drawing.Color.LightGreen;
             this.panelMenuVehicule.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenuVehicule.Location = new System.Drawing.Point(0, 24);
             this.panelMenuVehicule.Name = "panelMenuVehicule";

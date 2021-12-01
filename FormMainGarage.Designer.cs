@@ -70,6 +70,9 @@ namespace GestPark
             // 
             // IcBtnCloseFormGarage
             // 
+            this.IcBtnCloseFormGarage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IcBtnCloseFormGarage.BackColor = System.Drawing.Color.White;
             this.IcBtnCloseFormGarage.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.IcBtnCloseFormGarage.IconColor = System.Drawing.Color.Red;
@@ -109,28 +112,32 @@ namespace GestPark
             // 
             this.IbtnModifyGarage.BackColor = System.Drawing.Color.DarkOrange;
             this.IbtnModifyGarage.ForeColor = System.Drawing.Color.White;
-            this.IbtnModifyGarage.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.IbtnModifyGarage.IconColor = System.Drawing.Color.Black;
+            this.IbtnModifyGarage.IconChar = FontAwesome.Sharp.IconChar.Registered;
+            this.IbtnModifyGarage.IconColor = System.Drawing.Color.White;
             this.IbtnModifyGarage.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnModifyGarage.Location = new System.Drawing.Point(154, 483);
+            this.IbtnModifyGarage.IconSize = 20;
+            this.IbtnModifyGarage.Location = new System.Drawing.Point(134, 483);
             this.IbtnModifyGarage.Name = "IbtnModifyGarage";
-            this.IbtnModifyGarage.Size = new System.Drawing.Size(75, 32);
+            this.IbtnModifyGarage.Size = new System.Drawing.Size(95, 32);
             this.IbtnModifyGarage.TabIndex = 11;
             this.IbtnModifyGarage.Text = "Modifier";
+            this.IbtnModifyGarage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IbtnModifyGarage.UseVisualStyleBackColor = false;
             // 
             // IbtnRegisterGarage
             // 
             this.IbtnRegisterGarage.BackColor = System.Drawing.Color.DarkGreen;
             this.IbtnRegisterGarage.ForeColor = System.Drawing.Color.White;
-            this.IbtnRegisterGarage.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.IbtnRegisterGarage.IconColor = System.Drawing.Color.Black;
+            this.IbtnRegisterGarage.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.IbtnRegisterGarage.IconColor = System.Drawing.Color.White;
             this.IbtnRegisterGarage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IbtnRegisterGarage.IconSize = 20;
             this.IbtnRegisterGarage.Location = new System.Drawing.Point(249, 483);
             this.IbtnRegisterGarage.Name = "IbtnRegisterGarage";
-            this.IbtnRegisterGarage.Size = new System.Drawing.Size(75, 32);
+            this.IbtnRegisterGarage.Size = new System.Drawing.Size(95, 32);
             this.IbtnRegisterGarage.TabIndex = 10;
             this.IbtnRegisterGarage.Text = "Enregistrer";
+            this.IbtnRegisterGarage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IbtnRegisterGarage.UseVisualStyleBackColor = false;
             this.IbtnRegisterGarage.Click += new System.EventHandler(this.IbtnRegisterGarage_Click);
             // 

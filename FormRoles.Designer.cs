@@ -70,6 +70,9 @@ namespace GestPark
             // 
             // IbtnCloseFormRole
             // 
+            this.IbtnCloseFormRole.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IbtnCloseFormRole.BackColor = System.Drawing.Color.White;
             this.IbtnCloseFormRole.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.IbtnCloseFormRole.IconColor = System.Drawing.Color.Red;

@@ -191,7 +191,7 @@ namespace GestPark
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.ToString(), "GestPark: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

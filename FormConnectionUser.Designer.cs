@@ -176,7 +176,6 @@ namespace GestPark
             this.Name = "FormConnectionUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormConnectionUser";
-            this.Load += new System.EventHandler(this.FormConnectionUser_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -11,13 +11,14 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using System.Globalization;
 
 namespace GestPark
 {
     public partial class FormRegisterVehicule : Form
     {
         private SqlCommand SqlCmd;
-        private string IdFour,IdMarq,IdTypeConso,IdPark;
+        private int IdFour, IdMarq, IdTypeConso, IdPark;
         private SqlDataReader MyReader;
         private SqlDataAdapter SqlAda;
         //private string ImgLocation = null;
@@ -27,6 +28,33 @@ namespace GestPark
         {
             InitializeComponent();
         }
+
+        //private string VerifyEmplCar()
+        //{
+        //    if (string.IsNullOrEmpty(comboBoxEmplVehi.Text))
+        //    {
+        //        IdPark = "0";
+        //    }
+        //    return IdPark;
+        //}
+
+        //private string VerifyMarqCar()
+        //{
+        //    if (string.IsNullOrEmpty(comboBoxMarqVehi.Text))
+        //    {
+        //        IdMarq = "0";
+        //    }
+        //    return IdMarq;
+        //}
+
+        //private string VerifyTypConsoCar()
+        //{
+        //    if (string.IsNullOrEmpty(comboBoxTypConsoVehi.Text))
+        //    {
+        //        IdTypeConso = "0";
+        //    }
+        //    return IdTypeConso;
+        //}
 
         private void iconBtnCloseFormRegistVehi_Click(object sender, EventArgs e)
         {
@@ -45,7 +73,7 @@ namespace GestPark
                     MyReader = SqlCmd.ExecuteReader();
                     while (MyReader.Read())
                     {
-                        IdMarq = MyReader[0].ToString();
+                        IdMarq = int.Parse(MyReader[0].ToString());
                     }
                 }
             }
@@ -67,6 +95,9 @@ namespace GestPark
             fillComboboxParking();
             fillComboboxMarque();
             fillComboboxTypConso();
+            IdTypeConso = comboBoxTypConsoVehi.SelectedIndex = 0;
+            IdMarq =  comboBoxMarqVehi.SelectedIndex = 0;
+            IdPark = comboBoxEmplVehi.SelectedIndex = 0;
         }
 
         private void iconBtnProprSearch_Click(object sender, EventArgs e)
@@ -139,7 +170,7 @@ namespace GestPark
                         MyReader = SqlCmd.ExecuteReader();
                         while (MyReader.Read())
                         {
-                            IdTypeConso = MyReader[0].ToString();
+                            IdTypeConso = int.Parse(MyReader[0].ToString());
                         }
                     }
                 }
@@ -163,7 +194,7 @@ namespace GestPark
                     MyReader = SqlCmd.ExecuteReader();
                     while (MyReader.Read())
                     {
-                        IdFour = MyReader[0].ToString();
+                        IdFour = int.Parse(MyReader[0].ToString());
                     }
                 }
                 
@@ -186,7 +217,8 @@ namespace GestPark
                     MyReader = SqlCmd.ExecuteReader();
                     while (MyReader.Read())
                     {
-                        IdPark = MyReader[0].ToString();
+                        IdPark = int.Parse(MyReader[0].ToString());
+                        // MessageBox.Show(" " + IdPark);
                     }
                 }
             }
@@ -222,7 +254,6 @@ namespace GestPark
                 MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
 
         // Method to fill the combobox type of consommation
         private void fillComboboxTypConso()
@@ -307,7 +338,7 @@ namespace GestPark
                         string CodCar = generateCodeCar();
                         if (Conn.IsConnection)
                         {
-                            SqlCmd = new SqlCommand("INSERT INTO VEHICULE (ID_PARK,ID_TYPCONSO,ID_FOUR,ID_MARQ,CODE_VEHICULE,DATE_ACHA_VEHICULE,DATE_VISITE_VEHICULE,IMMATRICULATION_VEHICULE,MODELE_VEHICULE,CARTE_GRISE_VEHICULE,PRIX_VEHICULE,TYPEVITESSE_VEHICULE,TYPE_VEHICULE,ETAT_VEHICULE,CORDGPS_VEHICULE,DATECREATE_VEHICULE,ASSURANCE_VEHICULE,STATUT_VEHICULE,NOTE_VEHICULE,SANTE_VEHICULE) VALUES (@ID_PARK,@ID_TYPCONSO,@ID_FOUR,@ID_MARQ,@CODE_VEHICULE,@DATE_ACHA_VEHICULE,@DATE_VISITE_VEHICULE,@IMMATRICULATION_VEHICULE,@MODELE_VEHICULE,@CARTE_GRISE_VEHICULE,@PRIX_VEHICULE,@TYPEVITESSE_VEHICULE,@TYPE_VEHICULE,@ETAT_VEHICULE,@CORDGPS_VEHICULE,GETDATE(),@ASSURANCE_VEHICULE,@NOTE_VEHICULE,@STATUT_VEHICULE,@SANTE_VEHICULE)", Conn.cn);
+                            SqlCmd = new SqlCommand("INSERT INTO VEHICULE (ID_PARK,ID_TYPCONSO,ID_FOUR,ID_MARQ,CODE_VEHICULE,DATE_ACHA_VEHICULE,DATE_VISITE_VEHICULE,IMMATRICULATION_VEHICULE,MODELE_VEHICULE,CARTE_GRISE_VEHICULE,PRIX_VEHICULE,TYPEVITESSE_VEHICULE,TYPE_VEHICULE,ETAT_VEHICULE,CORDGPS_VEHICULE,DATECREATE_VEHICULE,ASSURANCE_VEHICULE,NOTE_VEHICULE,STATUT_VEHICULE,SANTE_VEHICULE,TOTALKILOMETRAGE_VEHICULE) VALUES (@ID_PARK,@ID_TYPCONSO,@ID_FOUR,@ID_MARQ,@CODE_VEHICULE,@DATE_ACHA_VEHICULE,@DATE_VISITE_VEHICULE,@IMMATRICULATION_VEHICULE,@MODELE_VEHICULE,@CARTE_GRISE_VEHICULE,@PRIX_VEHICULE,@TYPEVITESSE_VEHICULE,@TYPE_VEHICULE,@ETAT_VEHICULE,@CORDGPS_VEHICULE,GETDATE(),@ASSURANCE_VEHICULE,@NOTE_VEHICULE,@STATUT_VEHICULE,@SANTE_VEHICULE,@TOTALKILOMETRAGE_VEHICULE)", Conn.cn);
                             SqlCmd.Parameters.AddWithValue("@ID_PARK", IdPark);
                             SqlCmd.Parameters.AddWithValue("@ID_TYPCONSO", IdTypeConso);
                             SqlCmd.Parameters.AddWithValue("@ID_FOUR", IdFour);
@@ -324,12 +355,13 @@ namespace GestPark
                             SqlCmd.Parameters.AddWithValue("@ETAT_VEHICULE", comboBoxEtatVehi.Text);
                             SqlCmd.Parameters.AddWithValue("@CORDGPS_VEHICULE", textBoxCordGPSVehi.Text);
                             SqlCmd.Parameters.AddWithValue("@ASSURANCE_VEHICULE", DateTimePickerAssurance.Value.ToString("dd/MM/yyyy"));
-                            SqlCmd.Parameters.AddWithValue("@NOTE_VEHICULE", richTextBoxNoteVehi.Text);
+                            SqlCmd.Parameters.AddWithValue("@NOTE_VEHICULE", RTxtNoteCar.Text);
                             SqlCmd.Parameters.AddWithValue("@STATUT_VEHICULE", CbxStatut_vehi.Text);
                             SqlCmd.Parameters.AddWithValue("@SANTE_VEHICULE", CbxSanteCar.Text);
+                            SqlCmd.Parameters.AddWithValue("@TOTALKILOMETRAGE_VEHICULE", decimal.Parse(MeleageCar()));
                             SqlCmd.ExecuteNonQuery();
-                            MessageBox.Show("Enregistré avec succès");
-                            textBoxCodVehi.Clear(); textBoxImmatVehi.Clear(); textBoxCartGriVehi.Clear(); textBoxModelVehi.Clear(); textBoxPrixVentVehi.Clear(); richTextBoxNoteVehi.Clear();
+                            MessageBox.Show("Enregistré avec succès !!!");
+                            textBoxCodVehi.Clear(); textBoxImmatVehi.Clear(); textBoxCartGriVehi.Clear(); textBoxModelVehi.Clear(); textBoxPrixVentVehi.Clear(); RTxtNoteCar.Clear(); TxtKilometrageCar.Clear(); comboBoxEmplVehi.Text = null; comboBoxMarqVehi.Text = null;comboBoxTypConsoVehi.Text = null;
                         }
                     }
                 }
@@ -379,6 +411,18 @@ namespace GestPark
             }
 
             return textBoxCodVehi.Text;
+        }
+
+        private string MeleageCar()
+        {
+            if (string.IsNullOrEmpty(TxtKilometrageCar.Text))
+            {
+                return TxtKilometrageCar.Text = "0";
+            }
+            else
+            {
+                return TxtKilometrageCar.Text;
+            }
         }
     }
 }

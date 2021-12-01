@@ -112,13 +112,13 @@ namespace GestPark
                             if (Conn.IsConnection)
                             {
                                 string CodMouvement = generateCodeMvt();
-                                SqlCmd = new SqlCommand("INSERT INTO MOUVEMENTS (ID_PERS,ID_VEHICULE,CODE_MVTS,STATUT_MVTS,KILOMETRE_AVA_MVTS,KILO_APRES_MVTS,DESCRIPTION_MVTS,LIEU_MVTS,NOTE_MVTS,DATEDEPART_MVTS,DATECREATE_MVTS) VALUES (@ID_PERS,@ID_VEHICULE,@CODE_MVTS,@STATUT_MVTS,@KILOMETRE_AVA_MVTS,@KILO_APRES_MVTS,@DESCRIPTION_MVTS,@LIEU_MVTS,@NOTE_MVTS,@DATEDEPART_MVTS,GETDATE()) ", Conn.cn);
+                                SqlCmd = new SqlCommand("INSERT INTO MOUVEMENTS (ID_PERS,ID_VEHICULE,CODE_MVTS,STATUT_MVTS,DESCRIPTION_MVTS,LIEU_MVTS,NOTE_MVTS,DATEDEPART_MVTS,TIMESTART_MVTS,DATECREATE_MVTS) VALUES (@ID_PERS,@ID_VEHICULE,@CODE_MVTS,@STATUT_MVTS,@DESCRIPTION_MVTS,@LIEU_MVTS,@NOTE_MVTS,@TIMESTART_MVTS,@DATEDEPART_MVTS,GETDATE()) ", Conn.cn);
                                 SqlCmd.Parameters.AddWithValue("@ID_PERS", IdConducteur);
                                 SqlCmd.Parameters.AddWithValue("@ID_VEHICULE", IdVehicule);
                                 SqlCmd.Parameters.AddWithValue("@CODE_MVTS", CodMouvement);
                                 SqlCmd.Parameters.AddWithValue("@STATUT_MVTS", CbxStatutMvt.Text);
-                                SqlCmd.Parameters.AddWithValue("@KILOMETRE_AVA_MVTS", decimal.Parse(TbxKilometreAvantMvt.Text));
-                                SqlCmd.Parameters.AddWithValue("@KILO_APRES_MVTS", decimal.Parse(TbxKiloParcouApresMvt.Text));
+                                SqlCmd.Parameters.AddWithValue("@TIMESTART_MVTS", TimeStartMvt.Value.ToString("hh:mm:ss"));
+                                //SqlCmd.Parameters.AddWithValue("@KILO_APRES_MVTS", decimal.Parse(TbxKiloParcouApresMvt.Text));
                                 SqlCmd.Parameters.AddWithValue("@DESCRIPTION_MVTS", TbxDescriptionMvt.Text);
                                 SqlCmd.Parameters.AddWithValue("@LIEU_MVTS", CbxLieuMvts.Text);
                                 SqlCmd.Parameters.AddWithValue("@NOTE_MVTS", RtbxNoteMvt.Text);
@@ -165,12 +165,12 @@ namespace GestPark
                         }
                         MyReader.Close();
                         // Calculate total kilometers of car
-                        SqlCmd = new SqlCommand("SELECT SUM((KILO_APRES_MVTS + KILOMETRE_AVA_MVTS)) AS KILOTOTAL FROM MOUVEMENTS LEFT OUTER JOIN VEHICULE ON MOUVEMENTS.ID_VEHICULE=VEHICULE.ID_VEHICULE WHERE VEHICULE.ID_VEHICULE = '" + IdVehicule + "'", Conn.cn);
-                        MyReader = SqlCmd.ExecuteReader();
-                        while (MyReader.Read())
-                        {
-                            TbxKilometreAvantMvt.Text = MyReader[0].ToString();
-                        }
+                        //SqlCmd = new SqlCommand("SELECT SUM((KILO_APRES_MVTS + KILOMETRE_AVA_MVTS)) AS KILOTOTAL FROM MOUVEMENTS LEFT OUTER JOIN VEHICULE ON MOUVEMENTS.ID_VEHICULE=VEHICULE.ID_VEHICULE WHERE VEHICULE.ID_VEHICULE = '" + IdVehicule + "'", Conn.cn);
+                        //MyReader = SqlCmd.ExecuteReader();
+                        //while (MyReader.Read())
+                        //{
+                        //    TbxKilometreAvantMvt.Text = MyReader[0].ToString();
+                        //}
                     }
                 }
             }

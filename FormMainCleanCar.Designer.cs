@@ -145,7 +145,6 @@ namespace GestPark
             this.PanelSearchConsoCarbu.AutoScroll = true;
             this.PanelSearchConsoCarbu.BackColor = System.Drawing.Color.DarkOrange;
             this.PanelSearchConsoCarbu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PanelSearchConsoCarbu.Controls.Add(this.IcBtnExportCleanCar);
             this.PanelSearchConsoCarbu.Controls.Add(this.IbtnSearchWatchCar);
             this.PanelSearchConsoCarbu.Controls.Add(this.TbxSearchCleanCar);
             this.PanelSearchConsoCarbu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -162,9 +161,9 @@ namespace GestPark
             this.IcBtnExportCleanCar.IconColor = System.Drawing.Color.DarkGreen;
             this.IcBtnExportCleanCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IcBtnExportCleanCar.IconSize = 20;
-            this.IcBtnExportCleanCar.Location = new System.Drawing.Point(1021, 71);
+            this.IcBtnExportCleanCar.Location = new System.Drawing.Point(90, -2);
             this.IcBtnExportCleanCar.Name = "IcBtnExportCleanCar";
-            this.IcBtnExportCleanCar.Size = new System.Drawing.Size(90, 27);
+            this.IcBtnExportCleanCar.Size = new System.Drawing.Size(90, 26);
             this.IcBtnExportCleanCar.TabIndex = 2;
             this.IcBtnExportCleanCar.Text = "Exporter";
             this.IcBtnExportCleanCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -286,6 +285,7 @@ namespace GestPark
             // 
             this.PanelTitleMenuConsoCarb.BackColor = System.Drawing.Color.DarkOrange;
             this.PanelTitleMenuConsoCarb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PanelTitleMenuConsoCarb.Controls.Add(this.IcBtnExportCleanCar);
             this.PanelTitleMenuConsoCarb.Controls.Add(this.IbtnCloseFormCleanCar);
             this.PanelTitleMenuConsoCarb.Controls.Add(this.IbtnCreateCleanCar);
             this.PanelTitleMenuConsoCarb.Dock = System.Windows.Forms.DockStyle.Top;
@@ -296,6 +296,9 @@ namespace GestPark
             // 
             // IbtnCloseFormCleanCar
             // 
+            this.IbtnCloseFormCleanCar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IbtnCloseFormCleanCar.BackColor = System.Drawing.Color.White;
             this.IbtnCloseFormCleanCar.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.IbtnCloseFormCleanCar.IconColor = System.Drawing.Color.Red;
@@ -316,10 +319,10 @@ namespace GestPark
             this.IbtnCreateCleanCar.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.IbtnCreateCleanCar.IconColor = System.Drawing.Color.DarkGreen;
             this.IbtnCreateCleanCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnCreateCleanCar.IconSize = 25;
+            this.IbtnCreateCleanCar.IconSize = 20;
             this.IbtnCreateCleanCar.Location = new System.Drawing.Point(-2, -2);
             this.IbtnCreateCleanCar.Name = "IbtnCreateCleanCar";
-            this.IbtnCreateCleanCar.Size = new System.Drawing.Size(77, 27);
+            this.IbtnCreateCleanCar.Size = new System.Drawing.Size(86, 27);
             this.IbtnCreateCleanCar.TabIndex = 0;
             this.IbtnCreateCleanCar.Text = "Créer";
             this.IbtnCreateCleanCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

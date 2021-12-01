@@ -43,12 +43,13 @@ namespace GestPark
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.Controls.Add(this.iconBtnExportReportCarAss);
             this.panel1.Controls.Add(this.iconBtnCloseFormAssur);
             this.panel1.Controls.Add(this.iconBtnCreateAssur);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1118, 32);
+            this.panel1.Size = new System.Drawing.Size(1118, 26);
             this.panel1.TabIndex = 0;
             // 
             // iconBtnCloseFormAssur
@@ -57,11 +58,11 @@ namespace GestPark
             this.iconBtnCloseFormAssur.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.iconBtnCloseFormAssur.IconColor = System.Drawing.Color.Red;
             this.iconBtnCloseFormAssur.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnCloseFormAssur.IconSize = 35;
-            this.iconBtnCloseFormAssur.Location = new System.Drawing.Point(1077, 0);
+            this.iconBtnCloseFormAssur.IconSize = 30;
+            this.iconBtnCloseFormAssur.Location = new System.Drawing.Point(1082, 0);
             this.iconBtnCloseFormAssur.Name = "iconBtnCloseFormAssur";
             this.iconBtnCloseFormAssur.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
-            this.iconBtnCloseFormAssur.Size = new System.Drawing.Size(41, 32);
+            this.iconBtnCloseFormAssur.Size = new System.Drawing.Size(36, 27);
             this.iconBtnCloseFormAssur.TabIndex = 5;
             this.iconBtnCloseFormAssur.UseVisualStyleBackColor = false;
             this.iconBtnCloseFormAssur.Click += new System.EventHandler(this.iconBtnCloseFormAssur_Click);
@@ -74,10 +75,10 @@ namespace GestPark
             this.iconBtnCreateAssur.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.iconBtnCreateAssur.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtnCreateAssur.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnCreateAssur.IconSize = 30;
+            this.iconBtnCreateAssur.IconSize = 20;
             this.iconBtnCreateAssur.Location = new System.Drawing.Point(0, 0);
             this.iconBtnCreateAssur.Name = "iconBtnCreateAssur";
-            this.iconBtnCreateAssur.Size = new System.Drawing.Size(177, 32);
+            this.iconBtnCreateAssur.Size = new System.Drawing.Size(121, 26);
             this.iconBtnCreateAssur.TabIndex = 3;
             this.iconBtnCreateAssur.Text = "Saisir assurance";
             this.iconBtnCreateAssur.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -87,11 +88,10 @@ namespace GestPark
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.iconBtnExportReportCarAss);
             this.panel2.Controls.Add(this.iconBtnSearchFormAssur);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 32);
+            this.panel2.Location = new System.Drawing.Point(0, 26);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1118, 115);
             this.panel2.TabIndex = 1;
@@ -100,14 +100,16 @@ namespace GestPark
             // 
             this.iconBtnExportReportCarAss.BackColor = System.Drawing.Color.White;
             this.iconBtnExportReportCarAss.ForeColor = System.Drawing.Color.DarkGreen;
-            this.iconBtnExportReportCarAss.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconBtnExportReportCarAss.IconColor = System.Drawing.Color.Black;
+            this.iconBtnExportReportCarAss.IconChar = FontAwesome.Sharp.IconChar.FileExport;
+            this.iconBtnExportReportCarAss.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtnExportReportCarAss.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnExportReportCarAss.Location = new System.Drawing.Point(1019, 72);
+            this.iconBtnExportReportCarAss.IconSize = 20;
+            this.iconBtnExportReportCarAss.Location = new System.Drawing.Point(127, 0);
             this.iconBtnExportReportCarAss.Name = "iconBtnExportReportCarAss";
-            this.iconBtnExportReportCarAss.Size = new System.Drawing.Size(87, 27);
+            this.iconBtnExportReportCarAss.Size = new System.Drawing.Size(93, 27);
             this.iconBtnExportReportCarAss.TabIndex = 5;
             this.iconBtnExportReportCarAss.Text = "Exporter";
+            this.iconBtnExportReportCarAss.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnExportReportCarAss.UseVisualStyleBackColor = false;
             // 
             // iconBtnSearchFormAssur
@@ -117,10 +119,10 @@ namespace GestPark
             this.iconBtnSearchFormAssur.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtnSearchFormAssur.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnSearchFormAssur.IconSize = 20;
-            this.iconBtnSearchFormAssur.Location = new System.Drawing.Point(868, 35);
+            this.iconBtnSearchFormAssur.Location = new System.Drawing.Point(868, 38);
             this.iconBtnSearchFormAssur.Name = "iconBtnSearchFormAssur";
             this.iconBtnSearchFormAssur.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
-            this.iconBtnSearchFormAssur.Size = new System.Drawing.Size(51, 27);
+            this.iconBtnSearchFormAssur.Size = new System.Drawing.Size(36, 22);
             this.iconBtnSearchFormAssur.TabIndex = 4;
             this.iconBtnSearchFormAssur.UseVisualStyleBackColor = false;
             // 

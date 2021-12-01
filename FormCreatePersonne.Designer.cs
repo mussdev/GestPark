@@ -31,6 +31,7 @@ namespace GestPark
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreatePersonne));
             this.paneltitlePerson = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconBtnSavedPerson = new FontAwesome.Sharp.IconButton();
             this.panelInformationPerson = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -74,12 +75,31 @@ namespace GestPark
             // paneltitlePerson
             // 
             this.paneltitlePerson.BackColor = System.Drawing.Color.DarkOrange;
+            this.paneltitlePerson.Controls.Add(this.iconButton1);
             this.paneltitlePerson.Controls.Add(this.iconBtnSavedPerson);
             this.paneltitlePerson.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltitlePerson.Location = new System.Drawing.Point(0, 0);
             this.paneltitlePerson.Name = "paneltitlePerson";
-            this.paneltitlePerson.Size = new System.Drawing.Size(853, 31);
+            this.paneltitlePerson.Size = new System.Drawing.Size(853, 25);
             this.paneltitlePerson.TabIndex = 0;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.White;
+            this.iconButton1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FileImport;
+            this.iconButton1.IconColor = System.Drawing.Color.DarkGreen;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.Location = new System.Drawing.Point(123, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.iconButton1.Size = new System.Drawing.Size(104, 28);
+            this.iconButton1.TabIndex = 4;
+            this.iconButton1.Text = "Joindre doc.";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // iconBtnSavedPerson
             // 
@@ -88,10 +108,10 @@ namespace GestPark
             this.iconBtnSavedPerson.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.iconBtnSavedPerson.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtnSavedPerson.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnSavedPerson.IconSize = 30;
+            this.iconBtnSavedPerson.IconSize = 20;
             this.iconBtnSavedPerson.Location = new System.Drawing.Point(0, 0);
             this.iconBtnSavedPerson.Name = "iconBtnSavedPerson";
-            this.iconBtnSavedPerson.Size = new System.Drawing.Size(117, 31);
+            this.iconBtnSavedPerson.Size = new System.Drawing.Size(117, 28);
             this.iconBtnSavedPerson.TabIndex = 1;
             this.iconBtnSavedPerson.Text = "Enregistrer";
             this.iconBtnSavedPerson.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -127,9 +147,9 @@ namespace GestPark
             this.panelInformationPerson.Controls.Add(this.label2);
             this.panelInformationPerson.Controls.Add(this.label1);
             this.panelInformationPerson.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelInformationPerson.Location = new System.Drawing.Point(0, 31);
+            this.panelInformationPerson.Location = new System.Drawing.Point(0, 25);
             this.panelInformationPerson.Name = "panelInformationPerson";
-            this.panelInformationPerson.Size = new System.Drawing.Size(853, 559);
+            this.panelInformationPerson.Size = new System.Drawing.Size(853, 414);
             this.panelInformationPerson.TabIndex = 1;
             // 
             // panel1
@@ -548,6 +568,7 @@ namespace GestPark
             // 
             // dateTimePickerDateNaissPers
             // 
+            this.dateTimePickerDateNaissPers.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerDateNaissPers.Location = new System.Drawing.Point(119, 193);
             this.dateTimePickerDateNaissPers.Name = "dateTimePickerDateNaissPers";
             this.dateTimePickerDateNaissPers.Size = new System.Drawing.Size(223, 25);
@@ -555,6 +576,7 @@ namespace GestPark
             // 
             // dateTimePickerDateCreate
             // 
+            this.dateTimePickerDateCreate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerDateCreate.Location = new System.Drawing.Point(610, 18);
             this.dateTimePickerDateCreate.Name = "dateTimePickerDateCreate";
             this.dateTimePickerDateCreate.Size = new System.Drawing.Size(205, 25);
@@ -599,9 +621,9 @@ namespace GestPark
             // 
             // richTextBoxNotePers
             // 
-            this.richTextBoxNotePers.Location = new System.Drawing.Point(119, 425);
+            this.richTextBoxNotePers.Location = new System.Drawing.Point(610, 333);
             this.richTextBoxNotePers.Name = "richTextBoxNotePers";
-            this.richTextBoxNotePers.Size = new System.Drawing.Size(716, 115);
+            this.richTextBoxNotePers.Size = new System.Drawing.Size(225, 61);
             this.richTextBoxNotePers.TabIndex = 16;
             this.richTextBoxNotePers.Text = "";
             // 
@@ -619,7 +641,7 @@ namespace GestPark
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(5, 425);
+            this.label14.Location = new System.Drawing.Point(516, 336);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(44, 17);
             this.label14.TabIndex = 13;
@@ -719,7 +741,7 @@ namespace GestPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 590);
+            this.ClientSize = new System.Drawing.Size(853, 439);
             this.Controls.Add(this.panelInformationPerson);
             this.Controls.Add(this.paneltitlePerson);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -775,5 +797,6 @@ namespace GestPark
         private System.Windows.Forms.TextBox textBxTelPers;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

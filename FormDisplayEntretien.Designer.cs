@@ -184,12 +184,14 @@ namespace GestPark
             this.iconBtUploadDoc.IconChar = FontAwesome.Sharp.IconChar.Upload;
             this.iconBtUploadDoc.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtUploadDoc.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtUploadDoc.IconSize = 35;
-            this.iconBtUploadDoc.Location = new System.Drawing.Point(45, 0);
+            this.iconBtUploadDoc.IconSize = 20;
+            this.iconBtUploadDoc.Location = new System.Drawing.Point(106, 0);
             this.iconBtUploadDoc.Name = "iconBtUploadDoc";
             this.iconBtUploadDoc.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconBtUploadDoc.Size = new System.Drawing.Size(39, 33);
+            this.iconBtUploadDoc.Size = new System.Drawing.Size(117, 30);
             this.iconBtUploadDoc.TabIndex = 3;
+            this.iconBtUploadDoc.Text = "Joindre doc.";
+            this.iconBtUploadDoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtUploadDoc.UseVisualStyleBackColor = false;
             // 
             // label6
@@ -204,15 +206,18 @@ namespace GestPark
             // 
             // iconBtnCloseFormCreateEntretien
             // 
+            this.iconBtnCloseFormCreateEntretien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.iconBtnCloseFormCreateEntretien.BackColor = System.Drawing.Color.White;
             this.iconBtnCloseFormCreateEntretien.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.iconBtnCloseFormCreateEntretien.IconColor = System.Drawing.Color.Red;
             this.iconBtnCloseFormCreateEntretien.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnCloseFormCreateEntretien.IconSize = 35;
-            this.iconBtnCloseFormCreateEntretien.Location = new System.Drawing.Point(894, 0);
+            this.iconBtnCloseFormCreateEntretien.Location = new System.Drawing.Point(898, 0);
             this.iconBtnCloseFormCreateEntretien.Name = "iconBtnCloseFormCreateEntretien";
             this.iconBtnCloseFormCreateEntretien.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconBtnCloseFormCreateEntretien.Size = new System.Drawing.Size(39, 33);
+            this.iconBtnCloseFormCreateEntretien.Size = new System.Drawing.Size(35, 30);
             this.iconBtnCloseFormCreateEntretien.TabIndex = 1;
             this.iconBtnCloseFormCreateEntretien.UseVisualStyleBackColor = false;
             // 
@@ -222,16 +227,19 @@ namespace GestPark
             this.iconBtnSavedEntretien.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.iconBtnSavedEntretien.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtnSavedEntretien.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnSavedEntretien.IconSize = 35;
+            this.iconBtnSavedEntretien.IconSize = 20;
             this.iconBtnSavedEntretien.Location = new System.Drawing.Point(0, 0);
             this.iconBtnSavedEntretien.Name = "iconBtnSavedEntretien";
             this.iconBtnSavedEntretien.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconBtnSavedEntretien.Size = new System.Drawing.Size(39, 33);
+            this.iconBtnSavedEntretien.Size = new System.Drawing.Size(100, 30);
             this.iconBtnSavedEntretien.TabIndex = 0;
+            this.iconBtnSavedEntretien.Text = "Enregistrer";
+            this.iconBtnSavedEntretien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnSavedEntretien.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(645, 185);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(236, 22);
@@ -254,7 +262,7 @@ namespace GestPark
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(933, 33);
+            this.panel1.Size = new System.Drawing.Size(933, 30);
             this.panel1.TabIndex = 19;
             // 
             // FormDisplayEntretien

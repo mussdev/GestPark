@@ -65,12 +65,13 @@ namespace GestPark
             // 
             this.RtxtNoteRepairCar.Location = new System.Drawing.Point(95, 336);
             this.RtxtNoteRepairCar.Name = "RtxtNoteRepairCar";
-            this.RtxtNoteRepairCar.Size = new System.Drawing.Size(593, 130);
+            this.RtxtNoteRepairCar.Size = new System.Drawing.Size(593, 91);
             this.RtxtNoteRepairCar.TabIndex = 72;
             this.RtxtNoteRepairCar.Text = "";
             // 
             // DateRegisterRepairCar
             // 
+            this.DateRegisterRepairCar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateRegisterRepairCar.Location = new System.Drawing.Point(448, 56);
             this.DateRegisterRepairCar.Name = "DateRegisterRepairCar";
             this.DateRegisterRepairCar.Size = new System.Drawing.Size(240, 22);
@@ -142,12 +143,13 @@ namespace GestPark
             // PanelMenuConsoCarb
             // 
             this.PanelMenuConsoCarb.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelMenuConsoCarb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelMenuConsoCarb.Controls.Add(this.JointDocModifyPanCar);
             this.PanelMenuConsoCarb.Controls.Add(this.IcBtnSavedRepaiCar);
             this.PanelMenuConsoCarb.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelMenuConsoCarb.Location = new System.Drawing.Point(0, 0);
             this.PanelMenuConsoCarb.Name = "PanelMenuConsoCarb";
-            this.PanelMenuConsoCarb.Size = new System.Drawing.Size(700, 30);
+            this.PanelMenuConsoCarb.Size = new System.Drawing.Size(700, 28);
             this.PanelMenuConsoCarb.TabIndex = 63;
             // 
             // JointDocModifyPanCar
@@ -157,10 +159,10 @@ namespace GestPark
             this.JointDocModifyPanCar.IconChar = FontAwesome.Sharp.IconChar.FileUpload;
             this.JointDocModifyPanCar.IconColor = System.Drawing.Color.DarkGreen;
             this.JointDocModifyPanCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.JointDocModifyPanCar.IconSize = 25;
-            this.JointDocModifyPanCar.Location = new System.Drawing.Point(95, 0);
+            this.JointDocModifyPanCar.IconSize = 20;
+            this.JointDocModifyPanCar.Location = new System.Drawing.Point(107, -2);
             this.JointDocModifyPanCar.Name = "JointDocModifyPanCar";
-            this.JointDocModifyPanCar.Size = new System.Drawing.Size(128, 30);
+            this.JointDocModifyPanCar.Size = new System.Drawing.Size(128, 28);
             this.JointDocModifyPanCar.TabIndex = 2;
             this.JointDocModifyPanCar.Text = "Joindre fichier";
             this.JointDocModifyPanCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -173,10 +175,10 @@ namespace GestPark
             this.IcBtnSavedRepaiCar.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.IcBtnSavedRepaiCar.IconColor = System.Drawing.Color.DarkGreen;
             this.IcBtnSavedRepaiCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IcBtnSavedRepaiCar.IconSize = 25;
-            this.IcBtnSavedRepaiCar.Location = new System.Drawing.Point(0, 0);
+            this.IcBtnSavedRepaiCar.IconSize = 20;
+            this.IcBtnSavedRepaiCar.Location = new System.Drawing.Point(-2, -2);
             this.IcBtnSavedRepaiCar.Name = "IcBtnSavedRepaiCar";
-            this.IcBtnSavedRepaiCar.Size = new System.Drawing.Size(101, 30);
+            this.IcBtnSavedRepaiCar.Size = new System.Drawing.Size(103, 28);
             this.IcBtnSavedRepaiCar.TabIndex = 1;
             this.IcBtnSavedRepaiCar.Text = "Enregistrer";
             this.IcBtnSavedRepaiCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -241,6 +243,7 @@ namespace GestPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(700, 469);
             this.Controls.Add(this.TxtAmountRepair);
             this.Controls.Add(this.label7);

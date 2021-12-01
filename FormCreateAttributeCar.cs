@@ -69,11 +69,10 @@ namespace GestPark
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString(), "GestPark: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return TbxCodeAttr.Text;
         }
-
 
         private void CbxProprietAttr_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -97,7 +96,7 @@ namespace GestPark
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString(), "GestPark: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -122,7 +121,7 @@ namespace GestPark
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString(), "GestPark: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void IbtnRegisterAttributeCarToPersonn_Click(object sender, EventArgs e)
@@ -154,14 +153,14 @@ namespace GestPark
                                 SqlCmd.Parameters.AddWithValue("@DATE_ATTRI", DatePikerCreateAttr.Value.ToString("dd/MM/yyyy"));
                                 SqlCmd.Parameters.AddWithValue("@NOTE_ATTRI", RbtxNoteAttr.Text);
                                 SqlCmd.ExecuteNonQuery();
-                                MessageBox.Show("Enregistré avec succès");
+                                MessageBox.Show("Enregistré avec succès !!!","GestPark: Informations",MessageBoxButtons.OK);
                                 this.Close();
                             }
                         }
                     }
                     catch(Exception ex)
                     {
-                        MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.ToString(), "GestPark: Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

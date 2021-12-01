@@ -72,7 +72,7 @@ namespace GestPark
             // panelMenuGestPark
             // 
             this.panelMenuGestPark.AutoScroll = true;
-            this.panelMenuGestPark.BackColor = System.Drawing.Color.DarkGreen;
+            this.panelMenuGestPark.BackColor = System.Drawing.Color.LightGreen;
             this.panelMenuGestPark.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelMenuGestPark.Controls.Add(this.panelAdminSubMenu);
             this.panelMenuGestPark.Controls.Add(this.iconBtnAdmin);

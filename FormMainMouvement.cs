@@ -74,11 +74,11 @@ namespace GestPark
             FormModif.TbxDescriptionMvtMod.Text = this.DataGridViewMvt.CurrentRow.Cells[4].Value?.ToString();
             FormModif.CbxLieuMvtsMod.Text = this.DataGridViewMvt.CurrentRow.Cells[5].Value?.ToString();
             FormModif.CbxConducMvtMod.Text = this.DataGridViewMvt.CurrentRow.Cells[6].Value?.ToString();
-            FormModif.TbxKilometreMvtAvantMod.Text = this.DataGridViewMvt.CurrentRow.Cells[7].Value?.ToString();
-            FormModif.TbxKilometreMvtApresMod.Text = this.DataGridViewMvt.CurrentRow.Cells[8].Value?.ToString();
-            FormModif.DateDepartMvtMod.Text = this.DataGridViewMvt.CurrentRow.Cells[9].Value?.ToString();
-            FormModif.DateArriveeMvtMod.Text = this.DataGridViewMvt.CurrentRow.Cells[10].Value?.ToString();
-            FormModif.RtbxNoteMvtMod.Text = this.DataGridViewMvt.CurrentRow.Cells[11].Value?.ToString();
+            //FormModif.TbxKilometreMvtAvantMod.Text = this.DataGridViewMvt.CurrentRow.Cells[7].Value?.ToString();
+            //FormModif.TbxKilometreMvtApresMod.Text = this.DataGridViewMvt.CurrentRow.Cells[8].Value?.ToString();
+            FormModif.DateDepartMvtMod.Text = this.DataGridViewMvt.CurrentRow.Cells[7].Value?.ToString();
+            FormModif.DateArriveeMvtMod.Text = this.DataGridViewMvt.CurrentRow.Cells[8].Value?.ToString();
+            FormModif.RtbxNoteMvtMod.Text = this.DataGridViewMvt.CurrentRow.Cells[9].Value?.ToString();
             FormModif.ShowDialog();
         }
     }

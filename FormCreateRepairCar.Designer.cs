@@ -49,7 +49,9 @@ namespace GestPark
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtMecanicienRepairCar = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.PanelMenuConsoCarb.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // CbxRepaiCar
@@ -63,15 +65,16 @@ namespace GestPark
             // 
             // RtxtNoteRepairCar
             // 
-            this.RtxtNoteRepairCar.Location = new System.Drawing.Point(95, 336);
+            this.RtxtNoteRepairCar.Location = new System.Drawing.Point(95, 333);
             this.RtxtNoteRepairCar.Name = "RtxtNoteRepairCar";
-            this.RtxtNoteRepairCar.Size = new System.Drawing.Size(593, 130);
+            this.RtxtNoteRepairCar.Size = new System.Drawing.Size(665, 91);
             this.RtxtNoteRepairCar.TabIndex = 72;
             this.RtxtNoteRepairCar.Text = "";
             // 
             // DateRegisterRepairCar
             // 
-            this.DateRegisterRepairCar.Location = new System.Drawing.Point(448, 56);
+            this.DateRegisterRepairCar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateRegisterRepairCar.Location = new System.Drawing.Point(95, 23);
             this.DateRegisterRepairCar.Name = "DateRegisterRepairCar";
             this.DateRegisterRepairCar.Size = new System.Drawing.Size(240, 22);
             this.DateRegisterRepairCar.TabIndex = 71;
@@ -79,7 +82,7 @@ namespace GestPark
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(367, 62);
+            this.label6.Location = new System.Drawing.Point(14, 29);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 15);
             this.label6.TabIndex = 70;
@@ -103,7 +106,7 @@ namespace GestPark
             // 
             // TxtCodeRepaiCar
             // 
-            this.TxtCodeRepaiCar.BackColor = System.Drawing.Color.Khaki;
+            this.TxtCodeRepaiCar.BackColor = System.Drawing.Color.YellowGreen;
             this.TxtCodeRepaiCar.Location = new System.Drawing.Point(95, 59);
             this.TxtCodeRepaiCar.Name = "TxtCodeRepaiCar";
             this.TxtCodeRepaiCar.ReadOnly = true;
@@ -141,13 +144,14 @@ namespace GestPark
             // 
             // PanelMenuConsoCarb
             // 
-            this.PanelMenuConsoCarb.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelMenuConsoCarb.BackColor = System.Drawing.Color.Khaki;
+            this.PanelMenuConsoCarb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelMenuConsoCarb.Controls.Add(this.JointDocModifyPanCar);
             this.PanelMenuConsoCarb.Controls.Add(this.IcBtnSavedRepaiCar);
             this.PanelMenuConsoCarb.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelMenuConsoCarb.Location = new System.Drawing.Point(0, 0);
             this.PanelMenuConsoCarb.Name = "PanelMenuConsoCarb";
-            this.PanelMenuConsoCarb.Size = new System.Drawing.Size(700, 30);
+            this.PanelMenuConsoCarb.Size = new System.Drawing.Size(772, 28);
             this.PanelMenuConsoCarb.TabIndex = 63;
             // 
             // JointDocModifyPanCar
@@ -157,10 +161,10 @@ namespace GestPark
             this.JointDocModifyPanCar.IconChar = FontAwesome.Sharp.IconChar.FileUpload;
             this.JointDocModifyPanCar.IconColor = System.Drawing.Color.DarkGreen;
             this.JointDocModifyPanCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.JointDocModifyPanCar.IconSize = 25;
-            this.JointDocModifyPanCar.Location = new System.Drawing.Point(95, 0);
+            this.JointDocModifyPanCar.IconSize = 20;
+            this.JointDocModifyPanCar.Location = new System.Drawing.Point(107, -2);
             this.JointDocModifyPanCar.Name = "JointDocModifyPanCar";
-            this.JointDocModifyPanCar.Size = new System.Drawing.Size(128, 30);
+            this.JointDocModifyPanCar.Size = new System.Drawing.Size(128, 28);
             this.JointDocModifyPanCar.TabIndex = 2;
             this.JointDocModifyPanCar.Text = "Joindre fichier";
             this.JointDocModifyPanCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -173,10 +177,10 @@ namespace GestPark
             this.IcBtnSavedRepaiCar.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.IcBtnSavedRepaiCar.IconColor = System.Drawing.Color.DarkGreen;
             this.IcBtnSavedRepaiCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IcBtnSavedRepaiCar.IconSize = 25;
-            this.IcBtnSavedRepaiCar.Location = new System.Drawing.Point(0, 0);
+            this.IcBtnSavedRepaiCar.IconSize = 20;
+            this.IcBtnSavedRepaiCar.Location = new System.Drawing.Point(-2, -2);
             this.IcBtnSavedRepaiCar.Name = "IcBtnSavedRepaiCar";
-            this.IcBtnSavedRepaiCar.Size = new System.Drawing.Size(101, 30);
+            this.IcBtnSavedRepaiCar.Size = new System.Drawing.Size(103, 28);
             this.IcBtnSavedRepaiCar.TabIndex = 1;
             this.IcBtnSavedRepaiCar.Text = "Enregistrer";
             this.IcBtnSavedRepaiCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -208,6 +212,8 @@ namespace GestPark
             this.TxtAmountRepair.Name = "TxtAmountRepair";
             this.TxtAmountRepair.Size = new System.Drawing.Size(240, 22);
             this.TxtAmountRepair.TabIndex = 80;
+            this.TxtAmountRepair.Text = "0";
+            this.TxtAmountRepair.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -222,7 +228,7 @@ namespace GestPark
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(366, 119);
+            this.label5.Location = new System.Drawing.Point(13, 86);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 15);
             this.label5.TabIndex = 77;
@@ -230,28 +236,38 @@ namespace GestPark
             // 
             // TxtMecanicienRepairCar
             // 
-            this.TxtMecanicienRepairCar.BackColor = System.Drawing.Color.Khaki;
-            this.TxtMecanicienRepairCar.Location = new System.Drawing.Point(448, 112);
+            this.TxtMecanicienRepairCar.BackColor = System.Drawing.Color.YellowGreen;
+            this.TxtMecanicienRepairCar.Location = new System.Drawing.Point(95, 79);
             this.TxtMecanicienRepairCar.Name = "TxtMecanicienRepairCar";
             this.TxtMecanicienRepairCar.ReadOnly = true;
             this.TxtMecanicienRepairCar.Size = new System.Drawing.Size(240, 22);
             this.TxtMecanicienRepairCar.TabIndex = 78;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.DateRegisterRepairCar);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.TxtMecanicienRepairCar);
+            this.panel1.Location = new System.Drawing.Point(402, 43);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(364, 141);
+            this.panel1.TabIndex = 81;
+            // 
             // FormCreateRepairCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 469);
+            this.BackColor = System.Drawing.Color.Khaki;
+            this.ClientSize = new System.Drawing.Size(772, 469);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.TxtAmountRepair);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.TxtMecanicienRepairCar);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.CbxGarageRepairCar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.CbxRepaiCar);
             this.Controls.Add(this.RtxtNoteRepairCar);
-            this.Controls.Add(this.DateRegisterRepairCar);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.TxtDescripRepaiCar);
             this.Controls.Add(this.TxtCodeRepaiCar);
@@ -265,6 +281,8 @@ namespace GestPark
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Créer une reparation de vehicule";
             this.PanelMenuConsoCarb.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +308,6 @@ namespace GestPark
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox TxtMecanicienRepairCar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

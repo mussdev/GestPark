@@ -32,20 +32,24 @@ namespace GestPark
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainGestPark));
             this.panelMenuGestPark = new System.Windows.Forms.Panel();
             this.panelAdminSubMenu = new System.Windows.Forms.Panel();
+            this.panelTabBordsSubMenu = new System.Windows.Forms.Panel();
+            this.panelMaintenanceSubMenu = new System.Windows.Forms.Panel();
+            this.panelGestParkSubMenu = new System.Windows.Forms.Panel();
+            this.panelOutilGestParkSubMenu = new System.Windows.Forms.Panel();
+            this.panelConnectionUser = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelFormResultMenu = new System.Windows.Forms.Panel();
             this.iconBtnOutilAdmin = new FontAwesome.Sharp.IconButton();
             this.iconBtnRoles = new FontAwesome.Sharp.IconButton();
             this.iconBtnUsers = new FontAwesome.Sharp.IconButton();
             this.iconBtnAdmin = new FontAwesome.Sharp.IconButton();
-            this.panelTabBordsSubMenu = new System.Windows.Forms.Panel();
             this.iconBtnSuiviVehicul = new FontAwesome.Sharp.IconButton();
             this.iconBtnTabBord = new FontAwesome.Sharp.IconButton();
-            this.panelMaintenanceSubMenu = new System.Windows.Forms.Panel();
             this.iconBtnVisit = new FontAwesome.Sharp.IconButton();
             this.iconBtnAssurance = new FontAwesome.Sharp.IconButton();
             this.iconBtnEntretien = new FontAwesome.Sharp.IconButton();
             this.iconBtnMaintenance = new FontAwesome.Sharp.IconButton();
-            this.panelGestParkSubMenu = new System.Windows.Forms.Panel();
-            this.panelOutilGestParkSubMenu = new System.Windows.Forms.Panel();
+            this.BtnCarteCarburant = new FontAwesome.Sharp.IconButton();
             this.iconBtnFournisseur = new FontAwesome.Sharp.IconButton();
             this.iconBtnGarage = new FontAwesome.Sharp.IconButton();
             this.iconBtnConducteur = new FontAwesome.Sharp.IconButton();
@@ -55,10 +59,7 @@ namespace GestPark
             this.iconBtnVehicule = new FontAwesome.Sharp.IconButton();
             this.iconBtnParking = new FontAwesome.Sharp.IconButton();
             this.iconBtnGestPark = new FontAwesome.Sharp.IconButton();
-            this.panelConnectionUser = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.panelFormResultMenu = new System.Windows.Forms.Panel();
             this.panelMenuGestPark.SuspendLayout();
             this.panelAdminSubMenu.SuspendLayout();
             this.panelTabBordsSubMenu.SuspendLayout();
@@ -72,7 +73,7 @@ namespace GestPark
             // panelMenuGestPark
             // 
             this.panelMenuGestPark.AutoScroll = true;
-            this.panelMenuGestPark.BackColor = System.Drawing.Color.DarkGreen;
+            this.panelMenuGestPark.BackColor = System.Drawing.Color.Khaki;
             this.panelMenuGestPark.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelMenuGestPark.Controls.Add(this.panelAdminSubMenu);
             this.panelMenuGestPark.Controls.Add(this.iconBtnAdmin);
@@ -101,6 +102,96 @@ namespace GestPark
             this.panelAdminSubMenu.Name = "panelAdminSubMenu";
             this.panelAdminSubMenu.Size = new System.Drawing.Size(218, 145);
             this.panelAdminSubMenu.TabIndex = 8;
+            // 
+            // panelTabBordsSubMenu
+            // 
+            this.panelTabBordsSubMenu.BackColor = System.Drawing.Color.White;
+            this.panelTabBordsSubMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelTabBordsSubMenu.Controls.Add(this.iconBtnSuiviVehicul);
+            this.panelTabBordsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTabBordsSubMenu.Location = new System.Drawing.Point(0, 778);
+            this.panelTabBordsSubMenu.Name = "panelTabBordsSubMenu";
+            this.panelTabBordsSubMenu.Size = new System.Drawing.Size(218, 52);
+            this.panelTabBordsSubMenu.TabIndex = 6;
+            // 
+            // panelMaintenanceSubMenu
+            // 
+            this.panelMaintenanceSubMenu.BackColor = System.Drawing.Color.White;
+            this.panelMaintenanceSubMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelMaintenanceSubMenu.Controls.Add(this.iconBtnVisit);
+            this.panelMaintenanceSubMenu.Controls.Add(this.iconBtnAssurance);
+            this.panelMaintenanceSubMenu.Controls.Add(this.iconBtnEntretien);
+            this.panelMaintenanceSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMaintenanceSubMenu.Location = new System.Drawing.Point(0, 631);
+            this.panelMaintenanceSubMenu.Name = "panelMaintenanceSubMenu";
+            this.panelMaintenanceSubMenu.Size = new System.Drawing.Size(218, 112);
+            this.panelMaintenanceSubMenu.TabIndex = 4;
+            // 
+            // panelGestParkSubMenu
+            // 
+            this.panelGestParkSubMenu.BackColor = System.Drawing.Color.White;
+            this.panelGestParkSubMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelGestParkSubMenu.Controls.Add(this.panelOutilGestParkSubMenu);
+            this.panelGestParkSubMenu.Controls.Add(this.iconBtnOutilsGestPark);
+            this.panelGestParkSubMenu.Controls.Add(this.iconBtnVehicule);
+            this.panelGestParkSubMenu.Controls.Add(this.iconBtnParking);
+            this.panelGestParkSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelGestParkSubMenu.Location = new System.Drawing.Point(0, 300);
+            this.panelGestParkSubMenu.Name = "panelGestParkSubMenu";
+            this.panelGestParkSubMenu.Size = new System.Drawing.Size(218, 296);
+            this.panelGestParkSubMenu.TabIndex = 2;
+            // 
+            // panelOutilGestParkSubMenu
+            // 
+            this.panelOutilGestParkSubMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelOutilGestParkSubMenu.Controls.Add(this.BtnCarteCarburant);
+            this.panelOutilGestParkSubMenu.Controls.Add(this.iconBtnFournisseur);
+            this.panelOutilGestParkSubMenu.Controls.Add(this.iconBtnGarage);
+            this.panelOutilGestParkSubMenu.Controls.Add(this.iconBtnConducteur);
+            this.panelOutilGestParkSubMenu.Controls.Add(this.iconBtnTypConso);
+            this.panelOutilGestParkSubMenu.Controls.Add(this.iconBtnMarque);
+            this.panelOutilGestParkSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelOutilGestParkSubMenu.Location = new System.Drawing.Point(0, 105);
+            this.panelOutilGestParkSubMenu.Name = "panelOutilGestParkSubMenu";
+            this.panelOutilGestParkSubMenu.Size = new System.Drawing.Size(214, 184);
+            this.panelOutilGestParkSubMenu.TabIndex = 3;
+            // 
+            // panelConnectionUser
+            // 
+            this.panelConnectionUser.BackColor = System.Drawing.Color.White;
+            this.panelConnectionUser.Controls.Add(this.label1);
+            this.panelConnectionUser.Controls.Add(this.iconPictureBox1);
+            this.panelConnectionUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelConnectionUser.Location = new System.Drawing.Point(0, 0);
+            this.panelConnectionUser.Name = "panelConnectionUser";
+            this.panelConnectionUser.Size = new System.Drawing.Size(218, 265);
+            this.panelConnectionUser.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Khaki;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(228, 26);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "PARC AUTOMMOBILE";
+            // 
+            // panelFormResultMenu
+            // 
+            this.panelFormResultMenu.AutoScroll = true;
+            this.panelFormResultMenu.BackColor = System.Drawing.Color.White;
+            this.panelFormResultMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelFormResultMenu.BackgroundImage")));
+            this.panelFormResultMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelFormResultMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFormResultMenu.Location = new System.Drawing.Point(239, 0);
+            this.panelFormResultMenu.Name = "panelFormResultMenu";
+            this.panelFormResultMenu.Size = new System.Drawing.Size(1118, 731);
+            this.panelFormResultMenu.TabIndex = 1;
             // 
             // iconBtnOutilAdmin
             // 
@@ -164,11 +255,12 @@ namespace GestPark
             // 
             // iconBtnAdmin
             // 
-            this.iconBtnAdmin.BackColor = System.Drawing.Color.DarkOrange;
+            this.iconBtnAdmin.BackColor = System.Drawing.Color.Khaki;
             this.iconBtnAdmin.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconBtnAdmin.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
             this.iconBtnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconBtnAdmin.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnAdmin.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtnAdmin.IconChar = FontAwesome.Sharp.IconChar.Cogs;
             this.iconBtnAdmin.IconColor = System.Drawing.Color.White;
             this.iconBtnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -181,17 +273,6 @@ namespace GestPark
             this.iconBtnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnAdmin.UseVisualStyleBackColor = false;
             this.iconBtnAdmin.Click += new System.EventHandler(this.iconBtnAdmin_Click);
-            // 
-            // panelTabBordsSubMenu
-            // 
-            this.panelTabBordsSubMenu.BackColor = System.Drawing.Color.White;
-            this.panelTabBordsSubMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelTabBordsSubMenu.Controls.Add(this.iconBtnSuiviVehicul);
-            this.panelTabBordsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTabBordsSubMenu.Location = new System.Drawing.Point(0, 778);
-            this.panelTabBordsSubMenu.Name = "panelTabBordsSubMenu";
-            this.panelTabBordsSubMenu.Size = new System.Drawing.Size(218, 52);
-            this.panelTabBordsSubMenu.TabIndex = 6;
             // 
             // iconBtnSuiviVehicul
             // 
@@ -215,11 +296,12 @@ namespace GestPark
             // 
             // iconBtnTabBord
             // 
-            this.iconBtnTabBord.BackColor = System.Drawing.Color.DarkOrange;
+            this.iconBtnTabBord.BackColor = System.Drawing.Color.Khaki;
             this.iconBtnTabBord.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconBtnTabBord.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
             this.iconBtnTabBord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconBtnTabBord.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnTabBord.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtnTabBord.IconChar = FontAwesome.Sharp.IconChar.ChartArea;
             this.iconBtnTabBord.IconColor = System.Drawing.Color.White;
             this.iconBtnTabBord.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -232,19 +314,6 @@ namespace GestPark
             this.iconBtnTabBord.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnTabBord.UseVisualStyleBackColor = false;
             this.iconBtnTabBord.Click += new System.EventHandler(this.iconBtnTabBord_Click);
-            // 
-            // panelMaintenanceSubMenu
-            // 
-            this.panelMaintenanceSubMenu.BackColor = System.Drawing.Color.White;
-            this.panelMaintenanceSubMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelMaintenanceSubMenu.Controls.Add(this.iconBtnVisit);
-            this.panelMaintenanceSubMenu.Controls.Add(this.iconBtnAssurance);
-            this.panelMaintenanceSubMenu.Controls.Add(this.iconBtnEntretien);
-            this.panelMaintenanceSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMaintenanceSubMenu.Location = new System.Drawing.Point(0, 631);
-            this.panelMaintenanceSubMenu.Name = "panelMaintenanceSubMenu";
-            this.panelMaintenanceSubMenu.Size = new System.Drawing.Size(218, 112);
-            this.panelMaintenanceSubMenu.TabIndex = 4;
             // 
             // iconBtnVisit
             // 
@@ -311,11 +380,12 @@ namespace GestPark
             // 
             // iconBtnMaintenance
             // 
-            this.iconBtnMaintenance.BackColor = System.Drawing.Color.DarkOrange;
+            this.iconBtnMaintenance.BackColor = System.Drawing.Color.Khaki;
             this.iconBtnMaintenance.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconBtnMaintenance.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
             this.iconBtnMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconBtnMaintenance.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnMaintenance.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtnMaintenance.IconChar = FontAwesome.Sharp.IconChar.Wrench;
             this.iconBtnMaintenance.IconColor = System.Drawing.Color.White;
             this.iconBtnMaintenance.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -329,33 +399,26 @@ namespace GestPark
             this.iconBtnMaintenance.UseVisualStyleBackColor = false;
             this.iconBtnMaintenance.Click += new System.EventHandler(this.iconBtnMaintenance_Click);
             // 
-            // panelGestParkSubMenu
+            // BtnCarteCarburant
             // 
-            this.panelGestParkSubMenu.BackColor = System.Drawing.Color.White;
-            this.panelGestParkSubMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelGestParkSubMenu.Controls.Add(this.panelOutilGestParkSubMenu);
-            this.panelGestParkSubMenu.Controls.Add(this.iconBtnOutilsGestPark);
-            this.panelGestParkSubMenu.Controls.Add(this.iconBtnVehicule);
-            this.panelGestParkSubMenu.Controls.Add(this.iconBtnParking);
-            this.panelGestParkSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelGestParkSubMenu.Location = new System.Drawing.Point(0, 300);
-            this.panelGestParkSubMenu.Name = "panelGestParkSubMenu";
-            this.panelGestParkSubMenu.Size = new System.Drawing.Size(218, 296);
-            this.panelGestParkSubMenu.TabIndex = 2;
-            // 
-            // panelOutilGestParkSubMenu
-            // 
-            this.panelOutilGestParkSubMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelOutilGestParkSubMenu.Controls.Add(this.iconBtnFournisseur);
-            this.panelOutilGestParkSubMenu.Controls.Add(this.iconBtnGarage);
-            this.panelOutilGestParkSubMenu.Controls.Add(this.iconBtnConducteur);
-            this.panelOutilGestParkSubMenu.Controls.Add(this.iconBtnTypConso);
-            this.panelOutilGestParkSubMenu.Controls.Add(this.iconBtnMarque);
-            this.panelOutilGestParkSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelOutilGestParkSubMenu.Location = new System.Drawing.Point(0, 105);
-            this.panelOutilGestParkSubMenu.Name = "panelOutilGestParkSubMenu";
-            this.panelOutilGestParkSubMenu.Size = new System.Drawing.Size(214, 184);
-            this.panelOutilGestParkSubMenu.TabIndex = 3;
+            this.BtnCarteCarburant.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCarteCarburant.FlatAppearance.BorderSize = 0;
+            this.BtnCarteCarburant.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.BtnCarteCarburant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCarteCarburant.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCarteCarburant.ForeColor = System.Drawing.Color.DarkGreen;
+            this.BtnCarteCarburant.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnCarteCarburant.IconColor = System.Drawing.Color.Black;
+            this.BtnCarteCarburant.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnCarteCarburant.Location = new System.Drawing.Point(0, 147);
+            this.BtnCarteCarburant.Name = "BtnCarteCarburant";
+            this.BtnCarteCarburant.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.BtnCarteCarburant.Size = new System.Drawing.Size(210, 31);
+            this.BtnCarteCarburant.TabIndex = 5;
+            this.BtnCarteCarburant.Text = "Carte carburant";
+            this.BtnCarteCarburant.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCarteCarburant.UseVisualStyleBackColor = true;
+            this.BtnCarteCarburant.Click += new System.EventHandler(this.BtnCarteCarburant_Click);
             // 
             // iconBtnFournisseur
             // 
@@ -364,13 +427,14 @@ namespace GestPark
             this.iconBtnFournisseur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.iconBtnFournisseur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconBtnFournisseur.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnFournisseur.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtnFournisseur.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconBtnFournisseur.IconColor = System.Drawing.Color.Black;
             this.iconBtnFournisseur.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnFournisseur.Location = new System.Drawing.Point(0, 140);
+            this.iconBtnFournisseur.Location = new System.Drawing.Point(0, 116);
             this.iconBtnFournisseur.Name = "iconBtnFournisseur";
             this.iconBtnFournisseur.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.iconBtnFournisseur.Size = new System.Drawing.Size(210, 35);
+            this.iconBtnFournisseur.Size = new System.Drawing.Size(210, 31);
             this.iconBtnFournisseur.TabIndex = 4;
             this.iconBtnFournisseur.Text = "Fournisseur";
             this.iconBtnFournisseur.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -384,13 +448,14 @@ namespace GestPark
             this.iconBtnGarage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.iconBtnGarage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconBtnGarage.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnGarage.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtnGarage.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconBtnGarage.IconColor = System.Drawing.Color.Black;
             this.iconBtnGarage.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnGarage.Location = new System.Drawing.Point(0, 105);
+            this.iconBtnGarage.Location = new System.Drawing.Point(0, 87);
             this.iconBtnGarage.Name = "iconBtnGarage";
             this.iconBtnGarage.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.iconBtnGarage.Size = new System.Drawing.Size(210, 35);
+            this.iconBtnGarage.Size = new System.Drawing.Size(210, 29);
             this.iconBtnGarage.TabIndex = 3;
             this.iconBtnGarage.Text = "Garage";
             this.iconBtnGarage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -404,13 +469,14 @@ namespace GestPark
             this.iconBtnConducteur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.iconBtnConducteur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconBtnConducteur.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnConducteur.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtnConducteur.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconBtnConducteur.IconColor = System.Drawing.Color.Black;
             this.iconBtnConducteur.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnConducteur.Location = new System.Drawing.Point(0, 70);
+            this.iconBtnConducteur.Location = new System.Drawing.Point(0, 58);
             this.iconBtnConducteur.Name = "iconBtnConducteur";
             this.iconBtnConducteur.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.iconBtnConducteur.Size = new System.Drawing.Size(210, 35);
+            this.iconBtnConducteur.Size = new System.Drawing.Size(210, 29);
             this.iconBtnConducteur.TabIndex = 2;
             this.iconBtnConducteur.Text = "Personnels";
             this.iconBtnConducteur.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -424,13 +490,14 @@ namespace GestPark
             this.iconBtnTypConso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.iconBtnTypConso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconBtnTypConso.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnTypConso.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtnTypConso.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconBtnTypConso.IconColor = System.Drawing.Color.Black;
             this.iconBtnTypConso.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnTypConso.Location = new System.Drawing.Point(0, 35);
+            this.iconBtnTypConso.Location = new System.Drawing.Point(0, 29);
             this.iconBtnTypConso.Name = "iconBtnTypConso";
             this.iconBtnTypConso.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.iconBtnTypConso.Size = new System.Drawing.Size(210, 35);
+            this.iconBtnTypConso.Size = new System.Drawing.Size(210, 29);
             this.iconBtnTypConso.TabIndex = 1;
             this.iconBtnTypConso.Text = "Type Consommation";
             this.iconBtnTypConso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -444,13 +511,14 @@ namespace GestPark
             this.iconBtnMarque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.iconBtnMarque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconBtnMarque.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnMarque.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtnMarque.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconBtnMarque.IconColor = System.Drawing.Color.Black;
             this.iconBtnMarque.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnMarque.Location = new System.Drawing.Point(0, 0);
             this.iconBtnMarque.Name = "iconBtnMarque";
             this.iconBtnMarque.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.iconBtnMarque.Size = new System.Drawing.Size(210, 35);
+            this.iconBtnMarque.Size = new System.Drawing.Size(210, 29);
             this.iconBtnMarque.TabIndex = 0;
             this.iconBtnMarque.Text = "Marque";
             this.iconBtnMarque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -519,11 +587,12 @@ namespace GestPark
             // 
             // iconBtnGestPark
             // 
-            this.iconBtnGestPark.BackColor = System.Drawing.Color.DarkOrange;
+            this.iconBtnGestPark.BackColor = System.Drawing.Color.Khaki;
             this.iconBtnGestPark.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconBtnGestPark.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
             this.iconBtnGestPark.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconBtnGestPark.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnGestPark.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtnGestPark.IconChar = FontAwesome.Sharp.IconChar.Parking;
             this.iconBtnGestPark.IconColor = System.Drawing.Color.White;
             this.iconBtnGestPark.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -537,31 +606,6 @@ namespace GestPark
             this.iconBtnGestPark.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnGestPark.UseVisualStyleBackColor = false;
             this.iconBtnGestPark.Click += new System.EventHandler(this.iconBtnGestPark_Click);
-            // 
-            // panelConnectionUser
-            // 
-            this.panelConnectionUser.BackColor = System.Drawing.Color.White;
-            this.panelConnectionUser.Controls.Add(this.label1);
-            this.panelConnectionUser.Controls.Add(this.iconPictureBox1);
-            this.panelConnectionUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConnectionUser.Location = new System.Drawing.Point(0, 0);
-            this.panelConnectionUser.Name = "panelConnectionUser";
-            this.panelConnectionUser.Size = new System.Drawing.Size(218, 265);
-            this.panelConnectionUser.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkOrange;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 26);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "PARC AUTOMMOBILE";
             // 
             // iconPictureBox1
             // 
@@ -577,18 +621,6 @@ namespace GestPark
             this.iconPictureBox1.Size = new System.Drawing.Size(163, 135);
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
-            // 
-            // panelFormResultMenu
-            // 
-            this.panelFormResultMenu.AutoScroll = true;
-            this.panelFormResultMenu.BackColor = System.Drawing.Color.White;
-            this.panelFormResultMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelFormResultMenu.BackgroundImage")));
-            this.panelFormResultMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelFormResultMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormResultMenu.Location = new System.Drawing.Point(239, 0);
-            this.panelFormResultMenu.Name = "panelFormResultMenu";
-            this.panelFormResultMenu.Size = new System.Drawing.Size(1118, 731);
-            this.panelFormResultMenu.TabIndex = 1;
             // 
             // FormMainGestPark
             // 
@@ -644,6 +676,7 @@ namespace GestPark
         private FontAwesome.Sharp.IconButton iconBtnVisit;
         private FontAwesome.Sharp.IconButton iconBtnAssurance;
         private FontAwesome.Sharp.IconButton iconBtnEntretien;
+        private FontAwesome.Sharp.IconButton BtnCarteCarburant;
     }
 }
 

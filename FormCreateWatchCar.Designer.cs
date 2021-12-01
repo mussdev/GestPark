@@ -45,7 +45,9 @@ namespace GestPark
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtBMontant = new System.Windows.Forms.TextBox();
             this.TxtBLieuWatchCar = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // CbxVehiculeWatchCar
@@ -63,20 +65,21 @@ namespace GestPark
             // 
             this.RbtxNoteWatchCar.Location = new System.Drawing.Point(98, 265);
             this.RbtxNoteWatchCar.Name = "RbtxNoteWatchCar";
-            this.RbtxNoteWatchCar.Size = new System.Drawing.Size(601, 128);
+            this.RbtxNoteWatchCar.Size = new System.Drawing.Size(664, 101);
             this.RbtxNoteWatchCar.TabIndex = 29;
             this.RbtxNoteWatchCar.Text = "";
             // 
             // DatePikerWatchCar
             // 
-            this.DatePikerWatchCar.Location = new System.Drawing.Point(499, 61);
+            this.DatePikerWatchCar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DatePikerWatchCar.Location = new System.Drawing.Point(112, 6);
             this.DatePikerWatchCar.Name = "DatePikerWatchCar";
             this.DatePikerWatchCar.Size = new System.Drawing.Size(200, 22);
             this.DatePikerWatchCar.TabIndex = 26;
             // 
             // TbxCodeWatchCar
             // 
-            this.TbxCodeWatchCar.BackColor = System.Drawing.Color.Khaki;
+            this.TbxCodeWatchCar.BackColor = System.Drawing.Color.YellowGreen;
             this.TbxCodeWatchCar.Location = new System.Drawing.Point(98, 61);
             this.TbxCodeWatchCar.Name = "TbxCodeWatchCar";
             this.TbxCodeWatchCar.Size = new System.Drawing.Size(119, 22);
@@ -86,7 +89,7 @@ namespace GestPark
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(423, 136);
+            this.label6.Location = new System.Drawing.Point(36, 81);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 15);
             this.label6.TabIndex = 23;
@@ -96,7 +99,7 @@ namespace GestPark
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(423, 68);
+            this.label5.Location = new System.Drawing.Point(36, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 15);
             this.label5.TabIndex = 22;
@@ -140,11 +143,11 @@ namespace GestPark
             this.BtnJoindreWatchCar.IconColor = System.Drawing.Color.DarkGreen;
             this.BtnJoindreWatchCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnJoindreWatchCar.IconSize = 25;
-            this.BtnJoindreWatchCar.Location = new System.Drawing.Point(98, 0);
+            this.BtnJoindreWatchCar.Location = new System.Drawing.Point(105, -2);
             this.BtnJoindreWatchCar.Name = "BtnJoindreWatchCar";
-            this.BtnJoindreWatchCar.Size = new System.Drawing.Size(99, 30);
+            this.BtnJoindreWatchCar.Size = new System.Drawing.Size(106, 30);
             this.BtnJoindreWatchCar.TabIndex = 3;
-            this.BtnJoindreWatchCar.Text = "Joindre";
+            this.BtnJoindreWatchCar.Text = "Joindre doc.";
             this.BtnJoindreWatchCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnJoindreWatchCar.UseVisualStyleBackColor = false;
             // 
@@ -156,9 +159,9 @@ namespace GestPark
             this.IBtnRegisterWatchCar.IconColor = System.Drawing.Color.DarkGreen;
             this.IBtnRegisterWatchCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IBtnRegisterWatchCar.IconSize = 25;
-            this.IBtnRegisterWatchCar.Location = new System.Drawing.Point(0, 0);
+            this.IBtnRegisterWatchCar.Location = new System.Drawing.Point(-2, -2);
             this.IBtnRegisterWatchCar.Name = "IBtnRegisterWatchCar";
-            this.IBtnRegisterWatchCar.Size = new System.Drawing.Size(99, 30);
+            this.IBtnRegisterWatchCar.Size = new System.Drawing.Size(101, 32);
             this.IBtnRegisterWatchCar.TabIndex = 2;
             this.IBtnRegisterWatchCar.Text = "Enregistrer";
             this.IBtnRegisterWatchCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -177,13 +180,14 @@ namespace GestPark
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.BackColor = System.Drawing.Color.Khaki;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.BtnJoindreWatchCar);
             this.panel1.Controls.Add(this.IBtnRegisterWatchCar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(707, 30);
+            this.panel1.Size = new System.Drawing.Size(771, 30);
             this.panel1.TabIndex = 17;
             // 
             // TxtBMontant
@@ -195,25 +199,34 @@ namespace GestPark
             // 
             // TxtBLieuWatchCar
             // 
-            this.TxtBLieuWatchCar.Location = new System.Drawing.Point(495, 130);
+            this.TxtBLieuWatchCar.Location = new System.Drawing.Point(108, 75);
             this.TxtBLieuWatchCar.Name = "TxtBLieuWatchCar";
             this.TxtBLieuWatchCar.Size = new System.Drawing.Size(204, 22);
             this.TxtBLieuWatchCar.TabIndex = 32;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.DatePikerWatchCar);
+            this.panel2.Controls.Add(this.TxtBLieuWatchCar);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(438, 61);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(324, 133);
+            this.panel2.TabIndex = 33;
             // 
             // FormCreateWatchCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(707, 399);
-            this.Controls.Add(this.TxtBLieuWatchCar);
+            this.BackColor = System.Drawing.Color.Khaki;
+            this.ClientSize = new System.Drawing.Size(771, 399);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.TxtBMontant);
             this.Controls.Add(this.CbxVehiculeWatchCar);
             this.Controls.Add(this.RbtxNoteWatchCar);
-            this.Controls.Add(this.DatePikerWatchCar);
             this.Controls.Add(this.TbxCodeWatchCar);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -225,6 +238,8 @@ namespace GestPark
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enregistrer un véhicule lavé";
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,5 +262,6 @@ namespace GestPark
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TxtBMontant;
         private System.Windows.Forms.TextBox TxtBLieuWatchCar;
+        private System.Windows.Forms.Panel panel2;
     }
 }

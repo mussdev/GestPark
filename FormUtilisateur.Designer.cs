@@ -37,6 +37,7 @@ namespace GestPark
             this.IbtnSearchUser = new FontAwesome.Sharp.IconButton();
             this.TxtSearchUser = new System.Windows.Forms.TextBox();
             this.DgvUser = new System.Windows.Forms.DataGridView();
+            this.ID_USER = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PSEUDO_USERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIPTION_USER = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EMAIL_USERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +45,7 @@ namespace GestPark
             this.ID_ROLE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ACTIF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATECREATE_USERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MOTPASS_USERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.PaneSearchUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUser)).BeginInit();
@@ -51,14 +53,15 @@ namespace GestPark
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.BackColor = System.Drawing.Color.Khaki;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.IbtnExporterRole);
             this.panel1.Controls.Add(this.IbtnCloseFormUser);
             this.panel1.Controls.Add(this.IbtnAddUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1118, 28);
+            this.panel1.Size = new System.Drawing.Size(1118, 23);
             this.panel1.TabIndex = 0;
             // 
             // IbtnExporterRole
@@ -68,10 +71,10 @@ namespace GestPark
             this.IbtnExporterRole.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
             this.IbtnExporterRole.IconColor = System.Drawing.Color.DarkGreen;
             this.IbtnExporterRole.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnExporterRole.IconSize = 25;
-            this.IbtnExporterRole.Location = new System.Drawing.Point(79, 0);
+            this.IbtnExporterRole.IconSize = 20;
+            this.IbtnExporterRole.Location = new System.Drawing.Point(88, 0);
             this.IbtnExporterRole.Name = "IbtnExporterRole";
-            this.IbtnExporterRole.Size = new System.Drawing.Size(84, 28);
+            this.IbtnExporterRole.Size = new System.Drawing.Size(84, 21);
             this.IbtnExporterRole.TabIndex = 2;
             this.IbtnExporterRole.Text = "Exporter";
             this.IbtnExporterRole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -79,15 +82,18 @@ namespace GestPark
             // 
             // IbtnCloseFormUser
             // 
+            this.IbtnCloseFormUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IbtnCloseFormUser.BackColor = System.Drawing.Color.White;
             this.IbtnCloseFormUser.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.IbtnCloseFormUser.IconColor = System.Drawing.Color.Red;
             this.IbtnCloseFormUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnCloseFormUser.IconSize = 25;
-            this.IbtnCloseFormUser.Location = new System.Drawing.Point(1083, 0);
+            this.IbtnCloseFormUser.IconSize = 20;
+            this.IbtnCloseFormUser.Location = new System.Drawing.Point(1088, 0);
             this.IbtnCloseFormUser.Name = "IbtnCloseFormUser";
             this.IbtnCloseFormUser.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.IbtnCloseFormUser.Size = new System.Drawing.Size(35, 28);
+            this.IbtnCloseFormUser.Size = new System.Drawing.Size(26, 21);
             this.IbtnCloseFormUser.TabIndex = 1;
             this.IbtnCloseFormUser.UseVisualStyleBackColor = false;
             this.IbtnCloseFormUser.Click += new System.EventHandler(this.IbtnCloseFormUser_Click);
@@ -99,10 +105,10 @@ namespace GestPark
             this.IbtnAddUser.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.IbtnAddUser.IconColor = System.Drawing.Color.DarkGreen;
             this.IbtnAddUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnAddUser.IconSize = 25;
-            this.IbtnAddUser.Location = new System.Drawing.Point(0, 0);
+            this.IbtnAddUser.IconSize = 20;
+            this.IbtnAddUser.Location = new System.Drawing.Point(-2, 0);
             this.IbtnAddUser.Name = "IbtnAddUser";
-            this.IbtnAddUser.Size = new System.Drawing.Size(82, 28);
+            this.IbtnAddUser.Size = new System.Drawing.Size(84, 21);
             this.IbtnAddUser.TabIndex = 0;
             this.IbtnAddUser.Text = "Ajouter";
             this.IbtnAddUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -112,12 +118,12 @@ namespace GestPark
             // PaneSearchUser
             // 
             this.PaneSearchUser.AutoScroll = true;
-            this.PaneSearchUser.BackColor = System.Drawing.Color.DarkOrange;
+            this.PaneSearchUser.BackColor = System.Drawing.Color.Khaki;
             this.PaneSearchUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PaneSearchUser.Controls.Add(this.IbtnSearchUser);
             this.PaneSearchUser.Controls.Add(this.TxtSearchUser);
             this.PaneSearchUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PaneSearchUser.Location = new System.Drawing.Point(0, 28);
+            this.PaneSearchUser.Location = new System.Drawing.Point(0, 23);
             this.PaneSearchUser.Name = "PaneSearchUser";
             this.PaneSearchUser.Size = new System.Drawing.Size(1118, 104);
             this.PaneSearchUser.TabIndex = 1;
@@ -146,27 +152,38 @@ namespace GestPark
             // DgvUser
             // 
             this.DgvUser.AllowUserToOrderColumns = true;
-            this.DgvUser.BackgroundColor = System.Drawing.Color.White;
+            this.DgvUser.BackgroundColor = System.Drawing.Color.Khaki;
             this.DgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_USER,
             this.PSEUDO_USERS,
             this.DESCRIPTION_USER,
             this.EMAIL_USERS,
             this.TEL_USERS,
             this.ID_ROLE,
             this.ACTIF,
-            this.DATECREATE_USERS});
+            this.DATECREATE_USERS,
+            this.MOTPASS_USERS});
             this.DgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvUser.GridColor = System.Drawing.Color.Gainsboro;
-            this.DgvUser.Location = new System.Drawing.Point(0, 132);
+            this.DgvUser.Location = new System.Drawing.Point(0, 127);
             this.DgvUser.Name = "DgvUser";
-            this.DgvUser.Size = new System.Drawing.Size(1118, 599);
+            this.DgvUser.Size = new System.Drawing.Size(1118, 604);
             this.DgvUser.TabIndex = 2;
             this.DgvUser.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUser_CellDoubleClick);
+            // 
+            // ID_USER
+            // 
+            this.ID_USER.DataPropertyName = "ID_USER";
+            this.ID_USER.Frozen = true;
+            this.ID_USER.HeaderText = "Identifiant";
+            this.ID_USER.Name = "ID_USER";
+            this.ID_USER.ReadOnly = true;
             // 
             // PSEUDO_USERS
             // 
             this.PSEUDO_USERS.DataPropertyName = "PSEUDO_USERS";
+            this.PSEUDO_USERS.Frozen = true;
             this.PSEUDO_USERS.HeaderText = "Utilisateur";
             this.PSEUDO_USERS.Name = "PSEUDO_USERS";
             this.PSEUDO_USERS.ReadOnly = true;
@@ -174,6 +191,7 @@ namespace GestPark
             // DESCRIPTION_USER
             // 
             this.DESCRIPTION_USER.DataPropertyName = "DESCRIPTION_USER";
+            this.DESCRIPTION_USER.Frozen = true;
             this.DESCRIPTION_USER.HeaderText = "Description";
             this.DESCRIPTION_USER.Name = "DESCRIPTION_USER";
             this.DESCRIPTION_USER.ReadOnly = true;
@@ -182,6 +200,7 @@ namespace GestPark
             // EMAIL_USERS
             // 
             this.EMAIL_USERS.DataPropertyName = "EMAIL_USERS";
+            this.EMAIL_USERS.Frozen = true;
             this.EMAIL_USERS.HeaderText = "Mail";
             this.EMAIL_USERS.Name = "EMAIL_USERS";
             this.EMAIL_USERS.ReadOnly = true;
@@ -190,6 +209,7 @@ namespace GestPark
             // TEL_USERS
             // 
             this.TEL_USERS.DataPropertyName = "TEL_USERS";
+            this.TEL_USERS.Frozen = true;
             this.TEL_USERS.HeaderText = "Tél.";
             this.TEL_USERS.Name = "TEL_USERS";
             this.TEL_USERS.ReadOnly = true;
@@ -198,6 +218,7 @@ namespace GestPark
             // ID_ROLE
             // 
             this.ID_ROLE.DataPropertyName = "ID_ROLE";
+            this.ID_ROLE.Frozen = true;
             this.ID_ROLE.HeaderText = "Rôles";
             this.ID_ROLE.Name = "ID_ROLE";
             this.ID_ROLE.ReadOnly = true;
@@ -206,6 +227,7 @@ namespace GestPark
             // ACTIF
             // 
             this.ACTIF.DataPropertyName = "ACTIF";
+            this.ACTIF.Frozen = true;
             this.ACTIF.HeaderText = "Statut";
             this.ACTIF.Name = "ACTIF";
             this.ACTIF.ReadOnly = true;
@@ -213,10 +235,20 @@ namespace GestPark
             // DATECREATE_USERS
             // 
             this.DATECREATE_USERS.DataPropertyName = "DATECREATE_USERS";
+            this.DATECREATE_USERS.Frozen = true;
             this.DATECREATE_USERS.HeaderText = "Créer le";
             this.DATECREATE_USERS.Name = "DATECREATE_USERS";
             this.DATECREATE_USERS.ReadOnly = true;
             this.DATECREATE_USERS.Width = 150;
+            // 
+            // MOTPASS_USERS
+            // 
+            this.MOTPASS_USERS.DataPropertyName = "MOTPASS_USERS";
+            this.MOTPASS_USERS.Frozen = true;
+            this.MOTPASS_USERS.HeaderText = "Mot de passe";
+            this.MOTPASS_USERS.Name = "MOTPASS_USERS";
+            this.MOTPASS_USERS.ReadOnly = true;
+            this.MOTPASS_USERS.Visible = false;
             // 
             // FormUtilisateur
             // 
@@ -248,6 +280,7 @@ namespace GestPark
         private FontAwesome.Sharp.IconButton IbtnSearchUser;
         private System.Windows.Forms.TextBox TxtSearchUser;
         private System.Windows.Forms.DataGridView DgvUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_USER;
         private System.Windows.Forms.DataGridViewTextBoxColumn PSEUDO_USERS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_USER;
         private System.Windows.Forms.DataGridViewTextBoxColumn EMAIL_USERS;
@@ -255,5 +288,6 @@ namespace GestPark
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_ROLE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ACTIF;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATECREATE_USERS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MOTPASS_USERS;
     }
 }

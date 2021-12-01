@@ -29,9 +29,7 @@ namespace GestPark
         /// </summary>
         private void InitializeComponent()
         {
-            this.IbtnViewConfPasswordEdit = new FontAwesome.Sharp.IconButton();
-            this.IbtnViewPasswordEdit = new FontAwesome.Sharp.IconButton();
-            this.IbtnHidePasswordEdit = new FontAwesome.Sharp.IconButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormModifyUser));
             this.PanelRoleUser = new System.Windows.Forms.Panel();
             this.PanelInfosIdentityUser = new System.Windows.Forms.Panel();
             this.TxtDescriptionUserEdit = new System.Windows.Forms.TextBox();
@@ -40,66 +38,18 @@ namespace GestPark
             this.label7 = new System.Windows.Forms.Label();
             this.TxtTelUserEdit = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.IbtnValideUserEdit = new FontAwesome.Sharp.IconButton();
-            this.IbtnHideConfPasswordEdit = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.CbxActifUserEdit = new System.Windows.Forms.CheckBox();
             this.CbxChangePasswordAtFirstConnexionEdit = new System.Windows.Forms.CheckBox();
-            this.TxtConfirmPasswordEdit = new System.Windows.Forms.TextBox();
-            this.TxtPasswordUserEdit = new System.Windows.Forms.TextBox();
             this.TxtUserNameEdit = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.PaneInfosAccount = new System.Windows.Forms.Panel();
+            this.TxtIdUser = new System.Windows.Forms.TextBox();
+            this.BtnInitializePasswordUser = new FontAwesome.Sharp.IconButton();
+            this.IbtnValideUserEdit = new FontAwesome.Sharp.IconButton();
             this.PanelInfosIdentityUser.SuspendLayout();
             this.PaneInfosAccount.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // IbtnViewConfPasswordEdit
-            // 
-            this.IbtnViewConfPasswordEdit.BackColor = System.Drawing.Color.White;
-            this.IbtnViewConfPasswordEdit.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.IbtnViewConfPasswordEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IbtnViewConfPasswordEdit.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.IbtnViewConfPasswordEdit.IconColor = System.Drawing.Color.DarkGreen;
-            this.IbtnViewConfPasswordEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnViewConfPasswordEdit.IconSize = 23;
-            this.IbtnViewConfPasswordEdit.Location = new System.Drawing.Point(901, 26);
-            this.IbtnViewConfPasswordEdit.Name = "IbtnViewConfPasswordEdit";
-            this.IbtnViewConfPasswordEdit.Size = new System.Drawing.Size(29, 22);
-            this.IbtnViewConfPasswordEdit.TabIndex = 17;
-            this.IbtnViewConfPasswordEdit.UseVisualStyleBackColor = false;
-            // 
-            // IbtnViewPasswordEdit
-            // 
-            this.IbtnViewPasswordEdit.BackColor = System.Drawing.Color.White;
-            this.IbtnViewPasswordEdit.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.IbtnViewPasswordEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IbtnViewPasswordEdit.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.IbtnViewPasswordEdit.IconColor = System.Drawing.Color.DarkGreen;
-            this.IbtnViewPasswordEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnViewPasswordEdit.IconSize = 23;
-            this.IbtnViewPasswordEdit.Location = new System.Drawing.Point(558, 26);
-            this.IbtnViewPasswordEdit.Name = "IbtnViewPasswordEdit";
-            this.IbtnViewPasswordEdit.Size = new System.Drawing.Size(29, 22);
-            this.IbtnViewPasswordEdit.TabIndex = 17;
-            this.IbtnViewPasswordEdit.UseVisualStyleBackColor = false;
-            // 
-            // IbtnHidePasswordEdit
-            // 
-            this.IbtnHidePasswordEdit.BackColor = System.Drawing.Color.White;
-            this.IbtnHidePasswordEdit.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.IbtnHidePasswordEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IbtnHidePasswordEdit.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
-            this.IbtnHidePasswordEdit.IconColor = System.Drawing.Color.DarkGreen;
-            this.IbtnHidePasswordEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnHidePasswordEdit.IconSize = 23;
-            this.IbtnHidePasswordEdit.Location = new System.Drawing.Point(558, 26);
-            this.IbtnHidePasswordEdit.Name = "IbtnHidePasswordEdit";
-            this.IbtnHidePasswordEdit.Size = new System.Drawing.Size(29, 22);
-            this.IbtnHidePasswordEdit.TabIndex = 16;
-            this.IbtnHidePasswordEdit.UseVisualStyleBackColor = false;
             // 
             // PanelRoleUser
             // 
@@ -174,38 +124,6 @@ namespace GestPark
             this.label8.TabIndex = 11;
             this.label8.Text = "Mail :";
             // 
-            // IbtnValideUserEdit
-            // 
-            this.IbtnValideUserEdit.BackColor = System.Drawing.Color.White;
-            this.IbtnValideUserEdit.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IbtnValideUserEdit.ForeColor = System.Drawing.Color.DarkGreen;
-            this.IbtnValideUserEdit.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
-            this.IbtnValideUserEdit.IconColor = System.Drawing.Color.DarkGreen;
-            this.IbtnValideUserEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnValideUserEdit.IconSize = 30;
-            this.IbtnValideUserEdit.Location = new System.Drawing.Point(165, 422);
-            this.IbtnValideUserEdit.Name = "IbtnValideUserEdit";
-            this.IbtnValideUserEdit.Size = new System.Drawing.Size(105, 31);
-            this.IbtnValideUserEdit.TabIndex = 20;
-            this.IbtnValideUserEdit.Text = "VALIDER";
-            this.IbtnValideUserEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IbtnValideUserEdit.UseVisualStyleBackColor = false;
-            // 
-            // IbtnHideConfPasswordEdit
-            // 
-            this.IbtnHideConfPasswordEdit.BackColor = System.Drawing.Color.White;
-            this.IbtnHideConfPasswordEdit.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.IbtnHideConfPasswordEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IbtnHideConfPasswordEdit.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
-            this.IbtnHideConfPasswordEdit.IconColor = System.Drawing.Color.DarkGreen;
-            this.IbtnHideConfPasswordEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnHideConfPasswordEdit.IconSize = 23;
-            this.IbtnHideConfPasswordEdit.Location = new System.Drawing.Point(901, 26);
-            this.IbtnHideConfPasswordEdit.Name = "IbtnHideConfPasswordEdit";
-            this.IbtnHideConfPasswordEdit.Size = new System.Drawing.Size(29, 22);
-            this.IbtnHideConfPasswordEdit.TabIndex = 16;
-            this.IbtnHideConfPasswordEdit.UseVisualStyleBackColor = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -215,19 +133,10 @@ namespace GestPark
             this.label1.TabIndex = 0;
             this.label1.Text = "Non utilisateur :";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(313, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mot de passe :";
-            // 
             // CbxActifUserEdit
             // 
             this.CbxActifUserEdit.AutoSize = true;
-            this.CbxActifUserEdit.Location = new System.Drawing.Point(405, 76);
+            this.CbxActifUserEdit.Location = new System.Drawing.Point(766, 28);
             this.CbxActifUserEdit.Name = "CbxActifUserEdit";
             this.CbxActifUserEdit.Size = new System.Drawing.Size(53, 19);
             this.CbxActifUserEdit.TabIndex = 7;
@@ -237,44 +146,19 @@ namespace GestPark
             // CbxChangePasswordAtFirstConnexionEdit
             // 
             this.CbxChangePasswordAtFirstConnexionEdit.AutoSize = true;
-            this.CbxChangePasswordAtFirstConnexionEdit.Location = new System.Drawing.Point(16, 76);
+            this.CbxChangePasswordAtFirstConnexionEdit.Location = new System.Drawing.Point(380, 29);
             this.CbxChangePasswordAtFirstConnexionEdit.Name = "CbxChangePasswordAtFirstConnexionEdit";
             this.CbxChangePasswordAtFirstConnexionEdit.Size = new System.Drawing.Size(298, 19);
             this.CbxChangePasswordAtFirstConnexionEdit.TabIndex = 6;
             this.CbxChangePasswordAtFirstConnexionEdit.Text = "Changer de mot de passse à la première connection";
             this.CbxChangePasswordAtFirstConnexionEdit.UseVisualStyleBackColor = true;
             // 
-            // TxtConfirmPasswordEdit
-            // 
-            this.TxtConfirmPasswordEdit.Location = new System.Drawing.Point(737, 26);
-            this.TxtConfirmPasswordEdit.Name = "TxtConfirmPasswordEdit";
-            this.TxtConfirmPasswordEdit.PasswordChar = '*';
-            this.TxtConfirmPasswordEdit.Size = new System.Drawing.Size(193, 22);
-            this.TxtConfirmPasswordEdit.TabIndex = 5;
-            // 
-            // TxtPasswordUserEdit
-            // 
-            this.TxtPasswordUserEdit.Location = new System.Drawing.Point(405, 26);
-            this.TxtPasswordUserEdit.Name = "TxtPasswordUserEdit";
-            this.TxtPasswordUserEdit.PasswordChar = '*';
-            this.TxtPasswordUserEdit.Size = new System.Drawing.Size(182, 22);
-            this.TxtPasswordUserEdit.TabIndex = 4;
-            // 
             // TxtUserNameEdit
             // 
             this.TxtUserNameEdit.Location = new System.Drawing.Point(112, 26);
             this.TxtUserNameEdit.Name = "TxtUserNameEdit";
-            this.TxtUserNameEdit.Size = new System.Drawing.Size(195, 22);
+            this.TxtUserNameEdit.Size = new System.Drawing.Size(248, 22);
             this.TxtUserNameEdit.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(593, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Confirmer mot de passe :";
             // 
             // label6
             // 
@@ -288,38 +172,74 @@ namespace GestPark
             // 
             // PaneInfosAccount
             // 
-            this.PaneInfosAccount.BackColor = System.Drawing.Color.DarkOrange;
+            this.PaneInfosAccount.BackColor = System.Drawing.Color.Khaki;
             this.PaneInfosAccount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PaneInfosAccount.Controls.Add(this.IbtnViewConfPasswordEdit);
-            this.PaneInfosAccount.Controls.Add(this.IbtnViewPasswordEdit);
-            this.PaneInfosAccount.Controls.Add(this.IbtnHideConfPasswordEdit);
-            this.PaneInfosAccount.Controls.Add(this.IbtnHidePasswordEdit);
             this.PaneInfosAccount.Controls.Add(this.CbxActifUserEdit);
             this.PaneInfosAccount.Controls.Add(this.CbxChangePasswordAtFirstConnexionEdit);
-            this.PaneInfosAccount.Controls.Add(this.TxtConfirmPasswordEdit);
-            this.PaneInfosAccount.Controls.Add(this.TxtPasswordUserEdit);
             this.PaneInfosAccount.Controls.Add(this.TxtUserNameEdit);
-            this.PaneInfosAccount.Controls.Add(this.label3);
-            this.PaneInfosAccount.Controls.Add(this.label2);
             this.PaneInfosAccount.Controls.Add(this.label1);
             this.PaneInfosAccount.Dock = System.Windows.Forms.DockStyle.Top;
             this.PaneInfosAccount.Location = new System.Drawing.Point(0, 0);
             this.PaneInfosAccount.Name = "PaneInfosAccount";
-            this.PaneInfosAccount.Size = new System.Drawing.Size(933, 115);
+            this.PaneInfosAccount.Size = new System.Drawing.Size(933, 82);
             this.PaneInfosAccount.TabIndex = 18;
+            // 
+            // TxtIdUser
+            // 
+            this.TxtIdUser.Location = new System.Drawing.Point(346, 102);
+            this.TxtIdUser.Name = "TxtIdUser";
+            this.TxtIdUser.Size = new System.Drawing.Size(168, 22);
+            this.TxtIdUser.TabIndex = 23;
+            // 
+            // BtnInitializePasswordUser
+            // 
+            this.BtnInitializePasswordUser.BackColor = System.Drawing.Color.YellowGreen;
+            this.BtnInitializePasswordUser.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnInitializePasswordUser.IconColor = System.Drawing.Color.Black;
+            this.BtnInitializePasswordUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnInitializePasswordUser.Location = new System.Drawing.Point(18, 101);
+            this.BtnInitializePasswordUser.Name = "BtnInitializePasswordUser";
+            this.BtnInitializePasswordUser.Size = new System.Drawing.Size(170, 23);
+            this.BtnInitializePasswordUser.TabIndex = 24;
+            this.BtnInitializePasswordUser.Text = "Réinitialiser mot de passe";
+            this.BtnInitializePasswordUser.UseVisualStyleBackColor = false;
+            this.BtnInitializePasswordUser.Click += new System.EventHandler(this.BtnInitializePasswordUser_Click);
+            // 
+            // IbtnValideUserEdit
+            // 
+            this.IbtnValideUserEdit.BackColor = System.Drawing.Color.White;
+            this.IbtnValideUserEdit.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IbtnValideUserEdit.ForeColor = System.Drawing.Color.DarkGreen;
+            this.IbtnValideUserEdit.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
+            this.IbtnValideUserEdit.IconColor = System.Drawing.Color.DarkGreen;
+            this.IbtnValideUserEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IbtnValideUserEdit.IconSize = 30;
+            this.IbtnValideUserEdit.Location = new System.Drawing.Point(165, 422);
+            this.IbtnValideUserEdit.Name = "IbtnValideUserEdit";
+            this.IbtnValideUserEdit.Size = new System.Drawing.Size(102, 27);
+            this.IbtnValideUserEdit.TabIndex = 20;
+            this.IbtnValideUserEdit.Text = "VALIDER";
+            this.IbtnValideUserEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IbtnValideUserEdit.UseVisualStyleBackColor = false;
+            this.IbtnValideUserEdit.Click += new System.EventHandler(this.IbtnValideUserEdit_Click);
             // 
             // FormModifyUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(933, 519);
+            this.Controls.Add(this.BtnInitializePasswordUser);
+            this.Controls.Add(this.TxtIdUser);
             this.Controls.Add(this.PanelRoleUser);
             this.Controls.Add(this.PanelInfosIdentityUser);
             this.Controls.Add(this.IbtnValideUserEdit);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.PaneInfosAccount);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormModifyUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modifier un utilisateur";
             this.PanelInfosIdentityUser.ResumeLayout(false);
             this.PanelInfosIdentityUser.PerformLayout();
@@ -331,10 +251,6 @@ namespace GestPark
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconButton IbtnViewConfPasswordEdit;
-        private FontAwesome.Sharp.IconButton IbtnViewPasswordEdit;
-        private FontAwesome.Sharp.IconButton IbtnHidePasswordEdit;
         private System.Windows.Forms.Panel PanelRoleUser;
         private System.Windows.Forms.Panel PanelInfosIdentityUser;
         public System.Windows.Forms.TextBox TxtDescriptionUserEdit;
@@ -344,16 +260,13 @@ namespace GestPark
         public System.Windows.Forms.TextBox TxtTelUserEdit;
         private System.Windows.Forms.Label label8;
         private FontAwesome.Sharp.IconButton IbtnValideUserEdit;
-        private FontAwesome.Sharp.IconButton IbtnHideConfPasswordEdit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox CbxChangePasswordAtFirstConnexionEdit;
-        public System.Windows.Forms.TextBox TxtConfirmPasswordEdit;
-        public System.Windows.Forms.TextBox TxtPasswordUserEdit;
         public System.Windows.Forms.TextBox TxtUserNameEdit;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel PaneInfosAccount;
         public System.Windows.Forms.CheckBox CbxActifUserEdit;
+        public System.Windows.Forms.TextBox TxtIdUser;
+        private FontAwesome.Sharp.IconButton BtnInitializePasswordUser;
     }
 }

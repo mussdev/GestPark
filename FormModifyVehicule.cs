@@ -9,16 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using Stimulsoft.Report;
 
 namespace GestPark
 {
     public partial class FormModifyVehicule : Form
     {
         private SqlCommand SqlCmd;
-        private string IdFour, IdMarq, IdTypeConso, IdPark, IdPers, IdVehicule;
-        private SqlDataReader MyReader, MyReaderApp;
-        private SqlDataAdapter SqlAda;
-        private DataSet Ds;
+        private string IdFour, IdMarq, IdTypeConso, IdPark = null, IdPers, IdVehicule;
+        private SqlDataReader MyReader;
+
         public FormModifyVehicule()
         {
             InitializeComponent();
@@ -27,15 +27,14 @@ namespace GestPark
             FillComboMarqVehicule();
             FillComboboxParking();
             FillComboboxProprietor();
-            // Display kilometer of car
-            // ViewCarKilometer();
-            //Console.WriteLine(textBoxModifyCarCodVehi.Text);
         }
 
         
         private void iconBtnReportCar_Click(object sender, EventArgs e)
         {
-            
+            var reportCar = new StiReport();
+            // Call report
+            reportCar.Design();
         }
 
         private void comboBoxModifyCarProprio_SelectedIndexChanged(object sender, EventArgs e)
@@ -144,9 +143,8 @@ namespace GestPark
             {
                 string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
                 ConnectDB Conn = new ConnectDB(connectionString);
-                if (string.IsNullOrEmpty(comboBoxModifyCarProprio.Text) && comboBoxModifyCarTypVeh.Text == "Pool")
-                {
-                    DialogResult result = MessageBox.Show("Voulez vous enregister les modifications ?", "GESTPARK: CONFIRMATION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                VerifyMileageOfCar();
+                DialogResult result = MessageBox.Show("Voulez vous enregister les modifications ?", "GESTPARK: CONFIRMATION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
                         using (Conn.cn)
@@ -154,7 +152,7 @@ namespace GestPark
                             if (Conn.IsConnection)
                             {
                                 // Request to insert table car
-                                SqlCmd = new SqlCommand("UPDATE VEHICULE SET ID_PARK=@ID_PARK,ID_TYPCONSO=@ID_TYPCONSO,ID_FOUR=@ID_FOUR,ID_MARQ=@ID_MARQ,DATE_ACHA_VEHICULE=@DATE_ACHA_VEHICULE,DATE_VISITE_VEHICULE=@DATE_VISITE_VEHICULE,IMMATRICULATION_VEHICULE=@IMMATRICULATION_VEHICULE,MODELE_VEHICULE=@MODELE_VEHICULE,CARTE_GRISE_VEHICULE=@CARTE_GRISE_VEHICULE,PRIX_VEHICULE=@PRIX_VEHICULE,TYPEVITESSE_VEHICULE=@TYPEVITESSE_VEHICULE,TYPE_VEHICULE=@TYPE_VEHICULE,ETAT_VEHICULE=@ETAT_VEHICULE,CORDGPS_VEHICULE=@CORDGPS_VEHICULE,ASSURANCE_VEHICULE=@ASSURANCE_VEHICULE,NOTE_VEHICULE=@NOTE_VEHICULE,STATUT_VEHICULE=@STATUT_VEHICULE WHERE CODE_VEHICULE='" + textBoxModifyCarCodVehi.Text + "' ", Conn.cn);
+                                SqlCmd = new SqlCommand("UPDATE VEHICULE SET ID_PARK=@ID_PARK,ID_TYPCONSO=@ID_TYPCONSO,ID_FOUR=@ID_FOUR,ID_MARQ=@ID_MARQ,DATE_ACHA_VEHICULE=@DATE_ACHA_VEHICULE,DATE_VISITE_VEHICULE=@DATE_VISITE_VEHICULE,IMMATRICULATION_VEHICULE=@IMMATRICULATION_VEHICULE,MODELE_VEHICULE=@MODELE_VEHICULE,CARTE_GRISE_VEHICULE=@CARTE_GRISE_VEHICULE,PRIX_VEHICULE=@PRIX_VEHICULE,TYPEVITESSE_VEHICULE=@TYPEVITESSE_VEHICULE,TYPE_VEHICULE=@TYPE_VEHICULE,ETAT_VEHICULE=@ETAT_VEHICULE,CORDGPS_VEHICULE=@CORDGPS_VEHICULE,ASSURANCE_VEHICULE=@ASSURANCE_VEHICULE,NOTE_VEHICULE=@NOTE_VEHICULE,STATUT_VEHICULE=@STATUT_VEHICULE,TOTALKILOMETRAGE_VEHICULE=@TOTALKILOMETRAGE_VEHICULE WHERE CODE_VEHICULE='" + textBoxModifyCarCodVehi.Text + "' ", Conn.cn);
                                 SqlCmd.Parameters.AddWithValue("@ID_PARK", IdPark);
                                 SqlCmd.Parameters.AddWithValue("@ID_TYPCONSO", IdTypeConso);
                                 SqlCmd.Parameters.AddWithValue("@ID_FOUR", IdFour);
@@ -172,76 +170,14 @@ namespace GestPark
                                 SqlCmd.Parameters.AddWithValue("@ASSURANCE_VEHICULE", DateTimePickerModifyCarAssurance.Value.ToString("dd/MM/yyyy"));
                                 SqlCmd.Parameters.AddWithValue("@NOTE_VEHICULE", richTextBoxModifyCarNoteVehi.Text);
                                 SqlCmd.Parameters.AddWithValue("@STATUT_VEHICULE", CbxStatutModifyCar.Text);
+                                SqlCmd.Parameters.AddWithValue("@TOTALKILOMETRAGE_VEHICULE", (decimal.Parse(TxtKolimetrageCar.Text)));
                                 SqlCmd.ExecuteNonQuery();
-                                MessageBox.Show("Enregistré avec succès");
+                                MessageBox.Show("Enregistré avec succès", "GestPark : Informations", MessageBoxButtons.OK);
+                                this.Close();
                             }
                         }
                     }
-                }
-                else if (!string.IsNullOrEmpty(comboBoxModifyCarProprio.Text) && comboBoxModifyCarTypVeh.Text == "Privé")
-                {
-                    DialogResult result = MessageBox.Show("Voulez vous enregister les modifications ?", "GESTPARK: CONFIRMATION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (result == DialogResult.Yes)
-                    {
-                        using (Conn.cn)
-                        {
-                            if (Conn.IsConnection)
-                            {
-                                // Request to insert table car
-                                SqlCmd = new SqlCommand("UPDATE VEHICULE SET ID_PARK=@ID_PARK,ID_TYPCONSO=@ID_TYPCONSO,ID_FOUR=@ID_FOUR,ID_MARQ=@ID_MARQ,DATE_ACHA_VEHICULE=@DATE_ACHA_VEHICULE,DATE_VISITE_VEHICULE=@DATE_VISITE_VEHICULE,IMMATRICULATION_VEHICULE=@IMMATRICULATION_VEHICULE,MODELE_VEHICULE=@MODELE_VEHICULE,CARTE_GRISE_VEHICULE=@CARTE_GRISE_VEHICULE,PRIX_VEHICULE=@PRIX_VEHICULE,TYPEVITESSE_VEHICULE=@TYPEVITESSE_VEHICULE,TYPE_VEHICULE=@TYPE_VEHICULE,ETAT_VEHICULE=@ETAT_VEHICULE,CORDGPS_VEHICULE=@CORDGPS_VEHICULE,ASSURANCE_VEHICULE=@ASSURANCE_VEHICULE,NOTE_VEHICULE=@NOTE_VEHICULE,STATUT_VEHICULE=@STATUT_VEHICULE WHERE CODE_VEHICULE='" + textBoxModifyCarCodVehi.Text + "' ", Conn.cn);
-                                SqlCmd.Parameters.AddWithValue("@ID_PARK", IdPark);
-                                SqlCmd.Parameters.AddWithValue("@ID_TYPCONSO", IdTypeConso);
-                                SqlCmd.Parameters.AddWithValue("@ID_FOUR", IdFour);
-                                SqlCmd.Parameters.AddWithValue("@ID_MARQ", IdMarq);
-                                SqlCmd.Parameters.AddWithValue("@DATE_ACHA_VEHICULE", dateTimePickModifyCarDatAchaVehi.Value.ToString("dd/MM/yyyy"));
-                                SqlCmd.Parameters.AddWithValue("@DATE_VISITE_VEHICULE", dateTimeModifyCarPickDatVisitVehi.Value.ToString("dd/MM/yyyy"));
-                                SqlCmd.Parameters.AddWithValue("@IMMATRICULATION_VEHICULE", textBoxModifyCarImmatVehi.Text);
-                                SqlCmd.Parameters.AddWithValue("@MODELE_VEHICULE", textBoxModifyCarModelVehi.Text);
-                                SqlCmd.Parameters.AddWithValue("@CARTE_GRISE_VEHICULE", textBoxModifyCarCartGriVehi.Text);
-                                SqlCmd.Parameters.AddWithValue("@PRIX_VEHICULE", float.Parse(textBoxModifyCarPrixVentVehi.Text));
-                                SqlCmd.Parameters.AddWithValue("@TYPEVITESSE_VEHICULE", comboBoxModifyCarTypVitessVehi.Text);
-                                SqlCmd.Parameters.AddWithValue("@TYPE_VEHICULE", comboBoxModifyCarTypVeh.Text);
-                                SqlCmd.Parameters.AddWithValue("@ETAT_VEHICULE", comboBoxModifyCarEtatVehi.Text);
-                                SqlCmd.Parameters.AddWithValue("@CORDGPS_VEHICULE", textBoxModifyCarCordGPSVehi.Text);
-                                SqlCmd.Parameters.AddWithValue("@ASSURANCE_VEHICULE", DateTimePickerModifyCarAssurance.Value.ToString("dd/MM/yyyy"));
-                                SqlCmd.Parameters.AddWithValue("@NOTE_VEHICULE", richTextBoxModifyCarNoteVehi.Text);
-                                SqlCmd.Parameters.AddWithValue("@STATUT_VEHICULE", CbxStatutModifyCar.Text);
-                                SqlCmd.ExecuteNonQuery();
-                            }
-                        }
-                        // Request to send the last id vehicule
-                        using (Conn.cn)
-                            {
-                                if (Conn.IsConnection)
-                                {
-                                    SqlCmd = new SqlCommand("SELECT ID_VEHICULE FROM VEHICULE WHERE CODE_VEHICULE='" + textBoxModifyCarCodVehi.Text + "')", Conn.cn);
-                                    MyReader = SqlCmd.ExecuteReader();
-
-                                    while (MyReader.Read())
-                                    {
-                                        IdVehicule = MyReader[0].ToString();
-                                    }
-                                }
-                            }
-
-                            // Fill table Appartenir, association between personnels and vehicule
-                            using (Conn.cn)
-                            {
-                                if (Conn.IsConnection)
-                                {
-                                    SqlCmd = new SqlCommand("UPDATE APPARTENIR SET ID_PERS=@ID_PERS,ID_VEHICULE=@ID_VEHICULE,DATE_DEBUT_PERS=@DATE_DEBUT_PERS WHERE ID_VEHICULE = '" + IdVehicule + "' ", Conn.cn);
-                                    SqlCmd.Parameters.AddWithValue("@ID_PERS", IdPers);
-                                    SqlCmd.Parameters.AddWithValue("@ID_VEHICULE", IdVehicule);
-                                    SqlCmd.ExecuteNonQuery();
-                                }
-                            }
-
-                        MessageBox.Show("Enregistré avec succès");
-                        this.Close();
-                    }
-                }
-                else
-                    MessageBox.Show("Veiller saisir correctement les champs ou vérifier le type de vehicule");
+                
             }
             catch (Exception ex)
             {
@@ -299,6 +235,37 @@ namespace GestPark
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnVidengeCar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
+                ConnectDB Conn = new ConnectDB(connectionString);
+                FormCreateEntretien CreateEntretien = new FormCreateEntretien();
+                using (Conn.cn)
+                {
+                    if (Conn.IsConnection)
+                    {
+                        SqlCmd = new SqlCommand("SELECT ID_VEHICULE, IMMATRICULATION_VEHICULE FROM VEHICULE WHERE CODE_VEHICULE='" + textBoxModifyCarCodVehi.Text + "'", Conn.cn);
+                        MyReader = SqlCmd.ExecuteReader();
+                        while (MyReader.Read())
+                        {
+                            CreateEntretien.CbxCarMaintModi.Items.Add(MyReader["IMMATRICULATION_VEHICULE"].ToString());
+                            CreateEntretien.CbxCarMaintModi.DisplayMember = (MyReader["IMMATRICULATION_VEHICULE"].ToString());
+                            CreateEntretien.CbxCarMaintModi.ValueMember = (MyReader["ID_VEHICULE"].ToString());
+                            CreateEntretien.CbxCarMaintModi.Text = MyReader["IMMATRICULATION_VEHICULE"].ToString();
+                        }
+                    }
+                    
+                    CreateEntretien.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -411,6 +378,19 @@ namespace GestPark
             {
                 MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        // Verify the mileage of car
+        private void VerifyMileageOfCar()
+        {
+            if (decimal.Parse(TxtKilometrageParCar.Text) >= 10000)
+            {
+                MessageBox.Show("Le vehicule a atteint les 10 000 kilometrages donc il doit effectuer sa videnge.", "GestPark : Avertissement !", MessageBoxButtons.OK);
+                //TxtKilometrageParCar.Text = (decimal.Parse(TxtKilometrageParCar.Text) - 10000).ToString();
+                BtnVidengeCar.Visible = true;
+            }
+            else
+                BtnVidengeCar.Visible = false;
         }
 
     }

@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Configuration;
+using System.Globalization;
 
 namespace GestPark
 {
@@ -99,11 +100,11 @@ namespace GestPark
             FormDisplayAndModifyCar.richTextBoxModifyCarNoteVehi.Text = this.DataGridViewVehi.CurrentRow.Cells[13].Value?.ToString();
             FormDisplayAndModifyCar.CbxStatutModifyCar.Text = this.DataGridViewVehi.CurrentRow.Cells[14].Value?.ToString();
             FormDisplayAndModifyCar.CbxSanteCar.Text = this.DataGridViewVehi.CurrentRow.Cells[15].Value?.ToString();
-            FormDisplayAndModifyCar.dateTimePickModifyCarDatAchaVehi.Text = this.DataGridViewVehi.CurrentRow.Cells[16].Value?.ToString();
-            FormDisplayAndModifyCar.dateTimeModifyCarPickDatVisitVehi.Text = this.DataGridViewVehi.CurrentRow.Cells[17].Value?.ToString();
-            FormDisplayAndModifyCar.DateTimePickerModifyCarAssurance.Text = this.DataGridViewVehi.CurrentRow.Cells[18].Value?.ToString();
-            FormDisplayAndModifyCar.comboBoxModifyCarTypVitessVehi.Text = this.DataGridViewVehi.CurrentRow.Cells[19].Value?.ToString();
-            FormDisplayAndModifyCar.TxtKolimetrageCar.Text = ViewCarKilometer();
+            FormDisplayAndModifyCar.TxtKolimetrageCar.Text = this.DataGridViewVehi.CurrentRow.Cells[16].Value?.ToString();
+            FormDisplayAndModifyCar.TxtKilometrageParCar.Text = this.DataGridViewVehi.CurrentRow.Cells[17].Value?.ToString();
+            FormDisplayAndModifyCar.dateTimePickModifyCarDatAchaVehi.Text = this.DataGridViewVehi.CurrentRow.Cells[18].Value?.ToString();
+            FormDisplayAndModifyCar.dateTimeModifyCarPickDatVisitVehi.Text = this.DataGridViewVehi.CurrentRow.Cells[19].Value?.ToString();
+            FormDisplayAndModifyCar.DateTimePickerModifyCarAssurance.Text = this.DataGridViewVehi.CurrentRow.Cells[20].Value?.ToString();
             FormDisplayAndModifyCar.ShowDialog();
 
         }
@@ -111,36 +112,40 @@ namespace GestPark
 
         // Method to display the kilometer of car
 
-        private string ViewCarKilometer()
+        //private string ViewCarKilometer()
+        //{
+        //    string KiloCar = null;
+        //    try
+        //    {
+        //        string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
+        //        ConnectDB Conn = new ConnectDB(connectionString);
+        //        FormModifyVehicule FormDisplayAndModifyCar = new FormModifyVehicule();
+        //        using (Conn.cn)
+        //        {
+        //            if (Conn.IsConnection)
+        //            {
+        //                // Calculate total kilometers of car
+        //                SqlCmd = new SqlCommand("SELECT SUM((KILO_APRES_MVTS + KILOMETRE_AVA_MVTS)) AS KILOTOTAL FROM MOUVEMENTS LEFT OUTER JOIN VEHICULE ON MOUVEMENTS.ID_VEHICULE=VEHICULE.ID_VEHICULE WHERE VEHICULE.CODE_VEHICULE = '" + this.DataGridViewVehi.CurrentRow.Cells[0].Value?.ToString() + "'", Conn.cn);
+        //                MyReader = SqlCmd.ExecuteReader();
+        //                while (MyReader.Read())
+        //                {
+        //                    KiloCar = MyReader[0].ToString();
+        //                }
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+
+        //    return KiloCar;
+        //}
+
+        private void BtnCreateCar_Click(object sender, EventArgs e)
         {
-            string KiloCar = null;
-            try
-            {
-                string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
-                ConnectDB Conn = new ConnectDB(connectionString);
-                FormModifyVehicule FormDisplayAndModifyCar = new FormModifyVehicule();
-                using (Conn.cn)
-                {
-                    if (Conn.IsConnection)
-                    {
-                        // Calculate total kilometers of car
-                        SqlCmd = new SqlCommand("SELECT SUM((KILO_APRES_MVTS + KILOMETRE_AVA_MVTS)) AS KILOTOTAL FROM MOUVEMENTS LEFT OUTER JOIN VEHICULE ON MOUVEMENTS.ID_VEHICULE=VEHICULE.ID_VEHICULE WHERE VEHICULE.CODE_VEHICULE = '" + this.DataGridViewVehi.CurrentRow.Cells[0].Value?.ToString() + "'", Conn.cn);
-                        MyReader = SqlCmd.ExecuteReader();
-                        while (MyReader.Read())
-                        {
-                            KiloCar = MyReader[0].ToString();
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            return KiloCar;
+            FormRegisterVehicule CreateCar = new FormRegisterVehicule();
+            CreateCar.ShowDialog();
         }
-
-
     }
 }

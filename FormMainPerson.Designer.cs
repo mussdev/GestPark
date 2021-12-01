@@ -30,6 +30,7 @@ namespace GestPark
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnExportPerson = new FontAwesome.Sharp.IconButton();
             this.iconBtnCloseFormPers = new FontAwesome.Sharp.IconButton();
             this.iconBtnCreatePers = new FontAwesome.Sharp.IconButton();
             this.panelSearchPers = new System.Windows.Forms.Panel();
@@ -38,8 +39,9 @@ namespace GestPark
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panelDisplayPers = new System.Windows.Forms.Panel();
-            this.dgvPerson = new System.Windows.Forms.DataGridView();
+            this.DgvPerson = new System.Windows.Forms.DataGridView();
             this.ID_PERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CODE_PERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOM_PERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRENOM_PERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATENAISS_PERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,33 +62,55 @@ namespace GestPark
             this.panel1.SuspendLayout();
             this.panelSearchPers.SuspendLayout();
             this.panelDisplayPers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPerson)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPerson)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.BackColor = System.Drawing.Color.Khaki;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.BtnExportPerson);
             this.panel1.Controls.Add(this.iconBtnCloseFormPers);
             this.panel1.Controls.Add(this.iconBtnCreatePers);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1118, 33);
+            this.panel1.Size = new System.Drawing.Size(1118, 26);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnExportPerson
+            // 
+            this.BtnExportPerson.BackColor = System.Drawing.Color.White;
+            this.BtnExportPerson.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExportPerson.ForeColor = System.Drawing.Color.DarkGreen;
+            this.BtnExportPerson.IconChar = FontAwesome.Sharp.IconChar.FileExport;
+            this.BtnExportPerson.IconColor = System.Drawing.Color.DarkGreen;
+            this.BtnExportPerson.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnExportPerson.IconSize = 20;
+            this.BtnExportPerson.Location = new System.Drawing.Point(92, -3);
+            this.BtnExportPerson.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnExportPerson.Name = "BtnExportPerson";
+            this.BtnExportPerson.Size = new System.Drawing.Size(88, 27);
+            this.BtnExportPerson.TabIndex = 2;
+            this.BtnExportPerson.Text = "Exporter";
+            this.BtnExportPerson.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnExportPerson.UseVisualStyleBackColor = false;
             // 
             // iconBtnCloseFormPers
             // 
+            this.iconBtnCloseFormPers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.iconBtnCloseFormPers.BackColor = System.Drawing.Color.White;
             this.iconBtnCloseFormPers.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.iconBtnCloseFormPers.IconColor = System.Drawing.Color.Red;
             this.iconBtnCloseFormPers.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnCloseFormPers.IconSize = 35;
-            this.iconBtnCloseFormPers.Location = new System.Drawing.Point(1080, -2);
+            this.iconBtnCloseFormPers.IconSize = 20;
+            this.iconBtnCloseFormPers.Location = new System.Drawing.Point(1085, -2);
             this.iconBtnCloseFormPers.Name = "iconBtnCloseFormPers";
             this.iconBtnCloseFormPers.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconBtnCloseFormPers.Size = new System.Drawing.Size(38, 35);
+            this.iconBtnCloseFormPers.Size = new System.Drawing.Size(33, 28);
             this.iconBtnCloseFormPers.TabIndex = 1;
             this.iconBtnCloseFormPers.UseVisualStyleBackColor = false;
             this.iconBtnCloseFormPers.Click += new System.EventHandler(this.iconBtnCloseFormPers_Click);
@@ -94,16 +118,16 @@ namespace GestPark
             // iconBtnCreatePers
             // 
             this.iconBtnCreatePers.BackColor = System.Drawing.Color.White;
-            this.iconBtnCreatePers.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnCreatePers.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconBtnCreatePers.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtnCreatePers.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
             this.iconBtnCreatePers.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtnCreatePers.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnCreatePers.IconSize = 35;
+            this.iconBtnCreatePers.IconSize = 20;
             this.iconBtnCreatePers.Location = new System.Drawing.Point(-2, -2);
             this.iconBtnCreatePers.Margin = new System.Windows.Forms.Padding(4);
             this.iconBtnCreatePers.Name = "iconBtnCreatePers";
-            this.iconBtnCreatePers.Size = new System.Drawing.Size(91, 35);
+            this.iconBtnCreatePers.Size = new System.Drawing.Size(91, 27);
             this.iconBtnCreatePers.TabIndex = 0;
             this.iconBtnCreatePers.Text = "Créer";
             this.iconBtnCreatePers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -113,14 +137,14 @@ namespace GestPark
             // panelSearchPers
             // 
             this.panelSearchPers.AutoScroll = true;
-            this.panelSearchPers.BackColor = System.Drawing.Color.DarkOrange;
+            this.panelSearchPers.BackColor = System.Drawing.Color.Khaki;
             this.panelSearchPers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelSearchPers.Controls.Add(this.iconBtnSearchPers);
             this.panelSearchPers.Controls.Add(this.textBxSearchPers);
             this.panelSearchPers.Controls.Add(this.checkBox2);
             this.panelSearchPers.Controls.Add(this.checkBox1);
             this.panelSearchPers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSearchPers.Location = new System.Drawing.Point(0, 33);
+            this.panelSearchPers.Location = new System.Drawing.Point(0, 26);
             this.panelSearchPers.Name = "panelSearchPers";
             this.panelSearchPers.Size = new System.Drawing.Size(1118, 100);
             this.panelSearchPers.TabIndex = 1;
@@ -142,14 +166,15 @@ namespace GestPark
             // 
             // textBxSearchPers
             // 
-            this.textBxSearchPers.Location = new System.Drawing.Point(322, 34);
+            this.textBxSearchPers.Location = new System.Drawing.Point(397, 34);
             this.textBxSearchPers.Name = "textBxSearchPers";
-            this.textBxSearchPers.Size = new System.Drawing.Size(384, 25);
+            this.textBxSearchPers.Size = new System.Drawing.Size(309, 25);
             this.textBxSearchPers.TabIndex = 2;
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
+            this.checkBox2.ForeColor = System.Drawing.Color.DarkGreen;
             this.checkBox2.Location = new System.Drawing.Point(10, 57);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(95, 21);
@@ -160,6 +185,7 @@ namespace GestPark
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.Color.DarkGreen;
             this.checkBox1.Location = new System.Drawing.Point(10, 16);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(96, 21);
@@ -169,21 +195,22 @@ namespace GestPark
             // 
             // panelDisplayPers
             // 
-            this.panelDisplayPers.Controls.Add(this.dgvPerson);
+            this.panelDisplayPers.Controls.Add(this.DgvPerson);
             this.panelDisplayPers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDisplayPers.Location = new System.Drawing.Point(0, 133);
+            this.panelDisplayPers.Location = new System.Drawing.Point(0, 126);
             this.panelDisplayPers.Name = "panelDisplayPers";
-            this.panelDisplayPers.Size = new System.Drawing.Size(1118, 598);
+            this.panelDisplayPers.Size = new System.Drawing.Size(1118, 605);
             this.panelDisplayPers.TabIndex = 2;
             // 
-            // dgvPerson
+            // DgvPerson
             // 
-            this.dgvPerson.AllowUserToOrderColumns = true;
-            this.dgvPerson.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvPerson.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPerson.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DgvPerson.AllowUserToOrderColumns = true;
+            this.DgvPerson.BackgroundColor = System.Drawing.Color.Khaki;
+            this.DgvPerson.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DgvPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvPerson.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_PERS,
+            this.CODE_PERS,
             this.NOM_PERS,
             this.PRENOM_PERS,
             this.DATENAISS_PERS,
@@ -201,11 +228,12 @@ namespace GestPark
             this.NOTE_PERS,
             this.USERCREATE_PERS,
             this.DATECREATE_PERS});
-            this.dgvPerson.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvPerson.Location = new System.Drawing.Point(0, 0);
-            this.dgvPerson.Name = "dgvPerson";
-            this.dgvPerson.Size = new System.Drawing.Size(1118, 598);
-            this.dgvPerson.TabIndex = 0;
+            this.DgvPerson.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvPerson.Location = new System.Drawing.Point(0, 0);
+            this.DgvPerson.Name = "DgvPerson";
+            this.DgvPerson.Size = new System.Drawing.Size(1118, 605);
+            this.DgvPerson.TabIndex = 0;
+            this.DgvPerson.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPerson_CellDoubleClick);
             // 
             // ID_PERS
             // 
@@ -213,6 +241,13 @@ namespace GestPark
             this.ID_PERS.HeaderText = "N°";
             this.ID_PERS.Name = "ID_PERS";
             this.ID_PERS.Width = 50;
+            // 
+            // CODE_PERS
+            // 
+            this.CODE_PERS.DataPropertyName = "CODE_PERS";
+            this.CODE_PERS.HeaderText = "Code";
+            this.CODE_PERS.Name = "CODE_PERS";
+            this.CODE_PERS.ReadOnly = true;
             // 
             // NOM_PERS
             // 
@@ -333,7 +368,7 @@ namespace GestPark
             this.panelSearchPers.ResumeLayout(false);
             this.panelSearchPers.PerformLayout();
             this.panelDisplayPers.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPerson)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPerson)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,8 +384,10 @@ namespace GestPark
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Panel panelDisplayPers;
-        private System.Windows.Forms.DataGridView dgvPerson;
+        private System.Windows.Forms.DataGridView DgvPerson;
+        private FontAwesome.Sharp.IconButton BtnExportPerson;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_PERS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CODE_PERS;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOM_PERS;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRENOM_PERS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATENAISS_PERS;

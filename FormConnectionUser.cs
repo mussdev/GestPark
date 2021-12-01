@@ -47,7 +47,7 @@ namespace GestPark
                         if (isValidCon())
                         {
                             string passWordUser = EncryptData(TxtPasswordFanConUser.Text.Trim()); 
-                            string Query = "SELECT * FROM UTILISATEURS WHERE PSEUDO_USERS = '" + TxtUsernameFanConUser.Text.Trim() + "' AND MOTPASS_USERS = '" + passWordUser + "'";
+                            string Query = "SELECT * FROM UTILISATEURS WHERE PSEUDO_USERS = '" + TxtUsernameFanConUser.Text.Trim() + "' AND MOTPASS_USERS = '" + passWordUser + "' AND ACTIF='Actif'";
                             SqlDataAdapter SqlAda = new SqlDataAdapter(Query, ConDb.cn);
                             DataTable Dta = new DataTable();
                             SqlAda.Fill(Dta);
@@ -56,6 +56,10 @@ namespace GestPark
                                 FormMainGestPark FormHomeGestPark = new FormMainGestPark();
                                 this.Hide();
                                 FormHomeGestPark.ShowDialog();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Veillez vérifier si l'utilisateur est actif ou si les informations de connexion sont correctes !!!", "GestPark:", MessageBoxButtons.OK,MessageBoxIcon.Error);
                             }
                         }
                     }
@@ -70,21 +74,16 @@ namespace GestPark
 
         private bool isValidCon()
         {
-            if(TxtUsernameFanConUser.Text.TrimStart() == string.Empty)
+            if(string.IsNullOrEmpty(TxtUsernameFanConUser.Text.TrimStart()))
             {
-                MessageBox.Show("Entrez un utilisateur valide svp", "Error");
+                MessageBox.Show("Entrez un utilisateur valide svp !!!", "GestPark:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
-            } else if(TxtPasswordFanConUser.Text.TrimStart() == string.Empty)
+            } else if(string.IsNullOrEmpty(TxtPasswordFanConUser.Text.TrimStart()))
             {
-                MessageBox.Show("Entrez un mot de passe valide svp", "Error");
+                MessageBox.Show("Entrez un mot de passe valide svp !!!", "GestPark:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
-        }
-
-        private void FormConnectionUser_Load(object sender, EventArgs e)
-        {
-           // 
         }
     }
 }

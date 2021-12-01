@@ -39,9 +39,9 @@ namespace GestPark
             this.CODE_PAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_PAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelSearchConsoCarbu = new System.Windows.Forms.Panel();
-            this.IcBtnExportCleanCar = new FontAwesome.Sharp.IconButton();
             this.IbtnSearchWatchCar = new FontAwesome.Sharp.IconButton();
             this.TbxSearchCleanCar = new System.Windows.Forms.TextBox();
+            this.IcBtnExportCleanCar = new FontAwesome.Sharp.IconButton();
             this.DATE_FIN_ATTRI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATE_DEBUT_ATTRI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATECREATE_PAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,9 +143,8 @@ namespace GestPark
             // PanelSearchConsoCarbu
             // 
             this.PanelSearchConsoCarbu.AutoScroll = true;
-            this.PanelSearchConsoCarbu.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelSearchConsoCarbu.BackColor = System.Drawing.Color.Khaki;
             this.PanelSearchConsoCarbu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PanelSearchConsoCarbu.Controls.Add(this.IcBtnExportCleanCar);
             this.PanelSearchConsoCarbu.Controls.Add(this.IbtnSearchWatchCar);
             this.PanelSearchConsoCarbu.Controls.Add(this.TbxSearchCleanCar);
             this.PanelSearchConsoCarbu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -153,22 +152,6 @@ namespace GestPark
             this.PanelSearchConsoCarbu.Name = "PanelSearchConsoCarbu";
             this.PanelSearchConsoCarbu.Size = new System.Drawing.Size(1118, 100);
             this.PanelSearchConsoCarbu.TabIndex = 42;
-            // 
-            // IcBtnExportCleanCar
-            // 
-            this.IcBtnExportCleanCar.BackColor = System.Drawing.Color.White;
-            this.IcBtnExportCleanCar.ForeColor = System.Drawing.Color.DarkGreen;
-            this.IcBtnExportCleanCar.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.IcBtnExportCleanCar.IconColor = System.Drawing.Color.DarkGreen;
-            this.IcBtnExportCleanCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IcBtnExportCleanCar.IconSize = 20;
-            this.IcBtnExportCleanCar.Location = new System.Drawing.Point(1021, 71);
-            this.IcBtnExportCleanCar.Name = "IcBtnExportCleanCar";
-            this.IcBtnExportCleanCar.Size = new System.Drawing.Size(90, 27);
-            this.IcBtnExportCleanCar.TabIndex = 2;
-            this.IcBtnExportCleanCar.Text = "Exporter";
-            this.IcBtnExportCleanCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IcBtnExportCleanCar.UseVisualStyleBackColor = false;
             // 
             // IbtnSearchWatchCar
             // 
@@ -191,6 +174,22 @@ namespace GestPark
             this.TbxSearchCleanCar.Name = "TbxSearchCleanCar";
             this.TbxSearchCleanCar.Size = new System.Drawing.Size(272, 22);
             this.TbxSearchCleanCar.TabIndex = 0;
+            // 
+            // IcBtnExportCleanCar
+            // 
+            this.IcBtnExportCleanCar.BackColor = System.Drawing.Color.White;
+            this.IcBtnExportCleanCar.ForeColor = System.Drawing.Color.DarkGreen;
+            this.IcBtnExportCleanCar.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.IcBtnExportCleanCar.IconColor = System.Drawing.Color.DarkGreen;
+            this.IcBtnExportCleanCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IcBtnExportCleanCar.IconSize = 20;
+            this.IcBtnExportCleanCar.Location = new System.Drawing.Point(90, -2);
+            this.IcBtnExportCleanCar.Name = "IcBtnExportCleanCar";
+            this.IcBtnExportCleanCar.Size = new System.Drawing.Size(90, 26);
+            this.IcBtnExportCleanCar.TabIndex = 2;
+            this.IcBtnExportCleanCar.Text = "Exporter";
+            this.IcBtnExportCleanCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IcBtnExportCleanCar.UseVisualStyleBackColor = false;
             // 
             // DATE_FIN_ATTRI
             // 
@@ -284,8 +283,9 @@ namespace GestPark
             // 
             // PanelTitleMenuConsoCarb
             // 
-            this.PanelTitleMenuConsoCarb.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelTitleMenuConsoCarb.BackColor = System.Drawing.Color.Khaki;
             this.PanelTitleMenuConsoCarb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PanelTitleMenuConsoCarb.Controls.Add(this.IcBtnExportCleanCar);
             this.PanelTitleMenuConsoCarb.Controls.Add(this.IbtnCloseFormCleanCar);
             this.PanelTitleMenuConsoCarb.Controls.Add(this.IbtnCreateCleanCar);
             this.PanelTitleMenuConsoCarb.Dock = System.Windows.Forms.DockStyle.Top;
@@ -296,6 +296,9 @@ namespace GestPark
             // 
             // IbtnCloseFormCleanCar
             // 
+            this.IbtnCloseFormCleanCar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IbtnCloseFormCleanCar.BackColor = System.Drawing.Color.White;
             this.IbtnCloseFormCleanCar.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.IbtnCloseFormCleanCar.IconColor = System.Drawing.Color.Red;
@@ -316,10 +319,10 @@ namespace GestPark
             this.IbtnCreateCleanCar.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.IbtnCreateCleanCar.IconColor = System.Drawing.Color.DarkGreen;
             this.IbtnCreateCleanCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnCreateCleanCar.IconSize = 25;
+            this.IbtnCreateCleanCar.IconSize = 20;
             this.IbtnCreateCleanCar.Location = new System.Drawing.Point(-2, -2);
             this.IbtnCreateCleanCar.Name = "IbtnCreateCleanCar";
-            this.IbtnCreateCleanCar.Size = new System.Drawing.Size(77, 27);
+            this.IbtnCreateCleanCar.Size = new System.Drawing.Size(86, 27);
             this.IbtnCreateCleanCar.TabIndex = 0;
             this.IbtnCreateCleanCar.Text = "Créer";
             this.IbtnCreateCleanCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -351,7 +354,7 @@ namespace GestPark
             // Dgv_WatchCar
             // 
             this.Dgv_WatchCar.AllowUserToOrderColumns = true;
-            this.Dgv_WatchCar.BackgroundColor = System.Drawing.Color.White;
+            this.Dgv_WatchCar.BackgroundColor = System.Drawing.Color.Khaki;
             this.Dgv_WatchCar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_WatchCar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_WTCH,

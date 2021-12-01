@@ -77,7 +77,6 @@ namespace GestPark
                                 {
                                     if (Conn.IsConnection)
                                     {
-                                        // MessageBox.Show(CbxActifUser.Checked.ToString());
                                         // Desable user account
                                         try
                                         {
@@ -89,7 +88,7 @@ namespace GestPark
                                                 SqlCmd.Parameters.AddWithValue("@PSEUDO_USERS", TxtUserName.Text);
                                                 SqlCmd.Parameters.AddWithValue("@DESCRIPTION_USER", TxtDescriptionUser.Text);
                                                 SqlCmd.Parameters.AddWithValue("@MOTPASS_USERS", EncryptData(TxtPasswordUser.Text));
-                                                SqlCmd.Parameters.AddWithValue("@ACTIF", "Non actif");
+                                                SqlCmd.Parameters.AddWithValue("@ACTIF", "Inactif");
                                                 SqlCmd.Parameters.AddWithValue("@EMAIL_USERS", TxtMailUser.Text);
                                                 SqlCmd.Parameters.AddWithValue("@TEL_USERS", TxtTelUser.Text);
                                                 SqlCmd.ExecuteNonQuery();

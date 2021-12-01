@@ -42,7 +42,8 @@ namespace GestPark
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.BackColor = System.Drawing.Color.Khaki;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.IbtnExporterRole);
             this.panel1.Controls.Add(this.IbtnCloseFormRole);
             this.panel1.Controls.Add(this.IbtnAddRole);
@@ -60,7 +61,7 @@ namespace GestPark
             this.IbtnExporterRole.IconColor = System.Drawing.Color.DarkGreen;
             this.IbtnExporterRole.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IbtnExporterRole.IconSize = 25;
-            this.IbtnExporterRole.Location = new System.Drawing.Point(79, 0);
+            this.IbtnExporterRole.Location = new System.Drawing.Point(88, -2);
             this.IbtnExporterRole.Name = "IbtnExporterRole";
             this.IbtnExporterRole.Size = new System.Drawing.Size(84, 28);
             this.IbtnExporterRole.TabIndex = 2;
@@ -70,6 +71,9 @@ namespace GestPark
             // 
             // IbtnCloseFormRole
             // 
+            this.IbtnCloseFormRole.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IbtnCloseFormRole.BackColor = System.Drawing.Color.White;
             this.IbtnCloseFormRole.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.IbtnCloseFormRole.IconColor = System.Drawing.Color.Red;
@@ -78,7 +82,7 @@ namespace GestPark
             this.IbtnCloseFormRole.Location = new System.Drawing.Point(1083, 0);
             this.IbtnCloseFormRole.Name = "IbtnCloseFormRole";
             this.IbtnCloseFormRole.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.IbtnCloseFormRole.Size = new System.Drawing.Size(35, 28);
+            this.IbtnCloseFormRole.Size = new System.Drawing.Size(31, 26);
             this.IbtnCloseFormRole.TabIndex = 1;
             this.IbtnCloseFormRole.UseVisualStyleBackColor = false;
             this.IbtnCloseFormRole.Click += new System.EventHandler(this.IbtnCloseFormRole_Click);
@@ -91,9 +95,9 @@ namespace GestPark
             this.IbtnAddRole.IconColor = System.Drawing.Color.DarkGreen;
             this.IbtnAddRole.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IbtnAddRole.IconSize = 25;
-            this.IbtnAddRole.Location = new System.Drawing.Point(0, 0);
+            this.IbtnAddRole.Location = new System.Drawing.Point(-2, -2);
             this.IbtnAddRole.Name = "IbtnAddRole";
-            this.IbtnAddRole.Size = new System.Drawing.Size(82, 28);
+            this.IbtnAddRole.Size = new System.Drawing.Size(84, 28);
             this.IbtnAddRole.TabIndex = 0;
             this.IbtnAddRole.Text = "Ajouter";
             this.IbtnAddRole.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -101,7 +105,7 @@ namespace GestPark
             // 
             // PaneSearchUser
             // 
-            this.PaneSearchUser.BackColor = System.Drawing.Color.White;
+            this.PaneSearchUser.BackColor = System.Drawing.Color.Khaki;
             this.PaneSearchUser.Controls.Add(this.IbtnSearchRole);
             this.PaneSearchUser.Controls.Add(this.TxtSearchRole);
             this.PaneSearchUser.Dock = System.Windows.Forms.DockStyle.Top;

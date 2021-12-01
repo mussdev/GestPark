@@ -52,6 +52,15 @@ namespace GestPark
                             SqlCmd.ExecuteNonQuery();
                             // Clear the fields
                             textBoxCodTypConso.Clear(); textBoxDescripTypConso.Clear(); richTextBoxNoteTypConso.Clear();
+
+                            // Request
+                            SqlAda = new SqlDataAdapter("SELECT*FROM TYPECONSOMMATION WHERE ID_TYPCONSO = (SELECT MAX(ID_TYPCONSO) FROM TYPECONSOMMATION)", Conn.cn);
+                            DataTable dtbl = new DataTable();
+                            SqlAda.Fill(dtbl);
+
+                            // Fill DataGridView
+                            dataGridViewTypConso.AutoGenerateColumns = false;
+                            dataGridViewTypConso.DataSource = dtbl;
                         }
                     }
                 }
@@ -74,7 +83,7 @@ namespace GestPark
                     if (Conn.IsConnection)
                     {
                         // Request
-                        SqlAda = new SqlDataAdapter("SELECT*FROM TYPECONSOMMATION WHERE ID_TYPCONSO = (SELECT MAX(ID_TYPCONSO) FROM TYPECONSOMMATION)", Conn.cn);
+                        SqlAda = new SqlDataAdapter("SELECT*FROM TYPECONSOMMATION", Conn.cn);
                         DataTable dtbl = new DataTable();
                         SqlAda.Fill(dtbl);
 
@@ -86,7 +95,7 @@ namespace GestPark
             }
             catch(Exception ex)
             {
-                Console.WriteLine("Erreur :" + ex.Message);
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -29,6 +29,7 @@ namespace GestPark
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDisplayAssurance));
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
@@ -49,7 +50,6 @@ namespace GestPark
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconBtUploadDocAssu = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.iconBtnCloseFormCreateAssur = new FontAwesome.Sharp.IconButton();
             this.iconBtnSavedAssurance = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.iconBtnAssCreateVisitTech = new FontAwesome.Sharp.IconButton();
@@ -100,6 +100,7 @@ namespace GestPark
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(288, 20);
             this.textBox2.TabIndex = 54;
+            this.textBox2.Text = "0";
             // 
             // label9
             // 
@@ -169,6 +170,7 @@ namespace GestPark
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(645, 214);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(236, 20);
@@ -185,6 +187,7 @@ namespace GestPark
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(645, 154);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(236, 20);
@@ -210,29 +213,31 @@ namespace GestPark
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.BackColor = System.Drawing.Color.Khaki;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.iconBtUploadDocAssu);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.iconBtnCloseFormCreateAssur);
             this.panel1.Controls.Add(this.iconBtnSavedAssurance);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(933, 33);
+            this.panel1.Size = new System.Drawing.Size(933, 27);
             this.panel1.TabIndex = 40;
             // 
             // iconBtUploadDocAssu
             // 
             this.iconBtUploadDocAssu.BackColor = System.Drawing.Color.White;
+            this.iconBtUploadDocAssu.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtUploadDocAssu.IconChar = FontAwesome.Sharp.IconChar.Upload;
             this.iconBtUploadDocAssu.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtUploadDocAssu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtUploadDocAssu.IconSize = 35;
-            this.iconBtUploadDocAssu.Location = new System.Drawing.Point(45, 0);
+            this.iconBtUploadDocAssu.IconSize = 20;
+            this.iconBtUploadDocAssu.Location = new System.Drawing.Point(101, -1);
             this.iconBtUploadDocAssu.Name = "iconBtUploadDocAssu";
-            this.iconBtUploadDocAssu.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconBtUploadDocAssu.Size = new System.Drawing.Size(39, 33);
+            this.iconBtUploadDocAssu.Size = new System.Drawing.Size(100, 26);
             this.iconBtUploadDocAssu.TabIndex = 3;
+            this.iconBtUploadDocAssu.Text = "Joindre doc.";
+            this.iconBtUploadDocAssu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtUploadDocAssu.UseVisualStyleBackColor = false;
             // 
             // label6
@@ -245,38 +250,28 @@ namespace GestPark
             this.label6.TabIndex = 2;
             this.label6.Text = "Assurer votre voiture pour une meilleur visite technique";
             // 
-            // iconBtnCloseFormCreateAssur
-            // 
-            this.iconBtnCloseFormCreateAssur.BackColor = System.Drawing.Color.White;
-            this.iconBtnCloseFormCreateAssur.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.iconBtnCloseFormCreateAssur.IconColor = System.Drawing.Color.Red;
-            this.iconBtnCloseFormCreateAssur.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnCloseFormCreateAssur.IconSize = 35;
-            this.iconBtnCloseFormCreateAssur.Location = new System.Drawing.Point(894, 0);
-            this.iconBtnCloseFormCreateAssur.Name = "iconBtnCloseFormCreateAssur";
-            this.iconBtnCloseFormCreateAssur.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconBtnCloseFormCreateAssur.Size = new System.Drawing.Size(39, 33);
-            this.iconBtnCloseFormCreateAssur.TabIndex = 1;
-            this.iconBtnCloseFormCreateAssur.UseVisualStyleBackColor = false;
-            // 
             // iconBtnSavedAssurance
             // 
             this.iconBtnSavedAssurance.BackColor = System.Drawing.Color.White;
+            this.iconBtnSavedAssurance.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtnSavedAssurance.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.iconBtnSavedAssurance.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtnSavedAssurance.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnSavedAssurance.IconSize = 35;
-            this.iconBtnSavedAssurance.Location = new System.Drawing.Point(0, 0);
+            this.iconBtnSavedAssurance.IconSize = 20;
+            this.iconBtnSavedAssurance.Location = new System.Drawing.Point(-2, -2);
             this.iconBtnSavedAssurance.Name = "iconBtnSavedAssurance";
-            this.iconBtnSavedAssurance.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconBtnSavedAssurance.Size = new System.Drawing.Size(39, 33);
+            this.iconBtnSavedAssurance.Size = new System.Drawing.Size(97, 27);
             this.iconBtnSavedAssurance.TabIndex = 0;
+            this.iconBtnSavedAssurance.Text = "Enregistrer";
+            this.iconBtnSavedAssurance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnSavedAssurance.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.YellowGreen;
             this.textBox1.Location = new System.Drawing.Point(84, 100);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(171, 20);
             this.textBox1.TabIndex = 43;
             // 
@@ -299,7 +294,7 @@ namespace GestPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(933, 519);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
@@ -321,7 +316,7 @@ namespace GestPark
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDisplayAssurance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDisplayAssurance";
@@ -348,7 +343,6 @@ namespace GestPark
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private FontAwesome.Sharp.IconButton iconBtnCloseFormCreateAssur;
         private FontAwesome.Sharp.IconButton iconBtnSavedAssurance;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

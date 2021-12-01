@@ -29,6 +29,7 @@ namespace GestPark
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAttributeCarModify));
             this.CbxProprietAttrMod = new System.Windows.Forms.ComboBox();
             this.CbxVehiculeAttrMod = new System.Windows.Forms.ComboBox();
             this.RbtxNoteAttr = new System.Windows.Forms.RichTextBox();
@@ -74,14 +75,15 @@ namespace GestPark
             this.RbtxNoteAttr.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RbtxNoteAttr.Location = new System.Drawing.Point(98, 265);
             this.RbtxNoteAttr.Name = "RbtxNoteAttr";
-            this.RbtxNoteAttr.Size = new System.Drawing.Size(601, 128);
+            this.RbtxNoteAttr.Size = new System.Drawing.Size(657, 98);
             this.RbtxNoteAttr.TabIndex = 29;
             this.RbtxNoteAttr.Text = "";
             // 
             // DateFinAttVehi
             // 
             this.DateFinAttVehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateFinAttVehi.Location = new System.Drawing.Point(499, 192);
+            this.DateFinAttVehi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateFinAttVehi.Location = new System.Drawing.Point(555, 191);
             this.DateFinAttVehi.Name = "DateFinAttVehi";
             this.DateFinAttVehi.Size = new System.Drawing.Size(200, 22);
             this.DateFinAttVehi.TabIndex = 28;
@@ -89,7 +91,8 @@ namespace GestPark
             // DateAttrVehi
             // 
             this.DateAttrVehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateAttrVehi.Location = new System.Drawing.Point(499, 126);
+            this.DateAttrVehi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateAttrVehi.Location = new System.Drawing.Point(555, 125);
             this.DateAttrVehi.Name = "DateAttrVehi";
             this.DateAttrVehi.Size = new System.Drawing.Size(200, 22);
             this.DateAttrVehi.TabIndex = 27;
@@ -97,14 +100,15 @@ namespace GestPark
             // DatePikerCreateAttr
             // 
             this.DatePikerCreateAttr.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DatePikerCreateAttr.Location = new System.Drawing.Point(499, 61);
+            this.DatePikerCreateAttr.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DatePikerCreateAttr.Location = new System.Drawing.Point(555, 60);
             this.DatePikerCreateAttr.Name = "DatePikerCreateAttr";
             this.DatePikerCreateAttr.Size = new System.Drawing.Size(200, 22);
             this.DatePikerCreateAttr.TabIndex = 26;
             // 
             // TbxCodeAttr
             // 
-            this.TbxCodeAttr.BackColor = System.Drawing.Color.Khaki;
+            this.TbxCodeAttr.BackColor = System.Drawing.Color.YellowGreen;
             this.TbxCodeAttr.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbxCodeAttr.Location = new System.Drawing.Point(98, 61);
             this.TbxCodeAttr.Name = "TbxCodeAttr";
@@ -117,7 +121,7 @@ namespace GestPark
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(388, 198);
+            this.label7.Location = new System.Drawing.Point(444, 197);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 15);
             this.label7.TabIndex = 24;
@@ -128,7 +132,7 @@ namespace GestPark
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(388, 135);
+            this.label6.Location = new System.Drawing.Point(444, 134);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 15);
             this.label6.TabIndex = 23;
@@ -139,7 +143,7 @@ namespace GestPark
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(388, 67);
+            this.label5.Location = new System.Drawing.Point(444, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 15);
             this.label5.TabIndex = 22;
@@ -190,13 +194,14 @@ namespace GestPark
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.BackColor = System.Drawing.Color.Khaki;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.IbtnJoindreDocAttrMod);
             this.panel1.Controls.Add(this.IbtnRegisterAttributeCarToPersMod);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(707, 30);
+            this.panel1.Size = new System.Drawing.Size(762, 26);
             this.panel1.TabIndex = 17;
             // 
             // IbtnJoindreDocAttrMod
@@ -207,9 +212,9 @@ namespace GestPark
             this.IbtnJoindreDocAttrMod.IconColor = System.Drawing.Color.DarkGreen;
             this.IbtnJoindreDocAttrMod.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IbtnJoindreDocAttrMod.IconSize = 25;
-            this.IbtnJoindreDocAttrMod.Location = new System.Drawing.Point(98, 0);
+            this.IbtnJoindreDocAttrMod.Location = new System.Drawing.Point(98, -2);
             this.IbtnJoindreDocAttrMod.Name = "IbtnJoindreDocAttrMod";
-            this.IbtnJoindreDocAttrMod.Size = new System.Drawing.Size(99, 30);
+            this.IbtnJoindreDocAttrMod.Size = new System.Drawing.Size(103, 26);
             this.IbtnJoindreDocAttrMod.TabIndex = 4;
             this.IbtnJoindreDocAttrMod.Text = "Joindre";
             this.IbtnJoindreDocAttrMod.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -224,9 +229,9 @@ namespace GestPark
             this.IbtnRegisterAttributeCarToPersMod.IconColor = System.Drawing.Color.DarkGreen;
             this.IbtnRegisterAttributeCarToPersMod.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IbtnRegisterAttributeCarToPersMod.IconSize = 25;
-            this.IbtnRegisterAttributeCarToPersMod.Location = new System.Drawing.Point(0, 0);
+            this.IbtnRegisterAttributeCarToPersMod.Location = new System.Drawing.Point(-2, -2);
             this.IbtnRegisterAttributeCarToPersMod.Name = "IbtnRegisterAttributeCarToPersMod";
-            this.IbtnRegisterAttributeCarToPersMod.Size = new System.Drawing.Size(99, 30);
+            this.IbtnRegisterAttributeCarToPersMod.Size = new System.Drawing.Size(101, 26);
             this.IbtnRegisterAttributeCarToPersMod.TabIndex = 2;
             this.IbtnRegisterAttributeCarToPersMod.Text = "Enregistrer";
             this.IbtnRegisterAttributeCarToPersMod.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -237,8 +242,8 @@ namespace GestPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(707, 399);
+            this.BackColor = System.Drawing.Color.Khaki;
+            this.ClientSize = new System.Drawing.Size(762, 399);
             this.Controls.Add(this.CbxProprietAttrMod);
             this.Controls.Add(this.CbxVehiculeAttrMod);
             this.Controls.Add(this.RbtxNoteAttr);
@@ -254,9 +259,10 @@ namespace GestPark
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAttributeCarModify";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAttributeCarModify";
+            this.Text = "Modifier une attribution de véhicule";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

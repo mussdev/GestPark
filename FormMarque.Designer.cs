@@ -33,8 +33,8 @@ namespace GestPark
             this.label1 = new System.Windows.Forms.Label();
             this.iconBtnCloseFormMarq = new FontAwesome.Sharp.IconButton();
             this.panelRegisterMarq = new System.Windows.Forms.Panel();
+            this.btnValiderMarq = new FontAwesome.Sharp.IconButton();
             this.iconBtnAnnulerMarq = new FontAwesome.Sharp.IconButton();
-            this.btnValiderMarq = new System.Windows.Forms.Button();
             this.richTextBoxNoteMarq = new System.Windows.Forms.RichTextBox();
             this.textBoxDescriptMarq = new System.Windows.Forms.TextBox();
             this.textBxCodeMarq = new System.Windows.Forms.TextBox();
@@ -55,14 +55,14 @@ namespace GestPark
             // 
             // panelMarqueTitle
             // 
-            this.panelMarqueTitle.BackColor = System.Drawing.Color.DarkOrange;
+            this.panelMarqueTitle.BackColor = System.Drawing.Color.Khaki;
             this.panelMarqueTitle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelMarqueTitle.Controls.Add(this.label1);
             this.panelMarqueTitle.Controls.Add(this.iconBtnCloseFormMarq);
             this.panelMarqueTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMarqueTitle.Location = new System.Drawing.Point(0, 0);
             this.panelMarqueTitle.Name = "panelMarqueTitle";
-            this.panelMarqueTitle.Size = new System.Drawing.Size(973, 28);
+            this.panelMarqueTitle.Size = new System.Drawing.Size(1118, 28);
             this.panelMarqueTitle.TabIndex = 0;
             // 
             // label1
@@ -78,24 +78,27 @@ namespace GestPark
             // 
             // iconBtnCloseFormMarq
             // 
+            this.iconBtnCloseFormMarq.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.iconBtnCloseFormMarq.BackColor = System.Drawing.Color.White;
+            this.iconBtnCloseFormMarq.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconBtnCloseFormMarq.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.iconBtnCloseFormMarq.IconColor = System.Drawing.Color.Red;
             this.iconBtnCloseFormMarq.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnCloseFormMarq.IconSize = 35;
-            this.iconBtnCloseFormMarq.Location = new System.Drawing.Point(940, -2);
+            this.iconBtnCloseFormMarq.Location = new System.Drawing.Point(1087, -2);
             this.iconBtnCloseFormMarq.Name = "iconBtnCloseFormMarq";
             this.iconBtnCloseFormMarq.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.iconBtnCloseFormMarq.Size = new System.Drawing.Size(34, 30);
+            this.iconBtnCloseFormMarq.Size = new System.Drawing.Size(32, 30);
             this.iconBtnCloseFormMarq.TabIndex = 0;
-            this.iconBtnCloseFormMarq.UseVisualStyleBackColor = true;
+            this.iconBtnCloseFormMarq.UseVisualStyleBackColor = false;
             this.iconBtnCloseFormMarq.Click += new System.EventHandler(this.iconBtnCloseFormMarq_Click);
             // 
             // panelRegisterMarq
             // 
-            this.panelRegisterMarq.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelRegisterMarq.BackColor = System.Drawing.Color.Khaki;
             this.panelRegisterMarq.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelRegisterMarq.Controls.Add(this.iconBtnAnnulerMarq);
             this.panelRegisterMarq.Controls.Add(this.btnValiderMarq);
+            this.panelRegisterMarq.Controls.Add(this.iconBtnAnnulerMarq);
             this.panelRegisterMarq.Controls.Add(this.richTextBoxNoteMarq);
             this.panelRegisterMarq.Controls.Add(this.textBoxDescriptMarq);
             this.panelRegisterMarq.Controls.Add(this.textBxCodeMarq);
@@ -105,34 +108,43 @@ namespace GestPark
             this.panelRegisterMarq.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelRegisterMarq.Location = new System.Drawing.Point(0, 28);
             this.panelRegisterMarq.Name = "panelRegisterMarq";
-            this.panelRegisterMarq.Size = new System.Drawing.Size(385, 639);
+            this.panelRegisterMarq.Size = new System.Drawing.Size(385, 703);
             this.panelRegisterMarq.TabIndex = 1;
+            // 
+            // btnValiderMarq
+            // 
+            this.btnValiderMarq.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnValiderMarq.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValiderMarq.ForeColor = System.Drawing.Color.White;
+            this.btnValiderMarq.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btnValiderMarq.IconColor = System.Drawing.Color.White;
+            this.btnValiderMarq.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnValiderMarq.IconSize = 20;
+            this.btnValiderMarq.Location = new System.Drawing.Point(148, 363);
+            this.btnValiderMarq.Name = "btnValiderMarq";
+            this.btnValiderMarq.Size = new System.Drawing.Size(95, 30);
+            this.btnValiderMarq.TabIndex = 8;
+            this.btnValiderMarq.Text = "Enregistrer";
+            this.btnValiderMarq.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnValiderMarq.UseVisualStyleBackColor = false;
+            this.btnValiderMarq.Click += new System.EventHandler(this.btnValiderMarq_Click);
             // 
             // iconBtnAnnulerMarq
             // 
-            this.iconBtnAnnulerMarq.BackColor = System.Drawing.Color.White;
-            this.iconBtnAnnulerMarq.ForeColor = System.Drawing.Color.DarkOrange;
-            this.iconBtnAnnulerMarq.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconBtnAnnulerMarq.IconColor = System.Drawing.Color.Black;
+            this.iconBtnAnnulerMarq.BackColor = System.Drawing.Color.DarkOrange;
+            this.iconBtnAnnulerMarq.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnAnnulerMarq.ForeColor = System.Drawing.Color.White;
+            this.iconBtnAnnulerMarq.IconChar = FontAwesome.Sharp.IconChar.Ban;
+            this.iconBtnAnnulerMarq.IconColor = System.Drawing.Color.White;
             this.iconBtnAnnulerMarq.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnAnnulerMarq.IconSize = 20;
             this.iconBtnAnnulerMarq.Location = new System.Drawing.Point(249, 363);
             this.iconBtnAnnulerMarq.Name = "iconBtnAnnulerMarq";
             this.iconBtnAnnulerMarq.Size = new System.Drawing.Size(95, 30);
             this.iconBtnAnnulerMarq.TabIndex = 7;
             this.iconBtnAnnulerMarq.Text = "ANNULER";
+            this.iconBtnAnnulerMarq.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnAnnulerMarq.UseVisualStyleBackColor = false;
-            // 
-            // btnValiderMarq
-            // 
-            this.btnValiderMarq.BackColor = System.Drawing.Color.White;
-            this.btnValiderMarq.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btnValiderMarq.Location = new System.Drawing.Point(142, 363);
-            this.btnValiderMarq.Name = "btnValiderMarq";
-            this.btnValiderMarq.Size = new System.Drawing.Size(84, 30);
-            this.btnValiderMarq.TabIndex = 6;
-            this.btnValiderMarq.Text = "VALIDER";
-            this.btnValiderMarq.UseVisualStyleBackColor = false;
-            this.btnValiderMarq.Click += new System.EventHandler(this.btnValiderMarq_Click);
             // 
             // richTextBoxNoteMarq
             // 
@@ -196,7 +208,7 @@ namespace GestPark
             // dataGridViewMarq
             // 
             this.dataGridViewMarq.AllowUserToOrderColumns = true;
-            this.dataGridViewMarq.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewMarq.BackgroundColor = System.Drawing.Color.Khaki;
             this.dataGridViewMarq.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewMarq.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMarq.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -210,7 +222,7 @@ namespace GestPark
             this.dataGridViewMarq.GridColor = System.Drawing.Color.White;
             this.dataGridViewMarq.Location = new System.Drawing.Point(385, 28);
             this.dataGridViewMarq.Name = "dataGridViewMarq";
-            this.dataGridViewMarq.Size = new System.Drawing.Size(588, 639);
+            this.dataGridViewMarq.Size = new System.Drawing.Size(733, 703);
             this.dataGridViewMarq.TabIndex = 2;
             // 
             // ID_MARQ
@@ -218,7 +230,7 @@ namespace GestPark
             this.ID_MARQ.DataPropertyName = "ID_MARQ";
             this.ID_MARQ.HeaderText = "Num";
             this.ID_MARQ.Name = "ID_MARQ";
-            this.ID_MARQ.Width = 50;
+            this.ID_MARQ.Width = 70;
             // 
             // CODE_MARQ
             // 
@@ -239,7 +251,7 @@ namespace GestPark
             this.OBSERVATIONS_MARQ.DataPropertyName = "OBSERVATIONS_MARQ";
             this.OBSERVATIONS_MARQ.HeaderText = "Note";
             this.OBSERVATIONS_MARQ.Name = "OBSERVATIONS_MARQ";
-            this.OBSERVATIONS_MARQ.Width = 150;
+            this.OBSERVATIONS_MARQ.Width = 200;
             // 
             // USERCREATE_MARQ
             // 
@@ -257,7 +269,7 @@ namespace GestPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 667);
+            this.ClientSize = new System.Drawing.Size(1118, 731);
             this.Controls.Add(this.dataGridViewMarq);
             this.Controls.Add(this.panelRegisterMarq);
             this.Controls.Add(this.panelMarqueTitle);
@@ -282,7 +294,6 @@ namespace GestPark
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelRegisterMarq;
         private FontAwesome.Sharp.IconButton iconBtnAnnulerMarq;
-        private System.Windows.Forms.Button btnValiderMarq;
         private System.Windows.Forms.RichTextBox richTextBoxNoteMarq;
         private System.Windows.Forms.TextBox textBoxDescriptMarq;
         private System.Windows.Forms.TextBox textBxCodeMarq;
@@ -290,6 +301,7 @@ namespace GestPark
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridViewMarq;
+        private FontAwesome.Sharp.IconButton btnValiderMarq;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_MARQ;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODE_MARQ;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_MARQ;

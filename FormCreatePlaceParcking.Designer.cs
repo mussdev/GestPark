@@ -29,7 +29,6 @@ namespace GestPark
         /// </summary>
         private void InitializeComponent()
         {
-            this.IcbtnCloseFormCreateParking = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.IbtnModifier = new FontAwesome.Sharp.IconButton();
@@ -50,38 +49,23 @@ namespace GestPark
             this.OBSERVATION_PARK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATECREATE_PARK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.USERCREATE_PARK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewParking)).BeginInit();
             this.SuspendLayout();
             // 
-            // IcbtnCloseFormCreateParking
-            // 
-            this.IcbtnCloseFormCreateParking.BackColor = System.Drawing.Color.White;
-            this.IcbtnCloseFormCreateParking.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.IcbtnCloseFormCreateParking.IconColor = System.Drawing.Color.Red;
-            this.IcbtnCloseFormCreateParking.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IcbtnCloseFormCreateParking.IconSize = 30;
-            this.IcbtnCloseFormCreateParking.Location = new System.Drawing.Point(1061, 0);
-            this.IcbtnCloseFormCreateParking.Name = "IcbtnCloseFormCreateParking";
-            this.IcbtnCloseFormCreateParking.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.IcbtnCloseFormCreateParking.Size = new System.Drawing.Size(34, 31);
-            this.IcbtnCloseFormCreateParking.TabIndex = 1;
-            this.IcbtnCloseFormCreateParking.UseVisualStyleBackColor = false;
-            this.IcbtnCloseFormCreateParking.Click += new System.EventHandler(this.IcbtnCloseFormCreateParking_Click);
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.IcbtnCloseFormCreateParking);
+            this.panel1.BackColor = System.Drawing.Color.Khaki;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1095, 29);
+            this.panel1.Size = new System.Drawing.Size(1118, 23);
             this.panel1.TabIndex = 2;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.BackColor = System.Drawing.Color.Khaki;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.IbtnModifier);
             this.panel2.Controls.Add(this.IconBtnEnregistreParc);
@@ -94,37 +78,41 @@ namespace GestPark
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 29);
+            this.panel2.Location = new System.Drawing.Point(0, 23);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(439, 692);
+            this.panel2.Size = new System.Drawing.Size(439, 708);
             this.panel2.TabIndex = 3;
             // 
             // IbtnModifier
             // 
             this.IbtnModifier.BackColor = System.Drawing.Color.DarkOrange;
             this.IbtnModifier.ForeColor = System.Drawing.Color.White;
-            this.IbtnModifier.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.IbtnModifier.IconColor = System.Drawing.Color.Black;
+            this.IbtnModifier.IconChar = FontAwesome.Sharp.IconChar.Ban;
+            this.IbtnModifier.IconColor = System.Drawing.Color.White;
             this.IbtnModifier.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IbtnModifier.IconSize = 20;
             this.IbtnModifier.Location = new System.Drawing.Point(175, 395);
             this.IbtnModifier.Name = "IbtnModifier";
-            this.IbtnModifier.Size = new System.Drawing.Size(75, 31);
+            this.IbtnModifier.Size = new System.Drawing.Size(96, 31);
             this.IbtnModifier.TabIndex = 9;
             this.IbtnModifier.Text = "Modifier";
+            this.IbtnModifier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IbtnModifier.UseVisualStyleBackColor = false;
             // 
             // IconBtnEnregistreParc
             // 
             this.IconBtnEnregistreParc.BackColor = System.Drawing.Color.DarkGreen;
             this.IconBtnEnregistreParc.ForeColor = System.Drawing.Color.White;
-            this.IconBtnEnregistreParc.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.IconBtnEnregistreParc.IconColor = System.Drawing.Color.Black;
+            this.IconBtnEnregistreParc.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.IconBtnEnregistreParc.IconColor = System.Drawing.Color.White;
             this.IconBtnEnregistreParc.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IconBtnEnregistreParc.IconSize = 20;
             this.IconBtnEnregistreParc.Location = new System.Drawing.Point(277, 395);
             this.IconBtnEnregistreParc.Name = "IconBtnEnregistreParc";
-            this.IconBtnEnregistreParc.Size = new System.Drawing.Size(75, 31);
+            this.IconBtnEnregistreParc.Size = new System.Drawing.Size(97, 31);
             this.IconBtnEnregistreParc.TabIndex = 8;
             this.IconBtnEnregistreParc.Text = "Enregistrer";
+            this.IconBtnEnregistreParc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IconBtnEnregistreParc.UseVisualStyleBackColor = false;
             this.IconBtnEnregistreParc.Click += new System.EventHandler(this.IconBtnEnregistreParc_Click);
             // 
@@ -199,7 +187,7 @@ namespace GestPark
             // 
             // DataGridViewParking
             // 
-            this.DataGridViewParking.BackgroundColor = System.Drawing.Color.White;
+            this.DataGridViewParking.BackgroundColor = System.Drawing.Color.Khaki;
             this.DataGridViewParking.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridViewParking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewParking.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -211,9 +199,9 @@ namespace GestPark
             this.DATECREATE_PARK,
             this.USERCREATE_PARK});
             this.DataGridViewParking.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataGridViewParking.Location = new System.Drawing.Point(439, 29);
+            this.DataGridViewParking.Location = new System.Drawing.Point(439, 23);
             this.DataGridViewParking.Name = "DataGridViewParking";
-            this.DataGridViewParking.Size = new System.Drawing.Size(656, 692);
+            this.DataGridViewParking.Size = new System.Drawing.Size(679, 708);
             this.DataGridViewParking.TabIndex = 4;
             // 
             // ID_PARK
@@ -252,6 +240,7 @@ namespace GestPark
             this.OBSERVATION_PARK.HeaderText = "Note";
             this.OBSERVATION_PARK.Name = "OBSERVATION_PARK";
             this.OBSERVATION_PARK.ReadOnly = true;
+            this.OBSERVATION_PARK.Width = 150;
             // 
             // DATECREATE_PARK
             // 
@@ -272,7 +261,7 @@ namespace GestPark
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1095, 721);
+            this.ClientSize = new System.Drawing.Size(1118, 731);
             this.Controls.Add(this.DataGridViewParking);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -280,7 +269,6 @@ namespace GestPark
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCreatePlaceParcking";
             this.Text = "FormCreatePlaceParcking";
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewParking)).EndInit();
@@ -289,7 +277,6 @@ namespace GestPark
         }
 
         #endregion
-        private FontAwesome.Sharp.IconButton IcbtnCloseFormCreateParking;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton IconBtnEnregistreParc;
@@ -302,6 +289,7 @@ namespace GestPark
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView DataGridViewParking;
+        private FontAwesome.Sharp.IconButton IbtnModifier;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_PARK;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODE_PARK;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_PARK;
@@ -309,6 +297,5 @@ namespace GestPark
         private System.Windows.Forms.DataGridViewTextBoxColumn OBSERVATION_PARK;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATECREATE_PARK;
         private System.Windows.Forms.DataGridViewTextBoxColumn USERCREATE_PARK;
-        private FontAwesome.Sharp.IconButton IbtnModifier;
     }
 }

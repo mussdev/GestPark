@@ -18,7 +18,6 @@ namespace GestPark
         private SqlDataReader MyReader;
         private SqlDataAdapter SqlAda;
         private string IdConducteurMod, IdVehiculeMod, IdMvtsMod;
-        private decimal KilometreAvantMvt = 0, KilometreApreMvt = 0;
         public FormModifyMouvement()
         {
             InitializeComponent();
@@ -91,21 +90,17 @@ namespace GestPark
                         if (Conn.IsConnection)
                         {
                             string CodMvts = TbxCodMvtMod.Text;
-                            decimal kiloAprMvt = decimal.Parse(TbxKilometreMvtApresMod.Text);
-                            // Console.WriteLine(kiloAprMvt);
-                            SqlCmd = new SqlCommand("UPDATE MOUVEMENTS SET ID_PERS=@ID_PERS,ID_VEHICULE=@ID_VEHICULE, STATUT_MVTS =@STATUT_MVTS, KILOMETRE_AVA_MVTS =@KILOMETRE_AVA_MVTS, KILO_APRES_MVTS=@KILO_APRES_MVTS , DESCRIPTION_MVTS =@DESCRIPTION_MVTS, LIEU_MVTS =@LIEU_MVTS, NOTE_MVTS =@NOTE_MVTS,DATEDEPART_MVTS=@DATEDEPART_MVTS, DATEARRIVE_MVTS=@DATEARRIVE_MVTS WHERE CODE_MVTS = '" + CodMvts + "' ", Conn.cn);
+                            SqlCmd = new SqlCommand("UPDATE MOUVEMENTS SET ID_PERS=@ID_PERS,ID_VEHICULE=@ID_VEHICULE, STATUT_MVTS =@STATUT_MVTS, DESCRIPTION_MVTS =@DESCRIPTION_MVTS, LIEU_MVTS =@LIEU_MVTS, NOTE_MVTS =@NOTE_MVTS,DATEDEPART_MVTS=@DATEDEPART_MVTS, DATEARRIVE_MVTS=@DATEARRIVE_MVTS WHERE CODE_MVTS = '" + CodMvts + "' ", Conn.cn);
                             SqlCmd.Parameters.AddWithValue("@ID_PERS", IdConducteurMod);
                             SqlCmd.Parameters.AddWithValue("@ID_VEHICULE", IdVehiculeMod);
                             SqlCmd.Parameters.AddWithValue("@STATUT_MVTS", CbxStatutMvtMod.Text);
-                            SqlCmd.Parameters.AddWithValue("@KILOMETRE_AVA_MVTS", TbxKilometreMvtAvantMod.Text);
-                            SqlCmd.Parameters.AddWithValue("@KILO_APRES_MVTS", TbxKilometreMvtApresMod.Text);
                             SqlCmd.Parameters.AddWithValue("@DESCRIPTION_MVTS", TbxDescriptionMvtMod.Text);
                             SqlCmd.Parameters.AddWithValue("@LIEU_MVTS", CbxLieuMvtsMod.Text);
                             SqlCmd.Parameters.AddWithValue("@NOTE_MVTS", RtbxNoteMvtMod.Text);
                             SqlCmd.Parameters.AddWithValue("@DATEDEPART_MVTS", DateDepartMvtMod.Value.ToString("dd/MM/yyyy"));
                             SqlCmd.Parameters.AddWithValue("@DATEARRIVE_MVTS", DateArriveeMvtMod.Value.ToString("dd/MM/yyyy"));
                             SqlCmd.ExecuteNonQuery();
-                            MessageBox.Show("Les informations ont été modifiées avec succès !");
+                            MessageBox.Show("Les informations ont été modifiées avec succès !","GestPark",MessageBoxButtons.OK);
 
                             // Update state car
                             SqlCmd = new SqlCommand("UPDATE VEHICULE SET ETAT_VEHICULE=@ETAT_VEHICULE WHERE ID_VEHICULE='" + IdVehiculeMod + "'", Conn.cn);

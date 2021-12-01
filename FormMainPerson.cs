@@ -50,8 +50,8 @@ namespace GestPark
                         sqlAda.Fill(dtbl);
 
                         // Fill DataGridView
-                        dgvPerson.AutoGenerateColumns = false;
-                        dgvPerson.DataSource = dtbl;
+                        DgvPerson.AutoGenerateColumns = false;
+                        DgvPerson.DataSource = dtbl;
 
                     }
                 }
@@ -60,6 +60,29 @@ namespace GestPark
             {
                 MessageBox.Show(ex.ToString(), "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dgvPerson_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FormModifierPerson ModifierPers = new FormModifierPerson();
+            ModifierPers.TxtCodePersMod.Text = this.DgvPerson.CurrentRow.Cells[1].Value?.ToString() ;
+            ModifierPers.TxtNomPersMod.Text = this.DgvPerson.CurrentRow.Cells[2].Value?.ToString();
+            ModifierPers.TxtPrenPersMod.Text = this.DgvPerson.CurrentRow.Cells[3].Value?.ToString();
+            ModifierPers.DpDateNaissPersMod.Text = this.DgvPerson.CurrentRow.Cells[4].Value?.ToString();
+            ModifierPers.CbxLieuNaissPersMod.Text = this.DgvPerson.CurrentRow.Cells[5].Value?.ToString();
+            ModifierPers.TxtTelPersMod.Text = this.DgvPerson.CurrentRow.Cells[6].Value?.ToString();
+            ModifierPers.TxtNumPermisPersMod.Text = this.DgvPerson.CurrentRow.Cells[7].Value?.ToString();
+            ModifierPers.CbxTypPiecPersMod.Text = this.DgvPerson.CurrentRow.Cells[8].Value?.ToString();
+            ModifierPers.TxtNumPieceIdentPersMod.Text = this.DgvPerson.CurrentRow.Cells[9].Value?.ToString();
+            ModifierPers.CbxTypPersMod.Text = this.DgvPerson.CurrentRow.Cells[10].Value?.ToString();
+            ModifierPers.CbxCountryPersMod.Text = this.DgvPerson.CurrentRow.Cells[11].Value?.ToString();
+            ModifierPers.CbxTownPersMod.Text = this.DgvPerson.CurrentRow.Cells[12].Value?.ToString();
+            ModifierPers.TxtAdressPersMod.Text = this.DgvPerson.CurrentRow.Cells[13].Value?.ToString();
+            ModifierPers.TxtCodePostalPersMod.Text = this.DgvPerson.CurrentRow.Cells[14].Value?.ToString();
+            ModifierPers.DtKDateCreateMod.Text = this.DgvPerson.CurrentRow.Cells[15].Value?.ToString();
+            ModifierPers.RtxtNotePersMod.Text = this.DgvPerson.CurrentRow.Cells[16].Value?.ToString();
+            
+            ModifierPers.ShowDialog();
         }
     }
 }

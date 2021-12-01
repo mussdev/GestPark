@@ -63,20 +63,21 @@ namespace GestPark
             // 
             this.RbtxNoteWatchCarModi.Location = new System.Drawing.Point(98, 270);
             this.RbtxNoteWatchCarModi.Name = "RbtxNoteWatchCarModi";
-            this.RbtxNoteWatchCarModi.Size = new System.Drawing.Size(601, 128);
+            this.RbtxNoteWatchCarModi.Size = new System.Drawing.Size(698, 100);
             this.RbtxNoteWatchCarModi.TabIndex = 42;
             this.RbtxNoteWatchCarModi.Text = "";
             // 
             // DatePikerWatchCarModi
             // 
-            this.DatePikerWatchCarModi.Location = new System.Drawing.Point(499, 66);
+            this.DatePikerWatchCarModi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DatePikerWatchCarModi.Location = new System.Drawing.Point(596, 63);
             this.DatePikerWatchCarModi.Name = "DatePikerWatchCarModi";
             this.DatePikerWatchCarModi.Size = new System.Drawing.Size(200, 22);
             this.DatePikerWatchCarModi.TabIndex = 41;
             // 
             // TbxCodeWatchCarModi
             // 
-            this.TbxCodeWatchCarModi.BackColor = System.Drawing.Color.Khaki;
+            this.TbxCodeWatchCarModi.BackColor = System.Drawing.Color.YellowGreen;
             this.TbxCodeWatchCarModi.Location = new System.Drawing.Point(98, 66);
             this.TbxCodeWatchCarModi.Name = "TbxCodeWatchCarModi";
             this.TbxCodeWatchCarModi.Size = new System.Drawing.Size(119, 22);
@@ -86,7 +87,7 @@ namespace GestPark
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(423, 141);
+            this.label6.Location = new System.Drawing.Point(520, 138);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 15);
             this.label6.TabIndex = 39;
@@ -96,7 +97,7 @@ namespace GestPark
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(423, 73);
+            this.label5.Location = new System.Drawing.Point(520, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 15);
             this.label5.TabIndex = 38;
@@ -139,18 +140,18 @@ namespace GestPark
             this.BtnJoindreWatchCarModi.IconChar = FontAwesome.Sharp.IconChar.FileImport;
             this.BtnJoindreWatchCarModi.IconColor = System.Drawing.Color.DarkGreen;
             this.BtnJoindreWatchCarModi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnJoindreWatchCarModi.IconSize = 25;
-            this.BtnJoindreWatchCarModi.Location = new System.Drawing.Point(98, 0);
+            this.BtnJoindreWatchCarModi.IconSize = 20;
+            this.BtnJoindreWatchCarModi.Location = new System.Drawing.Point(105, -2);
             this.BtnJoindreWatchCarModi.Name = "BtnJoindreWatchCarModi";
-            this.BtnJoindreWatchCarModi.Size = new System.Drawing.Size(99, 30);
+            this.BtnJoindreWatchCarModi.Size = new System.Drawing.Size(106, 28);
             this.BtnJoindreWatchCarModi.TabIndex = 3;
-            this.BtnJoindreWatchCarModi.Text = "Joindre";
+            this.BtnJoindreWatchCarModi.Text = "Joindre doc.";
             this.BtnJoindreWatchCarModi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnJoindreWatchCarModi.UseVisualStyleBackColor = false;
             // 
             // TxtBLieuWatchCarModi
             // 
-            this.TxtBLieuWatchCarModi.Location = new System.Drawing.Point(495, 135);
+            this.TxtBLieuWatchCarModi.Location = new System.Drawing.Point(592, 132);
             this.TxtBLieuWatchCarModi.Name = "TxtBLieuWatchCarModi";
             this.TxtBLieuWatchCarModi.Size = new System.Drawing.Size(204, 22);
             this.TxtBLieuWatchCarModi.TabIndex = 45;
@@ -174,13 +175,14 @@ namespace GestPark
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.BackColor = System.Drawing.Color.Khaki;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.IbtnRegisterWatchCarModi);
             this.panel1.Controls.Add(this.BtnJoindreWatchCarModi);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(933, 30);
+            this.panel1.Size = new System.Drawing.Size(933, 28);
             this.panel1.TabIndex = 33;
             // 
             // IbtnRegisterWatchCarModi
@@ -190,10 +192,10 @@ namespace GestPark
             this.IbtnRegisterWatchCarModi.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.IbtnRegisterWatchCarModi.IconColor = System.Drawing.Color.DarkGreen;
             this.IbtnRegisterWatchCarModi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnRegisterWatchCarModi.IconSize = 25;
-            this.IbtnRegisterWatchCarModi.Location = new System.Drawing.Point(0, 0);
+            this.IbtnRegisterWatchCarModi.IconSize = 20;
+            this.IbtnRegisterWatchCarModi.Location = new System.Drawing.Point(-2, -2);
             this.IbtnRegisterWatchCarModi.Name = "IbtnRegisterWatchCarModi";
-            this.IbtnRegisterWatchCarModi.Size = new System.Drawing.Size(99, 30);
+            this.IbtnRegisterWatchCarModi.Size = new System.Drawing.Size(101, 28);
             this.IbtnRegisterWatchCarModi.TabIndex = 4;
             this.IbtnRegisterWatchCarModi.Text = "Enregistrer";
             this.IbtnRegisterWatchCarModi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -204,6 +206,7 @@ namespace GestPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(933, 519);
             this.Controls.Add(this.CbxVehiculeWatchCarModi);
             this.Controls.Add(this.RbtxNoteWatchCarModi);

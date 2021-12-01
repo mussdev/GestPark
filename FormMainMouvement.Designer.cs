@@ -30,10 +30,10 @@ namespace GestPark
         private void InitializeComponent()
         {
             this.panelTitleFormMouvt = new System.Windows.Forms.Panel();
+            this.IbtnExportMvt = new FontAwesome.Sharp.IconButton();
             this.IbtnCloseFormMvt = new FontAwesome.Sharp.IconButton();
             this.IbtnRegisterMvt = new FontAwesome.Sharp.IconButton();
             this.PanelSearchMvt = new System.Windows.Forms.Panel();
-            this.IbtnExportMvt = new FontAwesome.Sharp.IconButton();
             this.IbtnSearchMvt = new FontAwesome.Sharp.IconButton();
             this.TbxSearchMvt = new System.Windows.Forms.TextBox();
             this.DataGridViewMvt = new System.Windows.Forms.DataGridView();
@@ -44,8 +44,6 @@ namespace GestPark
             this.DESCRIPTION_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LIEU_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIPTION_PERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KILOMETRE_AVA_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KILO_APRES_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATEDEPART_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATEARRIVE_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOTE_MVTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,26 +56,47 @@ namespace GestPark
             // 
             // panelTitleFormMouvt
             // 
-            this.panelTitleFormMouvt.BackColor = System.Drawing.Color.DarkOrange;
+            this.panelTitleFormMouvt.BackColor = System.Drawing.Color.Khaki;
+            this.panelTitleFormMouvt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelTitleFormMouvt.Controls.Add(this.IbtnExportMvt);
             this.panelTitleFormMouvt.Controls.Add(this.IbtnCloseFormMvt);
             this.panelTitleFormMouvt.Controls.Add(this.IbtnRegisterMvt);
             this.panelTitleFormMouvt.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleFormMouvt.Location = new System.Drawing.Point(0, 0);
             this.panelTitleFormMouvt.Name = "panelTitleFormMouvt";
-            this.panelTitleFormMouvt.Size = new System.Drawing.Size(1118, 32);
+            this.panelTitleFormMouvt.Size = new System.Drawing.Size(1118, 26);
             this.panelTitleFormMouvt.TabIndex = 0;
+            // 
+            // IbtnExportMvt
+            // 
+            this.IbtnExportMvt.BackColor = System.Drawing.Color.White;
+            this.IbtnExportMvt.ForeColor = System.Drawing.Color.DarkGreen;
+            this.IbtnExportMvt.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.IbtnExportMvt.IconColor = System.Drawing.Color.DarkGreen;
+            this.IbtnExportMvt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IbtnExportMvt.IconSize = 20;
+            this.IbtnExportMvt.Location = new System.Drawing.Point(160, -2);
+            this.IbtnExportMvt.Name = "IbtnExportMvt";
+            this.IbtnExportMvt.Size = new System.Drawing.Size(110, 28);
+            this.IbtnExportMvt.TabIndex = 2;
+            this.IbtnExportMvt.Text = "Exporter";
+            this.IbtnExportMvt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IbtnExportMvt.UseVisualStyleBackColor = false;
             // 
             // IbtnCloseFormMvt
             // 
+            this.IbtnCloseFormMvt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IbtnCloseFormMvt.BackColor = System.Drawing.Color.White;
             this.IbtnCloseFormMvt.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.IbtnCloseFormMvt.IconColor = System.Drawing.Color.Red;
             this.IbtnCloseFormMvt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnCloseFormMvt.IconSize = 30;
-            this.IbtnCloseFormMvt.Location = new System.Drawing.Point(1082, 0);
+            this.IbtnCloseFormMvt.IconSize = 20;
+            this.IbtnCloseFormMvt.Location = new System.Drawing.Point(1089, -2);
             this.IbtnCloseFormMvt.Name = "IbtnCloseFormMvt";
             this.IbtnCloseFormMvt.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.IbtnCloseFormMvt.Size = new System.Drawing.Size(37, 32);
+            this.IbtnCloseFormMvt.Size = new System.Drawing.Size(26, 24);
             this.IbtnCloseFormMvt.TabIndex = 1;
             this.IbtnCloseFormMvt.UseVisualStyleBackColor = false;
             this.IbtnCloseFormMvt.Click += new System.EventHandler(this.IbtnCloseFormMvt_Click);
@@ -89,10 +108,10 @@ namespace GestPark
             this.IbtnRegisterMvt.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.IbtnRegisterMvt.IconColor = System.Drawing.Color.DarkGreen;
             this.IbtnRegisterMvt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnRegisterMvt.IconSize = 30;
-            this.IbtnRegisterMvt.Location = new System.Drawing.Point(0, 0);
+            this.IbtnRegisterMvt.IconSize = 20;
+            this.IbtnRegisterMvt.Location = new System.Drawing.Point(-2, -2);
             this.IbtnRegisterMvt.Name = "IbtnRegisterMvt";
-            this.IbtnRegisterMvt.Size = new System.Drawing.Size(158, 32);
+            this.IbtnRegisterMvt.Size = new System.Drawing.Size(156, 28);
             this.IbtnRegisterMvt.TabIndex = 0;
             this.IbtnRegisterMvt.Text = "Créer un mouvement";
             this.IbtnRegisterMvt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -102,32 +121,15 @@ namespace GestPark
             // PanelSearchMvt
             // 
             this.PanelSearchMvt.AutoScroll = true;
-            this.PanelSearchMvt.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelSearchMvt.BackColor = System.Drawing.Color.Khaki;
             this.PanelSearchMvt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PanelSearchMvt.Controls.Add(this.IbtnExportMvt);
             this.PanelSearchMvt.Controls.Add(this.IbtnSearchMvt);
             this.PanelSearchMvt.Controls.Add(this.TbxSearchMvt);
             this.PanelSearchMvt.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSearchMvt.Location = new System.Drawing.Point(0, 32);
+            this.PanelSearchMvt.Location = new System.Drawing.Point(0, 26);
             this.PanelSearchMvt.Name = "PanelSearchMvt";
             this.PanelSearchMvt.Size = new System.Drawing.Size(1118, 109);
             this.PanelSearchMvt.TabIndex = 1;
-            // 
-            // IbtnExportMvt
-            // 
-            this.IbtnExportMvt.BackColor = System.Drawing.Color.White;
-            this.IbtnExportMvt.ForeColor = System.Drawing.Color.DarkGreen;
-            this.IbtnExportMvt.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.IbtnExportMvt.IconColor = System.Drawing.Color.DarkGreen;
-            this.IbtnExportMvt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnExportMvt.IconSize = 20;
-            this.IbtnExportMvt.Location = new System.Drawing.Point(970, 83);
-            this.IbtnExportMvt.Name = "IbtnExportMvt";
-            this.IbtnExportMvt.Size = new System.Drawing.Size(101, 23);
-            this.IbtnExportMvt.TabIndex = 2;
-            this.IbtnExportMvt.Text = "Exporter";
-            this.IbtnExportMvt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IbtnExportMvt.UseVisualStyleBackColor = false;
             // 
             // IbtnSearchMvt
             // 
@@ -153,7 +155,7 @@ namespace GestPark
             // 
             // DataGridViewMvt
             // 
-            this.DataGridViewMvt.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.DataGridViewMvt.BackgroundColor = System.Drawing.Color.Khaki;
             this.DataGridViewMvt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewMvt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_MVTS,
@@ -163,17 +165,15 @@ namespace GestPark
             this.DESCRIPTION_MVTS,
             this.LIEU_MVTS,
             this.DESCRIPTION_PERS,
-            this.KILOMETRE_AVA_MVTS,
-            this.KILO_APRES_MVTS,
             this.DATEDEPART_MVTS,
             this.DATEARRIVE_MVTS,
             this.NOTE_MVTS,
             this.USERCREATE_MVTS,
             this.DATECREATE_MVTS});
             this.DataGridViewMvt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataGridViewMvt.Location = new System.Drawing.Point(0, 141);
+            this.DataGridViewMvt.Location = new System.Drawing.Point(0, 135);
             this.DataGridViewMvt.Name = "DataGridViewMvt";
-            this.DataGridViewMvt.Size = new System.Drawing.Size(1118, 590);
+            this.DataGridViewMvt.Size = new System.Drawing.Size(1118, 596);
             this.DataGridViewMvt.TabIndex = 2;
             this.DataGridViewMvt.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewMvt_CellDoubleClick);
             // 
@@ -233,22 +233,6 @@ namespace GestPark
             this.DESCRIPTION_PERS.Name = "DESCRIPTION_PERS";
             this.DESCRIPTION_PERS.ReadOnly = true;
             this.DESCRIPTION_PERS.Width = 150;
-            // 
-            // KILOMETRE_AVA_MVTS
-            // 
-            this.KILOMETRE_AVA_MVTS.DataPropertyName = "KILOMETRE_AVA_MVTS";
-            this.KILOMETRE_AVA_MVTS.HeaderText = "Kilo. av.";
-            this.KILOMETRE_AVA_MVTS.Name = "KILOMETRE_AVA_MVTS";
-            this.KILOMETRE_AVA_MVTS.ReadOnly = true;
-            this.KILOMETRE_AVA_MVTS.Width = 150;
-            // 
-            // KILO_APRES_MVTS
-            // 
-            this.KILO_APRES_MVTS.DataPropertyName = "KILO_APRES_MVTS";
-            this.KILO_APRES_MVTS.HeaderText = "Kilomètre apr.";
-            this.KILO_APRES_MVTS.Name = "KILO_APRES_MVTS";
-            this.KILO_APRES_MVTS.ReadOnly = true;
-            this.KILO_APRES_MVTS.Width = 150;
             // 
             // DATEDEPART_MVTS
             // 
@@ -324,8 +308,6 @@ namespace GestPark
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_MVTS;
         private System.Windows.Forms.DataGridViewTextBoxColumn LIEU_MVTS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_PERS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KILOMETRE_AVA_MVTS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KILO_APRES_MVTS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATEDEPART_MVTS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATEARRIVE_MVTS;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOTE_MVTS;

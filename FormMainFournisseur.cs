@@ -50,8 +50,8 @@ namespace GestPark
                         SqlAda.Fill(dtbl);
 
                         // Fill DataGridView
-                        dgvProvider.AutoGenerateColumns = false;
-                        dgvProvider.DataSource = dtbl;
+                        DgvProvider.AutoGenerateColumns = false;
+                        DgvProvider.DataSource = dtbl;
 
                     }
                 }
@@ -62,6 +62,24 @@ namespace GestPark
                 MessageBox.Show(ex.ToString(), "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    
+
+        private void dgvProvider_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FormModifierFourn EditFourn = new FormModifierFourn();
+            EditFourn.TxtCodFournMod.Text = this.DgvProvider.CurrentRow.Cells[1].Value?.ToString();
+            EditFourn.TxtDescripFournMod.Text = this.DgvProvider.CurrentRow.Cells[2].Value?.ToString();
+            EditFourn.TxtTelFournMod.Text = this.DgvProvider.CurrentRow.Cells[3].Value?.ToString();
+            EditFourn.TxtMailFournMod.Text = this.DgvProvider.CurrentRow.Cells[4].Value?.ToString();
+            EditFourn.RtxtNoteFournMod.Text = this.DgvProvider.CurrentRow.Cells[5].Value?.ToString();
+            EditFourn.TxtRCFournMod.Text = this.DgvProvider.CurrentRow.Cells[6].Value?.ToString();
+            EditFourn.TxtCCFournMod.Text = this.DgvProvider.CurrentRow.Cells[7].Value?.ToString();
+            EditFourn.CbxCountryMod.Text = this.DgvProvider.CurrentRow.Cells[8].Value?.ToString();
+            EditFourn.CbxTownMod.Text = this.DgvProvider.CurrentRow.Cells[9].Value?.ToString();
+            EditFourn.TxtAdressFournMod.Text = this.DgvProvider.CurrentRow.Cells[10].Value?.ToString();
+            EditFourn.TxtCodPostalFournMod.Text = this.DgvProvider.CurrentRow.Cells[11].Value?.ToString();
+            EditFourn.DtpRegisterFournMod.Text = this.DgvProvider.CurrentRow.Cells[12].Value?.ToString();
+            EditFourn.TxtOtherFieldFournMod.Text = this.DgvProvider.CurrentRow.Cells[13].Value?.ToString();
+            EditFourn.ShowDialog();
+        }
     }
 }

@@ -127,12 +127,13 @@ namespace GestPark
             // 
             // IbtnCloseFormSuiviVehi
             // 
+            this.IbtnCloseFormSuiviVehi.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.IbtnCloseFormSuiviVehi.BackColor = System.Drawing.Color.White;
             this.IbtnCloseFormSuiviVehi.ForeColor = System.Drawing.Color.White;
             this.IbtnCloseFormSuiviVehi.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.IbtnCloseFormSuiviVehi.IconColor = System.Drawing.Color.Red;
             this.IbtnCloseFormSuiviVehi.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnCloseFormSuiviVehi.IconSize = 35;
+            this.IbtnCloseFormSuiviVehi.IconSize = 20;
             this.IbtnCloseFormSuiviVehi.Location = new System.Drawing.Point(1084, -2);
             this.IbtnCloseFormSuiviVehi.Name = "IbtnCloseFormSuiviVehi";
             this.IbtnCloseFormSuiviVehi.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -144,7 +145,7 @@ namespace GestPark
             // panelViewVehicule
             // 
             this.panelViewVehicule.AutoScroll = true;
-            this.panelViewVehicule.BackColor = System.Drawing.Color.DarkOrange;
+            this.panelViewVehicule.BackColor = System.Drawing.Color.Khaki;
             this.panelViewVehicule.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelViewVehicule.Controls.Add(this.checkedListBox1);
             this.panelViewVehicule.Controls.Add(this.IbtnExportSuiviVehi);
@@ -175,7 +176,7 @@ namespace GestPark
             // DgvSuiviVehicule
             // 
             this.DgvSuiviVehicule.AllowUserToOrderColumns = true;
-            this.DgvSuiviVehicule.BackgroundColor = System.Drawing.Color.White;
+            this.DgvSuiviVehicule.BackgroundColor = System.Drawing.Color.Khaki;
             this.DgvSuiviVehicule.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DgvSuiviVehicule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvSuiviVehicule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

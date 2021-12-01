@@ -203,6 +203,12 @@ namespace GestPark
             openChildForm(new FormMainVisiteTech());
             hideSubMenu();
         }
+
+        private void BtnCarteCarburant_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormMainCarteCarburant());
+            hideSubMenu();
+        }
     }
 
 }

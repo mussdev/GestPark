@@ -31,17 +31,17 @@ namespace GestPark
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestionDuStationnementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CreerEmplacementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FermerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.servicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.réservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelAddFormParcking = new System.Windows.Forms.Panel();
-            this.CreerEmplacementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FermerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.DarkOrange;
+            this.menuStrip1.BackColor = System.Drawing.Color.Khaki;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionDuStationnementToolStripMenuItem,
             this.servicesToolStripMenuItem});
@@ -62,6 +62,22 @@ namespace GestPark
             this.gestionDuStationnementToolStripMenuItem.Size = new System.Drawing.Size(156, 20);
             this.gestionDuStationnementToolStripMenuItem.Text = "Gestion du stationnement";
             // 
+            // CreerEmplacementToolStripMenuItem
+            // 
+            this.CreerEmplacementToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGreen;
+            this.CreerEmplacementToolStripMenuItem.Name = "CreerEmplacementToolStripMenuItem";
+            this.CreerEmplacementToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.CreerEmplacementToolStripMenuItem.Text = "Créer emplacement";
+            this.CreerEmplacementToolStripMenuItem.Click += new System.EventHandler(this.CreerEmplacementToolStripMenuItem_Click);
+            // 
+            // FermerToolStripMenuItem
+            // 
+            this.FermerToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGreen;
+            this.FermerToolStripMenuItem.Name = "FermerToolStripMenuItem";
+            this.FermerToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.FermerToolStripMenuItem.Text = "Fermer";
+            this.FermerToolStripMenuItem.Click += new System.EventHandler(this.FermerToolStripMenuItem_Click);
+            // 
             // servicesToolStripMenuItem
             // 
             this.servicesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -76,33 +92,18 @@ namespace GestPark
             // 
             this.réservationToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGreen;
             this.réservationToolStripMenuItem.Name = "réservationToolStripMenuItem";
-            this.réservationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.réservationToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.réservationToolStripMenuItem.Text = "Réservation";
             // 
             // PanelAddFormParcking
             // 
+            this.PanelAddFormParcking.BackColor = System.Drawing.Color.Khaki;
             this.PanelAddFormParcking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelAddFormParcking.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelAddFormParcking.Location = new System.Drawing.Point(0, 24);
             this.PanelAddFormParcking.Name = "PanelAddFormParcking";
             this.PanelAddFormParcking.Size = new System.Drawing.Size(1095, 721);
             this.PanelAddFormParcking.TabIndex = 2;
-            // 
-            // CreerEmplacementToolStripMenuItem
-            // 
-            this.CreerEmplacementToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGreen;
-            this.CreerEmplacementToolStripMenuItem.Name = "CreerEmplacementToolStripMenuItem";
-            this.CreerEmplacementToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.CreerEmplacementToolStripMenuItem.Text = "Créer emplacement";
-            this.CreerEmplacementToolStripMenuItem.Click += new System.EventHandler(this.CreerEmplacementToolStripMenuItem_Click);
-            // 
-            // FermerToolStripMenuItem
-            // 
-            this.FermerToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGreen;
-            this.FermerToolStripMenuItem.Name = "FermerToolStripMenuItem";
-            this.FermerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.FermerToolStripMenuItem.Text = "Fermer";
-            this.FermerToolStripMenuItem.Click += new System.EventHandler(this.FermerToolStripMenuItem_Click);
             // 
             // FormMainParking
             // 

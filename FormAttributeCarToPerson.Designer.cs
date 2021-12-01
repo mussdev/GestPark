@@ -34,6 +34,7 @@ namespace GestPark
             this.IbtnCreateAttribute = new FontAwesome.Sharp.IconButton();
             this.TbxSearchAttribute = new System.Windows.Forms.TextBox();
             this.panelSearchAttribute = new System.Windows.Forms.Panel();
+            this.IbtnSearchCarAttribute = new FontAwesome.Sharp.IconButton();
             this.dataGridViewAttributeCar = new System.Windows.Forms.DataGridView();
             this.ID_APP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CODE_ATTRI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +44,6 @@ namespace GestPark
             this.DATE_ATTRI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATE_DEBUT_ATTRI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATE_FIN_ATTRI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IbtnSearchCarAttribute = new FontAwesome.Sharp.IconButton();
             this.panelTitleMainAttribute.SuspendLayout();
             this.panelSearchAttribute.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttributeCar)).BeginInit();
@@ -51,7 +51,7 @@ namespace GestPark
             // 
             // panelTitleMainAttribute
             // 
-            this.panelTitleMainAttribute.BackColor = System.Drawing.Color.DarkOrange;
+            this.panelTitleMainAttribute.BackColor = System.Drawing.Color.Khaki;
             this.panelTitleMainAttribute.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelTitleMainAttribute.Controls.Add(this.IbtnCloseFormMainAttribute);
             this.panelTitleMainAttribute.Controls.Add(this.IbtnCreateAttribute);
@@ -63,6 +63,9 @@ namespace GestPark
             // 
             // IbtnCloseFormMainAttribute
             // 
+            this.IbtnCloseFormMainAttribute.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IbtnCloseFormMainAttribute.BackColor = System.Drawing.Color.White;
             this.IbtnCloseFormMainAttribute.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.IbtnCloseFormMainAttribute.IconColor = System.Drawing.Color.Red;
@@ -102,7 +105,7 @@ namespace GestPark
             // 
             // panelSearchAttribute
             // 
-            this.panelSearchAttribute.BackColor = System.Drawing.Color.DarkOrange;
+            this.panelSearchAttribute.BackColor = System.Drawing.Color.Khaki;
             this.panelSearchAttribute.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelSearchAttribute.Controls.Add(this.IbtnSearchCarAttribute);
             this.panelSearchAttribute.Controls.Add(this.TbxSearchAttribute);
@@ -112,10 +115,25 @@ namespace GestPark
             this.panelSearchAttribute.Size = new System.Drawing.Size(1118, 100);
             this.panelSearchAttribute.TabIndex = 3;
             // 
+            // IbtnSearchCarAttribute
+            // 
+            this.IbtnSearchCarAttribute.BackColor = System.Drawing.Color.White;
+            this.IbtnSearchCarAttribute.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.IbtnSearchCarAttribute.IconColor = System.Drawing.Color.DarkGreen;
+            this.IbtnSearchCarAttribute.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IbtnSearchCarAttribute.IconSize = 25;
+            this.IbtnSearchCarAttribute.Location = new System.Drawing.Point(853, 42);
+            this.IbtnSearchCarAttribute.Name = "IbtnSearchCarAttribute";
+            this.IbtnSearchCarAttribute.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.IbtnSearchCarAttribute.Size = new System.Drawing.Size(52, 23);
+            this.IbtnSearchCarAttribute.TabIndex = 3;
+            this.IbtnSearchCarAttribute.UseVisualStyleBackColor = false;
+            this.IbtnSearchCarAttribute.Click += new System.EventHandler(this.IbtnSearchCarAttribute_Click);
+            // 
             // dataGridViewAttributeCar
             // 
             this.dataGridViewAttributeCar.AllowUserToOrderColumns = true;
-            this.dataGridViewAttributeCar.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewAttributeCar.BackgroundColor = System.Drawing.Color.Khaki;
             this.dataGridViewAttributeCar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAttributeCar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_APP,
@@ -195,21 +213,6 @@ namespace GestPark
             this.DATE_FIN_ATTRI.Name = "DATE_FIN_ATTRI";
             this.DATE_FIN_ATTRI.ReadOnly = true;
             this.DATE_FIN_ATTRI.Width = 150;
-            // 
-            // IbtnSearchCarAttribute
-            // 
-            this.IbtnSearchCarAttribute.BackColor = System.Drawing.Color.White;
-            this.IbtnSearchCarAttribute.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.IbtnSearchCarAttribute.IconColor = System.Drawing.Color.DarkGreen;
-            this.IbtnSearchCarAttribute.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnSearchCarAttribute.IconSize = 25;
-            this.IbtnSearchCarAttribute.Location = new System.Drawing.Point(853, 42);
-            this.IbtnSearchCarAttribute.Name = "IbtnSearchCarAttribute";
-            this.IbtnSearchCarAttribute.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.IbtnSearchCarAttribute.Size = new System.Drawing.Size(52, 23);
-            this.IbtnSearchCarAttribute.TabIndex = 3;
-            this.IbtnSearchCarAttribute.UseVisualStyleBackColor = false;
-            this.IbtnSearchCarAttribute.Click += new System.EventHandler(this.IbtnSearchCarAttribute_Click);
             // 
             // FormAttributeCarToPerson
             // 

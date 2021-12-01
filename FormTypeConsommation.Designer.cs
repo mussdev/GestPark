@@ -56,7 +56,7 @@ namespace GestPark
             // 
             // panelTypConsoTitle
             // 
-            this.panelTypConsoTitle.BackColor = System.Drawing.Color.DarkOrange;
+            this.panelTypConsoTitle.BackColor = System.Drawing.Color.Khaki;
             this.panelTypConsoTitle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelTypConsoTitle.Controls.Add(this.label1);
             this.panelTypConsoTitle.Controls.Add(this.iconBtnCloseFormTypConso);
@@ -64,7 +64,7 @@ namespace GestPark
             this.panelTypConsoTitle.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelTypConsoTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTypConsoTitle.Name = "panelTypConsoTitle";
-            this.panelTypConsoTitle.Size = new System.Drawing.Size(924, 32);
+            this.panelTypConsoTitle.Size = new System.Drawing.Size(1118, 26);
             this.panelTypConsoTitle.TabIndex = 0;
             // 
             // label1
@@ -79,21 +79,23 @@ namespace GestPark
             // 
             // iconBtnCloseFormTypConso
             // 
+            this.iconBtnCloseFormTypConso.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.iconBtnCloseFormTypConso.BackColor = System.Drawing.Color.White;
             this.iconBtnCloseFormTypConso.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.iconBtnCloseFormTypConso.IconColor = System.Drawing.Color.Red;
             this.iconBtnCloseFormTypConso.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnCloseFormTypConso.IconSize = 35;
-            this.iconBtnCloseFormTypConso.Location = new System.Drawing.Point(1054, -2);
+            this.iconBtnCloseFormTypConso.IconSize = 20;
+            this.iconBtnCloseFormTypConso.Location = new System.Drawing.Point(1083, -2);
             this.iconBtnCloseFormTypConso.Name = "iconBtnCloseFormTypConso";
             this.iconBtnCloseFormTypConso.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconBtnCloseFormTypConso.Size = new System.Drawing.Size(39, 32);
+            this.iconBtnCloseFormTypConso.Size = new System.Drawing.Size(33, 27);
             this.iconBtnCloseFormTypConso.TabIndex = 0;
-            this.iconBtnCloseFormTypConso.UseVisualStyleBackColor = true;
+            this.iconBtnCloseFormTypConso.UseVisualStyleBackColor = false;
             this.iconBtnCloseFormTypConso.Click += new System.EventHandler(this.iconBtnCloseFormTypConso_Click);
             // 
             // panelRegisterTypConso
             // 
-            this.panelRegisterTypConso.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelRegisterTypConso.BackColor = System.Drawing.Color.Khaki;
             this.panelRegisterTypConso.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelRegisterTypConso.Controls.Add(this.iconBtnAnnulerTypConso);
             this.panelRegisterTypConso.Controls.Add(this.iconBtnValiderTypConso);
@@ -105,37 +107,43 @@ namespace GestPark
             this.panelRegisterTypConso.Controls.Add(this.label2);
             this.panelRegisterTypConso.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelRegisterTypConso.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelRegisterTypConso.Location = new System.Drawing.Point(0, 32);
+            this.panelRegisterTypConso.Location = new System.Drawing.Point(0, 26);
             this.panelRegisterTypConso.Name = "panelRegisterTypConso";
-            this.panelRegisterTypConso.Size = new System.Drawing.Size(383, 507);
+            this.panelRegisterTypConso.Size = new System.Drawing.Size(383, 705);
             this.panelRegisterTypConso.TabIndex = 1;
             // 
             // iconBtnAnnulerTypConso
             // 
-            this.iconBtnAnnulerTypConso.BackColor = System.Drawing.Color.White;
-            this.iconBtnAnnulerTypConso.ForeColor = System.Drawing.Color.DarkOrange;
-            this.iconBtnAnnulerTypConso.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconBtnAnnulerTypConso.IconColor = System.Drawing.Color.Black;
+            this.iconBtnAnnulerTypConso.BackColor = System.Drawing.Color.DarkOrange;
+            this.iconBtnAnnulerTypConso.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnAnnulerTypConso.ForeColor = System.Drawing.Color.White;
+            this.iconBtnAnnulerTypConso.IconChar = FontAwesome.Sharp.IconChar.Ban;
+            this.iconBtnAnnulerTypConso.IconColor = System.Drawing.Color.White;
             this.iconBtnAnnulerTypConso.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnAnnulerTypConso.IconSize = 20;
             this.iconBtnAnnulerTypConso.Location = new System.Drawing.Point(242, 396);
             this.iconBtnAnnulerTypConso.Name = "iconBtnAnnulerTypConso";
-            this.iconBtnAnnulerTypConso.Size = new System.Drawing.Size(95, 33);
+            this.iconBtnAnnulerTypConso.Size = new System.Drawing.Size(95, 28);
             this.iconBtnAnnulerTypConso.TabIndex = 5;
             this.iconBtnAnnulerTypConso.Text = "ANNULER";
+            this.iconBtnAnnulerTypConso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnAnnulerTypConso.UseVisualStyleBackColor = false;
             // 
             // iconBtnValiderTypConso
             // 
-            this.iconBtnValiderTypConso.BackColor = System.Drawing.Color.White;
-            this.iconBtnValiderTypConso.ForeColor = System.Drawing.Color.DarkGreen;
-            this.iconBtnValiderTypConso.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconBtnValiderTypConso.IconColor = System.Drawing.Color.Black;
+            this.iconBtnValiderTypConso.BackColor = System.Drawing.Color.DarkGreen;
+            this.iconBtnValiderTypConso.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconBtnValiderTypConso.ForeColor = System.Drawing.Color.White;
+            this.iconBtnValiderTypConso.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.iconBtnValiderTypConso.IconColor = System.Drawing.Color.White;
             this.iconBtnValiderTypConso.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnValiderTypConso.IconSize = 20;
             this.iconBtnValiderTypConso.Location = new System.Drawing.Point(122, 396);
             this.iconBtnValiderTypConso.Name = "iconBtnValiderTypConso";
-            this.iconBtnValiderTypConso.Size = new System.Drawing.Size(98, 33);
+            this.iconBtnValiderTypConso.Size = new System.Drawing.Size(98, 28);
             this.iconBtnValiderTypConso.TabIndex = 4;
             this.iconBtnValiderTypConso.Text = "VALIDER";
+            this.iconBtnValiderTypConso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnValiderTypConso.UseVisualStyleBackColor = false;
             this.iconBtnValiderTypConso.Click += new System.EventHandler(this.iconBtnValiderTypConso_Click);
             // 
@@ -205,7 +213,7 @@ namespace GestPark
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             this.dataGridViewTypConso.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewTypConso.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridViewTypConso.BackgroundColor = System.Drawing.Color.Khaki;
             this.dataGridViewTypConso.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewTypConso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTypConso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -217,10 +225,10 @@ namespace GestPark
             this.DATECREATE_TYPCONSO});
             this.dataGridViewTypConso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewTypConso.GridColor = System.Drawing.Color.White;
-            this.dataGridViewTypConso.Location = new System.Drawing.Point(383, 32);
+            this.dataGridViewTypConso.Location = new System.Drawing.Point(383, 26);
             this.dataGridViewTypConso.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewTypConso.Name = "dataGridViewTypConso";
-            this.dataGridViewTypConso.Size = new System.Drawing.Size(541, 507);
+            this.dataGridViewTypConso.Size = new System.Drawing.Size(735, 705);
             this.dataGridViewTypConso.TabIndex = 4;
             // 
             // ID_TYPCONSO
@@ -235,20 +243,21 @@ namespace GestPark
             this.CODE_TYPCONSO.DataPropertyName = "CODE_TYPCONSO";
             this.CODE_TYPCONSO.HeaderText = "Code";
             this.CODE_TYPCONSO.Name = "CODE_TYPCONSO";
-            this.CODE_TYPCONSO.Width = 50;
+            this.CODE_TYPCONSO.Width = 70;
             // 
             // DESCRIPTION_TYPCONSO
             // 
             this.DESCRIPTION_TYPCONSO.DataPropertyName = "DESCRIPTION_TYPCONSO";
             this.DESCRIPTION_TYPCONSO.HeaderText = "Description";
             this.DESCRIPTION_TYPCONSO.Name = "DESCRIPTION_TYPCONSO";
+            this.DESCRIPTION_TYPCONSO.Width = 150;
             // 
             // OBSERVATION_TYPCONSO
             // 
             this.OBSERVATION_TYPCONSO.DataPropertyName = "OBSERVATION_TYPCONSO";
             this.OBSERVATION_TYPCONSO.HeaderText = "Note";
             this.OBSERVATION_TYPCONSO.Name = "OBSERVATION_TYPCONSO";
-            this.OBSERVATION_TYPCONSO.Width = 120;
+            this.OBSERVATION_TYPCONSO.Width = 250;
             // 
             // USERCREATE_TYPCONSO
             // 
@@ -267,7 +276,7 @@ namespace GestPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 539);
+            this.ClientSize = new System.Drawing.Size(1118, 731);
             this.Controls.Add(this.dataGridViewTypConso);
             this.Controls.Add(this.panelRegisterTypConso);
             this.Controls.Add(this.panelTypConsoTitle);

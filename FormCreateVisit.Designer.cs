@@ -29,6 +29,7 @@ namespace GestPark
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateVisit));
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -97,9 +98,9 @@ namespace GestPark
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(72, 340);
+            this.richTextBox1.Location = new System.Drawing.Point(72, 350);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(829, 157);
+            this.richTextBox1.Size = new System.Drawing.Size(809, 109);
             this.richTextBox1.TabIndex = 30;
             this.richTextBox1.Text = "";
             // 
@@ -133,6 +134,7 @@ namespace GestPark
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(645, 184);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(236, 22);
@@ -178,15 +180,17 @@ namespace GestPark
             // iconBtUploadDocVisit
             // 
             this.iconBtUploadDocVisit.BackColor = System.Drawing.Color.White;
+            this.iconBtUploadDocVisit.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtUploadDocVisit.IconChar = FontAwesome.Sharp.IconChar.Upload;
             this.iconBtUploadDocVisit.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtUploadDocVisit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtUploadDocVisit.IconSize = 35;
-            this.iconBtUploadDocVisit.Location = new System.Drawing.Point(45, 0);
+            this.iconBtUploadDocVisit.IconSize = 20;
+            this.iconBtUploadDocVisit.Location = new System.Drawing.Point(103, -2);
             this.iconBtUploadDocVisit.Name = "iconBtUploadDocVisit";
-            this.iconBtUploadDocVisit.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconBtUploadDocVisit.Size = new System.Drawing.Size(39, 33);
+            this.iconBtUploadDocVisit.Size = new System.Drawing.Size(107, 26);
             this.iconBtUploadDocVisit.TabIndex = 3;
+            this.iconBtUploadDocVisit.Text = "Joindre doc.";
+            this.iconBtUploadDocVisit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtUploadDocVisit.UseVisualStyleBackColor = false;
             // 
             // label6
@@ -201,15 +205,18 @@ namespace GestPark
             // 
             // iconBtnCloseFormCreateVisit
             // 
+            this.iconBtnCloseFormCreateVisit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.iconBtnCloseFormCreateVisit.BackColor = System.Drawing.Color.White;
             this.iconBtnCloseFormCreateVisit.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.iconBtnCloseFormCreateVisit.IconColor = System.Drawing.Color.Red;
             this.iconBtnCloseFormCreateVisit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnCloseFormCreateVisit.IconSize = 35;
-            this.iconBtnCloseFormCreateVisit.Location = new System.Drawing.Point(894, 0);
+            this.iconBtnCloseFormCreateVisit.IconSize = 20;
+            this.iconBtnCloseFormCreateVisit.Location = new System.Drawing.Point(899, 0);
             this.iconBtnCloseFormCreateVisit.Name = "iconBtnCloseFormCreateVisit";
             this.iconBtnCloseFormCreateVisit.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconBtnCloseFormCreateVisit.Size = new System.Drawing.Size(39, 33);
+            this.iconBtnCloseFormCreateVisit.Size = new System.Drawing.Size(30, 24);
             this.iconBtnCloseFormCreateVisit.TabIndex = 1;
             this.iconBtnCloseFormCreateVisit.UseVisualStyleBackColor = false;
             this.iconBtnCloseFormCreateVisit.Click += new System.EventHandler(this.iconBtnCloseFormCreateVisit_Click);
@@ -217,19 +224,22 @@ namespace GestPark
             // iconBtnSavedVisit
             // 
             this.iconBtnSavedVisit.BackColor = System.Drawing.Color.White;
+            this.iconBtnSavedVisit.ForeColor = System.Drawing.Color.DarkGreen;
             this.iconBtnSavedVisit.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.iconBtnSavedVisit.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtnSavedVisit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnSavedVisit.IconSize = 35;
-            this.iconBtnSavedVisit.Location = new System.Drawing.Point(0, 0);
+            this.iconBtnSavedVisit.IconSize = 20;
+            this.iconBtnSavedVisit.Location = new System.Drawing.Point(-2, -2);
             this.iconBtnSavedVisit.Name = "iconBtnSavedVisit";
-            this.iconBtnSavedVisit.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconBtnSavedVisit.Size = new System.Drawing.Size(39, 33);
+            this.iconBtnSavedVisit.Size = new System.Drawing.Size(99, 26);
             this.iconBtnSavedVisit.TabIndex = 0;
+            this.iconBtnSavedVisit.Text = "Enregistrer";
+            this.iconBtnSavedVisit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconBtnSavedVisit.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(645, 131);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(236, 22);
@@ -237,14 +247,17 @@ namespace GestPark
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.YellowGreen;
             this.textBox1.Location = new System.Drawing.Point(72, 78);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(171, 22);
             this.textBox1.TabIndex = 22;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.BackColor = System.Drawing.Color.Khaki;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.iconBtUploadDocVisit);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.iconBtnCloseFormCreateVisit);
@@ -252,7 +265,7 @@ namespace GestPark
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(933, 33);
+            this.panel1.Size = new System.Drawing.Size(933, 28);
             this.panel1.TabIndex = 18;
             // 
             // textBox3
@@ -298,7 +311,7 @@ namespace GestPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(933, 519);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textBox5);
@@ -323,6 +336,7 @@ namespace GestPark
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCreateVisit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCreateVisit";

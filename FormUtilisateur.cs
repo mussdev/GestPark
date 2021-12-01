@@ -16,7 +16,6 @@ namespace GestPark
     {
         private SqlCommand SqlCmd;
         private SqlDataAdapter SqlAda;
-        private SqlDataReader MyReader;
         private DataSet Ds;
         public FormUtilisateur()
         {
@@ -45,7 +44,7 @@ namespace GestPark
                 {
                     if (Conn.IsConnection)
                     {
-                        SqlCmd = new SqlCommand("SELECT PSEUDO_USERS,DESCRIPTION_USER,ACTIF,TEL_USERS,EMAIL_USERS,DESCRIPTION_ROLE,DATECREATE_USERS FROM UTILISATEURS LEFT OUTER JOIN	ROLES ON UTILISATEURS.ID_ROLE=ROLES.ID_ROLE", Conn.cn);
+                        SqlCmd = new SqlCommand("SELECT ID_USER,PSEUDO_USERS,DESCRIPTION_USER,ACTIF,TEL_USERS,EMAIL_USERS,DESCRIPTION_ROLE,DATECREATE_USERS FROM UTILISATEURS LEFT OUTER JOIN	ROLES ON UTILISATEURS.ID_ROLE=ROLES.ID_ROLE", Conn.cn);
                         SqlAda = new SqlDataAdapter(SqlCmd);
                         Ds = new DataSet();
                         SqlAda.Fill(Ds);
@@ -65,12 +64,18 @@ namespace GestPark
         private void DgvUser_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             FormModifyUser ModifyUser = new FormModifyUser();
-            ModifyUser.TxtUserNameEdit.Text = this.DgvUser.CurrentRow.Cells[0].Value?.ToString();
-            ModifyUser.TxtDescriptionUserEdit.Text = this.DgvUser.CurrentRow.Cells[1].Value?.ToString();
-            ModifyUser.TxtMailUserEdit.Text = this.DgvUser.CurrentRow.Cells[2].Value?.ToString();
-            ModifyUser.TxtTelUserEdit.Text = this.DgvUser.CurrentRow.Cells[3].Value?.ToString();
-           // ModifyUser.CbxActifUserEdit.Text = this.DgvUser.CurrentRow.Cells[4]?.ToString();
-            ModifyUser.TxtTelUserEdit.Text = this.DgvUser.CurrentRow.Cells[5].Value?.ToString();
+            ModifyUser.TxtIdUser.Text = this.DgvUser.CurrentRow.Cells[0].Value?.ToString();
+            ModifyUser.TxtUserNameEdit.Text = this.DgvUser.CurrentRow.Cells[1].Value?.ToString();
+            ModifyUser.TxtDescriptionUserEdit.Text = this.DgvUser.CurrentRow.Cells[2].Value?.ToString();
+            ModifyUser.TxtMailUserEdit.Text = this.DgvUser.CurrentRow.Cells[3].Value?.ToString();
+            ModifyUser.TxtTelUserEdit.Text = this.DgvUser.CurrentRow.Cells[4].Value?.ToString();
+            // ModifyUser.CbxActifUserEdit.Text = this.DgvUser.CurrentRow.Cells[4]?.ToString();
+           // ModifyUser.TxtPasswordUserEdit.Text = this.DgvUser.CurrentRow.Cells[8]?.ToString();
+            //ModifyUser.TxtConfirmPasswordEdit.Text = this.DgvUser.CurrentRow.Cells[8]?.ToString();
+            if (!string.IsNullOrEmpty(this.DgvUser.CurrentRow.Cells[6].Value?.ToString()) && this.DgvUser.CurrentRow.Cells[6].Value?.ToString()=="Actif")
+            {
+                ModifyUser.CbxActifUserEdit.Checked = true;
+            }
             ModifyUser.ShowDialog();
         }
     }

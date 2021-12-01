@@ -54,7 +54,7 @@ namespace GestPark
             // PanelSearchRepairCar
             // 
             this.PanelSearchRepairCar.AutoScroll = true;
-            this.PanelSearchRepairCar.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelSearchRepairCar.BackColor = System.Drawing.Color.Khaki;
             this.PanelSearchRepairCar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelSearchRepairCar.Controls.Add(this.IbtnSearchRepairCar);
             this.PanelSearchRepairCar.Controls.Add(this.TxtSeachRepairCar);
@@ -94,9 +94,9 @@ namespace GestPark
             this.IbtnExportRepairCar.IconColor = System.Drawing.Color.DarkGreen;
             this.IbtnExportRepairCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IbtnExportRepairCar.IconSize = 20;
-            this.IbtnExportRepairCar.Location = new System.Drawing.Point(0, -1);
+            this.IbtnExportRepairCar.Location = new System.Drawing.Point(-2, -1);
             this.IbtnExportRepairCar.Name = "IbtnExportRepairCar";
-            this.IbtnExportRepairCar.Size = new System.Drawing.Size(91, 27);
+            this.IbtnExportRepairCar.Size = new System.Drawing.Size(93, 25);
             this.IbtnExportRepairCar.TabIndex = 5;
             this.IbtnExportRepairCar.Text = "Exporter";
             this.IbtnExportRepairCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -104,7 +104,8 @@ namespace GestPark
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.BackColor = System.Drawing.Color.Khaki;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.IbtnExportRepairCar);
             this.panel1.Controls.Add(this.IbtnCloseFanRepairCar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -115,15 +116,18 @@ namespace GestPark
             // 
             // IbtnCloseFanRepairCar
             // 
+            this.IbtnCloseFanRepairCar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IbtnCloseFanRepairCar.BackColor = System.Drawing.Color.White;
             this.IbtnCloseFanRepairCar.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.IbtnCloseFanRepairCar.IconColor = System.Drawing.Color.Red;
             this.IbtnCloseFanRepairCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnCloseFanRepairCar.IconSize = 35;
-            this.IbtnCloseFanRepairCar.Location = new System.Drawing.Point(1084, 0);
+            this.IbtnCloseFanRepairCar.IconSize = 20;
+            this.IbtnCloseFanRepairCar.Location = new System.Drawing.Point(1084, -2);
             this.IbtnCloseFanRepairCar.Name = "IbtnCloseFanRepairCar";
             this.IbtnCloseFanRepairCar.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
-            this.IbtnCloseFanRepairCar.Size = new System.Drawing.Size(34, 26);
+            this.IbtnCloseFanRepairCar.Size = new System.Drawing.Size(30, 24);
             this.IbtnCloseFanRepairCar.TabIndex = 5;
             this.IbtnCloseFanRepairCar.UseVisualStyleBackColor = false;
             this.IbtnCloseFanRepairCar.Click += new System.EventHandler(this.IbtnCloseFanRepairCar_Click);
@@ -131,7 +135,7 @@ namespace GestPark
             // DgvCarRepair
             // 
             this.DgvCarRepair.AllowUserToOrderColumns = true;
-            this.DgvCarRepair.BackgroundColor = System.Drawing.Color.White;
+            this.DgvCarRepair.BackgroundColor = System.Drawing.Color.Khaki;
             this.DgvCarRepair.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvCarRepair.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_REPAR,

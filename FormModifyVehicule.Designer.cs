@@ -35,7 +35,6 @@ namespace GestPark
             this.iconBtnReportCar = new FontAwesome.Sharp.IconButton();
             this.IconBtnSavedModifica = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxModifyCarTypVitessVehi = new System.Windows.Forms.ComboBox();
             this.comboBoxModifyCarTypConsoVehi = new System.Windows.Forms.ComboBox();
             this.comboBoxModifyCarMarqVehi = new System.Windows.Forms.ComboBox();
             this.textBoxModifyCarModelVehi = new System.Windows.Forms.TextBox();
@@ -79,13 +78,18 @@ namespace GestPark
             this.label21 = new System.Windows.Forms.Label();
             this.TxtKolimetrageCar = new System.Windows.Forms.TextBox();
             this.CbxSanteCar = new System.Windows.Forms.ComboBox();
+            this.comboBoxModifyCarTypVitessVehi = new System.Windows.Forms.ComboBox();
+            this.TxtKilometrageParCar = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.BtnVidengeCar = new FontAwesome.Sharp.IconButton();
             this.PanelTitleFanModify.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelTitleFanModify
             // 
-            this.PanelTitleFanModify.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelTitleFanModify.BackColor = System.Drawing.Color.Khaki;
+            this.PanelTitleFanModify.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelTitleFanModify.Controls.Add(this.IcbtnJointFileCar);
             this.PanelTitleFanModify.Controls.Add(this.iconBtnReportCar);
             this.PanelTitleFanModify.Controls.Add(this.IconBtnSavedModifica);
@@ -104,7 +108,7 @@ namespace GestPark
             this.IcbtnJointFileCar.IconColor = System.Drawing.Color.DarkGreen;
             this.IcbtnJointFileCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IcbtnJointFileCar.IconSize = 25;
-            this.IcbtnJointFileCar.Location = new System.Drawing.Point(204, 0);
+            this.IcbtnJointFileCar.Location = new System.Drawing.Point(204, -2);
             this.IcbtnJointFileCar.Margin = new System.Windows.Forms.Padding(2);
             this.IcbtnJointFileCar.Name = "IcbtnJointFileCar";
             this.IcbtnJointFileCar.Size = new System.Drawing.Size(108, 27);
@@ -121,7 +125,7 @@ namespace GestPark
             this.iconBtnReportCar.IconColor = System.Drawing.Color.DarkGreen;
             this.iconBtnReportCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBtnReportCar.IconSize = 25;
-            this.iconBtnReportCar.Location = new System.Drawing.Point(101, 0);
+            this.iconBtnReportCar.Location = new System.Drawing.Point(101, -2);
             this.iconBtnReportCar.Margin = new System.Windows.Forms.Padding(2);
             this.iconBtnReportCar.Name = "iconBtnReportCar";
             this.iconBtnReportCar.Size = new System.Drawing.Size(108, 27);
@@ -139,10 +143,10 @@ namespace GestPark
             this.IconBtnSavedModifica.IconColor = System.Drawing.Color.DarkGreen;
             this.IconBtnSavedModifica.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IconBtnSavedModifica.IconSize = 25;
-            this.IconBtnSavedModifica.Location = new System.Drawing.Point(0, 0);
+            this.IconBtnSavedModifica.Location = new System.Drawing.Point(-2, -2);
             this.IconBtnSavedModifica.Margin = new System.Windows.Forms.Padding(2);
             this.IconBtnSavedModifica.Name = "IconBtnSavedModifica";
-            this.IconBtnSavedModifica.Size = new System.Drawing.Size(102, 27);
+            this.IconBtnSavedModifica.Size = new System.Drawing.Size(104, 27);
             this.IconBtnSavedModifica.TabIndex = 0;
             this.IconBtnSavedModifica.Text = "Enregistrer";
             this.IconBtnSavedModifica.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -160,20 +164,6 @@ namespace GestPark
             this.label2.Size = new System.Drawing.Size(77, 15);
             this.label2.TabIndex = 61;
             this.label2.Text = "Carte grise :";
-            // 
-            // comboBoxModifyCarTypVitessVehi
-            // 
-            this.comboBoxModifyCarTypVitessVehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxModifyCarTypVitessVehi.FormattingEnabled = true;
-            this.comboBoxModifyCarTypVitessVehi.ItemHeight = 15;
-            this.comboBoxModifyCarTypVitessVehi.Items.AddRange(new object[] {
-            "Manuelle",
-            "Automatique"});
-            this.comboBoxModifyCarTypVitessVehi.Location = new System.Drawing.Point(149, 346);
-            this.comboBoxModifyCarTypVitessVehi.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxModifyCarTypVitessVehi.Name = "comboBoxModifyCarTypVitessVehi";
-            this.comboBoxModifyCarTypVitessVehi.Size = new System.Drawing.Size(290, 23);
-            this.comboBoxModifyCarTypVitessVehi.TabIndex = 60;
             // 
             // comboBoxModifyCarTypConsoVehi
             // 
@@ -193,6 +183,8 @@ namespace GestPark
             this.comboBoxModifyCarMarqVehi.DisplayMember = "DESCRIPTION_MARQ";
             this.comboBoxModifyCarMarqVehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxModifyCarMarqVehi.FormattingEnabled = true;
+            this.comboBoxModifyCarMarqVehi.Items.AddRange(new object[] {
+            "-------------------Sélectionner--------------------"});
             this.comboBoxModifyCarMarqVehi.Location = new System.Drawing.Point(149, 255);
             this.comboBoxModifyCarMarqVehi.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxModifyCarMarqVehi.Name = "comboBoxModifyCarMarqVehi";
@@ -213,37 +205,37 @@ namespace GestPark
             // textBoxModifyCarPrixVentVehi
             // 
             this.textBoxModifyCarPrixVentVehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxModifyCarPrixVentVehi.ForeColor = System.Drawing.Color.DarkGreen;
             this.textBoxModifyCarPrixVentVehi.Location = new System.Drawing.Point(149, 171);
             this.textBoxModifyCarPrixVentVehi.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxModifyCarPrixVentVehi.Name = "textBoxModifyCarPrixVentVehi";
             this.textBoxModifyCarPrixVentVehi.Size = new System.Drawing.Size(290, 22);
             this.textBoxModifyCarPrixVentVehi.TabIndex = 51;
+            this.textBoxModifyCarPrixVentVehi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBoxModifyCarCartGriVehi
             // 
-            this.textBoxModifyCarCartGriVehi.BackColor = System.Drawing.Color.Khaki;
+            this.textBoxModifyCarCartGriVehi.BackColor = System.Drawing.Color.White;
             this.textBoxModifyCarCartGriVehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxModifyCarCartGriVehi.Location = new System.Drawing.Point(149, 126);
             this.textBoxModifyCarCartGriVehi.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxModifyCarCartGriVehi.Name = "textBoxModifyCarCartGriVehi";
-            this.textBoxModifyCarCartGriVehi.ReadOnly = true;
             this.textBoxModifyCarCartGriVehi.Size = new System.Drawing.Size(290, 22);
             this.textBoxModifyCarCartGriVehi.TabIndex = 50;
             // 
             // textBoxModifyCarImmatVehi
             // 
-            this.textBoxModifyCarImmatVehi.BackColor = System.Drawing.Color.Khaki;
+            this.textBoxModifyCarImmatVehi.BackColor = System.Drawing.Color.White;
             this.textBoxModifyCarImmatVehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxModifyCarImmatVehi.Location = new System.Drawing.Point(149, 83);
             this.textBoxModifyCarImmatVehi.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxModifyCarImmatVehi.Name = "textBoxModifyCarImmatVehi";
-            this.textBoxModifyCarImmatVehi.ReadOnly = true;
             this.textBoxModifyCarImmatVehi.Size = new System.Drawing.Size(290, 22);
             this.textBoxModifyCarImmatVehi.TabIndex = 48;
             // 
             // textBoxModifyCarCodVehi
             // 
-            this.textBoxModifyCarCodVehi.BackColor = System.Drawing.Color.Khaki;
+            this.textBoxModifyCarCodVehi.BackColor = System.Drawing.Color.YellowGreen;
             this.textBoxModifyCarCodVehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxModifyCarCodVehi.Location = new System.Drawing.Point(148, 40);
             this.textBoxModifyCarCodVehi.Margin = new System.Windows.Forms.Padding(2);
@@ -338,6 +330,7 @@ namespace GestPark
             // 
             // comboBoxModifyCarProprio
             // 
+            this.comboBoxModifyCarProprio.Enabled = false;
             this.comboBoxModifyCarProprio.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxModifyCarProprio.FormattingEnabled = true;
             this.comboBoxModifyCarProprio.Location = new System.Drawing.Point(621, 444);
@@ -447,7 +440,7 @@ namespace GestPark
             this.richTextBoxModifyCarNoteVehi.Location = new System.Drawing.Point(148, 491);
             this.richTextBoxModifyCarNoteVehi.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxModifyCarNoteVehi.Name = "richTextBoxModifyCarNoteVehi";
-            this.richTextBoxModifyCarNoteVehi.Size = new System.Drawing.Size(728, 117);
+            this.richTextBoxModifyCarNoteVehi.Size = new System.Drawing.Size(728, 100);
             this.richTextBoxModifyCarNoteVehi.TabIndex = 65;
             this.richTextBoxModifyCarNoteVehi.Text = "";
             // 
@@ -487,6 +480,7 @@ namespace GestPark
             // dateTimePickModifyCarDatAchaVehi
             // 
             this.dateTimePickModifyCarDatAchaVehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickModifyCarDatAchaVehi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickModifyCarDatAchaVehi.Location = new System.Drawing.Point(117, 19);
             this.dateTimePickModifyCarDatAchaVehi.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickModifyCarDatAchaVehi.Name = "dateTimePickModifyCarDatAchaVehi";
@@ -506,7 +500,6 @@ namespace GestPark
             this.comboBoxModifyCarEtatVehi.Name = "comboBoxModifyCarEtatVehi";
             this.comboBoxModifyCarEtatVehi.Size = new System.Drawing.Size(255, 23);
             this.comboBoxModifyCarEtatVehi.TabIndex = 76;
-            this.comboBoxModifyCarEtatVehi.Text = "Définir la position du vehicule";
             // 
             // label12
             // 
@@ -535,6 +528,7 @@ namespace GestPark
             // DateTimePickerModifyCarAssurance
             // 
             this.DateTimePickerModifyCarAssurance.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateTimePickerModifyCarAssurance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateTimePickerModifyCarAssurance.Location = new System.Drawing.Point(117, 130);
             this.DateTimePickerModifyCarAssurance.Margin = new System.Windows.Forms.Padding(2);
             this.DateTimePickerModifyCarAssurance.Name = "DateTimePickerModifyCarAssurance";
@@ -545,7 +539,7 @@ namespace GestPark
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(11, 136);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -558,6 +552,8 @@ namespace GestPark
             this.comboBoxModifyCarEmplVehi.DisplayMember = "ID_PARK";
             this.comboBoxModifyCarEmplVehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxModifyCarEmplVehi.FormattingEnabled = true;
+            this.comboBoxModifyCarEmplVehi.Items.AddRange(new object[] {
+            "-------------------Sélectionner--------------------"});
             this.comboBoxModifyCarEmplVehi.Location = new System.Drawing.Point(621, 304);
             this.comboBoxModifyCarEmplVehi.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxModifyCarEmplVehi.Name = "comboBoxModifyCarEmplVehi";
@@ -569,6 +565,7 @@ namespace GestPark
             // dateTimeModifyCarPickDatVisitVehi
             // 
             this.dateTimeModifyCarPickDatVisitVehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeModifyCarPickDatVisitVehi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeModifyCarPickDatVisitVehi.Location = new System.Drawing.Point(117, 75);
             this.dateTimeModifyCarPickDatVisitVehi.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeModifyCarPickDatVisitVehi.Name = "dateTimeModifyCarPickDatVisitVehi";
@@ -591,7 +588,7 @@ namespace GestPark
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(11, 81);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
@@ -659,40 +656,103 @@ namespace GestPark
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(913, 122);
+            this.label21.Location = new System.Drawing.Point(913, 118);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(77, 15);
+            this.label21.Size = new System.Drawing.Size(65, 15);
             this.label21.TabIndex = 90;
-            this.label21.Text = "Kilomètrage :";
+            this.label21.Text = "Kilo. total :";
             // 
             // TxtKolimetrageCar
             // 
-            this.TxtKolimetrageCar.BackColor = System.Drawing.Color.Khaki;
-            this.TxtKolimetrageCar.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtKolimetrageCar.BackColor = System.Drawing.Color.White;
+            this.TxtKolimetrageCar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtKolimetrageCar.ForeColor = System.Drawing.Color.DarkGreen;
             this.TxtKolimetrageCar.Location = new System.Drawing.Point(995, 112);
             this.TxtKolimetrageCar.Name = "TxtKolimetrageCar";
-            this.TxtKolimetrageCar.ReadOnly = true;
-            this.TxtKolimetrageCar.Size = new System.Drawing.Size(116, 25);
+            this.TxtKolimetrageCar.Size = new System.Drawing.Size(116, 21);
             this.TxtKolimetrageCar.TabIndex = 92;
+            this.TxtKolimetrageCar.Text = "0";
+            this.TxtKolimetrageCar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // CbxSanteCar
             // 
             this.CbxSanteCar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbxSanteCar.ForeColor = System.Drawing.Color.DarkGreen;
             this.CbxSanteCar.FormattingEnabled = true;
-            this.CbxSanteCar.Location = new System.Drawing.Point(990, 60);
+            this.CbxSanteCar.Location = new System.Drawing.Point(995, 60);
             this.CbxSanteCar.Name = "CbxSanteCar";
-            this.CbxSanteCar.Size = new System.Drawing.Size(121, 23);
+            this.CbxSanteCar.Size = new System.Drawing.Size(116, 23);
             this.CbxSanteCar.TabIndex = 93;
+            // 
+            // comboBoxModifyCarTypVitessVehi
+            // 
+            this.comboBoxModifyCarTypVitessVehi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxModifyCarTypVitessVehi.FormattingEnabled = true;
+            this.comboBoxModifyCarTypVitessVehi.ItemHeight = 15;
+            this.comboBoxModifyCarTypVitessVehi.Items.AddRange(new object[] {
+            "-------------------Sélectionner--------------------",
+            "Manuelle",
+            "Automatique"});
+            this.comboBoxModifyCarTypVitessVehi.Location = new System.Drawing.Point(149, 346);
+            this.comboBoxModifyCarTypVitessVehi.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxModifyCarTypVitessVehi.Name = "comboBoxModifyCarTypVitessVehi";
+            this.comboBoxModifyCarTypVitessVehi.Size = new System.Drawing.Size(290, 23);
+            this.comboBoxModifyCarTypVitessVehi.TabIndex = 60;
+            // 
+            // TxtKilometrageParCar
+            // 
+            this.TxtKilometrageParCar.BackColor = System.Drawing.Color.Khaki;
+            this.TxtKilometrageParCar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtKilometrageParCar.ForeColor = System.Drawing.Color.DarkGreen;
+            this.TxtKilometrageParCar.Location = new System.Drawing.Point(995, 159);
+            this.TxtKilometrageParCar.Name = "TxtKilometrageParCar";
+            this.TxtKilometrageParCar.ReadOnly = true;
+            this.TxtKilometrageParCar.Size = new System.Drawing.Size(116, 21);
+            this.TxtKilometrageParCar.TabIndex = 95;
+            this.TxtKilometrageParCar.Text = "0";
+            this.TxtKilometrageParCar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Black;
+            this.label22.Location = new System.Drawing.Point(913, 165);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(78, 15);
+            this.label22.TabIndex = 94;
+            this.label22.Text = "Kilo. videng :";
+            // 
+            // BtnVidengeCar
+            // 
+            this.BtnVidengeCar.BackColor = System.Drawing.Color.White;
+            this.BtnVidengeCar.ForeColor = System.Drawing.Color.DarkGreen;
+            this.BtnVidengeCar.IconChar = FontAwesome.Sharp.IconChar.GasPump;
+            this.BtnVidengeCar.IconColor = System.Drawing.Color.DarkGreen;
+            this.BtnVidengeCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnVidengeCar.IconSize = 25;
+            this.BtnVidengeCar.Location = new System.Drawing.Point(962, 251);
+            this.BtnVidengeCar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnVidengeCar.Name = "BtnVidengeCar";
+            this.BtnVidengeCar.Size = new System.Drawing.Size(108, 27);
+            this.BtnVidengeCar.TabIndex = 96;
+            this.BtnVidengeCar.Text = "Videnge";
+            this.BtnVidengeCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnVidengeCar.UseVisualStyleBackColor = false;
+            this.BtnVidengeCar.Visible = false;
+            this.BtnVidengeCar.Click += new System.EventHandler(this.BtnVidengeCar_Click);
             // 
             // FormModifyVehicule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(1123, 611);
+            this.Controls.Add(this.BtnVidengeCar);
+            this.Controls.Add(this.TxtKilometrageParCar);
+            this.Controls.Add(this.label22);
             this.Controls.Add(this.CbxSanteCar);
             this.Controls.Add(this.TxtKolimetrageCar);
             this.Controls.Add(this.label21);
@@ -771,7 +831,6 @@ namespace GestPark
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        public System.Windows.Forms.ComboBox comboBoxModifyCarTypVitessVehi;
         public System.Windows.Forms.ComboBox comboBoxModifyCarTypConsoVehi;
         public System.Windows.Forms.ComboBox comboBoxModifyCarMarqVehi;
         public System.Windows.Forms.TextBox textBoxModifyCarModelVehi;
@@ -797,5 +856,9 @@ namespace GestPark
         private System.Windows.Forms.Label label21;
         public System.Windows.Forms.ComboBox CbxSanteCar;
         public System.Windows.Forms.TextBox TxtKolimetrageCar;
+        public System.Windows.Forms.ComboBox comboBoxModifyCarTypVitessVehi;
+        public System.Windows.Forms.TextBox TxtKilometrageParCar;
+        private System.Windows.Forms.Label label22;
+        private FontAwesome.Sharp.IconButton BtnVidengeCar;
     }
 }

@@ -97,6 +97,7 @@ namespace GestPark
             // 
             // DateRegisterModifyPanCar
             // 
+            this.DateRegisterModifyPanCar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateRegisterModifyPanCar.Location = new System.Drawing.Point(95, 273);
             this.DateRegisterModifyPanCar.Name = "DateRegisterModifyPanCar";
             this.DateRegisterModifyPanCar.Size = new System.Drawing.Size(240, 22);
@@ -129,7 +130,7 @@ namespace GestPark
             // 
             // TxtCodeModifyPanCar
             // 
-            this.TxtCodeModifyPanCar.BackColor = System.Drawing.Color.Khaki;
+            this.TxtCodeModifyPanCar.BackColor = System.Drawing.Color.YellowGreen;
             this.TxtCodeModifyPanCar.Location = new System.Drawing.Point(95, 56);
             this.TxtCodeModifyPanCar.Name = "TxtCodeModifyPanCar";
             this.TxtCodeModifyPanCar.ReadOnly = true;
@@ -167,13 +168,14 @@ namespace GestPark
             // 
             // PanelMenuConsoCarb
             // 
-            this.PanelMenuConsoCarb.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelMenuConsoCarb.BackColor = System.Drawing.Color.Khaki;
+            this.PanelMenuConsoCarb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelMenuConsoCarb.Controls.Add(this.JointDocModifyPanCar);
             this.PanelMenuConsoCarb.Controls.Add(this.IcBtnSavedModifyPanCar);
             this.PanelMenuConsoCarb.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelMenuConsoCarb.Location = new System.Drawing.Point(0, 0);
             this.PanelMenuConsoCarb.Name = "PanelMenuConsoCarb";
-            this.PanelMenuConsoCarb.Size = new System.Drawing.Size(809, 30);
+            this.PanelMenuConsoCarb.Size = new System.Drawing.Size(809, 27);
             this.PanelMenuConsoCarb.TabIndex = 48;
             // 
             // JointDocModifyPanCar
@@ -183,12 +185,12 @@ namespace GestPark
             this.JointDocModifyPanCar.IconChar = FontAwesome.Sharp.IconChar.FileUpload;
             this.JointDocModifyPanCar.IconColor = System.Drawing.Color.DarkGreen;
             this.JointDocModifyPanCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.JointDocModifyPanCar.IconSize = 25;
-            this.JointDocModifyPanCar.Location = new System.Drawing.Point(95, 0);
+            this.JointDocModifyPanCar.IconSize = 20;
+            this.JointDocModifyPanCar.Location = new System.Drawing.Point(107, -2);
             this.JointDocModifyPanCar.Name = "JointDocModifyPanCar";
-            this.JointDocModifyPanCar.Size = new System.Drawing.Size(128, 30);
+            this.JointDocModifyPanCar.Size = new System.Drawing.Size(110, 27);
             this.JointDocModifyPanCar.TabIndex = 2;
-            this.JointDocModifyPanCar.Text = "Joindre fichier";
+            this.JointDocModifyPanCar.Text = "Joindre doc.";
             this.JointDocModifyPanCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.JointDocModifyPanCar.UseVisualStyleBackColor = false;
             // 
@@ -199,10 +201,10 @@ namespace GestPark
             this.IcBtnSavedModifyPanCar.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.IcBtnSavedModifyPanCar.IconColor = System.Drawing.Color.DarkGreen;
             this.IcBtnSavedModifyPanCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IcBtnSavedModifyPanCar.IconSize = 25;
-            this.IcBtnSavedModifyPanCar.Location = new System.Drawing.Point(0, 0);
+            this.IcBtnSavedModifyPanCar.IconSize = 20;
+            this.IcBtnSavedModifyPanCar.Location = new System.Drawing.Point(-2, -2);
             this.IcBtnSavedModifyPanCar.Name = "IcBtnSavedModifyPanCar";
-            this.IcBtnSavedModifyPanCar.Size = new System.Drawing.Size(101, 30);
+            this.IcBtnSavedModifyPanCar.Size = new System.Drawing.Size(103, 27);
             this.IcBtnSavedModifyPanCar.TabIndex = 1;
             this.IcBtnSavedModifyPanCar.Text = "Enregistrer";
             this.IcBtnSavedModifyPanCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -274,7 +276,7 @@ namespace GestPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(809, 469);
             this.Controls.Add(this.CbxVehiModifyPanCar);
             this.Controls.Add(this.TxtMecanicien);

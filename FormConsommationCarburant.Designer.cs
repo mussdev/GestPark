@@ -30,9 +30,9 @@ namespace GestPark
         private void InitializeComponent()
         {
             this.PanelSearchConsoCarbu = new System.Windows.Forms.Panel();
-            this.IcBtnExportConsoCarb = new FontAwesome.Sharp.IconButton();
             this.IbtnSearchConsoCarbu = new FontAwesome.Sharp.IconButton();
             this.TbxSearchConsoCar = new System.Windows.Forms.TextBox();
+            this.IcBtnExportConsoCarb = new FontAwesome.Sharp.IconButton();
             this.PanelTitleMenuConsoCarb = new System.Windows.Forms.Panel();
             this.IbtnCloseFormConsoCar = new FontAwesome.Sharp.IconButton();
             this.IbtnCreateConsoCar = new FontAwesome.Sharp.IconButton();
@@ -49,12 +49,12 @@ namespace GestPark
             this.ID_PROV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CODE_PROV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIPTION_PROV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MONTANT_PROV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QTELITRE_PROV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IMMAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.STATION_PROV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TYPCONSO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KILO_AVANT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KILOMETRAGE_EFFECT_HEBDO_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOTE_PROV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STATUT_PROV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATE_PROV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATECREATE_PROV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.USERCREATE_PROV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,9 +66,8 @@ namespace GestPark
             // 
             // PanelSearchConsoCarbu
             // 
-            this.PanelSearchConsoCarbu.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelSearchConsoCarbu.BackColor = System.Drawing.Color.Khaki;
             this.PanelSearchConsoCarbu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PanelSearchConsoCarbu.Controls.Add(this.IcBtnExportConsoCarb);
             this.PanelSearchConsoCarbu.Controls.Add(this.IbtnSearchConsoCarbu);
             this.PanelSearchConsoCarbu.Controls.Add(this.TbxSearchConsoCar);
             this.PanelSearchConsoCarbu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -76,22 +75,6 @@ namespace GestPark
             this.PanelSearchConsoCarbu.Name = "PanelSearchConsoCarbu";
             this.PanelSearchConsoCarbu.Size = new System.Drawing.Size(1118, 100);
             this.PanelSearchConsoCarbu.TabIndex = 35;
-            // 
-            // IcBtnExportConsoCarb
-            // 
-            this.IcBtnExportConsoCarb.BackColor = System.Drawing.Color.White;
-            this.IcBtnExportConsoCarb.ForeColor = System.Drawing.Color.DarkGreen;
-            this.IcBtnExportConsoCarb.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.IcBtnExportConsoCarb.IconColor = System.Drawing.Color.DarkGreen;
-            this.IcBtnExportConsoCarb.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IcBtnExportConsoCarb.IconSize = 20;
-            this.IcBtnExportConsoCarb.Location = new System.Drawing.Point(1021, 71);
-            this.IcBtnExportConsoCarb.Name = "IcBtnExportConsoCarb";
-            this.IcBtnExportConsoCarb.Size = new System.Drawing.Size(90, 27);
-            this.IcBtnExportConsoCarb.TabIndex = 2;
-            this.IcBtnExportConsoCarb.Text = "Exporter";
-            this.IcBtnExportConsoCarb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IcBtnExportConsoCarb.UseVisualStyleBackColor = false;
             // 
             // IbtnSearchConsoCarbu
             // 
@@ -115,10 +98,27 @@ namespace GestPark
             this.TbxSearchConsoCar.Size = new System.Drawing.Size(272, 22);
             this.TbxSearchConsoCar.TabIndex = 0;
             // 
+            // IcBtnExportConsoCarb
+            // 
+            this.IcBtnExportConsoCarb.BackColor = System.Drawing.Color.White;
+            this.IcBtnExportConsoCarb.ForeColor = System.Drawing.Color.DarkGreen;
+            this.IcBtnExportConsoCarb.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.IcBtnExportConsoCarb.IconColor = System.Drawing.Color.DarkGreen;
+            this.IcBtnExportConsoCarb.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IcBtnExportConsoCarb.IconSize = 20;
+            this.IcBtnExportConsoCarb.Location = new System.Drawing.Point(100, -2);
+            this.IcBtnExportConsoCarb.Name = "IcBtnExportConsoCarb";
+            this.IcBtnExportConsoCarb.Size = new System.Drawing.Size(95, 27);
+            this.IcBtnExportConsoCarb.TabIndex = 2;
+            this.IcBtnExportConsoCarb.Text = "Exporter";
+            this.IcBtnExportConsoCarb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IcBtnExportConsoCarb.UseVisualStyleBackColor = false;
+            // 
             // PanelTitleMenuConsoCarb
             // 
-            this.PanelTitleMenuConsoCarb.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelTitleMenuConsoCarb.BackColor = System.Drawing.Color.Khaki;
             this.PanelTitleMenuConsoCarb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PanelTitleMenuConsoCarb.Controls.Add(this.IcBtnExportConsoCarb);
             this.PanelTitleMenuConsoCarb.Controls.Add(this.IbtnCloseFormConsoCar);
             this.PanelTitleMenuConsoCarb.Controls.Add(this.IbtnCreateConsoCar);
             this.PanelTitleMenuConsoCarb.Dock = System.Windows.Forms.DockStyle.Top;
@@ -129,6 +129,9 @@ namespace GestPark
             // 
             // IbtnCloseFormConsoCar
             // 
+            this.IbtnCloseFormConsoCar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IbtnCloseFormConsoCar.BackColor = System.Drawing.Color.White;
             this.IbtnCloseFormConsoCar.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.IbtnCloseFormConsoCar.IconColor = System.Drawing.Color.Red;
@@ -152,7 +155,7 @@ namespace GestPark
             this.IbtnCreateConsoCar.IconSize = 25;
             this.IbtnCreateConsoCar.Location = new System.Drawing.Point(-2, -2);
             this.IbtnCreateConsoCar.Name = "IbtnCreateConsoCar";
-            this.IbtnCreateConsoCar.Size = new System.Drawing.Size(77, 27);
+            this.IbtnCreateConsoCar.Size = new System.Drawing.Size(96, 27);
             this.IbtnCreateConsoCar.TabIndex = 0;
             this.IbtnCreateConsoCar.Text = "Créer";
             this.IbtnCreateConsoCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -245,18 +248,18 @@ namespace GestPark
             // DataGridViewConsoCar
             // 
             this.DataGridViewConsoCar.AllowUserToOrderColumns = true;
-            this.DataGridViewConsoCar.BackgroundColor = System.Drawing.Color.White;
+            this.DataGridViewConsoCar.BackgroundColor = System.Drawing.Color.Khaki;
             this.DataGridViewConsoCar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewConsoCar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_PROV,
             this.CODE_PROV,
             this.DESCRIPTION_PROV,
-            this.MONTANT_PROV,
-            this.QTELITRE_PROV,
             this.IMMAT,
-            this.STATION_PROV,
             this.TYPCONSO,
+            this.KILO_AVANT,
+            this.KILOMETRAGE_EFFECT_HEBDO_VEHICULE,
             this.NOTE_PROV,
+            this.STATUT_PROV,
             this.DATE_PROV,
             this.DATECREATE_PROV,
             this.USERCREATE_PROV});
@@ -289,33 +292,12 @@ namespace GestPark
             this.DESCRIPTION_PROV.Name = "DESCRIPTION_PROV";
             this.DESCRIPTION_PROV.ReadOnly = true;
             // 
-            // MONTANT_PROV
-            // 
-            this.MONTANT_PROV.DataPropertyName = "MONTANT_PROV";
-            this.MONTANT_PROV.HeaderText = "Prix";
-            this.MONTANT_PROV.Name = "MONTANT_PROV";
-            this.MONTANT_PROV.ReadOnly = true;
-            // 
-            // QTELITRE_PROV
-            // 
-            this.QTELITRE_PROV.DataPropertyName = "QTELITRE_PROV";
-            this.QTELITRE_PROV.HeaderText = "Qte";
-            this.QTELITRE_PROV.Name = "QTELITRE_PROV";
-            this.QTELITRE_PROV.ReadOnly = true;
-            // 
             // IMMAT
             // 
             this.IMMAT.DataPropertyName = "IMMAT";
             this.IMMAT.HeaderText = "Vehicule";
             this.IMMAT.Name = "IMMAT";
             this.IMMAT.ReadOnly = true;
-            // 
-            // STATION_PROV
-            // 
-            this.STATION_PROV.DataPropertyName = "STATION_PROV";
-            this.STATION_PROV.HeaderText = "Station";
-            this.STATION_PROV.Name = "STATION_PROV";
-            this.STATION_PROV.ReadOnly = true;
             // 
             // TYPCONSO
             // 
@@ -324,6 +306,20 @@ namespace GestPark
             this.TYPCONSO.Name = "TYPCONSO";
             this.TYPCONSO.ReadOnly = true;
             // 
+            // KILO_AVANT
+            // 
+            this.KILO_AVANT.DataPropertyName = "KILO_AVANT";
+            this.KILO_AVANT.HeaderText = "Kilo. ava.";
+            this.KILO_AVANT.Name = "KILO_AVANT";
+            this.KILO_AVANT.ReadOnly = true;
+            // 
+            // KILOMETRAGE_EFFECT_HEBDO_VEHICULE
+            // 
+            this.KILOMETRAGE_EFFECT_HEBDO_VEHICULE.DataPropertyName = "KILOMETRAGE_EFFECT_HEBDO_VEHICULE";
+            this.KILOMETRAGE_EFFECT_HEBDO_VEHICULE.HeaderText = "Kilo. effect.";
+            this.KILOMETRAGE_EFFECT_HEBDO_VEHICULE.Name = "KILOMETRAGE_EFFECT_HEBDO_VEHICULE";
+            this.KILOMETRAGE_EFFECT_HEBDO_VEHICULE.ReadOnly = true;
+            // 
             // NOTE_PROV
             // 
             this.NOTE_PROV.DataPropertyName = "NOTE_PROV";
@@ -331,6 +327,13 @@ namespace GestPark
             this.NOTE_PROV.Name = "NOTE_PROV";
             this.NOTE_PROV.ReadOnly = true;
             this.NOTE_PROV.Width = 150;
+            // 
+            // STATUT_PROV
+            // 
+            this.STATUT_PROV.DataPropertyName = "STATUT_PROV";
+            this.STATUT_PROV.HeaderText = "Statut";
+            this.STATUT_PROV.Name = "STATUT_PROV";
+            this.STATUT_PROV.ReadOnly = true;
             // 
             // DATE_PROV
             // 
@@ -397,12 +400,12 @@ namespace GestPark
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_PROV;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODE_PROV;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_PROV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MONTANT_PROV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QTELITRE_PROV;
         private System.Windows.Forms.DataGridViewTextBoxColumn IMMAT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STATION_PROV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TYPCONSO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KILO_AVANT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KILOMETRAGE_EFFECT_HEBDO_VEHICULE;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOTE_PROV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STATUT_PROV;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATE_PROV;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATECREATE_PROV;
         private System.Windows.Forms.DataGridViewTextBoxColumn USERCREATE_PROV;

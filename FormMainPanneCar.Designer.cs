@@ -30,9 +30,9 @@ namespace GestPark
         private void InitializeComponent()
         {
             this.PanelSearchConsoCarbu = new System.Windows.Forms.Panel();
-            this.IcBtnExportPanCarb = new FontAwesome.Sharp.IconButton();
             this.IbtnSearchPanCar = new FontAwesome.Sharp.IconButton();
             this.TbxSearchPanCar = new System.Windows.Forms.TextBox();
+            this.IcBtnExportPanCarb = new FontAwesome.Sharp.IconButton();
             this.PanelTitleMenuConsoCarb = new System.Windows.Forms.Panel();
             this.IbtnCloseFormPanCar = new FontAwesome.Sharp.IconButton();
             this.IbtnCreatePanCar = new FontAwesome.Sharp.IconButton();
@@ -65,9 +65,8 @@ namespace GestPark
             // PanelSearchConsoCarbu
             // 
             this.PanelSearchConsoCarbu.AutoScroll = true;
-            this.PanelSearchConsoCarbu.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelSearchConsoCarbu.BackColor = System.Drawing.Color.Khaki;
             this.PanelSearchConsoCarbu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PanelSearchConsoCarbu.Controls.Add(this.IcBtnExportPanCarb);
             this.PanelSearchConsoCarbu.Controls.Add(this.IbtnSearchPanCar);
             this.PanelSearchConsoCarbu.Controls.Add(this.TbxSearchPanCar);
             this.PanelSearchConsoCarbu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -75,22 +74,6 @@ namespace GestPark
             this.PanelSearchConsoCarbu.Name = "PanelSearchConsoCarbu";
             this.PanelSearchConsoCarbu.Size = new System.Drawing.Size(1118, 100);
             this.PanelSearchConsoCarbu.TabIndex = 38;
-            // 
-            // IcBtnExportPanCarb
-            // 
-            this.IcBtnExportPanCarb.BackColor = System.Drawing.Color.White;
-            this.IcBtnExportPanCarb.ForeColor = System.Drawing.Color.DarkGreen;
-            this.IcBtnExportPanCarb.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.IcBtnExportPanCarb.IconColor = System.Drawing.Color.DarkGreen;
-            this.IcBtnExportPanCarb.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IcBtnExportPanCarb.IconSize = 20;
-            this.IcBtnExportPanCarb.Location = new System.Drawing.Point(1021, 71);
-            this.IcBtnExportPanCarb.Name = "IcBtnExportPanCarb";
-            this.IcBtnExportPanCarb.Size = new System.Drawing.Size(90, 27);
-            this.IcBtnExportPanCarb.TabIndex = 2;
-            this.IcBtnExportPanCarb.Text = "Exporter";
-            this.IcBtnExportPanCarb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IcBtnExportPanCarb.UseVisualStyleBackColor = false;
             // 
             // IbtnSearchPanCar
             // 
@@ -114,10 +97,27 @@ namespace GestPark
             this.TbxSearchPanCar.Size = new System.Drawing.Size(272, 22);
             this.TbxSearchPanCar.TabIndex = 0;
             // 
+            // IcBtnExportPanCarb
+            // 
+            this.IcBtnExportPanCarb.BackColor = System.Drawing.Color.White;
+            this.IcBtnExportPanCarb.ForeColor = System.Drawing.Color.DarkGreen;
+            this.IcBtnExportPanCarb.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.IcBtnExportPanCarb.IconColor = System.Drawing.Color.DarkGreen;
+            this.IcBtnExportPanCarb.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IcBtnExportPanCarb.IconSize = 20;
+            this.IcBtnExportPanCarb.Location = new System.Drawing.Point(81, -2);
+            this.IcBtnExportPanCarb.Name = "IcBtnExportPanCarb";
+            this.IcBtnExportPanCarb.Size = new System.Drawing.Size(90, 27);
+            this.IcBtnExportPanCarb.TabIndex = 2;
+            this.IcBtnExportPanCarb.Text = "Exporter";
+            this.IcBtnExportPanCarb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IcBtnExportPanCarb.UseVisualStyleBackColor = false;
+            // 
             // PanelTitleMenuConsoCarb
             // 
-            this.PanelTitleMenuConsoCarb.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelTitleMenuConsoCarb.BackColor = System.Drawing.Color.Khaki;
             this.PanelTitleMenuConsoCarb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PanelTitleMenuConsoCarb.Controls.Add(this.IcBtnExportPanCarb);
             this.PanelTitleMenuConsoCarb.Controls.Add(this.IbtnCloseFormPanCar);
             this.PanelTitleMenuConsoCarb.Controls.Add(this.IbtnCreatePanCar);
             this.PanelTitleMenuConsoCarb.Dock = System.Windows.Forms.DockStyle.Top;
@@ -128,6 +128,9 @@ namespace GestPark
             // 
             // IbtnCloseFormPanCar
             // 
+            this.IbtnCloseFormPanCar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IbtnCloseFormPanCar.BackColor = System.Drawing.Color.White;
             this.IbtnCloseFormPanCar.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.IbtnCloseFormPanCar.IconColor = System.Drawing.Color.Red;
@@ -244,7 +247,7 @@ namespace GestPark
             // DataGridViewCarPan
             // 
             this.DataGridViewCarPan.AllowUserToOrderColumns = true;
-            this.DataGridViewCarPan.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.DataGridViewCarPan.BackgroundColor = System.Drawing.Color.Khaki;
             this.DataGridViewCarPan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewCarPan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_PAN,

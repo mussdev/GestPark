@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,6 +44,72 @@
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="LibExcel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Engine.2021.4.3\lib\net452\LibExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.864.35, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.WebView2.1.0.864.35\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.864.35, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.WebView2.1.0.864.35\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.864.35, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Web.WebView2.1.0.864.35\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Engine.2021.4.3\lib\net452\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Blockly, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Engine.2021.4.3\lib\net452\Stimulsoft.Blockly.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.BlocklyEditor.Wpf, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Net.2021.4.3\lib\net452\Stimulsoft.BlocklyEditor.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Net.2021.4.3\lib\net452\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Net.2021.4.3\lib\net452\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Data, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Engine.2021.4.3\lib\net452\Stimulsoft.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Database, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Net.2021.4.3\lib\net452\Stimulsoft.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Design, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Net.2021.4.3\lib\net452\Stimulsoft.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Net.2021.4.3\lib\net452\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Map, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Engine.2021.4.3\lib\net452\Stimulsoft.Map.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.MathFX, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Engine.2021.4.3\lib\net452\Stimulsoft.MathFX.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Engine.2021.4.3\lib\net452\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Engine.2021.4.3\lib\net452\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Net.2021.4.3\lib\net452\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Engine.2021.4.3\lib\net452\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Web, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Net.2021.4.3\lib\net452\Stimulsoft.Report.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Reports.Net.2021.4.3\lib\net452\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Svg, Version=2021.4.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>packages\Stimulsoft.Svg.2021.4.3\lib\net452\Stimulsoft.Svg.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -59,6 +127,18 @@
   <ItemGroup>
     <Compile Include="AppSetting.cs" />
     <Compile Include="ConnectDB.cs" />
+    <Compile Include="FormAddCarteCarburant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCarteCarburant.Designer.cs">
+      <DependentUpon>FormAddCarteCarburant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddPaiement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddPaiement.Designer.cs">
+      <DependentUpon>FormAddPaiement.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAttributeCarModify.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,11 +247,17 @@
     <Compile Include="FormDisplayAssurance.Designer.cs">
       <DependentUpon>FormDisplayAssurance.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDisplayEntretien.cs">
+    <Compile Include="FormMainCarteCarburant.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDisplayEntretien.Designer.cs">
-      <DependentUpon>FormDisplayEntretien.cs</DependentUpon>
+    <Compile Include="FormMainCarteCarburant.Designer.cs">
+      <DependentUpon>FormMainCarteCarburant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModifierEntretien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifierEntretien.Designer.cs">
+      <DependentUpon>FormModifierEntretien.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDisplayVisitTechCar.cs">
       <SubType>Form</SubType>
@@ -190,6 +276,12 @@
     </Compile>
     <Compile Include="FormGestParcMain.Designer.cs">
       <DependentUpon>FormGestParcMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInitializePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInitializePassword.Designer.cs">
+      <DependentUpon>FormInitializePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMainAssurance.cs">
       <SubType>Form</SubType>
@@ -256,6 +348,18 @@
     </Compile>
     <Compile Include="FormMarque.Designer.cs">
       <DependentUpon>FormMarque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModifierFourn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifierFourn.Designer.cs">
+      <DependentUpon>FormModifierFourn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModifierPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifierPerson.Designer.cs">
+      <DependentUpon>FormModifierPerson.cs</DependentUpon>
     </Compile>
     <Compile Include="FormModifyConsoCarbCar.cs">
       <SubType>Form</SubType>
@@ -337,6 +441,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddCarteCarburant.resx">
+      <DependentUpon>FormAddCarteCarburant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddPaiement.resx">
+      <DependentUpon>FormAddPaiement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAttributeCarModify.resx">
       <DependentUpon>FormAttributeCarModify.cs</DependentUpon>
     </EmbeddedResource>
@@ -391,8 +501,11 @@
     <EmbeddedResource Include="FormDisplayAssurance.resx">
       <DependentUpon>FormDisplayAssurance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDisplayEntretien.resx">
-      <DependentUpon>FormDisplayEntretien.cs</DependentUpon>
+    <EmbeddedResource Include="FormMainCarteCarburant.resx">
+      <DependentUpon>FormMainCarteCarburant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifierEntretien.resx">
+      <DependentUpon>FormModifierEntretien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDisplayVisitTechCar.resx">
       <DependentUpon>FormDisplayVisitTechCar.cs</DependentUpon>
@@ -402,6 +515,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormGestParcMain.resx">
       <DependentUpon>FormGestParcMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInitializePassword.resx">
+      <DependentUpon>FormInitializePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMainAssurance.resx">
       <DependentUpon>FormMainAssurance.cs</DependentUpon>
@@ -435,6 +551,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMarque.resx">
       <DependentUpon>FormMarque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifierFourn.resx">
+      <DependentUpon>FormModifierFourn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifierPerson.resx">
+      <DependentUpon>FormModifierPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormModifyConsoCarbCar.resx">
       <DependentUpon>FormModifyConsoCarbCar.cs</DependentUpon>
@@ -553,6 +675,51 @@
     <Content Include="iconGestPak.ico" />
     <Content Include="IconGestPark.ico" />
     <Content Include="IconParc.ico" />
+    <Content Include="Localization\ar.xml" />
+    <Content Include="Localization\be.xml" />
+    <Content Include="Localization\bg.xml" />
+    <Content Include="Localization\bh.xml" />
+    <Content Include="Localization\ca-ES.xml" />
+    <Content Include="Localization\cs.xml" />
+    <Content Include="Localization\de.xml" />
+    <Content Include="Localization\el-GR.xml" />
+    <Content Include="Localization\en-GB.xml" />
+    <Content Include="Localization\en.xml" />
+    <Content Include="Localization\es.xml" />
+    <Content Include="Localization\eu-ES.xml" />
+    <Content Include="Localization\fa.xml" />
+    <Content Include="Localization\fr.xml" />
+    <Content Include="Localization\gl-ES.xml" />
+    <Content Include="Localization\hr.xml" />
+    <Content Include="Localization\hu.xml" />
+    <Content Include="Localization\id.xml" />
+    <Content Include="Localization\it.xml" />
+    <Content Include="Localization\ja.xml" />
+    <Content Include="Localization\ka.xml" />
+    <Content Include="Localization\ko.xml" />
+    <Content Include="Localization\lt.xml" />
+    <Content Include="Localization\nb-NO.xml" />
+    <Content Include="Localization\nl.xml" />
+    <Content Include="Localization\pl.xml" />
+    <Content Include="Localization\pt-BR.xml" />
+    <Content Include="Localization\pt.xml" />
+    <Content Include="Localization\ro.xml" />
+    <Content Include="Localization\ru.xml" />
+    <Content Include="Localization\sk.xml" />
+    <Content Include="Localization\sr.xml" />
+    <Content Include="Localization\sv.xml" />
+    <Content Include="Localization\tr.xml" />
+    <Content Include="Localization\uk.xml" />
+    <Content Include="Localization\vi.xml" />
+    <Content Include="Localization\zh-CHS.xml" />
+    <Content Include="Localization\zh-CHT.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Microsoft.Web.WebView2.1.0.864.35\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.864.35\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Web.WebView2.1.0.864.35\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Web.WebView2.1.0.864.35\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
 </Project>

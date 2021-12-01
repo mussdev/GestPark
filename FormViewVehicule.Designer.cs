@@ -30,6 +30,7 @@ namespace GestPark
         private void InitializeComponent()
         {
             this.panelViewVehicule = new System.Windows.Forms.Panel();
+            this.BtnCreateCar = new FontAwesome.Sharp.IconButton();
             this.iconBtnExportVehi = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,6 +59,8 @@ namespace GestPark
             this.NOTE_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.STATUT_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SANTE_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TOTALKILOMETRAGE_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KILOMETRAGE_VIDENGE_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATE_ACHA_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATE_VISITE_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ASSURANCE_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,8 +73,9 @@ namespace GestPark
             // panelViewVehicule
             // 
             this.panelViewVehicule.AutoScroll = true;
-            this.panelViewVehicule.BackColor = System.Drawing.Color.DarkOrange;
+            this.panelViewVehicule.BackColor = System.Drawing.Color.Khaki;
             this.panelViewVehicule.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelViewVehicule.Controls.Add(this.BtnCreateCar);
             this.panelViewVehicule.Controls.Add(this.iconBtnExportVehi);
             this.panelViewVehicule.Controls.Add(this.label3);
             this.panelViewVehicule.Controls.Add(this.label2);
@@ -88,6 +92,24 @@ namespace GestPark
             this.panelViewVehicule.Name = "panelViewVehicule";
             this.panelViewVehicule.Size = new System.Drawing.Size(1118, 135);
             this.panelViewVehicule.TabIndex = 0;
+            // 
+            // BtnCreateCar
+            // 
+            this.BtnCreateCar.BackColor = System.Drawing.Color.White;
+            this.BtnCreateCar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCreateCar.ForeColor = System.Drawing.Color.DarkGreen;
+            this.BtnCreateCar.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.BtnCreateCar.IconColor = System.Drawing.Color.DarkGreen;
+            this.BtnCreateCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnCreateCar.IconSize = 20;
+            this.BtnCreateCar.Location = new System.Drawing.Point(925, 90);
+            this.BtnCreateCar.Name = "BtnCreateCar";
+            this.BtnCreateCar.Size = new System.Drawing.Size(91, 23);
+            this.BtnCreateCar.TabIndex = 14;
+            this.BtnCreateCar.Text = "Créer";
+            this.BtnCreateCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnCreateCar.UseVisualStyleBackColor = false;
+            this.BtnCreateCar.Click += new System.EventHandler(this.BtnCreateCar_Click);
             // 
             // iconBtnExportVehi
             // 
@@ -211,18 +233,18 @@ namespace GestPark
             this.iconBtnCloseViewForm.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.iconBtnCloseViewForm.IconColor = System.Drawing.Color.Red;
             this.iconBtnCloseViewForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconBtnCloseViewForm.IconSize = 35;
-            this.iconBtnCloseViewForm.Location = new System.Drawing.Point(1078, -2);
+            this.iconBtnCloseViewForm.IconSize = 20;
+            this.iconBtnCloseViewForm.Location = new System.Drawing.Point(1086, -2);
             this.iconBtnCloseViewForm.Name = "iconBtnCloseViewForm";
             this.iconBtnCloseViewForm.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.iconBtnCloseViewForm.Size = new System.Drawing.Size(38, 30);
+            this.iconBtnCloseViewForm.Size = new System.Drawing.Size(30, 24);
             this.iconBtnCloseViewForm.TabIndex = 0;
             this.iconBtnCloseViewForm.UseVisualStyleBackColor = false;
             this.iconBtnCloseViewForm.Click += new System.EventHandler(this.iconBtnCloseViewForm_Click);
             // 
             // DataGridViewVehi
             // 
-            this.DataGridViewVehi.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.DataGridViewVehi.BackgroundColor = System.Drawing.Color.Khaki;
             this.DataGridViewVehi.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DataGridViewVehi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewVehi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -242,6 +264,8 @@ namespace GestPark
             this.NOTE_VEHICULE,
             this.STATUT_VEHICULE,
             this.SANTE_VEHICULE,
+            this.TOTALKILOMETRAGE_VEHICULE,
+            this.KILOMETRAGE_VIDENGE_VEHICULE,
             this.DATE_ACHA_VEHICULE,
             this.DATE_VISITE_VEHICULE,
             this.ASSURANCE_VEHICULE,
@@ -271,7 +295,7 @@ namespace GestPark
             // IMMATRICULATION_VEHICULE
             // 
             this.IMMATRICULATION_VEHICULE.DataPropertyName = "IMMATRICULATION_VEHICULE";
-            this.IMMATRICULATION_VEHICULE.HeaderText = "Immatriculation";
+            this.IMMATRICULATION_VEHICULE.HeaderText = "Immat.";
             this.IMMATRICULATION_VEHICULE.Name = "IMMATRICULATION_VEHICULE";
             this.IMMATRICULATION_VEHICULE.ReadOnly = true;
             // 
@@ -313,7 +337,7 @@ namespace GestPark
             // DESCRIPTION_PARK
             // 
             this.DESCRIPTION_PARK.DataPropertyName = "DESCRIPTION_PARK";
-            this.DESCRIPTION_PARK.HeaderText = "Emplacement";
+            this.DESCRIPTION_PARK.HeaderText = "Empl.";
             this.DESCRIPTION_PARK.Name = "DESCRIPTION_PARK";
             this.DESCRIPTION_PARK.ReadOnly = true;
             // 
@@ -337,7 +361,7 @@ namespace GestPark
             this.DESCRIPTION_PERS.HeaderText = "Propriétaire";
             this.DESCRIPTION_PERS.Name = "DESCRIPTION_PERS";
             this.DESCRIPTION_PERS.ReadOnly = true;
-            this.DESCRIPTION_PERS.Width = 200;
+            this.DESCRIPTION_PERS.Width = 250;
             // 
             // DESCRIPTION_FOUR
             // 
@@ -345,6 +369,7 @@ namespace GestPark
             this.DESCRIPTION_FOUR.HeaderText = "Fournisseur";
             this.DESCRIPTION_FOUR.Name = "DESCRIPTION_FOUR";
             this.DESCRIPTION_FOUR.ReadOnly = true;
+            this.DESCRIPTION_FOUR.Width = 200;
             // 
             // NOTE_VEHICULE
             // 
@@ -367,6 +392,21 @@ namespace GestPark
             this.SANTE_VEHICULE.Name = "SANTE_VEHICULE";
             this.SANTE_VEHICULE.ReadOnly = true;
             // 
+            // TOTALKILOMETRAGE_VEHICULE
+            // 
+            this.TOTALKILOMETRAGE_VEHICULE.DataPropertyName = "TOTALKILOMETRAGE_VEHICULE";
+            this.TOTALKILOMETRAGE_VEHICULE.HeaderText = "Kilo.";
+            this.TOTALKILOMETRAGE_VEHICULE.Name = "TOTALKILOMETRAGE_VEHICULE";
+            this.TOTALKILOMETRAGE_VEHICULE.ReadOnly = true;
+            // 
+            // KILOMETRAGE_VIDENGE_VEHICULE
+            // 
+            this.KILOMETRAGE_VIDENGE_VEHICULE.DataPropertyName = "KILOMETRAGE_VIDENGE_VEHICULE";
+            this.KILOMETRAGE_VIDENGE_VEHICULE.HeaderText = "Kilo. effect.";
+            this.KILOMETRAGE_VIDENGE_VEHICULE.Name = "KILOMETRAGE_VIDENGE_VEHICULE";
+            this.KILOMETRAGE_VIDENGE_VEHICULE.ReadOnly = true;
+            this.KILOMETRAGE_VIDENGE_VEHICULE.Width = 150;
+            // 
             // DATE_ACHA_VEHICULE
             // 
             this.DATE_ACHA_VEHICULE.DataPropertyName = "DATE_ACHA_VEHICULE";
@@ -380,6 +420,7 @@ namespace GestPark
             this.DATE_VISITE_VEHICULE.HeaderText = "Date visi. tech.";
             this.DATE_VISITE_VEHICULE.Name = "DATE_VISITE_VEHICULE";
             this.DATE_VISITE_VEHICULE.ReadOnly = true;
+            this.DATE_VISITE_VEHICULE.Width = 150;
             // 
             // ASSURANCE_VEHICULE
             // 
@@ -401,6 +442,7 @@ namespace GestPark
             this.USERCREATE_VEHICULE.HeaderText = "Créer par";
             this.USERCREATE_VEHICULE.Name = "USERCREATE_VEHICULE";
             this.USERCREATE_VEHICULE.ReadOnly = true;
+            this.USERCREATE_VEHICULE.Width = 200;
             // 
             // FormViewVehicule
             // 
@@ -436,6 +478,7 @@ namespace GestPark
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView DataGridViewVehi;
         private FontAwesome.Sharp.IconButton iconBtnExportVehi;
+        private FontAwesome.Sharp.IconButton BtnCreateCar;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODE_VEHICULE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ETAT_VEHICULE;
         private System.Windows.Forms.DataGridViewTextBoxColumn IMMATRICULATION_VEHICULE;
@@ -452,6 +495,8 @@ namespace GestPark
         private System.Windows.Forms.DataGridViewTextBoxColumn NOTE_VEHICULE;
         private System.Windows.Forms.DataGridViewTextBoxColumn STATUT_VEHICULE;
         private System.Windows.Forms.DataGridViewTextBoxColumn SANTE_VEHICULE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TOTALKILOMETRAGE_VEHICULE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KILOMETRAGE_VIDENGE_VEHICULE;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATE_ACHA_VEHICULE;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATE_VISITE_VEHICULE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ASSURANCE_VEHICULE;

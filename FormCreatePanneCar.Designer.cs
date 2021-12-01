@@ -51,14 +51,15 @@ namespace GestPark
             // 
             // RtxtNotePanCar
             // 
-            this.RtxtNotePanCar.Location = new System.Drawing.Point(95, 328);
+            this.RtxtNotePanCar.Location = new System.Drawing.Point(109, 328);
             this.RtxtNotePanCar.Name = "RtxtNotePanCar";
-            this.RtxtNotePanCar.Size = new System.Drawing.Size(593, 130);
+            this.RtxtNotePanCar.Size = new System.Drawing.Size(625, 104);
             this.RtxtNotePanCar.TabIndex = 36;
             this.RtxtNotePanCar.Text = "";
             // 
             // DateRegisterPanCar
             // 
+            this.DateRegisterPanCar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateRegisterPanCar.Location = new System.Drawing.Point(95, 268);
             this.DateRegisterPanCar.Name = "DateRegisterPanCar";
             this.DateRegisterPanCar.Size = new System.Drawing.Size(240, 22);
@@ -91,7 +92,7 @@ namespace GestPark
             // 
             // TxtCodePanCar
             // 
-            this.TxtCodePanCar.BackColor = System.Drawing.Color.Khaki;
+            this.TxtCodePanCar.BackColor = System.Drawing.Color.YellowGreen;
             this.TxtCodePanCar.Location = new System.Drawing.Point(95, 51);
             this.TxtCodePanCar.Name = "TxtCodePanCar";
             this.TxtCodePanCar.ReadOnly = true;
@@ -129,13 +130,14 @@ namespace GestPark
             // 
             // PanelMenuConsoCarb
             // 
-            this.PanelMenuConsoCarb.BackColor = System.Drawing.Color.DarkOrange;
+            this.PanelMenuConsoCarb.BackColor = System.Drawing.Color.Khaki;
+            this.PanelMenuConsoCarb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelMenuConsoCarb.Controls.Add(this.JointDocPanCar);
             this.PanelMenuConsoCarb.Controls.Add(this.IcBtnSavedPanCar);
             this.PanelMenuConsoCarb.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelMenuConsoCarb.Location = new System.Drawing.Point(0, 0);
             this.PanelMenuConsoCarb.Name = "PanelMenuConsoCarb";
-            this.PanelMenuConsoCarb.Size = new System.Drawing.Size(700, 30);
+            this.PanelMenuConsoCarb.Size = new System.Drawing.Size(745, 26);
             this.PanelMenuConsoCarb.TabIndex = 22;
             // 
             // JointDocPanCar
@@ -145,10 +147,10 @@ namespace GestPark
             this.JointDocPanCar.IconChar = FontAwesome.Sharp.IconChar.FileUpload;
             this.JointDocPanCar.IconColor = System.Drawing.Color.DarkGreen;
             this.JointDocPanCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.JointDocPanCar.IconSize = 25;
-            this.JointDocPanCar.Location = new System.Drawing.Point(95, 0);
+            this.JointDocPanCar.IconSize = 20;
+            this.JointDocPanCar.Location = new System.Drawing.Point(107, 0);
             this.JointDocPanCar.Name = "JointDocPanCar";
-            this.JointDocPanCar.Size = new System.Drawing.Size(128, 30);
+            this.JointDocPanCar.Size = new System.Drawing.Size(117, 24);
             this.JointDocPanCar.TabIndex = 2;
             this.JointDocPanCar.Text = "Joindre fichier";
             this.JointDocPanCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -161,10 +163,10 @@ namespace GestPark
             this.IcBtnSavedPanCar.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.IcBtnSavedPanCar.IconColor = System.Drawing.Color.DarkGreen;
             this.IcBtnSavedPanCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IcBtnSavedPanCar.IconSize = 25;
-            this.IcBtnSavedPanCar.Location = new System.Drawing.Point(0, 0);
+            this.IcBtnSavedPanCar.IconSize = 20;
+            this.IcBtnSavedPanCar.Location = new System.Drawing.Point(-2, -2);
             this.IcBtnSavedPanCar.Name = "IcBtnSavedPanCar";
-            this.IcBtnSavedPanCar.Size = new System.Drawing.Size(101, 30);
+            this.IcBtnSavedPanCar.Size = new System.Drawing.Size(103, 26);
             this.IcBtnSavedPanCar.TabIndex = 1;
             this.IcBtnSavedPanCar.Text = "Enregistrer";
             this.IcBtnSavedPanCar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -182,7 +184,7 @@ namespace GestPark
             // 
             // RichTxtoutheInfos
             // 
-            this.RichTxtoutheInfos.Location = new System.Drawing.Point(396, 51);
+            this.RichTxtoutheInfos.Location = new System.Drawing.Point(442, 51);
             this.RichTxtoutheInfos.Name = "RichTxtoutheInfos";
             this.RichTxtoutheInfos.Size = new System.Drawing.Size(292, 108);
             this.RichTxtoutheInfos.TabIndex = 43;
@@ -214,8 +216,8 @@ namespace GestPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(700, 469);
+            this.BackColor = System.Drawing.Color.Khaki;
+            this.ClientSize = new System.Drawing.Size(745, 469);
             this.Controls.Add(this.CbxEtatCarPan);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.RichTxtoutheInfos);

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace GestPark
 {
-    public partial class FormDisplayEntretien : Form
+    public partial class FormInitializePassword : Form
     {
-        public FormDisplayEntretien()
+        public FormInitializePassword()
         {
             InitializeComponent();
+        }
+
+        private void BtnCloseFormInitPassword_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

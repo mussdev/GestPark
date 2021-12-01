@@ -47,7 +47,7 @@ namespace GestPark
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.DarkOrange;
+            this.menuStrip1.BackColor = System.Drawing.Color.Khaki;
             this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
@@ -163,6 +163,7 @@ namespace GestPark
             // 
             // panelMenuVehicule
             // 
+            this.panelMenuVehicule.BackColor = System.Drawing.Color.Khaki;
             this.panelMenuVehicule.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenuVehicule.Location = new System.Drawing.Point(0, 24);
             this.panelMenuVehicule.Name = "panelMenuVehicule";

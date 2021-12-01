@@ -41,20 +41,22 @@ namespace GestPark
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PanelFormMvt = new System.Windows.Forms.Panel();
-            this.RtbxNoteMvtMod = new System.Windows.Forms.RichTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.CbxVehiculeMod = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.TbxKilometreMvtApresMod = new System.Windows.Forms.TextBox();
+            this.RtbxNoteMvtMod = new System.Windows.Forms.RichTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.TimeEndMvtModi = new System.Windows.Forms.DateTimePicker();
+            this.TimeStartMvtModi = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.TbxKilometreMvtAvantMod = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.DateArriveeMvtMod = new System.Windows.Forms.DateTimePicker();
             this.DateDepartMvtMod = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.paneltitleFormCreateMvt = new System.Windows.Forms.Panel();
+            this.BtnImportDocModi = new FontAwesome.Sharp.IconButton();
+            this.BtnPrinterCarModi = new FontAwesome.Sharp.IconButton();
             this.IbtnRegisterMvtTbxCodMvtMod = new FontAwesome.Sharp.IconButton();
             this.PanelFormMvt.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -140,7 +142,7 @@ namespace GestPark
             // 
             // TbxCodMvtMod
             // 
-            this.TbxCodMvtMod.BackColor = System.Drawing.Color.Khaki;
+            this.TbxCodMvtMod.BackColor = System.Drawing.Color.YellowGreen;
             this.TbxCodMvtMod.Location = new System.Drawing.Point(119, 27);
             this.TbxCodMvtMod.Name = "TbxCodMvtMod";
             this.TbxCodMvtMod.ReadOnly = true;
@@ -199,7 +201,9 @@ namespace GestPark
             // 
             // PanelFormMvt
             // 
-            this.PanelFormMvt.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PanelFormMvt.BackColor = System.Drawing.Color.Khaki;
+            this.PanelFormMvt.Controls.Add(this.CbxVehiculeMod);
+            this.PanelFormMvt.Controls.Add(this.label10);
             this.PanelFormMvt.Controls.Add(this.RtbxNoteMvtMod);
             this.PanelFormMvt.Controls.Add(this.panel1);
             this.PanelFormMvt.Controls.Add(this.label11);
@@ -214,42 +218,15 @@ namespace GestPark
             this.PanelFormMvt.Controls.Add(this.label2);
             this.PanelFormMvt.Controls.Add(this.label1);
             this.PanelFormMvt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelFormMvt.Location = new System.Drawing.Point(0, 30);
+            this.PanelFormMvt.Location = new System.Drawing.Point(0, 24);
             this.PanelFormMvt.Name = "PanelFormMvt";
-            this.PanelFormMvt.Size = new System.Drawing.Size(933, 489);
+            this.PanelFormMvt.Size = new System.Drawing.Size(933, 495);
             this.PanelFormMvt.TabIndex = 3;
-            // 
-            // RtbxNoteMvtMod
-            // 
-            this.RtbxNoteMvtMod.Location = new System.Drawing.Point(125, 307);
-            this.RtbxNoteMvtMod.Name = "RtbxNoteMvtMod";
-            this.RtbxNoteMvtMod.Size = new System.Drawing.Size(797, 141);
-            this.RtbxNoteMvtMod.TabIndex = 38;
-            this.RtbxNoteMvtMod.Text = "";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.CbxVehiculeMod);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.TbxKilometreMvtApresMod);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.TbxKilometreMvtAvantMod);
-            this.panel1.Controls.Add(this.DateArriveeMvtMod);
-            this.panel1.Controls.Add(this.DateDepartMvtMod);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(462, 17);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(459, 263);
-            this.panel1.TabIndex = 25;
             // 
             // CbxVehiculeMod
             // 
             this.CbxVehiculeMod.FormattingEnabled = true;
-            this.CbxVehiculeMod.Location = new System.Drawing.Point(148, 236);
+            this.CbxVehiculeMod.Location = new System.Drawing.Point(608, 226);
             this.CbxVehiculeMod.Name = "CbxVehiculeMod";
             this.CbxVehiculeMod.Size = new System.Drawing.Size(278, 23);
             this.CbxVehiculeMod.TabIndex = 38;
@@ -259,40 +236,76 @@ namespace GestPark
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(32, 244);
+            this.label10.Location = new System.Drawing.Point(492, 234);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 15);
             this.label10.TabIndex = 37;
             this.label10.Text = "Voiture";
             // 
-            // TbxKilometreMvtApresMod
+            // RtbxNoteMvtMod
             // 
-            this.TbxKilometreMvtApresMod.Location = new System.Drawing.Point(148, 180);
-            this.TbxKilometreMvtApresMod.Name = "TbxKilometreMvtApresMod";
-            this.TbxKilometreMvtApresMod.Size = new System.Drawing.Size(278, 22);
-            this.TbxKilometreMvtApresMod.TabIndex = 36;
-            this.TbxKilometreMvtApresMod.Text = "0";
+            this.RtbxNoteMvtMod.Location = new System.Drawing.Point(125, 307);
+            this.RtbxNoteMvtMod.Name = "RtbxNoteMvtMod";
+            this.RtbxNoteMvtMod.Size = new System.Drawing.Size(797, 105);
+            this.RtbxNoteMvtMod.TabIndex = 38;
+            this.RtbxNoteMvtMod.Text = "";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.TimeEndMvtModi);
+            this.panel1.Controls.Add(this.TimeStartMvtModi);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.DateArriveeMvtMod);
+            this.panel1.Controls.Add(this.DateDepartMvtMod);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Location = new System.Drawing.Point(462, 17);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(459, 189);
+            this.panel1.TabIndex = 25;
+            // 
+            // TimeEndMvtModi
+            // 
+            this.TimeEndMvtModi.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.TimeEndMvtModi.Location = new System.Drawing.Point(148, 151);
+            this.TimeEndMvtModi.Name = "TimeEndMvtModi";
+            this.TimeEndMvtModi.Size = new System.Drawing.Size(274, 22);
+            this.TimeEndMvtModi.TabIndex = 36;
+            // 
+            // TimeStartMvtModi
+            // 
+            this.TimeStartMvtModi.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.TimeStartMvtModi.Location = new System.Drawing.Point(148, 111);
+            this.TimeStartMvtModi.Name = "TimeStartMvtModi";
+            this.TimeStartMvtModi.Size = new System.Drawing.Size(274, 22);
+            this.TimeStartMvtModi.TabIndex = 35;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(32, 183);
+            this.label6.Location = new System.Drawing.Point(32, 158);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 15);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Kilomètre après";
+            this.label6.Size = new System.Drawing.Size(78, 15);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Heure arrivée";
             // 
-            // TbxKilometreMvtAvantMod
+            // label9
             // 
-            this.TbxKilometreMvtAvantMod.Location = new System.Drawing.Point(148, 125);
-            this.TbxKilometreMvtAvantMod.Name = "TbxKilometreMvtAvantMod";
-            this.TbxKilometreMvtAvantMod.Size = new System.Drawing.Size(278, 22);
-            this.TbxKilometreMvtAvantMod.TabIndex = 33;
-            this.TbxKilometreMvtAvantMod.Text = "0";
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(32, 122);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 15);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Heure départ";
             // 
             // DateArriveeMvtMod
             // 
+            this.DateArriveeMvtMod.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateArriveeMvtMod.Location = new System.Drawing.Point(148, 67);
             this.DateArriveeMvtMod.Name = "DateArriveeMvtMod";
             this.DateArriveeMvtMod.Size = new System.Drawing.Size(274, 22);
@@ -300,20 +313,11 @@ namespace GestPark
             // 
             // DateDepartMvtMod
             // 
+            this.DateDepartMvtMod.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateDepartMvtMod.Location = new System.Drawing.Point(148, 15);
             this.DateDepartMvtMod.Name = "DateDepartMvtMod";
             this.DateDepartMvtMod.Size = new System.Drawing.Size(274, 22);
             this.DateDepartMvtMod.TabIndex = 31;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(32, 128);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 15);
-            this.label9.TabIndex = 29;
-            this.label9.Text = "Kilomètre avant";
             // 
             // label8
             // 
@@ -347,13 +351,48 @@ namespace GestPark
             // 
             // paneltitleFormCreateMvt
             // 
-            this.paneltitleFormCreateMvt.BackColor = System.Drawing.Color.DarkOrange;
+            this.paneltitleFormCreateMvt.BackColor = System.Drawing.Color.Khaki;
+            this.paneltitleFormCreateMvt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.paneltitleFormCreateMvt.Controls.Add(this.BtnImportDocModi);
+            this.paneltitleFormCreateMvt.Controls.Add(this.BtnPrinterCarModi);
             this.paneltitleFormCreateMvt.Controls.Add(this.IbtnRegisterMvtTbxCodMvtMod);
             this.paneltitleFormCreateMvt.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltitleFormCreateMvt.Location = new System.Drawing.Point(0, 0);
             this.paneltitleFormCreateMvt.Name = "paneltitleFormCreateMvt";
-            this.paneltitleFormCreateMvt.Size = new System.Drawing.Size(933, 30);
+            this.paneltitleFormCreateMvt.Size = new System.Drawing.Size(933, 24);
             this.paneltitleFormCreateMvt.TabIndex = 2;
+            // 
+            // BtnImportDocModi
+            // 
+            this.BtnImportDocModi.BackColor = System.Drawing.Color.White;
+            this.BtnImportDocModi.ForeColor = System.Drawing.Color.DarkGreen;
+            this.BtnImportDocModi.IconChar = FontAwesome.Sharp.IconChar.FileImport;
+            this.BtnImportDocModi.IconColor = System.Drawing.Color.DarkGreen;
+            this.BtnImportDocModi.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnImportDocModi.IconSize = 20;
+            this.BtnImportDocModi.Location = new System.Drawing.Point(201, -2);
+            this.BtnImportDocModi.Name = "BtnImportDocModi";
+            this.BtnImportDocModi.Size = new System.Drawing.Size(103, 24);
+            this.BtnImportDocModi.TabIndex = 2;
+            this.BtnImportDocModi.Text = "Joindre doc.";
+            this.BtnImportDocModi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnImportDocModi.UseVisualStyleBackColor = false;
+            // 
+            // BtnPrinterCarModi
+            // 
+            this.BtnPrinterCarModi.BackColor = System.Drawing.Color.White;
+            this.BtnPrinterCarModi.ForeColor = System.Drawing.Color.DarkGreen;
+            this.BtnPrinterCarModi.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.BtnPrinterCarModi.IconColor = System.Drawing.Color.DarkGreen;
+            this.BtnPrinterCarModi.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnPrinterCarModi.IconSize = 20;
+            this.BtnPrinterCarModi.Location = new System.Drawing.Point(99, -2);
+            this.BtnPrinterCarModi.Name = "BtnPrinterCarModi";
+            this.BtnPrinterCarModi.Size = new System.Drawing.Size(96, 24);
+            this.BtnPrinterCarModi.TabIndex = 1;
+            this.BtnPrinterCarModi.Text = "Imprimer";
+            this.BtnPrinterCarModi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnPrinterCarModi.UseVisualStyleBackColor = false;
             // 
             // IbtnRegisterMvtTbxCodMvtMod
             // 
@@ -362,10 +401,10 @@ namespace GestPark
             this.IbtnRegisterMvtTbxCodMvtMod.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.IbtnRegisterMvtTbxCodMvtMod.IconColor = System.Drawing.Color.DarkGreen;
             this.IbtnRegisterMvtTbxCodMvtMod.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnRegisterMvtTbxCodMvtMod.IconSize = 25;
-            this.IbtnRegisterMvtTbxCodMvtMod.Location = new System.Drawing.Point(0, 0);
+            this.IbtnRegisterMvtTbxCodMvtMod.IconSize = 20;
+            this.IbtnRegisterMvtTbxCodMvtMod.Location = new System.Drawing.Point(-2, -2);
             this.IbtnRegisterMvtTbxCodMvtMod.Name = "IbtnRegisterMvtTbxCodMvtMod";
-            this.IbtnRegisterMvtTbxCodMvtMod.Size = new System.Drawing.Size(118, 30);
+            this.IbtnRegisterMvtTbxCodMvtMod.Size = new System.Drawing.Size(95, 24);
             this.IbtnRegisterMvtTbxCodMvtMod.TabIndex = 0;
             this.IbtnRegisterMvtTbxCodMvtMod.Text = "Enregistrer";
             this.IbtnRegisterMvtTbxCodMvtMod.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -409,17 +448,19 @@ namespace GestPark
         public System.Windows.Forms.TextBox TbxDescriptionMvtMod;
         public System.Windows.Forms.TextBox TbxCodMvtMod;
         private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.TextBox TbxKilometreMvtApresMod;
-        private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox TbxKilometreMvtAvantMod;
         public System.Windows.Forms.DateTimePicker DateArriveeMvtMod;
         public System.Windows.Forms.DateTimePicker DateDepartMvtMod;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         public System.Windows.Forms.RichTextBox RtbxNoteMvtMod;
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.ComboBox CbxVehiculeMod;
         private System.Windows.Forms.Label label10;
+        private FontAwesome.Sharp.IconButton BtnImportDocModi;
+        private FontAwesome.Sharp.IconButton BtnPrinterCarModi;
+        public System.Windows.Forms.DateTimePicker TimeEndMvtModi;
+        public System.Windows.Forms.DateTimePicker TimeStartMvtModi;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -22,15 +22,6 @@ namespace GestPark
             InitializeComponent();
         }
 
-        private void iconBtnCloseCreateFormFour_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void FormCreateFourn_Load(object sender, EventArgs e)
-        {
-        }
-
         private void iconBtnSavedFourn_Click(object sender, EventArgs e)
         {
             try

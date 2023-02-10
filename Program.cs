@@ -14,11 +14,12 @@ namespace GestPark
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // new FormConnectionUser()
-             Application.Run(new FormConnectionUser());
-            // Application.Run(new FormMainGestPark());
+            
+            Application.Run(new FormConnectionUser());
+            //Application.Run(new MainGestPark());
         }
     }
 }

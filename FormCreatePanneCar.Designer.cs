@@ -51,6 +51,7 @@ namespace GestPark
             // 
             // RtxtNotePanCar
             // 
+            this.RtxtNotePanCar.BackColor = System.Drawing.Color.GhostWhite;
             this.RtxtNotePanCar.Location = new System.Drawing.Point(109, 328);
             this.RtxtNotePanCar.Name = "RtxtNotePanCar";
             this.RtxtNotePanCar.Size = new System.Drawing.Size(625, 104);
@@ -85,6 +86,7 @@ namespace GestPark
             // 
             // TxtDescriptionPanCar
             // 
+            this.TxtDescriptionPanCar.BackColor = System.Drawing.Color.GhostWhite;
             this.TxtDescriptionPanCar.Location = new System.Drawing.Point(95, 155);
             this.TxtDescriptionPanCar.Name = "TxtDescriptionPanCar";
             this.TxtDescriptionPanCar.Size = new System.Drawing.Size(240, 22);
@@ -175,6 +177,7 @@ namespace GestPark
             // 
             // CbxVehiPanCar
             // 
+            this.CbxVehiPanCar.BackColor = System.Drawing.Color.GhostWhite;
             this.CbxVehiPanCar.FormattingEnabled = true;
             this.CbxVehiPanCar.Location = new System.Drawing.Point(95, 208);
             this.CbxVehiPanCar.Name = "CbxVehiPanCar";
@@ -184,6 +187,7 @@ namespace GestPark
             // 
             // RichTxtoutheInfos
             // 
+            this.RichTxtoutheInfos.BackColor = System.Drawing.Color.GhostWhite;
             this.RichTxtoutheInfos.Location = new System.Drawing.Point(442, 51);
             this.RichTxtoutheInfos.Name = "RichTxtoutheInfos";
             this.RichTxtoutheInfos.Size = new System.Drawing.Size(292, 108);
@@ -202,6 +206,7 @@ namespace GestPark
             // 
             // CbxEtatCarPan
             // 
+            this.CbxEtatCarPan.BackColor = System.Drawing.Color.GhostWhite;
             this.CbxEtatCarPan.FormattingEnabled = true;
             this.CbxEtatCarPan.Items.AddRange(new object[] {
             "",

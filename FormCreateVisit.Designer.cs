@@ -60,6 +60,7 @@ namespace GestPark
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.GhostWhite;
             this.textBox2.Location = new System.Drawing.Point(72, 263);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(288, 22);
@@ -76,6 +77,7 @@ namespace GestPark
             // 
             // comboBox3
             // 
+            this.comboBox3.BackColor = System.Drawing.Color.GhostWhite;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "En cours",
@@ -98,6 +100,7 @@ namespace GestPark
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BackColor = System.Drawing.Color.GhostWhite;
             this.richTextBox1.Location = new System.Drawing.Point(72, 350);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(809, 109);
@@ -116,6 +119,7 @@ namespace GestPark
             // 
             // comboBox2
             // 
+            this.comboBox2.BackColor = System.Drawing.Color.GhostWhite;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(72, 204);
             this.comboBox2.Name = "comboBox2";
@@ -270,6 +274,7 @@ namespace GestPark
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.Color.GhostWhite;
             this.textBox3.Location = new System.Drawing.Point(72, 144);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(288, 22);
@@ -277,6 +282,7 @@ namespace GestPark
             // 
             // textBox4
             // 
+            this.textBox4.BackColor = System.Drawing.Color.GhostWhite;
             this.textBox4.Location = new System.Drawing.Point(645, 237);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(236, 22);
@@ -302,6 +308,7 @@ namespace GestPark
             // 
             // textBox5
             // 
+            this.textBox5.BackColor = System.Drawing.Color.GhostWhite;
             this.textBox5.Location = new System.Drawing.Point(645, 286);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(236, 22);

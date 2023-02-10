@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GestParkDataSetListCar" targetNamespace="http://tempuri.org/GestParkDataSetListCar.xsd" xmlns:mstns="http://tempuri.org/GestParkDataSetListCar.xsd" xmlns="http://tempuri.org/GestParkDataSetListCar.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GestParkConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GestParkConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GestPark.Properties.Settings.GlobalReference.Default.GestParkConnectionString2" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_VehiculeTableAdapter" GeneratorDataComponentClassName="View_VehiculeTableAdapter" Name="View_Vehicule" UserDataComponentName="View_VehiculeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GestParkConnectionString2 (Settings)" DbObjectName="GestPark.dbo.View_Vehicule" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CODE_VEHICULE, DATE_ACHA_VEHICULE, DATE_VISITE_VEHICULE, IMMATRICULATION_VEHICULE, CARTE_GRISE_VEHICULE, PRIX_VEHICULE, TYPEVITESSE_VEHICULE, TYPE_VEHICULE, ETAT_VEHICULE, CORDGPS_VEHICULE, NOTE_VEHICULE, DATECREATE_VEHICULE, USERCREATE_VEHICULE, ASSURANCE_VEHICULE, STATUT_VEHICULE, SANTE_VEHICULE, TOTALKILOMETRAGE_VEHICULE, KILOMETRAGE_VIDENGE_VEHICULE, DATEMISEENSERVICE, MODELE_MARQ, DESCRIPTION_MARQ, DESCRIPTION_TYPCONSO, DESCRIPTION_FOUR FROM dbo.View_Vehicule</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODE_VEHICULE" DataSetColumn="CODE_VEHICULE" />
+              <Mapping SourceColumn="DATE_ACHA_VEHICULE" DataSetColumn="DATE_ACHA_VEHICULE" />
+              <Mapping SourceColumn="DATE_VISITE_VEHICULE" DataSetColumn="DATE_VISITE_VEHICULE" />
+              <Mapping SourceColumn="IMMATRICULATION_VEHICULE" DataSetColumn="IMMATRICULATION_VEHICULE" />
+              <Mapping SourceColumn="CARTE_GRISE_VEHICULE" DataSetColumn="CARTE_GRISE_VEHICULE" />
+              <Mapping SourceColumn="PRIX_VEHICULE" DataSetColumn="PRIX_VEHICULE" />
+              <Mapping SourceColumn="TYPEVITESSE_VEHICULE" DataSetColumn="TYPEVITESSE_VEHICULE" />
+              <Mapping SourceColumn="TYPE_VEHICULE" DataSetColumn="TYPE_VEHICULE" />
+              <Mapping SourceColumn="ETAT_VEHICULE" DataSetColumn="ETAT_VEHICULE" />
+              <Mapping SourceColumn="CORDGPS_VEHICULE" DataSetColumn="CORDGPS_VEHICULE" />
+              <Mapping SourceColumn="NOTE_VEHICULE" DataSetColumn="NOTE_VEHICULE" />
+              <Mapping SourceColumn="DATECREATE_VEHICULE" DataSetColumn="DATECREATE_VEHICULE" />
+              <Mapping SourceColumn="USERCREATE_VEHICULE" DataSetColumn="USERCREATE_VEHICULE" />
+              <Mapping SourceColumn="ASSURANCE_VEHICULE" DataSetColumn="ASSURANCE_VEHICULE" />
+              <Mapping SourceColumn="STATUT_VEHICULE" DataSetColumn="STATUT_VEHICULE" />
+              <Mapping SourceColumn="SANTE_VEHICULE" DataSetColumn="SANTE_VEHICULE" />
+              <Mapping SourceColumn="TOTALKILOMETRAGE_VEHICULE" DataSetColumn="TOTALKILOMETRAGE_VEHICULE" />
+              <Mapping SourceColumn="KILOMETRAGE_VIDENGE_VEHICULE" DataSetColumn="KILOMETRAGE_VIDENGE_VEHICULE" />
+              <Mapping SourceColumn="DATEMISEENSERVICE" DataSetColumn="DATEMISEENSERVICE" />
+              <Mapping SourceColumn="MODELE_MARQ" DataSetColumn="MODELE_MARQ" />
+              <Mapping SourceColumn="DESCRIPTION_MARQ" DataSetColumn="DESCRIPTION_MARQ" />
+              <Mapping SourceColumn="DESCRIPTION_TYPCONSO" DataSetColumn="DESCRIPTION_TYPCONSO" />
+              <Mapping SourceColumn="DESCRIPTION_FOUR" DataSetColumn="DESCRIPTION_FOUR" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GestParkDataSetListCar" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="GestParkDataSetListCar" msprop:Generator_DataSetName="GestParkDataSetListCar">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Vehicule" msprop:Generator_RowEvHandlerName="View_VehiculeRowChangeEventHandler" msprop:Generator_RowDeletedName="View_VehiculeRowDeleted" msprop:Generator_RowDeletingName="View_VehiculeRowDeleting" msprop:Generator_RowEvArgName="View_VehiculeRowChangeEvent" msprop:Generator_TablePropName="View_Vehicule" msprop:Generator_RowChangedName="View_VehiculeRowChanged" msprop:Generator_RowChangingName="View_VehiculeRowChanging" msprop:Generator_TableClassName="View_VehiculeDataTable" msprop:Generator_RowClassName="View_VehiculeRow" msprop:Generator_TableVarName="tableView_Vehicule" msprop:Generator_UserTableName="View_Vehicule">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODE_VEHICULE" msprop:Generator_ColumnPropNameInRow="CODE_VEHICULE" msprop:Generator_ColumnPropNameInTable="CODE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnCODE_VEHICULE" msprop:Generator_UserColumnName="CODE_VEHICULE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATE_ACHA_VEHICULE" msprop:Generator_ColumnPropNameInRow="DATE_ACHA_VEHICULE" msprop:Generator_ColumnPropNameInTable="DATE_ACHA_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnDATE_ACHA_VEHICULE" msprop:Generator_UserColumnName="DATE_ACHA_VEHICULE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DATE_VISITE_VEHICULE" msprop:Generator_ColumnPropNameInRow="DATE_VISITE_VEHICULE" msprop:Generator_ColumnPropNameInTable="DATE_VISITE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnDATE_VISITE_VEHICULE" msprop:Generator_UserColumnName="DATE_VISITE_VEHICULE" type="xs:dateTime" />
+              <xs:element name="IMMATRICULATION_VEHICULE" msprop:Generator_ColumnPropNameInRow="IMMATRICULATION_VEHICULE" msprop:Generator_ColumnPropNameInTable="IMMATRICULATION_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnIMMATRICULATION_VEHICULE" msprop:Generator_UserColumnName="IMMATRICULATION_VEHICULE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CARTE_GRISE_VEHICULE" msprop:Generator_ColumnPropNameInRow="CARTE_GRISE_VEHICULE" msprop:Generator_ColumnPropNameInTable="CARTE_GRISE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnCARTE_GRISE_VEHICULE" msprop:Generator_UserColumnName="CARTE_GRISE_VEHICULE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRIX_VEHICULE" msprop:Generator_ColumnPropNameInRow="PRIX_VEHICULE" msprop:Generator_ColumnPropNameInTable="PRIX_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnPRIX_VEHICULE" msprop:Generator_UserColumnName="PRIX_VEHICULE" type="xs:decimal" />
+              <xs:element name="TYPEVITESSE_VEHICULE" msprop:Generator_ColumnPropNameInRow="TYPEVITESSE_VEHICULE" msprop:Generator_ColumnPropNameInTable="TYPEVITESSE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnTYPEVITESSE_VEHICULE" msprop:Generator_UserColumnName="TYPEVITESSE_VEHICULE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TYPE_VEHICULE" msprop:Generator_ColumnPropNameInRow="TYPE_VEHICULE" msprop:Generator_ColumnPropNameInTable="TYPE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnTYPE_VEHICULE" msprop:Generator_UserColumnName="TYPE_VEHICULE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ETAT_VEHICULE" msprop:Generator_ColumnPropNameInRow="ETAT_VEHICULE" msprop:Generator_ColumnPropNameInTable="ETAT_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnETAT_VEHICULE" msprop:Generator_UserColumnName="ETAT_VEHICULE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CORDGPS_VEHICULE" msprop:Generator_ColumnPropNameInRow="CORDGPS_VEHICULE" msprop:Generator_ColumnPropNameInTable="CORDGPS_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnCORDGPS_VEHICULE" msprop:Generator_UserColumnName="CORDGPS_VEHICULE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOTE_VEHICULE" msprop:Generator_ColumnPropNameInRow="NOTE_VEHICULE" msprop:Generator_ColumnPropNameInTable="NOTE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnNOTE_VEHICULE" msprop:Generator_UserColumnName="NOTE_VEHICULE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATECREATE_VEHICULE" msprop:Generator_ColumnPropNameInRow="DATECREATE_VEHICULE" msprop:Generator_ColumnPropNameInTable="DATECREATE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnDATECREATE_VEHICULE" msprop:Generator_UserColumnName="DATECREATE_VEHICULE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="USERCREATE_VEHICULE" msprop:Generator_ColumnPropNameInRow="USERCREATE_VEHICULE" msprop:Generator_ColumnPropNameInTable="USERCREATE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnUSERCREATE_VEHICULE" msprop:Generator_UserColumnName="USERCREATE_VEHICULE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASSURANCE_VEHICULE" msprop:Generator_ColumnPropNameInRow="ASSURANCE_VEHICULE" msprop:Generator_ColumnPropNameInTable="ASSURANCE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnASSURANCE_VEHICULE" msprop:Generator_UserColumnName="ASSURANCE_VEHICULE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="STATUT_VEHICULE" msprop:Generator_ColumnPropNameInRow="STATUT_VEHICULE" msprop:Generator_ColumnPropNameInTable="STATUT_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnSTATUT_VEHICULE" msprop:Generator_UserColumnName="STATUT_VEHICULE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SANTE_VEHICULE" msprop:Generator_ColumnPropNameInRow="SANTE_VEHICULE" msprop:Generator_ColumnPropNameInTable="SANTE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnSANTE_VEHICULE" msprop:Generator_UserColumnName="SANTE_VEHICULE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOTALKILOMETRAGE_VEHICULE" msprop:Generator_ColumnPropNameInRow="TOTALKILOMETRAGE_VEHICULE" msprop:Generator_ColumnPropNameInTable="TOTALKILOMETRAGE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnTOTALKILOMETRAGE_VEHICULE" msprop:Generator_UserColumnName="TOTALKILOMETRAGE_VEHICULE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KILOMETRAGE_VIDENGE_VEHICULE" msprop:Generator_ColumnPropNameInRow="KILOMETRAGE_VIDENGE_VEHICULE" msprop:Generator_ColumnPropNameInTable="KILOMETRAGE_VIDENGE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnKILOMETRAGE_VIDENGE_VEHICULE" msprop:Generator_UserColumnName="KILOMETRAGE_VIDENGE_VEHICULE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DATEMISEENSERVICE" msprop:Generator_ColumnPropNameInRow="DATEMISEENSERVICE" msprop:Generator_ColumnPropNameInTable="DATEMISEENSERVICEColumn" msprop:Generator_ColumnVarNameInTable="columnDATEMISEENSERVICE" msprop:Generator_UserColumnName="DATEMISEENSERVICE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MODELE_MARQ" msprop:Generator_ColumnPropNameInRow="MODELE_MARQ" msprop:Generator_ColumnPropNameInTable="MODELE_MARQColumn" msprop:Generator_ColumnVarNameInTable="columnMODELE_MARQ" msprop:Generator_UserColumnName="MODELE_MARQ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPTION_MARQ" msprop:Generator_ColumnPropNameInRow="DESCRIPTION_MARQ" msprop:Generator_ColumnPropNameInTable="DESCRIPTION_MARQColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION_MARQ" msprop:Generator_UserColumnName="DESCRIPTION_MARQ">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPTION_TYPCONSO" msprop:Generator_ColumnPropNameInRow="DESCRIPTION_TYPCONSO" msprop:Generator_ColumnPropNameInTable="DESCRIPTION_TYPCONSOColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION_TYPCONSO" msprop:Generator_UserColumnName="DESCRIPTION_TYPCONSO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPTION_FOUR" msprop:Generator_ColumnPropNameInRow="DESCRIPTION_FOUR" msprop:Generator_ColumnPropNameInTable="DESCRIPTION_FOURColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION_FOUR" msprop:Generator_UserColumnName="DESCRIPTION_FOUR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

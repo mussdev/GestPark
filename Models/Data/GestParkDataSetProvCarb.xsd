@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GestParkDataSetProvCarb" targetNamespace="http://tempuri.org/GestParkDataSetProvCarb.xsd" xmlns:mstns="http://tempuri.org/GestParkDataSetProvCarb.xsd" xmlns="http://tempuri.org/GestParkDataSetProvCarb.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GestParkConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GestParkConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GestPark.Properties.Settings.GlobalReference.Default.GestParkConnectionString2" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ProvisionTableAdapter" GeneratorDataComponentClassName="View_ProvisionTableAdapter" Name="View_Provision" UserDataComponentName="View_ProvisionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GestParkConnectionString2 (Settings)" DbObjectName="GestPark.dbo.View_Provision" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CODE_PROV, KILO_AVANT_VIDENGE, MONTANT_PROV, DATE_PROV, DATECREATE_PROV, USERCREATE_PROV, DATEMODIFY, LITRE_PROV, KILO_TOTAL_OLD_PROV, ANCIEN_COUNT_VIDANGE_PROV, IMMATRICULATION_VEHICULE, CARTE_GRISE_VEHICULE, DESCRIPTION_TYPCONSO, MODELE_MARQ FROM dbo.View_Provision</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODE_PROV" DataSetColumn="CODE_PROV" />
+              <Mapping SourceColumn="KILO_AVANT_VIDENGE" DataSetColumn="KILO_AVANT_VIDENGE" />
+              <Mapping SourceColumn="MONTANT_PROV" DataSetColumn="MONTANT_PROV" />
+              <Mapping SourceColumn="DATE_PROV" DataSetColumn="DATE_PROV" />
+              <Mapping SourceColumn="DATECREATE_PROV" DataSetColumn="DATECREATE_PROV" />
+              <Mapping SourceColumn="USERCREATE_PROV" DataSetColumn="USERCREATE_PROV" />
+              <Mapping SourceColumn="DATEMODIFY" DataSetColumn="DATEMODIFY" />
+              <Mapping SourceColumn="LITRE_PROV" DataSetColumn="LITRE_PROV" />
+              <Mapping SourceColumn="KILO_TOTAL_OLD_PROV" DataSetColumn="KILO_TOTAL_OLD_PROV" />
+              <Mapping SourceColumn="ANCIEN_COUNT_VIDANGE_PROV" DataSetColumn="ANCIEN_COUNT_VIDANGE_PROV" />
+              <Mapping SourceColumn="IMMATRICULATION_VEHICULE" DataSetColumn="IMMATRICULATION_VEHICULE" />
+              <Mapping SourceColumn="CARTE_GRISE_VEHICULE" DataSetColumn="CARTE_GRISE_VEHICULE" />
+              <Mapping SourceColumn="DESCRIPTION_TYPCONSO" DataSetColumn="DESCRIPTION_TYPCONSO" />
+              <Mapping SourceColumn="MODELE_MARQ" DataSetColumn="MODELE_MARQ" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GestParkDataSetProvCarb" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="GestParkDataSetProvCarb" msprop:Generator_DataSetName="GestParkDataSetProvCarb">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Provision" msprop:Generator_RowEvHandlerName="View_ProvisionRowChangeEventHandler" msprop:Generator_RowDeletedName="View_ProvisionRowDeleted" msprop:Generator_RowDeletingName="View_ProvisionRowDeleting" msprop:Generator_RowEvArgName="View_ProvisionRowChangeEvent" msprop:Generator_TablePropName="View_Provision" msprop:Generator_RowChangedName="View_ProvisionRowChanged" msprop:Generator_RowChangingName="View_ProvisionRowChanging" msprop:Generator_TableClassName="View_ProvisionDataTable" msprop:Generator_RowClassName="View_ProvisionRow" msprop:Generator_TableVarName="tableView_Provision" msprop:Generator_UserTableName="View_Provision">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODE_PROV" msprop:Generator_ColumnPropNameInRow="CODE_PROV" msprop:Generator_ColumnPropNameInTable="CODE_PROVColumn" msprop:Generator_ColumnVarNameInTable="columnCODE_PROV" msprop:Generator_UserColumnName="CODE_PROV" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KILO_AVANT_VIDENGE" msprop:Generator_ColumnPropNameInRow="KILO_AVANT_VIDENGE" msprop:Generator_ColumnPropNameInTable="KILO_AVANT_VIDENGEColumn" msprop:Generator_ColumnVarNameInTable="columnKILO_AVANT_VIDENGE" msprop:Generator_UserColumnName="KILO_AVANT_VIDENGE" type="xs:decimal" />
+              <xs:element name="MONTANT_PROV" msprop:Generator_ColumnPropNameInRow="MONTANT_PROV" msprop:Generator_ColumnPropNameInTable="MONTANT_PROVColumn" msprop:Generator_ColumnVarNameInTable="columnMONTANT_PROV" msprop:Generator_UserColumnName="MONTANT_PROV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DATE_PROV" msprop:Generator_ColumnPropNameInRow="DATE_PROV" msprop:Generator_ColumnPropNameInTable="DATE_PROVColumn" msprop:Generator_ColumnVarNameInTable="columnDATE_PROV" msprop:Generator_UserColumnName="DATE_PROV" type="xs:dateTime" />
+              <xs:element name="DATECREATE_PROV" msprop:Generator_ColumnPropNameInRow="DATECREATE_PROV" msprop:Generator_ColumnPropNameInTable="DATECREATE_PROVColumn" msprop:Generator_ColumnVarNameInTable="columnDATECREATE_PROV" msprop:Generator_UserColumnName="DATECREATE_PROV" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="USERCREATE_PROV" msprop:Generator_ColumnPropNameInRow="USERCREATE_PROV" msprop:Generator_ColumnPropNameInTable="USERCREATE_PROVColumn" msprop:Generator_ColumnVarNameInTable="columnUSERCREATE_PROV" msprop:Generator_UserColumnName="USERCREATE_PROV" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATEMODIFY" msprop:Generator_ColumnPropNameInRow="DATEMODIFY" msprop:Generator_ColumnPropNameInTable="DATEMODIFYColumn" msprop:Generator_ColumnVarNameInTable="columnDATEMODIFY" msprop:Generator_UserColumnName="DATEMODIFY" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LITRE_PROV" msprop:Generator_ColumnPropNameInRow="LITRE_PROV" msprop:Generator_ColumnPropNameInTable="LITRE_PROVColumn" msprop:Generator_ColumnVarNameInTable="columnLITRE_PROV" msprop:Generator_UserColumnName="LITRE_PROV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KILO_TOTAL_OLD_PROV" msprop:Generator_ColumnPropNameInRow="KILO_TOTAL_OLD_PROV" msprop:Generator_ColumnPropNameInTable="KILO_TOTAL_OLD_PROVColumn" msprop:Generator_ColumnVarNameInTable="columnKILO_TOTAL_OLD_PROV" msprop:Generator_UserColumnName="KILO_TOTAL_OLD_PROV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ANCIEN_COUNT_VIDANGE_PROV" msprop:Generator_ColumnPropNameInRow="ANCIEN_COUNT_VIDANGE_PROV" msprop:Generator_ColumnPropNameInTable="ANCIEN_COUNT_VIDANGE_PROVColumn" msprop:Generator_ColumnVarNameInTable="columnANCIEN_COUNT_VIDANGE_PROV" msprop:Generator_UserColumnName="ANCIEN_COUNT_VIDANGE_PROV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IMMATRICULATION_VEHICULE" msprop:Generator_ColumnPropNameInRow="IMMATRICULATION_VEHICULE" msprop:Generator_ColumnPropNameInTable="IMMATRICULATION_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnIMMATRICULATION_VEHICULE" msprop:Generator_UserColumnName="IMMATRICULATION_VEHICULE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CARTE_GRISE_VEHICULE" msprop:Generator_ColumnPropNameInRow="CARTE_GRISE_VEHICULE" msprop:Generator_ColumnPropNameInTable="CARTE_GRISE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnCARTE_GRISE_VEHICULE" msprop:Generator_UserColumnName="CARTE_GRISE_VEHICULE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPTION_TYPCONSO" msprop:Generator_ColumnPropNameInRow="DESCRIPTION_TYPCONSO" msprop:Generator_ColumnPropNameInTable="DESCRIPTION_TYPCONSOColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION_TYPCONSO" msprop:Generator_UserColumnName="DESCRIPTION_TYPCONSO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODELE_MARQ" msprop:Generator_ColumnPropNameInRow="MODELE_MARQ" msprop:Generator_ColumnPropNameInTable="MODELE_MARQColumn" msprop:Generator_ColumnVarNameInTable="columnMODELE_MARQ" msprop:Generator_UserColumnName="MODELE_MARQ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

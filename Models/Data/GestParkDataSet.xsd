@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GestParkDataSet" targetNamespace="http://tempuri.org/GestParkDataSet.xsd" xmlns:mstns="http://tempuri.org/GestParkDataSet.xsd" xmlns="http://tempuri.org/GestParkDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GestParkConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GestParkConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GestPark.Properties.Settings.GlobalReference.Default.GestParkConnectionString2" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewReparationTableAdapter" GeneratorDataComponentClassName="ViewReparationTableAdapter" Name="ViewReparation" UserDataComponentName="ViewReparationTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GestParkConnectionString2 (Settings)" DbObjectName="GestPark.dbo.ViewReparation" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PRIX_REPAR, CAUSE_REPAR, IMMATRICULATION_VEHICULE, DESCRIPTION_GARAGE, PROPRIETAIRE_GARAGE, TEL_GARAGE, MODELE_MARQ, DESCRIPTION_TYPCONSO, DATE_REPAR FROM dbo.ViewReparation</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PRIX_REPAR" DataSetColumn="PRIX_REPAR" />
+              <Mapping SourceColumn="CAUSE_REPAR" DataSetColumn="CAUSE_REPAR" />
+              <Mapping SourceColumn="IMMATRICULATION_VEHICULE" DataSetColumn="IMMATRICULATION_VEHICULE" />
+              <Mapping SourceColumn="DESCRIPTION_GARAGE" DataSetColumn="DESCRIPTION_GARAGE" />
+              <Mapping SourceColumn="PROPRIETAIRE_GARAGE" DataSetColumn="PROPRIETAIRE_GARAGE" />
+              <Mapping SourceColumn="TEL_GARAGE" DataSetColumn="TEL_GARAGE" />
+              <Mapping SourceColumn="MODELE_MARQ" DataSetColumn="MODELE_MARQ" />
+              <Mapping SourceColumn="DESCRIPTION_TYPCONSO" DataSetColumn="DESCRIPTION_TYPCONSO" />
+              <Mapping SourceColumn="DATE_REPAR" DataSetColumn="DATE_REPAR" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GestParkDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="GestParkDataSet" msprop:Generator_DataSetName="GestParkDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ViewReparation" msprop:Generator_RowEvHandlerName="ViewReparationRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewReparationRowDeleted" msprop:Generator_RowDeletingName="ViewReparationRowDeleting" msprop:Generator_RowEvArgName="ViewReparationRowChangeEvent" msprop:Generator_TablePropName="ViewReparation" msprop:Generator_RowChangedName="ViewReparationRowChanged" msprop:Generator_RowChangingName="ViewReparationRowChanging" msprop:Generator_TableClassName="ViewReparationDataTable" msprop:Generator_RowClassName="ViewReparationRow" msprop:Generator_TableVarName="tableViewReparation" msprop:Generator_UserTableName="ViewReparation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PRIX_REPAR" msprop:Generator_ColumnPropNameInRow="PRIX_REPAR" msprop:Generator_ColumnPropNameInTable="PRIX_REPARColumn" msprop:Generator_ColumnVarNameInTable="columnPRIX_REPAR" msprop:Generator_UserColumnName="PRIX_REPAR" type="xs:decimal" />
+              <xs:element name="CAUSE_REPAR" msprop:Generator_ColumnPropNameInRow="CAUSE_REPAR" msprop:Generator_ColumnPropNameInTable="CAUSE_REPARColumn" msprop:Generator_ColumnVarNameInTable="columnCAUSE_REPAR" msprop:Generator_UserColumnName="CAUSE_REPAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IMMATRICULATION_VEHICULE" msprop:Generator_ColumnPropNameInRow="IMMATRICULATION_VEHICULE" msprop:Generator_ColumnPropNameInTable="IMMATRICULATION_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnIMMATRICULATION_VEHICULE" msprop:Generator_UserColumnName="IMMATRICULATION_VEHICULE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPTION_GARAGE" msprop:Generator_ColumnPropNameInRow="DESCRIPTION_GARAGE" msprop:Generator_ColumnPropNameInTable="DESCRIPTION_GARAGEColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION_GARAGE" msprop:Generator_UserColumnName="DESCRIPTION_GARAGE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROPRIETAIRE_GARAGE" msprop:Generator_ColumnPropNameInRow="PROPRIETAIRE_GARAGE" msprop:Generator_ColumnPropNameInTable="PROPRIETAIRE_GARAGEColumn" msprop:Generator_ColumnVarNameInTable="columnPROPRIETAIRE_GARAGE" msprop:Generator_UserColumnName="PROPRIETAIRE_GARAGE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEL_GARAGE" msprop:Generator_ColumnPropNameInRow="TEL_GARAGE" msprop:Generator_ColumnPropNameInTable="TEL_GARAGEColumn" msprop:Generator_ColumnVarNameInTable="columnTEL_GARAGE" msprop:Generator_UserColumnName="TEL_GARAGE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODELE_MARQ" msprop:Generator_ColumnPropNameInRow="MODELE_MARQ" msprop:Generator_ColumnPropNameInTable="MODELE_MARQColumn" msprop:Generator_ColumnVarNameInTable="columnMODELE_MARQ" msprop:Generator_UserColumnName="MODELE_MARQ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPTION_TYPCONSO" msprop:Generator_ColumnPropNameInRow="DESCRIPTION_TYPCONSO" msprop:Generator_ColumnPropNameInTable="DESCRIPTION_TYPCONSOColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION_TYPCONSO" msprop:Generator_UserColumnName="DESCRIPTION_TYPCONSO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATE_REPAR" msprop:Generator_ColumnPropNameInRow="DATE_REPAR" msprop:Generator_ColumnPropNameInTable="DATE_REPARColumn" msprop:Generator_ColumnVarNameInTable="columnDATE_REPAR" msprop:Generator_UserColumnName="DATE_REPAR" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

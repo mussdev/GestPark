@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GestParkDataSetLavage" targetNamespace="http://tempuri.org/GestParkDataSetLavage.xsd" xmlns:mstns="http://tempuri.org/GestParkDataSetLavage.xsd" xmlns="http://tempuri.org/GestParkDataSetLavage.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GestParkConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GestParkConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GestPark.Properties.Settings.GlobalReference.Default.GestParkConnectionString2" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_LavageTableAdapter" GeneratorDataComponentClassName="View_LavageTableAdapter" Name="View_Lavage" UserDataComponentName="View_LavageTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GestParkConnectionString2 (Settings)" DbObjectName="GestPark.dbo.View_Lavage" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CODE_WTCH, MONTANT_WTCH, LIEU_WTCH, NOTE_WTCH, DATEREGISTER, DATECREATE_WTCH, USERCREATE_WTCH, DATEMODIFY, CODE_VEHICULE, IMMATRICULATION_VEHICULE, CARTE_GRISE_VEHICULE, DESCRIPTION_TYPCONSO, MODELE_MARQ FROM dbo.View_Lavage</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODE_WTCH" DataSetColumn="CODE_WTCH" />
+              <Mapping SourceColumn="MONTANT_WTCH" DataSetColumn="MONTANT_WTCH" />
+              <Mapping SourceColumn="LIEU_WTCH" DataSetColumn="LIEU_WTCH" />
+              <Mapping SourceColumn="NOTE_WTCH" DataSetColumn="NOTE_WTCH" />
+              <Mapping SourceColumn="DATEREGISTER" DataSetColumn="DATEREGISTER" />
+              <Mapping SourceColumn="DATECREATE_WTCH" DataSetColumn="DATECREATE_WTCH" />
+              <Mapping SourceColumn="USERCREATE_WTCH" DataSetColumn="USERCREATE_WTCH" />
+              <Mapping SourceColumn="DATEMODIFY" DataSetColumn="DATEMODIFY" />
+              <Mapping SourceColumn="CODE_VEHICULE" DataSetColumn="CODE_VEHICULE" />
+              <Mapping SourceColumn="IMMATRICULATION_VEHICULE" DataSetColumn="IMMATRICULATION_VEHICULE" />
+              <Mapping SourceColumn="CARTE_GRISE_VEHICULE" DataSetColumn="CARTE_GRISE_VEHICULE" />
+              <Mapping SourceColumn="DESCRIPTION_TYPCONSO" DataSetColumn="DESCRIPTION_TYPCONSO" />
+              <Mapping SourceColumn="MODELE_MARQ" DataSetColumn="MODELE_MARQ" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GestParkDataSetLavage" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="GestParkDataSetLavage" msprop:Generator_DataSetName="GestParkDataSetLavage">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Lavage" msprop:Generator_RowEvHandlerName="View_LavageRowChangeEventHandler" msprop:Generator_RowDeletedName="View_LavageRowDeleted" msprop:Generator_RowDeletingName="View_LavageRowDeleting" msprop:Generator_RowEvArgName="View_LavageRowChangeEvent" msprop:Generator_TablePropName="View_Lavage" msprop:Generator_RowChangedName="View_LavageRowChanged" msprop:Generator_RowChangingName="View_LavageRowChanging" msprop:Generator_TableClassName="View_LavageDataTable" msprop:Generator_RowClassName="View_LavageRow" msprop:Generator_TableVarName="tableView_Lavage" msprop:Generator_UserTableName="View_Lavage">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODE_WTCH" msprop:Generator_ColumnPropNameInRow="CODE_WTCH" msprop:Generator_ColumnPropNameInTable="CODE_WTCHColumn" msprop:Generator_ColumnVarNameInTable="columnCODE_WTCH" msprop:Generator_UserColumnName="CODE_WTCH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MONTANT_WTCH" msprop:Generator_ColumnPropNameInRow="MONTANT_WTCH" msprop:Generator_ColumnPropNameInTable="MONTANT_WTCHColumn" msprop:Generator_ColumnVarNameInTable="columnMONTANT_WTCH" msprop:Generator_UserColumnName="MONTANT_WTCH" type="xs:decimal" />
+              <xs:element name="LIEU_WTCH" msprop:Generator_ColumnPropNameInRow="LIEU_WTCH" msprop:Generator_ColumnPropNameInTable="LIEU_WTCHColumn" msprop:Generator_ColumnVarNameInTable="columnLIEU_WTCH" msprop:Generator_UserColumnName="LIEU_WTCH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOTE_WTCH" msprop:Generator_ColumnPropNameInRow="NOTE_WTCH" msprop:Generator_ColumnPropNameInTable="NOTE_WTCHColumn" msprop:Generator_ColumnVarNameInTable="columnNOTE_WTCH" msprop:Generator_UserColumnName="NOTE_WTCH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATEREGISTER" msprop:Generator_ColumnPropNameInRow="DATEREGISTER" msprop:Generator_ColumnPropNameInTable="DATEREGISTERColumn" msprop:Generator_ColumnVarNameInTable="columnDATEREGISTER" msprop:Generator_UserColumnName="DATEREGISTER" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DATECREATE_WTCH" msprop:Generator_ColumnPropNameInRow="DATECREATE_WTCH" msprop:Generator_ColumnPropNameInTable="DATECREATE_WTCHColumn" msprop:Generator_ColumnVarNameInTable="columnDATECREATE_WTCH" msprop:Generator_UserColumnName="DATECREATE_WTCH" type="xs:dateTime" />
+              <xs:element name="USERCREATE_WTCH" msprop:Generator_ColumnPropNameInRow="USERCREATE_WTCH" msprop:Generator_ColumnPropNameInTable="USERCREATE_WTCHColumn" msprop:Generator_ColumnVarNameInTable="columnUSERCREATE_WTCH" msprop:Generator_UserColumnName="USERCREATE_WTCH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATEMODIFY" msprop:Generator_ColumnPropNameInRow="DATEMODIFY" msprop:Generator_ColumnPropNameInTable="DATEMODIFYColumn" msprop:Generator_ColumnVarNameInTable="columnDATEMODIFY" msprop:Generator_UserColumnName="DATEMODIFY" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CODE_VEHICULE" msprop:Generator_ColumnPropNameInRow="CODE_VEHICULE" msprop:Generator_ColumnPropNameInTable="CODE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnCODE_VEHICULE" msprop:Generator_UserColumnName="CODE_VEHICULE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IMMATRICULATION_VEHICULE" msprop:Generator_ColumnPropNameInRow="IMMATRICULATION_VEHICULE" msprop:Generator_ColumnPropNameInTable="IMMATRICULATION_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnIMMATRICULATION_VEHICULE" msprop:Generator_UserColumnName="IMMATRICULATION_VEHICULE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CARTE_GRISE_VEHICULE" msprop:Generator_ColumnPropNameInRow="CARTE_GRISE_VEHICULE" msprop:Generator_ColumnPropNameInTable="CARTE_GRISE_VEHICULEColumn" msprop:Generator_ColumnVarNameInTable="columnCARTE_GRISE_VEHICULE" msprop:Generator_UserColumnName="CARTE_GRISE_VEHICULE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPTION_TYPCONSO" msprop:Generator_ColumnPropNameInRow="DESCRIPTION_TYPCONSO" msprop:Generator_ColumnPropNameInTable="DESCRIPTION_TYPCONSOColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION_TYPCONSO" msprop:Generator_UserColumnName="DESCRIPTION_TYPCONSO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MODELE_MARQ" msprop:Generator_ColumnPropNameInRow="MODELE_MARQ" msprop:Generator_ColumnPropNameInTable="MODELE_MARQColumn" msprop:Generator_ColumnVarNameInTable="columnMODELE_MARQ" msprop:Generator_UserColumnName="MODELE_MARQ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

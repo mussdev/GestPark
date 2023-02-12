@@ -36,6 +36,7 @@ namespace GestPark
             this.MenuUser = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuRoles = new System.Windows.Forms.ToolStripMenuItem();
             this.PanPrincipalAdmin = new System.Windows.Forms.Panel();
+            this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItemAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,10 +48,11 @@ namespace GestPark
             this.MenuItemAdmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.accueilToolStripMenuItem,
             this.MenuUser,
-            this.MenuRoles});
+            this.MenuRoles,
+            this.configurationToolStripMenuItem});
             this.MenuItemAdmin.Location = new System.Drawing.Point(0, 0);
             this.MenuItemAdmin.Name = "MenuItemAdmin";
-            this.MenuItemAdmin.Size = new System.Drawing.Size(1121, 30);
+            this.MenuItemAdmin.Size = new System.Drawing.Size(1121, 28);
             this.MenuItemAdmin.TabIndex = 0;
             this.MenuItemAdmin.Text = "menuStrip1";
             // 
@@ -60,7 +62,7 @@ namespace GestPark
             this.CloseFormAdmin});
             this.accueilToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.accueilToolStripMenuItem.Name = "accueilToolStripMenuItem";
-            this.accueilToolStripMenuItem.Size = new System.Drawing.Size(67, 26);
+            this.accueilToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.accueilToolStripMenuItem.Text = "Accueil";
             // 
             // CloseFormAdmin
@@ -75,7 +77,7 @@ namespace GestPark
             // 
             this.MenuUser.ForeColor = System.Drawing.Color.Black;
             this.MenuUser.Name = "MenuUser";
-            this.MenuUser.Size = new System.Drawing.Size(82, 26);
+            this.MenuUser.Size = new System.Drawing.Size(82, 24);
             this.MenuUser.Text = "Utilisateur";
             this.MenuUser.Click += new System.EventHandler(this.MenuUser_Click);
             // 
@@ -83,7 +85,7 @@ namespace GestPark
             // 
             this.MenuRoles.ForeColor = System.Drawing.Color.Black;
             this.MenuRoles.Name = "MenuRoles";
-            this.MenuRoles.Size = new System.Drawing.Size(55, 26);
+            this.MenuRoles.Size = new System.Drawing.Size(55, 24);
             this.MenuRoles.Text = "Rôles";
             this.MenuRoles.Click += new System.EventHandler(this.MenuRoles_Click);
             // 
@@ -94,10 +96,16 @@ namespace GestPark
             this.PanPrincipalAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanPrincipalAdmin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanPrincipalAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanPrincipalAdmin.Location = new System.Drawing.Point(0, 30);
+            this.PanPrincipalAdmin.Location = new System.Drawing.Point(0, 28);
             this.PanPrincipalAdmin.Name = "PanPrincipalAdmin";
-            this.PanPrincipalAdmin.Size = new System.Drawing.Size(1121, 622);
+            this.PanPrincipalAdmin.Size = new System.Drawing.Size(1121, 624);
             this.PanPrincipalAdmin.TabIndex = 1;
+            // 
+            // configurationToolStripMenuItem
+            // 
+            this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(101, 24);
+            this.configurationToolStripMenuItem.Text = "Configuration";
             // 
             // Administration
             // 
@@ -127,5 +135,6 @@ namespace GestPark
         private System.Windows.Forms.Panel PanPrincipalAdmin;
         private System.Windows.Forms.ToolStripMenuItem accueilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem CloseFormAdmin;
+        private System.Windows.Forms.ToolStripMenuItem configurationToolStripMenuItem;
     }
 }

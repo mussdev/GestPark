@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,8 @@ namespace GestPark.Vues.CreateItems
         private SqlCommand SqlCmd;
         private SqlDataReader MyReader;
         private Guid IdCarMission, IdPersMission, IdConducteurMission;
+        private SqlDataAdapter SqlAda;
+        private DataSet Ds;
         public FormCreateDemandeMission()
         {
             InitializeComponent();
@@ -194,6 +197,56 @@ namespace GestPark.Vues.CreateItems
             {
                 MessageBox.Show(ex.ToString(), "Fleet: Gestion des erreurs", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+        // Generate code of mission
+        private string generateCodeMission()
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
+                ConnectDB Conn = new ConnectDB(connectionString);
+                using (Conn.cn)
+                {
+                    if (Conn.IsConnection)
+                    {
+                        // Generate code attribution car to person
+                        SqlCmd = new SqlCommand("SELECT CODE_MISS FROM MISSION WHERE CODE_MISS=(SELECT MAX(CODE_MISS) FROM MISSION)", Conn.cn);
+                        SqlAda = new SqlDataAdapter(SqlCmd);
+                        Ds = new DataSet();
+                        SqlAda.Fill(Ds);
+
+                        if (Ds.Tables[0].Rows.Count > 0)
+                        {
+                            TxtCodeMission.Text = Ds.Tables[0].Rows[0]["CODE_MISS"].ToString();
+                        }
+                        else
+                        {
+                            TxtCodeMission.Text = "MISS0000";
+                        }
+                        if (!string.IsNullOrEmpty(TxtCodeMission.Text))
+                        {
+                            TxtCodeMission.SelectionStart = 4;
+                            TxtCodeMission.SelectionLength = 4;
+                            TxtCodeMission.Text = TxtCodeMission.SelectedText;
+                        }
+                        if (!string.IsNullOrEmpty(TxtCodeMission.Text))
+                        {
+                            int codeCarMvt = int.Parse(TxtCodeMission.Text.ToString()) + 1;
+                            TxtCodeMission.Text = codeCarMvt.ToString("MISS0000");
+                        }
+                    }
+                    else
+                        MessageBox.Show("Veillez réviser les paramètres de connexion à la base de données !", "Fleet: Gestion des erreurs", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Fleet: Gestion des erreurs!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return TxtCodeMission.Text;
         }
     }
 }

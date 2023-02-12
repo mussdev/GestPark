@@ -30,43 +30,43 @@ namespace GestPark.Vues.Consult
             if (FormConnectionUser.rolesUser.Equals("Utilisateur simple"))
             {
                 DemandeMission.panMoyenDeplacement.Enabled = false;
-                DemandeMission.checkBoxSignAgent.Enabled = true;
-                DemandeMission.checkBoxAnnulDarh.Enabled = false;
-                DemandeMission.checkBoxAnnulDir.Enabled = false;
-                DemandeMission.checkBoxAnnulDirDep.Enabled = false;
-                DemandeMission.checkBoxSignAgentSup.Enabled = false;
-                DemandeMission.checkBoxSignDarh.Enabled = false;
-                DemandeMission.checkBoxSignDir.Enabled = false;
-                DemandeMission.checkBoxSignDirecDep.Enabled = false;
-                DemandeMission.checkBoxAnnulAgentSup.Enabled = false;
+                DemandeMission.checkBoxSignAgentMission.Enabled = true;
+                DemandeMission.checkBoxAnnulDarhMission.Enabled = false;
+                DemandeMission.checkBoxAnnulDirMission.Enabled = false;
+                DemandeMission.checkBoxAnnulDirDepMission.Enabled = false;
+                DemandeMission.checkBoxSignAgentSupMission.Enabled = false;
+                DemandeMission.checkBoxSignDarhMission.Enabled = false;
+                DemandeMission.checkBoxSignDirMission.Enabled = false;
+                DemandeMission.checkBoxSignDirecDepMission.Enabled = false;
+                DemandeMission.checkBoxAnnulAgentSupMission.Enabled = false;
                 DemandeMission.ShowDialog();
             }else if (FormConnectionUser.rolesUser.Equals("Gestionnaire"))
             {
                 DemandeMission.panMoyenDeplacement.Enabled = true;
                 DemandeMission.panSignture.Enabled = false;
-                DemandeMission.checkBoxSignAgent.Enabled = false;
-                DemandeMission.checkBoxAnnulDarh.Enabled = false;
-                DemandeMission.checkBoxAnnulDir.Enabled = false;
-                DemandeMission.checkBoxAnnulDirDep.Enabled = false;
-                DemandeMission.checkBoxSignAgentSup.Enabled = false;
-                DemandeMission.checkBoxSignDarh.Enabled = false;
-                DemandeMission.checkBoxSignDir.Enabled = false;
-                DemandeMission.checkBoxSignDirecDep.Enabled = false;
-                DemandeMission.checkBoxAnnulAgentSup.Enabled = false;
+                DemandeMission.checkBoxSignAgentMission.Enabled = false;
+                DemandeMission.checkBoxAnnulDarhMission.Enabled = false;
+                DemandeMission.checkBoxAnnulDirMission.Enabled = false;
+                DemandeMission.checkBoxAnnulDirDepMission.Enabled = false;
+                DemandeMission.checkBoxSignAgentSupMission.Enabled = false;
+                DemandeMission.checkBoxSignDarhMission.Enabled = false;
+                DemandeMission.checkBoxSignDirMission.Enabled = false;
+                DemandeMission.checkBoxSignDirecDepMission.Enabled = false;
+                DemandeMission.checkBoxAnnulAgentSupMission.Enabled = false;
                 DemandeMission.ShowDialog();
             }else if (FormConnectionUser.rolesUser.Equals("DARH"))
             {
                 DemandeMission.panMoyenDeplacement.Enabled = true;
                 DemandeMission.panSignture.Enabled = true;
-                DemandeMission.checkBoxSignAgent.Enabled = false;
-                DemandeMission.checkBoxAnnulDarh.Enabled = true;
-                DemandeMission.checkBoxAnnulDir.Enabled = true;
-                DemandeMission.checkBoxAnnulDirDep.Enabled = false;
-                DemandeMission.checkBoxSignAgentSup.Enabled = false;
-                DemandeMission.checkBoxSignDarh.Enabled = true;
-                DemandeMission.checkBoxSignDir.Enabled = true;
-                DemandeMission.checkBoxSignDirecDep.Enabled = false;
-                DemandeMission.checkBoxAnnulAgentSup.Enabled = false;
+                DemandeMission.checkBoxSignAgentMission.Enabled = false;
+                DemandeMission.checkBoxAnnulDarhMission.Enabled = true;
+                DemandeMission.checkBoxAnnulDirMission.Enabled = true;
+                DemandeMission.checkBoxAnnulDirDepMission.Enabled = false;
+                DemandeMission.checkBoxSignAgentSupMission.Enabled = false;
+                DemandeMission.checkBoxSignDarhMission.Enabled = true;
+                DemandeMission.checkBoxSignDirMission.Enabled = true;
+                DemandeMission.checkBoxSignDirecDepMission.Enabled = false;
+                DemandeMission.checkBoxAnnulAgentSupMission.Enabled = false;
                 DemandeMission.panSMG.Enabled = false;
                 DemandeMission.ShowDialog();
             }

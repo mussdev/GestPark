@@ -70,7 +70,7 @@
             // 
             this.CloseFan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.CloseFan.Name = "CloseFan";
-            this.CloseFan.Size = new System.Drawing.Size(224, 26);
+            this.CloseFan.Size = new System.Drawing.Size(139, 26);
             this.CloseFan.Text = "Fermer";
             // 
             // MenuAlertVidange

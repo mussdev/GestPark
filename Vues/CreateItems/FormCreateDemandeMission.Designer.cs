@@ -40,42 +40,44 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.DateDebutMission = new System.Windows.Forms.DateTimePicker();
+            this.DateFinMission = new System.Windows.Forms.DateTimePicker();
             this.panMoyenDeplacement = new System.Windows.Forms.Panel();
             this.panSMG = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.cbxImmatVehicule_miss = new System.Windows.Forms.ComboBox();
             this.cbxConducteurMission = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtAutreMoyenDeplacMission = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ChkAvionMission = new System.Windows.Forms.CheckBox();
+            this.ChkVehiPersoMission = new System.Windows.Forms.CheckBox();
+            this.ChkVehiSocMission = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.DateRegisterMission = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.panSignture = new System.Windows.Forms.Panel();
-            this.checkBoxAnnulDir = new System.Windows.Forms.CheckBox();
-            this.checkBoxAnnulDarh = new System.Windows.Forms.CheckBox();
-            this.checkBoxAnnulDirDep = new System.Windows.Forms.CheckBox();
-            this.checkBoxAnnulAgentSup = new System.Windows.Forms.CheckBox();
-            this.checkBoxSignDir = new System.Windows.Forms.CheckBox();
-            this.checkBoxSignDarh = new System.Windows.Forms.CheckBox();
-            this.checkBoxSignDirecDep = new System.Windows.Forms.CheckBox();
-            this.checkBoxSignAgentSup = new System.Windows.Forms.CheckBox();
-            this.checkBoxSignAgent = new System.Windows.Forms.CheckBox();
+            this.checkBoxAnnulDirMission = new System.Windows.Forms.CheckBox();
+            this.checkBoxAnnulDarhMission = new System.Windows.Forms.CheckBox();
+            this.checkBoxAnnulDirDepMission = new System.Windows.Forms.CheckBox();
+            this.checkBoxAnnulAgentSupMission = new System.Windows.Forms.CheckBox();
+            this.checkBoxSignDirMission = new System.Windows.Forms.CheckBox();
+            this.checkBoxSignDarhMission = new System.Windows.Forms.CheckBox();
+            this.checkBoxSignDirecDepMission = new System.Windows.Forms.CheckBox();
+            this.checkBoxSignAgentSupMission = new System.Windows.Forms.CheckBox();
+            this.checkBoxSignAgentMission = new System.Windows.Forms.CheckBox();
             this.cbxDemandeurMission = new System.Windows.Forms.ComboBox();
             this.TxtNameDemandeur = new System.Windows.Forms.TextBox();
             this.txtFirstNameDemandeur = new System.Windows.Forms.TextBox();
             this.TxtFonctionDemandeur = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TxtDestinationMission = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.RtxtObjetMission = new System.Windows.Forms.RichTextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.TxtCodeMission = new System.Windows.Forms.TextBox();
+            this.BtnPrimeMission = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panMoyenDeplacement.SuspendLayout();
             this.panSMG.SuspendLayout();
@@ -203,37 +205,37 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 118);
+            this.label7.Location = new System.Drawing.Point(9, 110);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 19);
             this.label7.TabIndex = 7;
             this.label7.Text = "Date fin";
             // 
-            // dateTimePicker1
+            // DateDebutMission
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(121, 59);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(128, 27);
-            this.dateTimePicker1.TabIndex = 8;
+            this.DateDebutMission.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateDebutMission.Location = new System.Drawing.Point(121, 59);
+            this.DateDebutMission.Name = "DateDebutMission";
+            this.DateDebutMission.Size = new System.Drawing.Size(128, 27);
+            this.DateDebutMission.TabIndex = 8;
             // 
-            // dateTimePicker2
+            // DateFinMission
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(120, 104);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(129, 27);
-            this.dateTimePicker2.TabIndex = 9;
+            this.DateFinMission.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateFinMission.Location = new System.Drawing.Point(120, 104);
+            this.DateFinMission.Name = "DateFinMission";
+            this.DateFinMission.Size = new System.Drawing.Size(129, 27);
+            this.DateFinMission.TabIndex = 9;
             // 
             // panMoyenDeplacement
             // 
             this.panMoyenDeplacement.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panMoyenDeplacement.Controls.Add(this.panSMG);
-            this.panMoyenDeplacement.Controls.Add(this.textBox1);
+            this.panMoyenDeplacement.Controls.Add(this.TxtAutreMoyenDeplacMission);
             this.panMoyenDeplacement.Controls.Add(this.label9);
-            this.panMoyenDeplacement.Controls.Add(this.checkBox3);
-            this.panMoyenDeplacement.Controls.Add(this.checkBox2);
-            this.panMoyenDeplacement.Controls.Add(this.checkBox1);
+            this.panMoyenDeplacement.Controls.Add(this.ChkAvionMission);
+            this.panMoyenDeplacement.Controls.Add(this.ChkVehiPersoMission);
+            this.panMoyenDeplacement.Controls.Add(this.ChkVehiSocMission);
             this.panMoyenDeplacement.Location = new System.Drawing.Point(16, 331);
             this.panMoyenDeplacement.Name = "panMoyenDeplacement";
             this.panMoyenDeplacement.Size = new System.Drawing.Size(457, 200);
@@ -273,8 +275,7 @@
             this.cbxImmatVehicule_miss.ForeColor = System.Drawing.Color.Maroon;
             this.cbxImmatVehicule_miss.FormattingEnabled = true;
             this.cbxImmatVehicule_miss.Items.AddRange(new object[] {
-            "",
-            "Autre"});
+            ""});
             this.cbxImmatVehicule_miss.Location = new System.Drawing.Point(158, 5);
             this.cbxImmatVehicule_miss.Name = "cbxImmatVehicule_miss";
             this.cbxImmatVehicule_miss.Size = new System.Drawing.Size(246, 27);
@@ -286,20 +287,19 @@
             this.cbxConducteurMission.ForeColor = System.Drawing.Color.Maroon;
             this.cbxConducteurMission.FormattingEnabled = true;
             this.cbxConducteurMission.Items.AddRange(new object[] {
-            "",
-            "Autre"});
+            ""});
             this.cbxConducteurMission.Location = new System.Drawing.Point(158, 64);
             this.cbxConducteurMission.Name = "cbxConducteurMission";
             this.cbxConducteurMission.Size = new System.Drawing.Size(246, 27);
             this.cbxConducteurMission.TabIndex = 18;
             this.cbxConducteurMission.SelectedIndexChanged += new System.EventHandler(this.cbxConducteurMission_SelectedIndexChanged);
             // 
-            // textBox1
+            // TxtAutreMoyenDeplacMission
             // 
-            this.textBox1.Location = new System.Drawing.Point(165, 166);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(246, 27);
-            this.textBox1.TabIndex = 17;
+            this.TxtAutreMoyenDeplacMission.Location = new System.Drawing.Point(165, 166);
+            this.TxtAutreMoyenDeplacMission.Name = "TxtAutreMoyenDeplacMission";
+            this.TxtAutreMoyenDeplacMission.Size = new System.Drawing.Size(246, 27);
+            this.TxtAutreMoyenDeplacMission.TabIndex = 17;
             // 
             // label9
             // 
@@ -310,35 +310,35 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "Autres à préciser";
             // 
-            // checkBox3
+            // ChkAvionMission
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(349, 16);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(70, 23);
-            this.checkBox3.TabIndex = 15;
-            this.checkBox3.Text = "Avion";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.ChkAvionMission.AutoSize = true;
+            this.ChkAvionMission.Location = new System.Drawing.Point(349, 16);
+            this.ChkAvionMission.Name = "ChkAvionMission";
+            this.ChkAvionMission.Size = new System.Drawing.Size(70, 23);
+            this.ChkAvionMission.TabIndex = 15;
+            this.ChkAvionMission.Text = "Avion";
+            this.ChkAvionMission.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // ChkVehiPersoMission
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(165, 16);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(163, 23);
-            this.checkBox2.TabIndex = 8;
-            this.checkBox2.Text = "Véhicule personnel";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.ChkVehiPersoMission.AutoSize = true;
+            this.ChkVehiPersoMission.Location = new System.Drawing.Point(165, 16);
+            this.ChkVehiPersoMission.Name = "ChkVehiPersoMission";
+            this.ChkVehiPersoMission.Size = new System.Drawing.Size(163, 23);
+            this.ChkVehiPersoMission.TabIndex = 8;
+            this.ChkVehiPersoMission.Text = "Véhicule personnel";
+            this.ChkVehiPersoMission.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // ChkVehiSocMission
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 16);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(146, 23);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Véhicule société";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ChkVehiSocMission.AutoSize = true;
+            this.ChkVehiSocMission.Location = new System.Drawing.Point(3, 16);
+            this.ChkVehiSocMission.Name = "ChkVehiSocMission";
+            this.ChkVehiSocMission.Size = new System.Drawing.Size(146, 23);
+            this.ChkVehiSocMission.TabIndex = 7;
+            this.ChkVehiSocMission.Text = "Véhicule société";
+            this.ChkVehiSocMission.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -354,19 +354,19 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(11, 21);
+            this.label11.Location = new System.Drawing.Point(9, 21);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 19);
             this.label11.TabIndex = 12;
             this.label11.Text = "Date";
             // 
-            // dateTimePicker3
+            // DateRegisterMission
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(121, 13);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(128, 27);
-            this.dateTimePicker3.TabIndex = 13;
+            this.DateRegisterMission.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateRegisterMission.Location = new System.Drawing.Point(121, 13);
+            this.DateRegisterMission.Name = "DateRegisterMission";
+            this.DateRegisterMission.Size = new System.Drawing.Size(128, 27);
+            this.DateRegisterMission.TabIndex = 13;
             // 
             // label12
             // 
@@ -382,110 +382,110 @@
             // panSignture
             // 
             this.panSignture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panSignture.Controls.Add(this.checkBoxAnnulDir);
-            this.panSignture.Controls.Add(this.checkBoxAnnulDarh);
-            this.panSignture.Controls.Add(this.checkBoxAnnulDirDep);
-            this.panSignture.Controls.Add(this.checkBoxAnnulAgentSup);
-            this.panSignture.Controls.Add(this.checkBoxSignDir);
-            this.panSignture.Controls.Add(this.checkBoxSignDarh);
-            this.panSignture.Controls.Add(this.checkBoxSignDirecDep);
-            this.panSignture.Controls.Add(this.checkBoxSignAgentSup);
-            this.panSignture.Controls.Add(this.checkBoxSignAgent);
+            this.panSignture.Controls.Add(this.checkBoxAnnulDirMission);
+            this.panSignture.Controls.Add(this.checkBoxAnnulDarhMission);
+            this.panSignture.Controls.Add(this.checkBoxAnnulDirDepMission);
+            this.panSignture.Controls.Add(this.checkBoxAnnulAgentSupMission);
+            this.panSignture.Controls.Add(this.checkBoxSignDirMission);
+            this.panSignture.Controls.Add(this.checkBoxSignDarhMission);
+            this.panSignture.Controls.Add(this.checkBoxSignDirecDepMission);
+            this.panSignture.Controls.Add(this.checkBoxSignAgentSupMission);
+            this.panSignture.Controls.Add(this.checkBoxSignAgentMission);
             this.panSignture.Location = new System.Drawing.Point(483, 331);
             this.panSignture.Name = "panSignture";
             this.panSignture.Size = new System.Drawing.Size(416, 200);
             this.panSignture.TabIndex = 14;
             // 
-            // checkBoxAnnulDir
+            // checkBoxAnnulDirMission
             // 
-            this.checkBoxAnnulDir.AutoSize = true;
-            this.checkBoxAnnulDir.Location = new System.Drawing.Point(283, 103);
-            this.checkBoxAnnulDir.Name = "checkBoxAnnulDir";
-            this.checkBoxAnnulDir.Size = new System.Drawing.Size(109, 23);
-            this.checkBoxAnnulDir.TabIndex = 21;
-            this.checkBoxAnnulDir.Text = "Annulé Dir.";
-            this.checkBoxAnnulDir.UseVisualStyleBackColor = true;
+            this.checkBoxAnnulDirMission.AutoSize = true;
+            this.checkBoxAnnulDirMission.Location = new System.Drawing.Point(283, 103);
+            this.checkBoxAnnulDirMission.Name = "checkBoxAnnulDirMission";
+            this.checkBoxAnnulDirMission.Size = new System.Drawing.Size(109, 23);
+            this.checkBoxAnnulDirMission.TabIndex = 21;
+            this.checkBoxAnnulDirMission.Text = "Annulé Dir.";
+            this.checkBoxAnnulDirMission.UseVisualStyleBackColor = true;
             // 
-            // checkBoxAnnulDarh
+            // checkBoxAnnulDarhMission
             // 
-            this.checkBoxAnnulDarh.AutoSize = true;
-            this.checkBoxAnnulDarh.Location = new System.Drawing.Point(283, 45);
-            this.checkBoxAnnulDarh.Name = "checkBoxAnnulDarh";
-            this.checkBoxAnnulDarh.Size = new System.Drawing.Size(129, 23);
-            this.checkBoxAnnulDarh.TabIndex = 20;
-            this.checkBoxAnnulDarh.Text = "Annulé DARH";
-            this.checkBoxAnnulDarh.UseVisualStyleBackColor = true;
+            this.checkBoxAnnulDarhMission.AutoSize = true;
+            this.checkBoxAnnulDarhMission.Location = new System.Drawing.Point(283, 45);
+            this.checkBoxAnnulDarhMission.Name = "checkBoxAnnulDarhMission";
+            this.checkBoxAnnulDarhMission.Size = new System.Drawing.Size(129, 23);
+            this.checkBoxAnnulDarhMission.TabIndex = 20;
+            this.checkBoxAnnulDarhMission.Text = "Annulé DARH";
+            this.checkBoxAnnulDarhMission.UseVisualStyleBackColor = true;
             // 
-            // checkBoxAnnulDirDep
+            // checkBoxAnnulDirDepMission
             // 
-            this.checkBoxAnnulDirDep.AutoSize = true;
-            this.checkBoxAnnulDirDep.Location = new System.Drawing.Point(3, 168);
-            this.checkBoxAnnulDirDep.Name = "checkBoxAnnulDirDep";
-            this.checkBoxAnnulDirDep.Size = new System.Drawing.Size(285, 23);
-            this.checkBoxAnnulDirDep.TabIndex = 19;
-            this.checkBoxAnnulDirDep.Text = "Annulé Dir. de département de l\'agent";
-            this.checkBoxAnnulDirDep.UseVisualStyleBackColor = true;
+            this.checkBoxAnnulDirDepMission.AutoSize = true;
+            this.checkBoxAnnulDirDepMission.Location = new System.Drawing.Point(3, 168);
+            this.checkBoxAnnulDirDepMission.Name = "checkBoxAnnulDirDepMission";
+            this.checkBoxAnnulDirDepMission.Size = new System.Drawing.Size(285, 23);
+            this.checkBoxAnnulDirDepMission.TabIndex = 19;
+            this.checkBoxAnnulDirDepMission.Text = "Annulé Dir. de département de l\'agent";
+            this.checkBoxAnnulDirDepMission.UseVisualStyleBackColor = true;
             // 
-            // checkBoxAnnulAgentSup
+            // checkBoxAnnulAgentSupMission
             // 
-            this.checkBoxAnnulAgentSup.AutoSize = true;
-            this.checkBoxAnnulAgentSup.Location = new System.Drawing.Point(3, 93);
-            this.checkBoxAnnulAgentSup.Name = "checkBoxAnnulAgentSup";
-            this.checkBoxAnnulAgentSup.Size = new System.Drawing.Size(201, 23);
-            this.checkBoxAnnulAgentSup.TabIndex = 18;
-            this.checkBoxAnnulAgentSup.Text = "Annulé Sup. hiérarchique";
-            this.checkBoxAnnulAgentSup.UseVisualStyleBackColor = true;
+            this.checkBoxAnnulAgentSupMission.AutoSize = true;
+            this.checkBoxAnnulAgentSupMission.Location = new System.Drawing.Point(3, 93);
+            this.checkBoxAnnulAgentSupMission.Name = "checkBoxAnnulAgentSupMission";
+            this.checkBoxAnnulAgentSupMission.Size = new System.Drawing.Size(201, 23);
+            this.checkBoxAnnulAgentSupMission.TabIndex = 18;
+            this.checkBoxAnnulAgentSupMission.Text = "Annulé Sup. hiérarchique";
+            this.checkBoxAnnulAgentSupMission.UseVisualStyleBackColor = true;
             // 
-            // checkBoxSignDir
+            // checkBoxSignDirMission
             // 
-            this.checkBoxSignDir.AutoSize = true;
-            this.checkBoxSignDir.Location = new System.Drawing.Point(283, 74);
-            this.checkBoxSignDir.Name = "checkBoxSignDir";
-            this.checkBoxSignDir.Size = new System.Drawing.Size(97, 23);
-            this.checkBoxSignDir.TabIndex = 17;
-            this.checkBoxSignDir.Text = "Directeur";
-            this.checkBoxSignDir.UseVisualStyleBackColor = true;
+            this.checkBoxSignDirMission.AutoSize = true;
+            this.checkBoxSignDirMission.Location = new System.Drawing.Point(283, 74);
+            this.checkBoxSignDirMission.Name = "checkBoxSignDirMission";
+            this.checkBoxSignDirMission.Size = new System.Drawing.Size(97, 23);
+            this.checkBoxSignDirMission.TabIndex = 17;
+            this.checkBoxSignDirMission.Text = "Directeur";
+            this.checkBoxSignDirMission.UseVisualStyleBackColor = true;
             // 
-            // checkBoxSignDarh
+            // checkBoxSignDarhMission
             // 
-            this.checkBoxSignDarh.AutoSize = true;
-            this.checkBoxSignDarh.Location = new System.Drawing.Point(283, 16);
-            this.checkBoxSignDarh.Name = "checkBoxSignDarh";
-            this.checkBoxSignDarh.Size = new System.Drawing.Size(77, 23);
-            this.checkBoxSignDarh.TabIndex = 16;
-            this.checkBoxSignDarh.Text = "DARH";
-            this.checkBoxSignDarh.UseVisualStyleBackColor = true;
+            this.checkBoxSignDarhMission.AutoSize = true;
+            this.checkBoxSignDarhMission.Location = new System.Drawing.Point(283, 16);
+            this.checkBoxSignDarhMission.Name = "checkBoxSignDarhMission";
+            this.checkBoxSignDarhMission.Size = new System.Drawing.Size(77, 23);
+            this.checkBoxSignDarhMission.TabIndex = 16;
+            this.checkBoxSignDarhMission.Text = "DARH";
+            this.checkBoxSignDarhMission.UseVisualStyleBackColor = true;
             // 
-            // checkBoxSignDirecDep
+            // checkBoxSignDirecDepMission
             // 
-            this.checkBoxSignDirecDep.AutoSize = true;
-            this.checkBoxSignDirecDep.Location = new System.Drawing.Point(3, 137);
-            this.checkBoxSignDirecDep.Name = "checkBoxSignDirecDep";
-            this.checkBoxSignDirecDep.Size = new System.Drawing.Size(273, 23);
-            this.checkBoxSignDirecDep.TabIndex = 15;
-            this.checkBoxSignDirecDep.Text = "Directeur de département de l\'agent";
-            this.checkBoxSignDirecDep.UseVisualStyleBackColor = true;
+            this.checkBoxSignDirecDepMission.AutoSize = true;
+            this.checkBoxSignDirecDepMission.Location = new System.Drawing.Point(3, 137);
+            this.checkBoxSignDirecDepMission.Name = "checkBoxSignDirecDepMission";
+            this.checkBoxSignDirecDepMission.Size = new System.Drawing.Size(273, 23);
+            this.checkBoxSignDirecDepMission.TabIndex = 15;
+            this.checkBoxSignDirecDepMission.Text = "Directeur de département de l\'agent";
+            this.checkBoxSignDirecDepMission.UseVisualStyleBackColor = true;
             // 
-            // checkBoxSignAgentSup
+            // checkBoxSignAgentSupMission
             // 
-            this.checkBoxSignAgentSup.AutoSize = true;
-            this.checkBoxSignAgentSup.Location = new System.Drawing.Point(3, 52);
-            this.checkBoxSignAgentSup.Name = "checkBoxSignAgentSup";
-            this.checkBoxSignAgentSup.Size = new System.Drawing.Size(186, 23);
-            this.checkBoxSignAgentSup.TabIndex = 8;
-            this.checkBoxSignAgentSup.Text = "Supérieur hiérarchique";
-            this.checkBoxSignAgentSup.UseVisualStyleBackColor = true;
+            this.checkBoxSignAgentSupMission.AutoSize = true;
+            this.checkBoxSignAgentSupMission.Location = new System.Drawing.Point(3, 52);
+            this.checkBoxSignAgentSupMission.Name = "checkBoxSignAgentSupMission";
+            this.checkBoxSignAgentSupMission.Size = new System.Drawing.Size(186, 23);
+            this.checkBoxSignAgentSupMission.TabIndex = 8;
+            this.checkBoxSignAgentSupMission.Text = "Supérieur hiérarchique";
+            this.checkBoxSignAgentSupMission.UseVisualStyleBackColor = true;
             // 
-            // checkBoxSignAgent
+            // checkBoxSignAgentMission
             // 
-            this.checkBoxSignAgent.AutoSize = true;
-            this.checkBoxSignAgent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.checkBoxSignAgent.Location = new System.Drawing.Point(3, 16);
-            this.checkBoxSignAgent.Name = "checkBoxSignAgent";
-            this.checkBoxSignAgent.Size = new System.Drawing.Size(71, 23);
-            this.checkBoxSignAgent.TabIndex = 7;
-            this.checkBoxSignAgent.Text = "Agent";
-            this.checkBoxSignAgent.UseVisualStyleBackColor = false;
+            this.checkBoxSignAgentMission.AutoSize = true;
+            this.checkBoxSignAgentMission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.checkBoxSignAgentMission.Location = new System.Drawing.Point(3, 16);
+            this.checkBoxSignAgentMission.Name = "checkBoxSignAgentMission";
+            this.checkBoxSignAgentMission.Size = new System.Drawing.Size(71, 23);
+            this.checkBoxSignAgentMission.TabIndex = 7;
+            this.checkBoxSignAgentMission.Text = "Agent";
+            this.checkBoxSignAgentMission.UseVisualStyleBackColor = false;
             // 
             // cbxDemandeurMission
             // 
@@ -523,21 +523,21 @@
             this.TxtFonctionDemandeur.Size = new System.Drawing.Size(347, 27);
             this.TxtFonctionDemandeur.TabIndex = 20;
             // 
-            // textBox5
+            // TxtDestinationMission
             // 
-            this.textBox5.Location = new System.Drawing.Point(126, 252);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(347, 27);
-            this.textBox5.TabIndex = 21;
+            this.TxtDestinationMission.Location = new System.Drawing.Point(126, 252);
+            this.TxtDestinationMission.Name = "TxtDestinationMission";
+            this.TxtDestinationMission.Size = new System.Drawing.Size(347, 27);
+            this.TxtDestinationMission.TabIndex = 21;
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.dateTimePicker3);
+            this.panel4.Controls.Add(this.DateRegisterMission);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.dateTimePicker1);
-            this.panel4.Controls.Add(this.dateTimePicker2);
+            this.panel4.Controls.Add(this.DateDebutMission);
+            this.panel4.Controls.Add(this.DateFinMission);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Location = new System.Drawing.Point(858, 79);
             this.panel4.Name = "panel4";
@@ -555,13 +555,13 @@
             this.label13.TabIndex = 23;
             this.label13.Text = "Dates";
             // 
-            // richTextBox1
+            // RtxtObjetMission
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(483, 78);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(362, 201);
-            this.richTextBox1.TabIndex = 24;
-            this.richTextBox1.Text = "";
+            this.RtxtObjetMission.Location = new System.Drawing.Point(483, 78);
+            this.RtxtObjetMission.Name = "RtxtObjetMission";
+            this.RtxtObjetMission.Size = new System.Drawing.Size(362, 201);
+            this.RtxtObjetMission.TabIndex = 24;
+            this.RtxtObjetMission.Text = "";
             // 
             // label14
             // 
@@ -574,17 +574,41 @@
             this.label14.TabIndex = 25;
             this.label14.Text = "Objet de mission *";
             // 
+            // TxtCodeMission
+            // 
+            this.TxtCodeMission.Location = new System.Drawing.Point(1001, 33);
+            this.TxtCodeMission.Name = "TxtCodeMission";
+            this.TxtCodeMission.Size = new System.Drawing.Size(165, 27);
+            this.TxtCodeMission.TabIndex = 26;
+            // 
+            // BtnPrimeMission
+            // 
+            this.BtnPrimeMission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BtnPrimeMission.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPrimeMission.ForeColor = System.Drawing.Color.Maroon;
+            this.BtnPrimeMission.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BtnPrimeMission.IconColor = System.Drawing.Color.Black;
+            this.BtnPrimeMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnPrimeMission.Location = new System.Drawing.Point(896, 252);
+            this.BtnPrimeMission.Name = "BtnPrimeMission";
+            this.BtnPrimeMission.Size = new System.Drawing.Size(213, 51);
+            this.BtnPrimeMission.TabIndex = 27;
+            this.BtnPrimeMission.Text = "Cliquez ici pour calculer la prime de mission";
+            this.BtnPrimeMission.UseVisualStyleBackColor = false;
+            // 
             // FormCreateDemandeMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.ClientSize = new System.Drawing.Size(1166, 557);
+            this.Controls.Add(this.BtnPrimeMission);
+            this.Controls.Add(this.TxtCodeMission);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.RtxtObjetMission);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.TxtDestinationMission);
             this.Controls.Add(this.TxtFonctionDemandeur);
             this.Controls.Add(this.txtFirstNameDemandeur);
             this.Controls.Add(this.TxtNameDemandeur);
@@ -633,41 +657,43 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker DateDebutMission;
+        private System.Windows.Forms.DateTimePicker DateFinMission;
+        private System.Windows.Forms.TextBox TxtAutreMoyenDeplacMission;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox ChkAvionMission;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbxImmatVehicule_miss;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox ChkVehiPersoMission;
+        private System.Windows.Forms.CheckBox ChkVehiSocMission;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker DateRegisterMission;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbxDemandeurMission;
         private System.Windows.Forms.TextBox TxtNameDemandeur;
         private System.Windows.Forms.TextBox txtFirstNameDemandeur;
         private System.Windows.Forms.TextBox TxtFonctionDemandeur;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TxtDestinationMission;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox RtxtObjetMission;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox cbxConducteurMission;
         public System.Windows.Forms.Panel panMoyenDeplacement;
         public System.Windows.Forms.Panel panSignture;
-        public System.Windows.Forms.CheckBox checkBoxSignDir;
-        public System.Windows.Forms.CheckBox checkBoxSignDarh;
-        public System.Windows.Forms.CheckBox checkBoxSignDirecDep;
-        public System.Windows.Forms.CheckBox checkBoxSignAgentSup;
-        public System.Windows.Forms.CheckBox checkBoxAnnulDir;
-        public System.Windows.Forms.CheckBox checkBoxAnnulDarh;
-        public System.Windows.Forms.CheckBox checkBoxAnnulDirDep;
-        public System.Windows.Forms.CheckBox checkBoxAnnulAgentSup;
-        public System.Windows.Forms.CheckBox checkBoxSignAgent;
+        public System.Windows.Forms.CheckBox checkBoxSignDirMission;
+        public System.Windows.Forms.CheckBox checkBoxSignDarhMission;
+        public System.Windows.Forms.CheckBox checkBoxSignDirecDepMission;
+        public System.Windows.Forms.CheckBox checkBoxSignAgentSupMission;
+        public System.Windows.Forms.CheckBox checkBoxAnnulDirMission;
+        public System.Windows.Forms.CheckBox checkBoxAnnulDarhMission;
+        public System.Windows.Forms.CheckBox checkBoxAnnulDirDepMission;
+        public System.Windows.Forms.CheckBox checkBoxAnnulAgentSupMission;
+        public System.Windows.Forms.CheckBox checkBoxSignAgentMission;
         public System.Windows.Forms.Panel panSMG;
+        private System.Windows.Forms.TextBox TxtCodeMission;
+        private FontAwesome.Sharp.IconButton BtnPrimeMission;
     }
 }

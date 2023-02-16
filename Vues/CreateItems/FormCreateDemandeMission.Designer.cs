@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnImportDocMission = new FontAwesome.Sharp.IconButton();
             this.BtnPrinterCarMission = new FontAwesome.Sharp.IconButton();
-            this.IbtnRegisterMission = new FontAwesome.Sharp.IconButton();
+            this.IbtnRegisterAndCloseMission = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,11 +58,11 @@
             this.DateRegisterMission = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.panSignture = new System.Windows.Forms.Panel();
-            this.checkBoxAnnulDirMission = new System.Windows.Forms.CheckBox();
+            this.checkBoxAnnulDGMission = new System.Windows.Forms.CheckBox();
             this.checkBoxAnnulDarhMission = new System.Windows.Forms.CheckBox();
             this.checkBoxAnnulDirDepMission = new System.Windows.Forms.CheckBox();
             this.checkBoxAnnulAgentSupMission = new System.Windows.Forms.CheckBox();
-            this.checkBoxSignDirMission = new System.Windows.Forms.CheckBox();
+            this.checkBoxSignDGMission = new System.Windows.Forms.CheckBox();
             this.checkBoxSignDarhMission = new System.Windows.Forms.CheckBox();
             this.checkBoxSignDirecDepMission = new System.Windows.Forms.CheckBox();
             this.checkBoxSignAgentSupMission = new System.Windows.Forms.CheckBox();
@@ -78,6 +78,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.TxtCodeMission = new System.Windows.Forms.TextBox();
             this.BtnPrimeMission = new FontAwesome.Sharp.IconButton();
+            this.BtnRegisterMission = new FontAwesome.Sharp.IconButton();
+            this.BtnRefreshMission = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panMoyenDeplacement.SuspendLayout();
             this.panSMG.SuspendLayout();
@@ -89,9 +91,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(222)))), ((int)(((byte)(132)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.BtnRefreshMission);
+            this.panel1.Controls.Add(this.BtnRegisterMission);
             this.panel1.Controls.Add(this.BtnImportDocMission);
             this.panel1.Controls.Add(this.BtnPrinterCarMission);
-            this.panel1.Controls.Add(this.IbtnRegisterMission);
+            this.panel1.Controls.Add(this.IbtnRegisterAndCloseMission);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -106,9 +110,8 @@
             this.BtnImportDocMission.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(13)))));
             this.BtnImportDocMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnImportDocMission.IconSize = 20;
-            this.BtnImportDocMission.Location = new System.Drawing.Point(69, -2);
+            this.BtnImportDocMission.Location = new System.Drawing.Point(88, -2);
             this.BtnImportDocMission.Name = "BtnImportDocMission";
-            this.BtnImportDocMission.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.BtnImportDocMission.Size = new System.Drawing.Size(31, 27);
             this.BtnImportDocMission.TabIndex = 5;
             this.BtnImportDocMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -122,29 +125,28 @@
             this.BtnPrinterCarMission.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(34)))), ((int)(((byte)(4)))));
             this.BtnPrinterCarMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnPrinterCarMission.IconSize = 20;
-            this.BtnPrinterCarMission.Location = new System.Drawing.Point(33, -2);
+            this.BtnPrinterCarMission.Location = new System.Drawing.Point(58, -2);
             this.BtnPrinterCarMission.Name = "BtnPrinterCarMission";
-            this.BtnPrinterCarMission.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.BtnPrinterCarMission.Size = new System.Drawing.Size(30, 27);
+            this.BtnPrinterCarMission.Size = new System.Drawing.Size(31, 27);
             this.BtnPrinterCarMission.TabIndex = 4;
             this.BtnPrinterCarMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnPrinterCarMission.UseVisualStyleBackColor = false;
             // 
-            // IbtnRegisterMission
+            // IbtnRegisterAndCloseMission
             // 
-            this.IbtnRegisterMission.BackColor = System.Drawing.Color.White;
-            this.IbtnRegisterMission.ForeColor = System.Drawing.Color.YellowGreen;
-            this.IbtnRegisterMission.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.IbtnRegisterMission.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(147)))), ((int)(((byte)(222)))));
-            this.IbtnRegisterMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnRegisterMission.IconSize = 20;
-            this.IbtnRegisterMission.Location = new System.Drawing.Point(-2, -2);
-            this.IbtnRegisterMission.Name = "IbtnRegisterMission";
-            this.IbtnRegisterMission.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.IbtnRegisterMission.Size = new System.Drawing.Size(31, 27);
-            this.IbtnRegisterMission.TabIndex = 3;
-            this.IbtnRegisterMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IbtnRegisterMission.UseVisualStyleBackColor = false;
+            this.IbtnRegisterAndCloseMission.BackColor = System.Drawing.Color.White;
+            this.IbtnRegisterAndCloseMission.ForeColor = System.Drawing.Color.YellowGreen;
+            this.IbtnRegisterAndCloseMission.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.IbtnRegisterAndCloseMission.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(147)))), ((int)(((byte)(222)))));
+            this.IbtnRegisterAndCloseMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IbtnRegisterAndCloseMission.IconSize = 20;
+            this.IbtnRegisterAndCloseMission.Location = new System.Drawing.Point(-2, -2);
+            this.IbtnRegisterAndCloseMission.Name = "IbtnRegisterAndCloseMission";
+            this.IbtnRegisterAndCloseMission.Size = new System.Drawing.Size(31, 27);
+            this.IbtnRegisterAndCloseMission.TabIndex = 3;
+            this.IbtnRegisterAndCloseMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IbtnRegisterAndCloseMission.UseVisualStyleBackColor = false;
+            this.IbtnRegisterAndCloseMission.Click += new System.EventHandler(this.IbtnRegisterMission_Click);
             // 
             // label1
             // 
@@ -189,9 +191,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(14, 260);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 19);
+            this.label5.Size = new System.Drawing.Size(101, 19);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Destination";
+            this.label5.Text = "Destination *";
             // 
             // label6
             // 
@@ -319,6 +321,7 @@
             this.ChkAvionMission.TabIndex = 15;
             this.ChkAvionMission.Text = "Avion";
             this.ChkAvionMission.UseVisualStyleBackColor = true;
+            this.ChkAvionMission.CheckedChanged += new System.EventHandler(this.ChkAvionMission_CheckedChanged);
             // 
             // ChkVehiPersoMission
             // 
@@ -329,6 +332,7 @@
             this.ChkVehiPersoMission.TabIndex = 8;
             this.ChkVehiPersoMission.Text = "Véhicule personnel";
             this.ChkVehiPersoMission.UseVisualStyleBackColor = true;
+            this.ChkVehiPersoMission.CheckedChanged += new System.EventHandler(this.ChkVehiPersoMission_CheckedChanged);
             // 
             // ChkVehiSocMission
             // 
@@ -339,6 +343,7 @@
             this.ChkVehiSocMission.TabIndex = 7;
             this.ChkVehiSocMission.Text = "Véhicule société";
             this.ChkVehiSocMission.UseVisualStyleBackColor = true;
+            this.ChkVehiSocMission.CheckedChanged += new System.EventHandler(this.ChkVehiSocMission_CheckedChanged);
             // 
             // label8
             // 
@@ -382,11 +387,11 @@
             // panSignture
             // 
             this.panSignture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panSignture.Controls.Add(this.checkBoxAnnulDirMission);
+            this.panSignture.Controls.Add(this.checkBoxAnnulDGMission);
             this.panSignture.Controls.Add(this.checkBoxAnnulDarhMission);
             this.panSignture.Controls.Add(this.checkBoxAnnulDirDepMission);
             this.panSignture.Controls.Add(this.checkBoxAnnulAgentSupMission);
-            this.panSignture.Controls.Add(this.checkBoxSignDirMission);
+            this.panSignture.Controls.Add(this.checkBoxSignDGMission);
             this.panSignture.Controls.Add(this.checkBoxSignDarhMission);
             this.panSignture.Controls.Add(this.checkBoxSignDirecDepMission);
             this.panSignture.Controls.Add(this.checkBoxSignAgentSupMission);
@@ -396,15 +401,16 @@
             this.panSignture.Size = new System.Drawing.Size(416, 200);
             this.panSignture.TabIndex = 14;
             // 
-            // checkBoxAnnulDirMission
+            // checkBoxAnnulDGMission
             // 
-            this.checkBoxAnnulDirMission.AutoSize = true;
-            this.checkBoxAnnulDirMission.Location = new System.Drawing.Point(283, 103);
-            this.checkBoxAnnulDirMission.Name = "checkBoxAnnulDirMission";
-            this.checkBoxAnnulDirMission.Size = new System.Drawing.Size(109, 23);
-            this.checkBoxAnnulDirMission.TabIndex = 21;
-            this.checkBoxAnnulDirMission.Text = "Annulé Dir.";
-            this.checkBoxAnnulDirMission.UseVisualStyleBackColor = true;
+            this.checkBoxAnnulDGMission.AutoSize = true;
+            this.checkBoxAnnulDGMission.Location = new System.Drawing.Point(283, 103);
+            this.checkBoxAnnulDGMission.Name = "checkBoxAnnulDGMission";
+            this.checkBoxAnnulDGMission.Size = new System.Drawing.Size(111, 23);
+            this.checkBoxAnnulDGMission.TabIndex = 21;
+            this.checkBoxAnnulDGMission.Text = "Annulé DG.";
+            this.checkBoxAnnulDGMission.UseVisualStyleBackColor = true;
+            this.checkBoxAnnulDGMission.CheckedChanged += new System.EventHandler(this.checkBoxAnnulDirMission_CheckedChanged);
             // 
             // checkBoxAnnulDarhMission
             // 
@@ -415,6 +421,7 @@
             this.checkBoxAnnulDarhMission.TabIndex = 20;
             this.checkBoxAnnulDarhMission.Text = "Annulé DARH";
             this.checkBoxAnnulDarhMission.UseVisualStyleBackColor = true;
+            this.checkBoxAnnulDarhMission.CheckedChanged += new System.EventHandler(this.checkBoxAnnulDarhMission_CheckedChanged);
             // 
             // checkBoxAnnulDirDepMission
             // 
@@ -425,6 +432,7 @@
             this.checkBoxAnnulDirDepMission.TabIndex = 19;
             this.checkBoxAnnulDirDepMission.Text = "Annulé Dir. de département de l\'agent";
             this.checkBoxAnnulDirDepMission.UseVisualStyleBackColor = true;
+            this.checkBoxAnnulDirDepMission.CheckedChanged += new System.EventHandler(this.checkBoxAnnulDirDepMission_CheckedChanged);
             // 
             // checkBoxAnnulAgentSupMission
             // 
@@ -435,16 +443,18 @@
             this.checkBoxAnnulAgentSupMission.TabIndex = 18;
             this.checkBoxAnnulAgentSupMission.Text = "Annulé Sup. hiérarchique";
             this.checkBoxAnnulAgentSupMission.UseVisualStyleBackColor = true;
+            this.checkBoxAnnulAgentSupMission.CheckedChanged += new System.EventHandler(this.checkBoxAnnulAgentSupMission_CheckedChanged);
             // 
-            // checkBoxSignDirMission
+            // checkBoxSignDGMission
             // 
-            this.checkBoxSignDirMission.AutoSize = true;
-            this.checkBoxSignDirMission.Location = new System.Drawing.Point(283, 74);
-            this.checkBoxSignDirMission.Name = "checkBoxSignDirMission";
-            this.checkBoxSignDirMission.Size = new System.Drawing.Size(97, 23);
-            this.checkBoxSignDirMission.TabIndex = 17;
-            this.checkBoxSignDirMission.Text = "Directeur";
-            this.checkBoxSignDirMission.UseVisualStyleBackColor = true;
+            this.checkBoxSignDGMission.AutoSize = true;
+            this.checkBoxSignDGMission.Location = new System.Drawing.Point(283, 74);
+            this.checkBoxSignDGMission.Name = "checkBoxSignDGMission";
+            this.checkBoxSignDGMission.Size = new System.Drawing.Size(55, 23);
+            this.checkBoxSignDGMission.TabIndex = 17;
+            this.checkBoxSignDGMission.Text = "DG";
+            this.checkBoxSignDGMission.UseVisualStyleBackColor = true;
+            this.checkBoxSignDGMission.CheckedChanged += new System.EventHandler(this.checkBoxSignDirMission_CheckedChanged);
             // 
             // checkBoxSignDarhMission
             // 
@@ -455,6 +465,7 @@
             this.checkBoxSignDarhMission.TabIndex = 16;
             this.checkBoxSignDarhMission.Text = "DARH";
             this.checkBoxSignDarhMission.UseVisualStyleBackColor = true;
+            this.checkBoxSignDarhMission.CheckedChanged += new System.EventHandler(this.checkBoxSignDarhMission_CheckedChanged);
             // 
             // checkBoxSignDirecDepMission
             // 
@@ -465,6 +476,7 @@
             this.checkBoxSignDirecDepMission.TabIndex = 15;
             this.checkBoxSignDirecDepMission.Text = "Directeur de département de l\'agent";
             this.checkBoxSignDirecDepMission.UseVisualStyleBackColor = true;
+            this.checkBoxSignDirecDepMission.CheckedChanged += new System.EventHandler(this.checkBoxSignDirecDepMission_CheckedChanged);
             // 
             // checkBoxSignAgentSupMission
             // 
@@ -475,6 +487,7 @@
             this.checkBoxSignAgentSupMission.TabIndex = 8;
             this.checkBoxSignAgentSupMission.Text = "Supérieur hiérarchique";
             this.checkBoxSignAgentSupMission.UseVisualStyleBackColor = true;
+            this.checkBoxSignAgentSupMission.CheckedChanged += new System.EventHandler(this.checkBoxSignAgentSupMission_CheckedChanged);
             // 
             // checkBoxSignAgentMission
             // 
@@ -576,7 +589,7 @@
             // 
             // TxtCodeMission
             // 
-            this.TxtCodeMission.Location = new System.Drawing.Point(1001, 33);
+            this.TxtCodeMission.Location = new System.Drawing.Point(990, 33);
             this.TxtCodeMission.Name = "TxtCodeMission";
             this.TxtCodeMission.Size = new System.Drawing.Size(165, 27);
             this.TxtCodeMission.TabIndex = 26;
@@ -595,6 +608,38 @@
             this.BtnPrimeMission.TabIndex = 27;
             this.BtnPrimeMission.Text = "Cliquez ici pour calculer la prime de mission";
             this.BtnPrimeMission.UseVisualStyleBackColor = false;
+            // 
+            // BtnRegisterMission
+            // 
+            this.BtnRegisterMission.BackColor = System.Drawing.Color.White;
+            this.BtnRegisterMission.ForeColor = System.Drawing.Color.YellowGreen;
+            this.BtnRegisterMission.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.BtnRegisterMission.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(117)))), ((int)(((byte)(55)))));
+            this.BtnRegisterMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnRegisterMission.IconSize = 20;
+            this.BtnRegisterMission.Location = new System.Drawing.Point(28, -2);
+            this.BtnRegisterMission.Name = "BtnRegisterMission";
+            this.BtnRegisterMission.Size = new System.Drawing.Size(31, 27);
+            this.BtnRegisterMission.TabIndex = 6;
+            this.BtnRegisterMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnRegisterMission.UseVisualStyleBackColor = false;
+            this.BtnRegisterMission.Click += new System.EventHandler(this.BtnRegisterMission_Click);
+            // 
+            // BtnRefreshMission
+            // 
+            this.BtnRefreshMission.BackColor = System.Drawing.Color.White;
+            this.BtnRefreshMission.ForeColor = System.Drawing.Color.YellowGreen;
+            this.BtnRefreshMission.IconChar = FontAwesome.Sharp.IconChar.C;
+            this.BtnRefreshMission.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(154)))), ((int)(((byte)(166)))));
+            this.BtnRefreshMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnRefreshMission.IconSize = 20;
+            this.BtnRefreshMission.Location = new System.Drawing.Point(120, -2);
+            this.BtnRefreshMission.Name = "BtnRefreshMission";
+            this.BtnRefreshMission.Size = new System.Drawing.Size(31, 27);
+            this.BtnRefreshMission.TabIndex = 7;
+            this.BtnRefreshMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnRefreshMission.UseVisualStyleBackColor = false;
+            this.BtnRefreshMission.Click += new System.EventHandler(this.BtnRefreshMission_Click);
             // 
             // FormCreateDemandeMission
             // 
@@ -649,7 +694,7 @@
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton BtnImportDocMission;
         private FontAwesome.Sharp.IconButton BtnPrinterCarMission;
-        private FontAwesome.Sharp.IconButton IbtnRegisterMission;
+        private FontAwesome.Sharp.IconButton IbtnRegisterAndCloseMission;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -683,11 +728,11 @@
         private System.Windows.Forms.ComboBox cbxConducteurMission;
         public System.Windows.Forms.Panel panMoyenDeplacement;
         public System.Windows.Forms.Panel panSignture;
-        public System.Windows.Forms.CheckBox checkBoxSignDirMission;
+        public System.Windows.Forms.CheckBox checkBoxSignDGMission;
         public System.Windows.Forms.CheckBox checkBoxSignDarhMission;
         public System.Windows.Forms.CheckBox checkBoxSignDirecDepMission;
         public System.Windows.Forms.CheckBox checkBoxSignAgentSupMission;
-        public System.Windows.Forms.CheckBox checkBoxAnnulDirMission;
+        public System.Windows.Forms.CheckBox checkBoxAnnulDGMission;
         public System.Windows.Forms.CheckBox checkBoxAnnulDarhMission;
         public System.Windows.Forms.CheckBox checkBoxAnnulDirDepMission;
         public System.Windows.Forms.CheckBox checkBoxAnnulAgentSupMission;
@@ -695,5 +740,7 @@
         public System.Windows.Forms.Panel panSMG;
         private System.Windows.Forms.TextBox TxtCodeMission;
         private FontAwesome.Sharp.IconButton BtnPrimeMission;
+        private FontAwesome.Sharp.IconButton BtnRegisterMission;
+        private FontAwesome.Sharp.IconButton BtnRefreshMission;
     }
 }

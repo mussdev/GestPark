@@ -170,11 +170,11 @@ namespace GestPark
         {
             if (string.IsNullOrEmpty(TxtLieuMvt.Text))
             {
-                MessageBox.Show("Saisir le lieu svp !!!", "Fleet: Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Saisir le lieu svp !!!", "Fleet: Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if(string.IsNullOrEmpty(CbxDemandeurMvt.Text))
             {
-                MessageBox.Show("Sélectionner le demandeur de véhicule svp !!!", "Fleet: Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Sélectionner le demandeur de véhicule svp !!!", "Fleet: Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }else
             {
                 string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
@@ -190,7 +190,7 @@ namespace GestPark
 
                             using (var Cmd = Conn.cn.CreateCommand())
                             {
-                                MessageBox.Show("Id véhicule : " + IdCarMvt + " Id cond : " + IdConducteurMvt + " Id de la validation : " + IdValidation());
+                                //MessageBox.Show("Id véhicule : " + IdCarMvt + " Id cond : " + IdConducteurMvt + " Id de la validation : " + IdValidation());
                                 Cmd.CommandText = "INSERT INTO [dbo].[MOUVEMENTS] (ID_PERS,ID_VALMVT,ID_COND,ID_VEHICULE,CODE_MVTS,STATUT_MVTS,LIEU_MVTS,NOTE_MVTS,DATEDEPARTSOUHAITE_MVTS,DATECREATE_MVTS,TIMESTART_MVTS,TIMEEND_MVTS,DATEEXECUTION,DATERETOURPROBABLE,DATERETOURREEL) VALUES (@ID_PERS,@ID_VALMVT,@ID_COND,@ID_VEHICULE,@CODE_MVTS,@STATUT_MVTS,@LIEU_MVTS,@NOTE_MVTS,@DATEDEPARTSOUHAITE_MVTS,GETDATE(),@TIMESTART_MVTS,@TIMEEND_MVTS,@DATEEXECUTION,@DATERETOURPROBABLE,@DATERETOURREEL)";
 
                                 if (IdPersDema.HasValue)

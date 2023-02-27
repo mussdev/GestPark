@@ -42,7 +42,7 @@ namespace GestPark
                 {
                     if (Conn.IsConnection)
                     {
-                        sqlCmd = new SqlCommand("SELECT * FROM View_Pers_Serv_Dir", Conn.cn);
+                        sqlCmd = new SqlCommand("SELECT * FROM PERSONNELS AS PERS INNER JOIN SERVICESENT AS SERV ON PERS.ID_SERV=SERV.ID_SERV INNER JOIN DIRECTION AS DIREC ON SERV.ID_DIR=DIREC.ID_DIR", Conn.cn);
                         //sqlCmd.Parameters.Add("@NOM_PERS", string.Format("%{0}%", textBxSearchPers.Text));
                         //sqlCmd.Parameters.Add("@PRENOM_PERS", string.Format("%{0}%", textBxSearchPers.Text));
                         sqlAda = new SqlDataAdapter(sqlCmd);
@@ -83,6 +83,7 @@ namespace GestPark
             ModifierPers.TxtDirPersMod.Text = this.DgvPerson.CurrentRow.Cells[15].Value?.ToString();
             ModifierPers.DtKDateCreateMod.Text = this.DgvPerson.CurrentRow.Cells[16].Value?.ToString();
             ModifierPers.RtxtNotePersMod.Text = this.DgvPerson.CurrentRow.Cells[17].Value?.ToString();
+            ModifierPers.TxtCategPersMod.Text = this.DgvPerson.CurrentRow.Cells[18].Value?.ToString();
 
             ModifierPers.ShowDialog();
         }

@@ -35,6 +35,10 @@
             this.MenuAlertVidange = new System.Windows.Forms.ToolStripMenuItem();
             this.SubMenuWriteProjectMIssion = new System.Windows.Forms.ToolStripMenuItem();
             this.inventaireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paramètresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.périodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuSubCat = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuSubType = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PanPrincipalMission = new System.Windows.Forms.Panel();
             this.panPrincipalMenu = new System.Windows.Forms.Panel();
@@ -50,11 +54,12 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.accueilToolStripMenuItem,
             this.MenuAlertVidange,
-            this.inventaireToolStripMenuItem});
+            this.inventaireToolStripMenuItem,
+            this.paramètresToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1228, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1228, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,7 +68,7 @@
             this.accueilToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CloseFan});
             this.accueilToolStripMenuItem.Name = "accueilToolStripMenuItem";
-            this.accueilToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
+            this.accueilToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.accueilToolStripMenuItem.Text = "Accueil";
             // 
             // CloseFan
@@ -78,7 +83,7 @@
             this.MenuAlertVidange.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SubMenuWriteProjectMIssion});
             this.MenuAlertVidange.Name = "MenuAlertVidange";
-            this.MenuAlertVidange.Size = new System.Drawing.Size(75, 26);
+            this.MenuAlertVidange.Size = new System.Drawing.Size(75, 24);
             this.MenuAlertVidange.Text = "Mission";
             // 
             // SubMenuWriteProjectMIssion
@@ -92,8 +97,38 @@
             // inventaireToolStripMenuItem
             // 
             this.inventaireToolStripMenuItem.Name = "inventaireToolStripMenuItem";
-            this.inventaireToolStripMenuItem.Size = new System.Drawing.Size(90, 26);
+            this.inventaireToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.inventaireToolStripMenuItem.Text = "Inventaire";
+            // 
+            // paramètresToolStripMenuItem
+            // 
+            this.paramètresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.périodeToolStripMenuItem,
+            this.MenuSubCat,
+            this.MenuSubType});
+            this.paramètresToolStripMenuItem.Name = "paramètresToolStripMenuItem";
+            this.paramètresToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
+            this.paramètresToolStripMenuItem.Text = "Paramètres";
+            // 
+            // périodeToolStripMenuItem
+            // 
+            this.périodeToolStripMenuItem.Name = "périodeToolStripMenuItem";
+            this.périodeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.périodeToolStripMenuItem.Text = "Période";
+            // 
+            // MenuSubCat
+            // 
+            this.MenuSubCat.Name = "MenuSubCat";
+            this.MenuSubCat.Size = new System.Drawing.Size(224, 26);
+            this.MenuSubCat.Text = "Catégorie";
+            this.MenuSubCat.Click += new System.EventHandler(this.MenuSubCat_Click);
+            // 
+            // MenuSubType
+            // 
+            this.MenuSubType.Name = "MenuSubType";
+            this.MenuSubType.Size = new System.Drawing.Size(224, 26);
+            this.MenuSubType.Text = "Type";
+            this.MenuSubType.Click += new System.EventHandler(this.MenuSubType_Click);
             // 
             // panel2
             // 
@@ -107,9 +142,9 @@
             // 
             this.PanPrincipalMission.Controls.Add(this.panPrincipalMenu);
             this.PanPrincipalMission.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanPrincipalMission.Location = new System.Drawing.Point(0, 30);
+            this.PanPrincipalMission.Location = new System.Drawing.Point(0, 28);
             this.PanPrincipalMission.Name = "PanPrincipalMission";
-            this.PanPrincipalMission.Size = new System.Drawing.Size(1228, 664);
+            this.PanPrincipalMission.Size = new System.Drawing.Size(1228, 666);
             this.PanPrincipalMission.TabIndex = 6;
             // 
             // panPrincipalMenu
@@ -119,7 +154,7 @@
             this.panPrincipalMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panPrincipalMenu.Location = new System.Drawing.Point(0, 0);
             this.panPrincipalMenu.Name = "panPrincipalMenu";
-            this.panPrincipalMenu.Size = new System.Drawing.Size(1228, 664);
+            this.panPrincipalMenu.Size = new System.Drawing.Size(1228, 666);
             this.panPrincipalMenu.TabIndex = 1;
             // 
             // MainMission
@@ -156,5 +191,9 @@
         private System.Windows.Forms.Panel PanPrincipalMission;
         private System.Windows.Forms.ToolStripMenuItem inventaireToolStripMenuItem;
         private System.Windows.Forms.Panel panPrincipalMenu;
+        private System.Windows.Forms.ToolStripMenuItem paramètresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem périodeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MenuSubCat;
+        private System.Windows.Forms.ToolStripMenuItem MenuSubType;
     }
 }

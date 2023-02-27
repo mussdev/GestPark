@@ -37,5 +37,15 @@ namespace GestPark.Vues.Mains
         {
             DisplayFormOfMenu(new FormMainMission());
         }
+
+        private void MenuSubType_Click(object sender, EventArgs e)
+        {
+            DisplayFormOfMenu(new FormTypeMission());
+        }
+
+        private void MenuSubCat_Click(object sender, EventArgs e)
+        {
+            DisplayFormOfMenu(new FormCategorieMission());
+        }
     }
 }

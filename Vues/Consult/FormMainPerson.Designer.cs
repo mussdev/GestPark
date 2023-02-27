@@ -32,28 +32,28 @@ namespace GestPark
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainPerson));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainPerson));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnImportPerson = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,6 +61,8 @@ namespace GestPark
             this.iconBtnCloseFormPers = new FontAwesome.Sharp.IconButton();
             this.iconBtnCreatePers = new FontAwesome.Sharp.IconButton();
             this.panelSearchPers = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtFilterPers = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.iconBtnSearchPers = new FontAwesome.Sharp.IconButton();
@@ -92,10 +94,9 @@ namespace GestPark
             this.DESCRIPTION_DIR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATE_FOUR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOTE_PERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CATEGORIE_PERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.USERCREATE_PERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATECREATE_PERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtFilterPers = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panelSearchPers.SuspendLayout();
             this.panelDisplayPers.SuspendLayout();
@@ -227,6 +228,27 @@ namespace GestPark
             this.panelSearchPers.Size = new System.Drawing.Size(1204, 165);
             this.panelSearchPers.TabIndex = 1;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Maroon;
+            this.label4.Location = new System.Drawing.Point(736, 128);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 19);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Filter";
+            // 
+            // txtFilterPers
+            // 
+            this.txtFilterPers.BackColor = System.Drawing.Color.White;
+            this.txtFilterPers.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFilterPers.Location = new System.Drawing.Point(796, 120);
+            this.txtFilterPers.Name = "txtFilterPers";
+            this.txtFilterPers.Size = new System.Drawing.Size(244, 27);
+            this.txtFilterPers.TabIndex = 6;
+            this.txtFilterPers.TextChanged += new System.EventHandler(this.txtFilterPers_TextChanged);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -318,17 +340,18 @@ namespace GestPark
             this.DESCRIPTION_DIR,
             this.DATE_FOUR,
             this.NOTE_PERS,
+            this.CATEGORIE_PERS,
             this.USERCREATE_PERS,
             this.DATECREATE_PERS});
             this.DgvPerson.ContextMenuStrip = this.CntxtMenuPerson;
-            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle66.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle66.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle66.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(255)))), ((int)(((byte)(179)))));
-            dataGridViewCellStyle66.SelectionForeColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle66.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvPerson.DefaultCellStyle = dataGridViewCellStyle66;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(255)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvPerson.DefaultCellStyle = dataGridViewCellStyle23;
             this.DgvPerson.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvPerson.GridColor = System.Drawing.Color.White;
             this.DgvPerson.Location = new System.Drawing.Point(0, 21);
@@ -411,8 +434,8 @@ namespace GestPark
             // CODE_PERS
             // 
             this.CODE_PERS.DataPropertyName = "CODE_PERS";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.CODE_PERS.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.CODE_PERS.DefaultCellStyle = dataGridViewCellStyle3;
             this.CODE_PERS.HeaderText = "Code";
             this.CODE_PERS.MinimumWidth = 6;
             this.CODE_PERS.Name = "CODE_PERS";
@@ -422,8 +445,8 @@ namespace GestPark
             // NOM_PERS
             // 
             this.NOM_PERS.DataPropertyName = "NOM_PERS";
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.NOM_PERS.DefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.NOM_PERS.DefaultCellStyle = dataGridViewCellStyle4;
             this.NOM_PERS.HeaderText = "Nom";
             this.NOM_PERS.MinimumWidth = 6;
             this.NOM_PERS.Name = "NOM_PERS";
@@ -432,8 +455,8 @@ namespace GestPark
             // PRENOM_PERS
             // 
             this.PRENOM_PERS.DataPropertyName = "PRENOM_PERS";
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.PRENOM_PERS.DefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.PRENOM_PERS.DefaultCellStyle = dataGridViewCellStyle5;
             this.PRENOM_PERS.HeaderText = "Prénoms";
             this.PRENOM_PERS.MinimumWidth = 6;
             this.PRENOM_PERS.Name = "PRENOM_PERS";
@@ -442,8 +465,8 @@ namespace GestPark
             // DATENAISS_PERS
             // 
             this.DATENAISS_PERS.DataPropertyName = "DATENAISS_PERS";
-            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DATENAISS_PERS.DefaultCellStyle = dataGridViewCellStyle49;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DATENAISS_PERS.DefaultCellStyle = dataGridViewCellStyle6;
             this.DATENAISS_PERS.HeaderText = "Date naiss.";
             this.DATENAISS_PERS.MinimumWidth = 6;
             this.DATENAISS_PERS.Name = "DATENAISS_PERS";
@@ -452,8 +475,8 @@ namespace GestPark
             // LIEUNAISS_PERS
             // 
             this.LIEUNAISS_PERS.DataPropertyName = "LIEUNAISS_PERS";
-            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.LIEUNAISS_PERS.DefaultCellStyle = dataGridViewCellStyle50;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.LIEUNAISS_PERS.DefaultCellStyle = dataGridViewCellStyle7;
             this.LIEUNAISS_PERS.HeaderText = "Lieu naiss.";
             this.LIEUNAISS_PERS.MinimumWidth = 6;
             this.LIEUNAISS_PERS.Name = "LIEUNAISS_PERS";
@@ -462,8 +485,8 @@ namespace GestPark
             // TEL_PERS
             // 
             this.TEL_PERS.DataPropertyName = "TEL_PERS";
-            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.TEL_PERS.DefaultCellStyle = dataGridViewCellStyle51;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TEL_PERS.DefaultCellStyle = dataGridViewCellStyle8;
             this.TEL_PERS.HeaderText = "Tél";
             this.TEL_PERS.MinimumWidth = 6;
             this.TEL_PERS.Name = "TEL_PERS";
@@ -472,8 +495,8 @@ namespace GestPark
             // NUMPERMIS_PERS
             // 
             this.NUMPERMIS_PERS.DataPropertyName = "NUMPERMIS_PERS";
-            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.NUMPERMIS_PERS.DefaultCellStyle = dataGridViewCellStyle52;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.NUMPERMIS_PERS.DefaultCellStyle = dataGridViewCellStyle9;
             this.NUMPERMIS_PERS.HeaderText = "N° Permis";
             this.NUMPERMIS_PERS.MinimumWidth = 6;
             this.NUMPERMIS_PERS.Name = "NUMPERMIS_PERS";
@@ -482,8 +505,8 @@ namespace GestPark
             // TYPEPIECE_PERS
             // 
             this.TYPEPIECE_PERS.DataPropertyName = "TYPEPIECE_PERS";
-            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.TYPEPIECE_PERS.DefaultCellStyle = dataGridViewCellStyle53;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.TYPEPIECE_PERS.DefaultCellStyle = dataGridViewCellStyle10;
             this.TYPEPIECE_PERS.HeaderText = "Type pièce";
             this.TYPEPIECE_PERS.MinimumWidth = 6;
             this.TYPEPIECE_PERS.Name = "TYPEPIECE_PERS";
@@ -492,8 +515,8 @@ namespace GestPark
             // NUMPIECEIDENT_PERS
             // 
             this.NUMPIECEIDENT_PERS.DataPropertyName = "NUMPIECEIDENT_PERS";
-            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.NUMPIECEIDENT_PERS.DefaultCellStyle = dataGridViewCellStyle54;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.NUMPIECEIDENT_PERS.DefaultCellStyle = dataGridViewCellStyle11;
             this.NUMPIECEIDENT_PERS.HeaderText = "N° pièce";
             this.NUMPIECEIDENT_PERS.MinimumWidth = 6;
             this.NUMPIECEIDENT_PERS.Name = "NUMPIECEIDENT_PERS";
@@ -502,8 +525,8 @@ namespace GestPark
             // FONCTION_PERS
             // 
             this.FONCTION_PERS.DataPropertyName = "FONCTION_PERS";
-            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.FONCTION_PERS.DefaultCellStyle = dataGridViewCellStyle55;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.FONCTION_PERS.DefaultCellStyle = dataGridViewCellStyle12;
             this.FONCTION_PERS.HeaderText = "Fonction";
             this.FONCTION_PERS.MinimumWidth = 6;
             this.FONCTION_PERS.Name = "FONCTION_PERS";
@@ -512,8 +535,8 @@ namespace GestPark
             // PAYS_PERS
             // 
             this.PAYS_PERS.DataPropertyName = "PAYS_PERS";
-            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.PAYS_PERS.DefaultCellStyle = dataGridViewCellStyle56;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.PAYS_PERS.DefaultCellStyle = dataGridViewCellStyle13;
             this.PAYS_PERS.HeaderText = "Pays";
             this.PAYS_PERS.MinimumWidth = 6;
             this.PAYS_PERS.Name = "PAYS_PERS";
@@ -522,8 +545,8 @@ namespace GestPark
             // VILLE_PERS
             // 
             this.VILLE_PERS.DataPropertyName = "VILLE_PERS";
-            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.VILLE_PERS.DefaultCellStyle = dataGridViewCellStyle57;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.VILLE_PERS.DefaultCellStyle = dataGridViewCellStyle14;
             this.VILLE_PERS.HeaderText = "Ville";
             this.VILLE_PERS.MinimumWidth = 6;
             this.VILLE_PERS.Name = "VILLE_PERS";
@@ -532,8 +555,8 @@ namespace GestPark
             // ADRESSE_PERS
             // 
             this.ADRESSE_PERS.DataPropertyName = "ADRESSE_PERS";
-            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.ADRESSE_PERS.DefaultCellStyle = dataGridViewCellStyle58;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.ADRESSE_PERS.DefaultCellStyle = dataGridViewCellStyle15;
             this.ADRESSE_PERS.HeaderText = "Adresse";
             this.ADRESSE_PERS.MinimumWidth = 6;
             this.ADRESSE_PERS.Name = "ADRESSE_PERS";
@@ -542,8 +565,8 @@ namespace GestPark
             // CODEPOSTAL_PERS
             // 
             this.CODEPOSTAL_PERS.DataPropertyName = "CODEPOSTAL_PERS";
-            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.CODEPOSTAL_PERS.DefaultCellStyle = dataGridViewCellStyle59;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.CODEPOSTAL_PERS.DefaultCellStyle = dataGridViewCellStyle16;
             this.CODEPOSTAL_PERS.HeaderText = "Code Post.";
             this.CODEPOSTAL_PERS.MinimumWidth = 6;
             this.CODEPOSTAL_PERS.Name = "CODEPOSTAL_PERS";
@@ -552,8 +575,8 @@ namespace GestPark
             // DESCRIPTION_SERV
             // 
             this.DESCRIPTION_SERV.DataPropertyName = "DESCRIPTION_SERV";
-            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.DESCRIPTION_SERV.DefaultCellStyle = dataGridViewCellStyle60;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.DESCRIPTION_SERV.DefaultCellStyle = dataGridViewCellStyle17;
             this.DESCRIPTION_SERV.HeaderText = "Service";
             this.DESCRIPTION_SERV.MinimumWidth = 6;
             this.DESCRIPTION_SERV.Name = "DESCRIPTION_SERV";
@@ -563,8 +586,8 @@ namespace GestPark
             // DESCRIPTION_DIR
             // 
             this.DESCRIPTION_DIR.DataPropertyName = "DESCRIPTION_DIR";
-            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.DESCRIPTION_DIR.DefaultCellStyle = dataGridViewCellStyle61;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.DESCRIPTION_DIR.DefaultCellStyle = dataGridViewCellStyle18;
             this.DESCRIPTION_DIR.HeaderText = "Direction";
             this.DESCRIPTION_DIR.MinimumWidth = 6;
             this.DESCRIPTION_DIR.Name = "DESCRIPTION_DIR";
@@ -574,8 +597,8 @@ namespace GestPark
             // DATE_FOUR
             // 
             this.DATE_FOUR.DataPropertyName = "DATE_FOUR";
-            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DATE_FOUR.DefaultCellStyle = dataGridViewCellStyle62;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DATE_FOUR.DefaultCellStyle = dataGridViewCellStyle19;
             this.DATE_FOUR.HeaderText = "Date";
             this.DATE_FOUR.MinimumWidth = 6;
             this.DATE_FOUR.Name = "DATE_FOUR";
@@ -584,18 +607,27 @@ namespace GestPark
             // NOTE_PERS
             // 
             this.NOTE_PERS.DataPropertyName = "NOTE_PERS";
-            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.NOTE_PERS.DefaultCellStyle = dataGridViewCellStyle63;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.NOTE_PERS.DefaultCellStyle = dataGridViewCellStyle20;
             this.NOTE_PERS.HeaderText = "Note";
             this.NOTE_PERS.MinimumWidth = 6;
             this.NOTE_PERS.Name = "NOTE_PERS";
             this.NOTE_PERS.Width = 200;
             // 
+            // CATEGORIE_PERS
+            // 
+            this.CATEGORIE_PERS.DataPropertyName = "CATEGORIE_PERS";
+            this.CATEGORIE_PERS.HeaderText = "Catégorie";
+            this.CATEGORIE_PERS.MinimumWidth = 6;
+            this.CATEGORIE_PERS.Name = "CATEGORIE_PERS";
+            this.CATEGORIE_PERS.ReadOnly = true;
+            this.CATEGORIE_PERS.Width = 150;
+            // 
             // USERCREATE_PERS
             // 
             this.USERCREATE_PERS.DataPropertyName = "USERCREATE_PERS";
-            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.USERCREATE_PERS.DefaultCellStyle = dataGridViewCellStyle64;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.USERCREATE_PERS.DefaultCellStyle = dataGridViewCellStyle21;
             this.USERCREATE_PERS.HeaderText = "Créer par";
             this.USERCREATE_PERS.MinimumWidth = 6;
             this.USERCREATE_PERS.Name = "USERCREATE_PERS";
@@ -604,33 +636,12 @@ namespace GestPark
             // DATECREATE_PERS
             // 
             this.DATECREATE_PERS.DataPropertyName = "DATECREATE_PERS";
-            dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DATECREATE_PERS.DefaultCellStyle = dataGridViewCellStyle65;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DATECREATE_PERS.DefaultCellStyle = dataGridViewCellStyle22;
             this.DATECREATE_PERS.HeaderText = "Créer le";
             this.DATECREATE_PERS.MinimumWidth = 6;
             this.DATECREATE_PERS.Name = "DATECREATE_PERS";
             this.DATECREATE_PERS.Width = 125;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Maroon;
-            this.label4.Location = new System.Drawing.Point(736, 128);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 19);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Filter";
-            // 
-            // txtFilterPers
-            // 
-            this.txtFilterPers.BackColor = System.Drawing.Color.White;
-            this.txtFilterPers.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilterPers.Location = new System.Drawing.Point(796, 120);
-            this.txtFilterPers.Name = "txtFilterPers";
-            this.txtFilterPers.Size = new System.Drawing.Size(244, 27);
-            this.txtFilterPers.TabIndex = 6;
-            this.txtFilterPers.TextChanged += new System.EventHandler(this.txtFilterPers_TextChanged);
             // 
             // FormMainPerson
             // 
@@ -680,6 +691,8 @@ namespace GestPark
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btnImportPerson;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtFilterPers;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODE_PERS;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOM_PERS;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRENOM_PERS;
@@ -698,9 +711,8 @@ namespace GestPark
         private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_DIR;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATE_FOUR;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOTE_PERS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CATEGORIE_PERS;
         private System.Windows.Forms.DataGridViewTextBoxColumn USERCREATE_PERS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATECREATE_PERS;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtFilterPers;
     }
 }

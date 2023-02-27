@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMission));
             this.panelTitleFormMouvt = new System.Windows.Forms.Panel();
+            this.BtnMissionGroupe = new FontAwesome.Sharp.IconButton();
             this.btnImportMvt = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.IbtnExportMvt = new FontAwesome.Sharp.IconButton();
@@ -52,19 +56,34 @@
             this.dateMvtTo = new System.Windows.Forms.DateTimePicker();
             this.dateMvtFrom = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.IbtnSearchMvt = new FontAwesome.Sharp.IconButton();
+            this.BtnSearchMiss = new FontAwesome.Sharp.IconButton();
             this.TbxSearchMvt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TotalMvts = new System.Windows.Forms.Label();
             this.dgvMission = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Demandeur = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_MISS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CODE_MISS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OBJET_MISS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCRIPTION_COND = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCRIPTION_PERS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESTINATION_MISS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IMMATRICULATION_VEHICULE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATE_DEBUT_MISS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATE_FIN_MISS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AUTRE_MOYEN_DEPLAC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MOYEN_DEPLA_AVION_MISS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.MOYEN_DEPLA_VEHI_SOC_MISS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.MOYEN_DEPLA_VEHI_PERS_MISS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SIGN_DEMANDEUR_MISS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.SIGN_CHEF_SERV_MISS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.SIGN_DIR_MISS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ANNULE_SUP_HIERACHIQ = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ANNULE_DIR_DEPART = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.SIGN_DARH_MISS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ANNULE_DARH = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.SIGN_DG_MISS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ANNULE_DG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +98,7 @@
             // 
             this.panelTitleFormMouvt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.panelTitleFormMouvt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelTitleFormMouvt.Controls.Add(this.BtnMissionGroupe);
             this.panelTitleFormMouvt.Controls.Add(this.btnImportMvt);
             this.panelTitleFormMouvt.Controls.Add(this.label1);
             this.panelTitleFormMouvt.Controls.Add(this.IbtnExportMvt);
@@ -90,6 +110,23 @@
             this.panelTitleFormMouvt.Size = new System.Drawing.Size(1374, 27);
             this.panelTitleFormMouvt.TabIndex = 1;
             // 
+            // BtnMissionGroupe
+            // 
+            this.BtnMissionGroupe.BackColor = System.Drawing.Color.White;
+            this.BtnMissionGroupe.ForeColor = System.Drawing.Color.Black;
+            this.BtnMissionGroupe.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
+            this.BtnMissionGroupe.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(222)))), ((int)(((byte)(132)))));
+            this.BtnMissionGroupe.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnMissionGroupe.IconSize = 20;
+            this.BtnMissionGroupe.Location = new System.Drawing.Point(142, -2);
+            this.BtnMissionGroupe.Name = "BtnMissionGroupe";
+            this.BtnMissionGroupe.Size = new System.Drawing.Size(154, 27);
+            this.BtnMissionGroupe.TabIndex = 5;
+            this.BtnMissionGroupe.Text = "Mission groupée";
+            this.BtnMissionGroupe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnMissionGroupe.UseVisualStyleBackColor = false;
+            this.BtnMissionGroupe.Click += new System.EventHandler(this.BtnMissionGroupe_Click);
+            // 
             // btnImportMvt
             // 
             this.btnImportMvt.BackColor = System.Drawing.Color.White;
@@ -98,9 +135,9 @@
             this.btnImportMvt.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(147)))), ((int)(((byte)(222)))));
             this.btnImportMvt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnImportMvt.IconSize = 20;
-            this.btnImportMvt.Location = new System.Drawing.Point(218, -1);
+            this.btnImportMvt.Location = new System.Drawing.Point(415, -2);
             this.btnImportMvt.Name = "btnImportMvt";
-            this.btnImportMvt.Size = new System.Drawing.Size(106, 26);
+            this.btnImportMvt.Size = new System.Drawing.Size(106, 27);
             this.btnImportMvt.TabIndex = 4;
             this.btnImportMvt.Text = "Importer";
             this.btnImportMvt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -126,7 +163,7 @@
             this.IbtnExportMvt.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(13)))));
             this.IbtnExportMvt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IbtnExportMvt.IconSize = 20;
-            this.IbtnExportMvt.Location = new System.Drawing.Point(105, -2);
+            this.IbtnExportMvt.Location = new System.Drawing.Point(302, -2);
             this.IbtnExportMvt.Name = "IbtnExportMvt";
             this.IbtnExportMvt.Size = new System.Drawing.Size(107, 27);
             this.IbtnExportMvt.TabIndex = 2;
@@ -154,15 +191,15 @@
             // 
             this.IbtnRegisterMission.BackColor = System.Drawing.Color.White;
             this.IbtnRegisterMission.ForeColor = System.Drawing.Color.Black;
-            this.IbtnRegisterMission.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.IbtnRegisterMission.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
             this.IbtnRegisterMission.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(222)))), ((int)(((byte)(132)))));
             this.IbtnRegisterMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IbtnRegisterMission.IconSize = 20;
             this.IbtnRegisterMission.Location = new System.Drawing.Point(-2, -2);
             this.IbtnRegisterMission.Name = "IbtnRegisterMission";
-            this.IbtnRegisterMission.Size = new System.Drawing.Size(107, 27);
+            this.IbtnRegisterMission.Size = new System.Drawing.Size(138, 27);
             this.IbtnRegisterMission.TabIndex = 0;
-            this.IbtnRegisterMission.Text = "Saisir";
+            this.IbtnRegisterMission.Text = "Saisir mission";
             this.IbtnRegisterMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IbtnRegisterMission.UseVisualStyleBackColor = false;
             this.IbtnRegisterMission.Click += new System.EventHandler(this.IbtnRegisterMission_Click);
@@ -188,7 +225,7 @@
             this.PanelSearchMvt.Controls.Add(this.dateMvtTo);
             this.PanelSearchMvt.Controls.Add(this.dateMvtFrom);
             this.PanelSearchMvt.Controls.Add(this.label3);
-            this.PanelSearchMvt.Controls.Add(this.IbtnSearchMvt);
+            this.PanelSearchMvt.Controls.Add(this.BtnSearchMiss);
             this.PanelSearchMvt.Controls.Add(this.TbxSearchMvt);
             this.PanelSearchMvt.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSearchMvt.Location = new System.Drawing.Point(0, 27);
@@ -372,19 +409,20 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Fin";
             // 
-            // IbtnSearchMvt
+            // BtnSearchMiss
             // 
-            this.IbtnSearchMvt.BackColor = System.Drawing.Color.White;
-            this.IbtnSearchMvt.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.IbtnSearchMvt.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(222)))), ((int)(((byte)(132)))));
-            this.IbtnSearchMvt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IbtnSearchMvt.IconSize = 20;
-            this.IbtnSearchMvt.Location = new System.Drawing.Point(1221, 94);
-            this.IbtnSearchMvt.Name = "IbtnSearchMvt";
-            this.IbtnSearchMvt.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.IbtnSearchMvt.Size = new System.Drawing.Size(29, 24);
-            this.IbtnSearchMvt.TabIndex = 1;
-            this.IbtnSearchMvt.UseVisualStyleBackColor = false;
+            this.BtnSearchMiss.BackColor = System.Drawing.Color.White;
+            this.BtnSearchMiss.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.BtnSearchMiss.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(222)))), ((int)(((byte)(132)))));
+            this.BtnSearchMiss.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnSearchMiss.IconSize = 20;
+            this.BtnSearchMiss.Location = new System.Drawing.Point(1221, 94);
+            this.BtnSearchMiss.Name = "BtnSearchMiss";
+            this.BtnSearchMiss.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.BtnSearchMiss.Size = new System.Drawing.Size(29, 24);
+            this.BtnSearchMiss.TabIndex = 1;
+            this.BtnSearchMiss.UseVisualStyleBackColor = false;
+            this.BtnSearchMiss.Click += new System.EventHandler(this.BtnSearchMiss_Click);
             // 
             // TbxSearchMvt
             // 
@@ -419,84 +457,191 @@
             // 
             this.dgvMission.AllowUserToOrderColumns = true;
             this.dgvMission.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(255)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMission.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMission.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMission.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Demandeur,
-            this.Column4,
-            this.Column5,
-            this.Column6,
+            this.ID_MISS,
+            this.CODE_MISS,
+            this.OBJET_MISS,
+            this.DESCRIPTION_COND,
+            this.DESCRIPTION_PERS,
+            this.DESTINATION_MISS,
+            this.IMMATRICULATION_VEHICULE,
+            this.DATE_DEBUT_MISS,
+            this.DATE_FIN_MISS,
+            this.AUTRE_MOYEN_DEPLAC,
+            this.MOYEN_DEPLA_AVION_MISS,
+            this.MOYEN_DEPLA_VEHI_SOC_MISS,
+            this.MOYEN_DEPLA_VEHI_PERS_MISS,
             this.Column7,
+            this.SIGN_DEMANDEUR_MISS,
+            this.SIGN_CHEF_SERV_MISS,
+            this.SIGN_DIR_MISS,
+            this.ANNULE_SUP_HIERACHIQ,
+            this.ANNULE_DIR_DEPART,
+            this.SIGN_DARH_MISS,
+            this.ANNULE_DARH,
+            this.SIGN_DG_MISS,
+            this.ANNULE_DG,
             this.Column8,
             this.Column9,
             this.Column10,
             this.Column11});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(255)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMission.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMission.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMission.GridColor = System.Drawing.Color.White;
             this.dgvMission.Location = new System.Drawing.Point(0, 277);
             this.dgvMission.Name = "dgvMission";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(255)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMission.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMission.RowHeadersWidth = 51;
             this.dgvMission.RowTemplate.Height = 24;
             this.dgvMission.Size = new System.Drawing.Size(1374, 429);
             this.dgvMission.TabIndex = 4;
             // 
-            // Column1
+            // ID_MISS
             // 
-            this.Column1.HeaderText = "KeyMission";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            this.Column1.Width = 125;
+            this.ID_MISS.DataPropertyName = "ID_MISS";
+            this.ID_MISS.HeaderText = "KeyMission";
+            this.ID_MISS.MinimumWidth = 6;
+            this.ID_MISS.Name = "ID_MISS";
+            this.ID_MISS.ReadOnly = true;
+            this.ID_MISS.Visible = false;
+            this.ID_MISS.Width = 125;
             // 
-            // Column2
+            // CODE_MISS
             // 
-            this.Column2.HeaderText = "Description";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 300;
+            this.CODE_MISS.DataPropertyName = "CODE_MISS";
+            this.CODE_MISS.HeaderText = "Code";
+            this.CODE_MISS.MinimumWidth = 6;
+            this.CODE_MISS.Name = "CODE_MISS";
+            this.CODE_MISS.ReadOnly = true;
+            this.CODE_MISS.Width = 125;
             // 
-            // Column3
+            // OBJET_MISS
             // 
-            this.Column3.HeaderText = "Lieu";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 200;
+            this.OBJET_MISS.DataPropertyName = "OBJET_MISS";
+            this.OBJET_MISS.HeaderText = "Objet de mission";
+            this.OBJET_MISS.MinimumWidth = 6;
+            this.OBJET_MISS.Name = "OBJET_MISS";
+            this.OBJET_MISS.ReadOnly = true;
+            this.OBJET_MISS.Width = 300;
             // 
-            // Demandeur
+            // DESCRIPTION_COND
             // 
-            this.Demandeur.HeaderText = "Demandeur";
-            this.Demandeur.MinimumWidth = 6;
-            this.Demandeur.Name = "Demandeur";
-            this.Demandeur.ReadOnly = true;
-            this.Demandeur.Width = 250;
+            this.DESCRIPTION_COND.DataPropertyName = "DESCRIPTION_COND";
+            this.DESCRIPTION_COND.HeaderText = "Conducteur";
+            this.DESCRIPTION_COND.MinimumWidth = 6;
+            this.DESCRIPTION_COND.Name = "DESCRIPTION_COND";
+            this.DESCRIPTION_COND.ReadOnly = true;
+            this.DESCRIPTION_COND.Width = 200;
             // 
-            // Column4
+            // DESCRIPTION_PERS
             // 
-            this.Column4.HeaderText = "Code";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
+            this.DESCRIPTION_PERS.DataPropertyName = "DESCRIPTION_PERS";
+            this.DESCRIPTION_PERS.HeaderText = "Demandeur";
+            this.DESCRIPTION_PERS.MinimumWidth = 6;
+            this.DESCRIPTION_PERS.Name = "DESCRIPTION_PERS";
+            this.DESCRIPTION_PERS.ReadOnly = true;
+            this.DESCRIPTION_PERS.Width = 250;
             // 
-            // Column5
+            // DESTINATION_MISS
             // 
-            this.Column5.HeaderText = "Date début mission";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 180;
+            this.DESTINATION_MISS.DataPropertyName = "DESTINATION_MISS";
+            this.DESTINATION_MISS.HeaderText = "Destination";
+            this.DESTINATION_MISS.MinimumWidth = 6;
+            this.DESTINATION_MISS.Name = "DESTINATION_MISS";
+            this.DESTINATION_MISS.ReadOnly = true;
+            this.DESTINATION_MISS.Width = 125;
             // 
-            // Column6
+            // IMMATRICULATION_VEHICULE
             // 
-            this.Column6.HeaderText = "Date fin mission";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 180;
+            this.IMMATRICULATION_VEHICULE.DataPropertyName = "IMMATRICULATION_VEHICULE";
+            this.IMMATRICULATION_VEHICULE.HeaderText = "Vehicule";
+            this.IMMATRICULATION_VEHICULE.MinimumWidth = 6;
+            this.IMMATRICULATION_VEHICULE.Name = "IMMATRICULATION_VEHICULE";
+            this.IMMATRICULATION_VEHICULE.ReadOnly = true;
+            this.IMMATRICULATION_VEHICULE.Width = 125;
+            // 
+            // DATE_DEBUT_MISS
+            // 
+            this.DATE_DEBUT_MISS.DataPropertyName = "DATE_DEBUT_MISS";
+            this.DATE_DEBUT_MISS.HeaderText = "Date début mission";
+            this.DATE_DEBUT_MISS.MinimumWidth = 6;
+            this.DATE_DEBUT_MISS.Name = "DATE_DEBUT_MISS";
+            this.DATE_DEBUT_MISS.ReadOnly = true;
+            this.DATE_DEBUT_MISS.Width = 180;
+            // 
+            // DATE_FIN_MISS
+            // 
+            this.DATE_FIN_MISS.DataPropertyName = "DATE_FIN_MISS";
+            this.DATE_FIN_MISS.HeaderText = "Date fin mission";
+            this.DATE_FIN_MISS.MinimumWidth = 6;
+            this.DATE_FIN_MISS.Name = "DATE_FIN_MISS";
+            this.DATE_FIN_MISS.ReadOnly = true;
+            this.DATE_FIN_MISS.Width = 180;
+            // 
+            // AUTRE_MOYEN_DEPLAC
+            // 
+            this.AUTRE_MOYEN_DEPLAC.DataPropertyName = "AUTRE_MOYEN_DEPLAC";
+            this.AUTRE_MOYEN_DEPLAC.HeaderText = "Autre moy. depla";
+            this.AUTRE_MOYEN_DEPLAC.MinimumWidth = 6;
+            this.AUTRE_MOYEN_DEPLAC.Name = "AUTRE_MOYEN_DEPLAC";
+            this.AUTRE_MOYEN_DEPLAC.ReadOnly = true;
+            this.AUTRE_MOYEN_DEPLAC.Width = 150;
+            // 
+            // MOYEN_DEPLA_AVION_MISS
+            // 
+            this.MOYEN_DEPLA_AVION_MISS.DataPropertyName = "MOYEN_DEPLA_AVION_MISS";
+            this.MOYEN_DEPLA_AVION_MISS.HeaderText = "Avion";
+            this.MOYEN_DEPLA_AVION_MISS.MinimumWidth = 6;
+            this.MOYEN_DEPLA_AVION_MISS.Name = "MOYEN_DEPLA_AVION_MISS";
+            this.MOYEN_DEPLA_AVION_MISS.ReadOnly = true;
+            this.MOYEN_DEPLA_AVION_MISS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MOYEN_DEPLA_AVION_MISS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.MOYEN_DEPLA_AVION_MISS.Width = 150;
+            // 
+            // MOYEN_DEPLA_VEHI_SOC_MISS
+            // 
+            this.MOYEN_DEPLA_VEHI_SOC_MISS.DataPropertyName = "MOYEN_DEPLA_VEHI_SOC_MISS";
+            this.MOYEN_DEPLA_VEHI_SOC_MISS.HeaderText = "Voiture de soc";
+            this.MOYEN_DEPLA_VEHI_SOC_MISS.MinimumWidth = 6;
+            this.MOYEN_DEPLA_VEHI_SOC_MISS.Name = "MOYEN_DEPLA_VEHI_SOC_MISS";
+            this.MOYEN_DEPLA_VEHI_SOC_MISS.ReadOnly = true;
+            this.MOYEN_DEPLA_VEHI_SOC_MISS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MOYEN_DEPLA_VEHI_SOC_MISS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.MOYEN_DEPLA_VEHI_SOC_MISS.Width = 150;
+            // 
+            // MOYEN_DEPLA_VEHI_PERS_MISS
+            // 
+            this.MOYEN_DEPLA_VEHI_PERS_MISS.DataPropertyName = "MOYEN_DEPLA_VEHI_PERS_MISS";
+            this.MOYEN_DEPLA_VEHI_PERS_MISS.HeaderText = "Voiture Pers";
+            this.MOYEN_DEPLA_VEHI_PERS_MISS.MinimumWidth = 6;
+            this.MOYEN_DEPLA_VEHI_PERS_MISS.Name = "MOYEN_DEPLA_VEHI_PERS_MISS";
+            this.MOYEN_DEPLA_VEHI_PERS_MISS.ReadOnly = true;
+            this.MOYEN_DEPLA_VEHI_PERS_MISS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MOYEN_DEPLA_VEHI_PERS_MISS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.MOYEN_DEPLA_VEHI_PERS_MISS.Width = 150;
             // 
             // Column7
             // 
@@ -505,6 +650,99 @@
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             this.Column7.Width = 200;
+            // 
+            // SIGN_DEMANDEUR_MISS
+            // 
+            this.SIGN_DEMANDEUR_MISS.DataPropertyName = "SIGN_DEMANDEUR_MISS";
+            this.SIGN_DEMANDEUR_MISS.HeaderText = "Sign. Agent";
+            this.SIGN_DEMANDEUR_MISS.MinimumWidth = 6;
+            this.SIGN_DEMANDEUR_MISS.Name = "SIGN_DEMANDEUR_MISS";
+            this.SIGN_DEMANDEUR_MISS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SIGN_DEMANDEUR_MISS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.SIGN_DEMANDEUR_MISS.Width = 150;
+            // 
+            // SIGN_CHEF_SERV_MISS
+            // 
+            this.SIGN_CHEF_SERV_MISS.DataPropertyName = "SIGN_CHEF_SERV_MISS";
+            this.SIGN_CHEF_SERV_MISS.HeaderText = "Sign. Sup Agent";
+            this.SIGN_CHEF_SERV_MISS.MinimumWidth = 6;
+            this.SIGN_CHEF_SERV_MISS.Name = "SIGN_CHEF_SERV_MISS";
+            this.SIGN_CHEF_SERV_MISS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SIGN_CHEF_SERV_MISS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.SIGN_CHEF_SERV_MISS.Width = 150;
+            // 
+            // SIGN_DIR_MISS
+            // 
+            this.SIGN_DIR_MISS.DataPropertyName = "SIGN_DIR_MISS";
+            this.SIGN_DIR_MISS.HeaderText = "Sign. Dir. Depart.";
+            this.SIGN_DIR_MISS.MinimumWidth = 6;
+            this.SIGN_DIR_MISS.Name = "SIGN_DIR_MISS";
+            this.SIGN_DIR_MISS.ReadOnly = true;
+            this.SIGN_DIR_MISS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SIGN_DIR_MISS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.SIGN_DIR_MISS.Width = 180;
+            // 
+            // ANNULE_SUP_HIERACHIQ
+            // 
+            this.ANNULE_SUP_HIERACHIQ.DataPropertyName = "ANNULE_SUP_HIERACHIQ";
+            this.ANNULE_SUP_HIERACHIQ.HeaderText = "Ann. Sup. Agent";
+            this.ANNULE_SUP_HIERACHIQ.MinimumWidth = 6;
+            this.ANNULE_SUP_HIERACHIQ.Name = "ANNULE_SUP_HIERACHIQ";
+            this.ANNULE_SUP_HIERACHIQ.ReadOnly = true;
+            this.ANNULE_SUP_HIERACHIQ.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ANNULE_SUP_HIERACHIQ.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ANNULE_SUP_HIERACHIQ.Width = 150;
+            // 
+            // ANNULE_DIR_DEPART
+            // 
+            this.ANNULE_DIR_DEPART.DataPropertyName = "ANNULE_DIR_DEPART";
+            this.ANNULE_DIR_DEPART.HeaderText = "Ann. Dir. Depart";
+            this.ANNULE_DIR_DEPART.MinimumWidth = 6;
+            this.ANNULE_DIR_DEPART.Name = "ANNULE_DIR_DEPART";
+            this.ANNULE_DIR_DEPART.ReadOnly = true;
+            this.ANNULE_DIR_DEPART.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ANNULE_DIR_DEPART.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ANNULE_DIR_DEPART.Width = 150;
+            // 
+            // SIGN_DARH_MISS
+            // 
+            this.SIGN_DARH_MISS.DataPropertyName = "SIGN_DARH_MISS";
+            this.SIGN_DARH_MISS.HeaderText = "Sign. DARH";
+            this.SIGN_DARH_MISS.MinimumWidth = 6;
+            this.SIGN_DARH_MISS.Name = "SIGN_DARH_MISS";
+            this.SIGN_DARH_MISS.ReadOnly = true;
+            this.SIGN_DARH_MISS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SIGN_DARH_MISS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.SIGN_DARH_MISS.Width = 150;
+            // 
+            // ANNULE_DARH
+            // 
+            this.ANNULE_DARH.DataPropertyName = "ANNULE_DARH";
+            this.ANNULE_DARH.HeaderText = "Annu. DARH";
+            this.ANNULE_DARH.MinimumWidth = 6;
+            this.ANNULE_DARH.Name = "ANNULE_DARH";
+            this.ANNULE_DARH.ReadOnly = true;
+            this.ANNULE_DARH.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ANNULE_DARH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ANNULE_DARH.Width = 150;
+            // 
+            // SIGN_DG_MISS
+            // 
+            this.SIGN_DG_MISS.DataPropertyName = "SIGN_DG_MISS";
+            this.SIGN_DG_MISS.HeaderText = "Sign. DG";
+            this.SIGN_DG_MISS.MinimumWidth = 6;
+            this.SIGN_DG_MISS.Name = "SIGN_DG_MISS";
+            this.SIGN_DG_MISS.ReadOnly = true;
+            this.SIGN_DG_MISS.Width = 150;
+            // 
+            // ANNULE_DG
+            // 
+            this.ANNULE_DG.DataPropertyName = "ANNULE_DG";
+            this.ANNULE_DG.HeaderText = "Annu. DG";
+            this.ANNULE_DG.MinimumWidth = 6;
+            this.ANNULE_DG.Name = "ANNULE_DG";
+            this.ANNULE_DG.ReadOnly = true;
+            this.ANNULE_DG.Width = 150;
             // 
             // Column8
             // 
@@ -590,19 +828,35 @@
         private System.Windows.Forms.DateTimePicker dateMvtTo;
         private System.Windows.Forms.DateTimePicker dateMvtFrom;
         private System.Windows.Forms.Label label3;
-        private FontAwesome.Sharp.IconButton IbtnSearchMvt;
+        private FontAwesome.Sharp.IconButton BtnSearchMiss;
         private System.Windows.Forms.TextBox TbxSearchMvt;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label TotalMvts;
         private System.Windows.Forms.DataGridView dgvMission;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Demandeur;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private FontAwesome.Sharp.IconButton BtnMissionGroupe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_MISS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CODE_MISS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OBJET_MISS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_COND;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPTION_PERS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DESTINATION_MISS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IMMATRICULATION_VEHICULE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATE_DEBUT_MISS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATE_FIN_MISS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AUTRE_MOYEN_DEPLAC;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn MOYEN_DEPLA_AVION_MISS;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn MOYEN_DEPLA_VEHI_SOC_MISS;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn MOYEN_DEPLA_VEHI_PERS_MISS;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn SIGN_DEMANDEUR_MISS;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn SIGN_CHEF_SERV_MISS;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn SIGN_DIR_MISS;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ANNULE_SUP_HIERACHIQ;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ANNULE_DIR_DEPART;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn SIGN_DARH_MISS;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ANNULE_DARH;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn SIGN_DG_MISS;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ANNULE_DG;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;

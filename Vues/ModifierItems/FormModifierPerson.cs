@@ -44,7 +44,7 @@ namespace GestPark
                             if (Conn.IsConnection)
                             {
                                 // Request to insert table car
-                                SqlCmd = new SqlCommand("UPDATE PERSONNELS SET ID_SERV=@ID_SERV, NOM_PERS=@NOM_PERS,PRENOM_PERS=@PRENOM_PERS,TEL_PERS=@TEL_PERS,DATENAISS_PERS=@DATENAISS_PERS,LIEUNAISS_PERS=@LIEUNAISS_PERS,NUMPERMIS_PERS=@NUMPERMIS_PERS,TYPEPIECE_PERS=@TYPEPIECE_PERS,NUMPIECEIDENT_PERS=@NUMPIECEIDENT_PERS,FONCTION_PERS=@FONCTION_PERS,NOTE_PERS=@NOTE_PERS,PAYS_PERS=@PAYS_PERS,ADRESSE_PERS=@ADRESSE_PERS,VILLE_PERS=@VILLE_PERS,CODEPOSTAL_PERS=@CODEPOSTAL_PERS,DATE_PERS=@DATE_PERS,DATEMODIFIER_PERS=GETDATE() WHERE CODE_PERS='" + TxtCodePersMod.Text + "' ", Conn.cn);
+                                SqlCmd = new SqlCommand("UPDATE PERSONNELS SET ID_SERV=@ID_SERV, NOM_PERS=@NOM_PERS,PRENOM_PERS=@PRENOM_PERS,TEL_PERS=@TEL_PERS,DATENAISS_PERS=@DATENAISS_PERS,LIEUNAISS_PERS=@LIEUNAISS_PERS,NUMPERMIS_PERS=@NUMPERMIS_PERS,TYPEPIECE_PERS=@TYPEPIECE_PERS,NUMPIECEIDENT_PERS=@NUMPIECEIDENT_PERS,FONCTION_PERS=@FONCTION_PERS,NOTE_PERS=@NOTE_PERS,PAYS_PERS=@PAYS_PERS,ADRESSE_PERS=@ADRESSE_PERS,VILLE_PERS=@VILLE_PERS,CODEPOSTAL_PERS=@CODEPOSTAL_PERS,DATE_PERS=@DATE_PERS,DATEMODIFIER_PERS=GETDATE(),CATEGORIE_PERS=@CATEGORIE_PERS WHERE CODE_PERS='" + TxtCodePersMod.Text + "' ", Conn.cn);
                                 SqlCmd.Parameters.AddWithValue("@ID_SERV", IdServMod);
                                 SqlCmd.Parameters.AddWithValue("@NOM_PERS", TxtNomPersMod.Text);
                                 SqlCmd.Parameters.AddWithValue("@PRENOM_PERS", TxtPrenPersMod.Text);
@@ -61,19 +61,20 @@ namespace GestPark
                                 SqlCmd.Parameters.AddWithValue("@VILLE_PERS", CbxTownPersMod.Text);
                                 SqlCmd.Parameters.AddWithValue("@CODEPOSTAL_PERS", TxtCodePostalPersMod.Text);
                                 SqlCmd.Parameters.AddWithValue("@DATE_PERS", DtKDateCreateMod.Value.ToString());
+                                SqlCmd.Parameters.AddWithValue("@CATEGORIE_PERS", TxtCategPersMod.Text);
                                 SqlCmd.ExecuteNonQuery();
-                                MessageBox.Show("Enregistré avec succès", "GestPark", MessageBoxButtons.OK);
+                                MessageBox.Show("Enregistré avec succès", "Fleet", MessageBoxButtons.OK,MessageBoxIcon.Information);
                                 this.Close();
                             }
                         }
                     }
                 }
                 else
-                    MessageBox.Show("Veillez saisir les informations obligatoires !", "GestParc: Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Veillez saisir les informations obligatoires !", "Fleet: Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "GestPark : Gestion des erreurs", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString(), "Fleet : Gestion des erreurs", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }          
         }
 

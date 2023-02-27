@@ -66,7 +66,7 @@ namespace GestPark
                                 // INSERT PROVIDER IN DATABASE
                                 string DescPerson = textBxNomPers.Text + " " + textBxPrenPers.Text;
                                 // Request to insert data in table personnels
-                                SqlCmd = new SqlCommand("INSERT INTO PERSONNELS (ID_SERV,CODE_PERS,NOM_PERS,PRENOM_PERS,DESCRIPTION_PERS,TEL_PERS,DATENAISS_PERS,LIEUNAISS_PERS,NUMPERMIS_PERS,TYPEPIECE_PERS,NUMPIECEIDENT_PERS,FONCTION_PERS,NOTE_PERS,PAYS_PERS,ADRESSE_PERS,VILLE_PERS,CODEPOSTAL_PERS,DATE_PERS,DATECREATE_PERS) VALUES (@ID_SERV,@CODE_PERS, @NOM_PERS, @PRENOM_PERS,@DESCRIPTION_PERS, @TEL_PERS, @DATENAISS_PERS, @LIEUNAISS_PERS, @NUMPERMIS_PERS, @TYPEPIECE_PERS, @NUMPIECEIDENT_PERS, @FONCTION_PERS, @NOTE_PERS, @PAYS_PERS, @ADRESSE_PERS, @VILLE_PERS, @CODEPOSTAL_PERS, @DATE_PERS, GETDATE()); ", Conn.cn);
+                                SqlCmd = new SqlCommand("INSERT INTO PERSONNELS (ID_SERV,CODE_PERS,NOM_PERS,PRENOM_PERS,DESCRIPTION_PERS,TEL_PERS,DATENAISS_PERS,LIEUNAISS_PERS,NUMPERMIS_PERS,TYPEPIECE_PERS,NUMPIECEIDENT_PERS,FONCTION_PERS,NOTE_PERS,PAYS_PERS,ADRESSE_PERS,VILLE_PERS,CODEPOSTAL_PERS,DATE_PERS,DATECREATE_PERS,CATEGORIE_PERS) VALUES (@ID_SERV,@CODE_PERS, @NOM_PERS, @PRENOM_PERS,@DESCRIPTION_PERS, @TEL_PERS, @DATENAISS_PERS, @LIEUNAISS_PERS, @NUMPERMIS_PERS, @TYPEPIECE_PERS, @NUMPIECEIDENT_PERS, @FONCTION_PERS, @NOTE_PERS, @PAYS_PERS, @ADRESSE_PERS, @VILLE_PERS, @CODEPOSTAL_PERS, @DATE_PERS, GETDATE(),@CATEGORIE_PERS); ", Conn.cn);
                                 SqlCmd.Parameters.AddWithValue("@ID_SERV", IdServ);
                                 SqlCmd.Parameters.AddWithValue("@CODE_PERS", codePerson);
                                 SqlCmd.Parameters.AddWithValue("@NOM_PERS", textBxNomPers.Text);
@@ -85,6 +85,7 @@ namespace GestPark
                                 SqlCmd.Parameters.AddWithValue("@VILLE_PERS", comboBoxTownPers.Text);
                                 SqlCmd.Parameters.AddWithValue("@CODEPOSTAL_PERS", textBoxCodePostalPers.Text);
                                 SqlCmd.Parameters.AddWithValue("@DATE_PERS", dateTimePickerDateCreate.Value.ToString("dd/MM/yyyy"));
+                                SqlCmd.Parameters.AddWithValue("@CATEGORIE_PERS",TxtCategPers.Text);
                                 SqlCmd.ExecuteNonQuery();
                                 MessageBox.Show("Enregistré avec succès","GestPark : Information", MessageBoxButtons.OK);
                                 // Clear the fields provider of car
@@ -143,7 +144,7 @@ namespace GestPark
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "GestPark: GESTION ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString(), "GestPark: GESTION DES ERREURS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return textBxCodePers.Text;
         }

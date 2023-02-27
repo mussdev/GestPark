@@ -32,6 +32,7 @@ namespace GestPark
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormModifierPerson));
             this.DpDateNaissPersMod = new System.Windows.Forms.DateTimePicker();
             this.panelInformationPerson = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.txtFonctionPersMod = new System.Windows.Forms.TextBox();
             this.CbxSerPersMod = new System.Windows.Forms.ComboBox();
             this.TxtDirPersMod = new System.Windows.Forms.TextBox();
@@ -72,7 +73,8 @@ namespace GestPark
             this.BtnPrintDocPers = new FontAwesome.Sharp.IconButton();
             this.BtnImportDocMod = new FontAwesome.Sharp.IconButton();
             this.BtnSavedPersonMod = new FontAwesome.Sharp.IconButton();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.TxtCategPersMod = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.panelInformationPerson.SuspendLayout();
             this.panel1.SuspendLayout();
             this.paneltitlePerson.SuspendLayout();
@@ -91,6 +93,8 @@ namespace GestPark
             // panelInformationPerson
             // 
             this.panelInformationPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            this.panelInformationPerson.Controls.Add(this.TxtCategPersMod);
+            this.panelInformationPerson.Controls.Add(this.label19);
             this.panelInformationPerson.Controls.Add(this.panel3);
             this.panelInformationPerson.Controls.Add(this.txtFonctionPersMod);
             this.panelInformationPerson.Controls.Add(this.CbxSerPersMod);
@@ -124,14 +128,23 @@ namespace GestPark
             this.panelInformationPerson.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelInformationPerson.Location = new System.Drawing.Point(0, 25);
             this.panelInformationPerson.Name = "panelInformationPerson";
-            this.panelInformationPerson.Size = new System.Drawing.Size(754, 486);
+            this.panelInformationPerson.Size = new System.Drawing.Size(754, 538);
             this.panelInformationPerson.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 523);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(754, 15);
+            this.panel3.TabIndex = 34;
             // 
             // txtFonctionPersMod
             // 
             this.txtFonctionPersMod.BackColor = System.Drawing.Color.White;
             this.txtFonctionPersMod.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFonctionPersMod.Location = new System.Drawing.Point(119, 418);
+            this.txtFonctionPersMod.Location = new System.Drawing.Point(119, 416);
             this.txtFonctionPersMod.Name = "txtFonctionPersMod";
             this.txtFonctionPersMod.Size = new System.Drawing.Size(216, 25);
             this.txtFonctionPersMod.TabIndex = 22;
@@ -702,7 +715,7 @@ namespace GestPark
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(10, 424);
+            this.label8.Location = new System.Drawing.Point(4, 424);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 17);
             this.label8.TabIndex = 7;
@@ -853,20 +866,31 @@ namespace GestPark
             this.BtnSavedPersonMod.Click += new System.EventHandler(this.BtnSavedPersonMod_Click);
             this.BtnSavedPersonMod.MouseHover += new System.EventHandler(this.BtnSavedPersonMod_MouseHover);
             // 
-            // panel3
+            // TxtCategPersMod
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 471);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(754, 15);
-            this.panel3.TabIndex = 34;
+            this.TxtCategPersMod.BackColor = System.Drawing.Color.White;
+            this.TxtCategPersMod.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCategPersMod.Location = new System.Drawing.Point(119, 464);
+            this.TxtCategPersMod.Name = "TxtCategPersMod";
+            this.TxtCategPersMod.Size = new System.Drawing.Size(216, 25);
+            this.TxtCategPersMod.TabIndex = 36;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(5, 472);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(99, 17);
+            this.label19.TabIndex = 35;
+            this.label19.Text = "Catégorie pro. :";
             // 
             // FormModifierPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 511);
+            this.ClientSize = new System.Drawing.Size(754, 563);
             this.Controls.Add(this.panelInformationPerson);
             this.Controls.Add(this.paneltitlePerson);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -928,5 +952,7 @@ namespace GestPark
         private System.Windows.Forms.Label label18;
         public System.Windows.Forms.TextBox txtFonctionPersMod;
         private System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.TextBox TxtCategPersMod;
+        private System.Windows.Forms.Label label19;
     }
 }

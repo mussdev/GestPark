@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateDemandeMission));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnRefreshMission = new FontAwesome.Sharp.IconButton();
+            this.BtnRegisterMission = new FontAwesome.Sharp.IconButton();
             this.BtnImportDocMission = new FontAwesome.Sharp.IconButton();
             this.BtnPrinterCarMission = new FontAwesome.Sharp.IconButton();
             this.IbtnRegisterAndCloseMission = new FontAwesome.Sharp.IconButton();
@@ -78,18 +80,28 @@
             this.label14 = new System.Windows.Forms.Label();
             this.TxtCodeMission = new System.Windows.Forms.TextBox();
             this.BtnPrimeMission = new FontAwesome.Sharp.IconButton();
-            this.BtnRegisterMission = new FontAwesome.Sharp.IconButton();
-            this.BtnRefreshMission = new FontAwesome.Sharp.IconButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SubMenuRegisterMiss = new System.Windows.Forms.ToolStripMenuItem();
+            this.SubMenuRegisterCloseMiss = new System.Windows.Forms.ToolStripMenuItem();
+            this.SubMenuCloseMiss = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuJoindreDocMiss = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuRefresh = new System.Windows.Forms.ToolStripMenuItem();
+            this.rapportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SubMenuFicheProjetMiss = new System.Windows.Forms.ToolStripMenuItem();
+            this.SubMenuOrdreMiss = new System.Windows.Forms.ToolStripMenuItem();
+            this.SubMenuDecisionMiss = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panMoyenDeplacement.SuspendLayout();
             this.panSMG.SuspendLayout();
             this.panSignture.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(222)))), ((int)(((byte)(132)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.BtnRefreshMission);
             this.panel1.Controls.Add(this.BtnRegisterMission);
@@ -97,10 +109,42 @@
             this.panel1.Controls.Add(this.BtnPrinterCarMission);
             this.panel1.Controls.Add(this.IbtnRegisterAndCloseMission);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1166, 27);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnRefreshMission
+            // 
+            this.BtnRefreshMission.BackColor = System.Drawing.Color.White;
+            this.BtnRefreshMission.ForeColor = System.Drawing.Color.YellowGreen;
+            this.BtnRefreshMission.IconChar = FontAwesome.Sharp.IconChar.C;
+            this.BtnRefreshMission.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(154)))), ((int)(((byte)(166)))));
+            this.BtnRefreshMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnRefreshMission.IconSize = 20;
+            this.BtnRefreshMission.Location = new System.Drawing.Point(146, -2);
+            this.BtnRefreshMission.Name = "BtnRefreshMission";
+            this.BtnRefreshMission.Size = new System.Drawing.Size(31, 27);
+            this.BtnRefreshMission.TabIndex = 7;
+            this.BtnRefreshMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnRefreshMission.UseVisualStyleBackColor = false;
+            this.BtnRefreshMission.Click += new System.EventHandler(this.BtnRefreshMission_Click);
+            // 
+            // BtnRegisterMission
+            // 
+            this.BtnRegisterMission.BackColor = System.Drawing.Color.White;
+            this.BtnRegisterMission.ForeColor = System.Drawing.Color.YellowGreen;
+            this.BtnRegisterMission.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.BtnRegisterMission.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(117)))), ((int)(((byte)(55)))));
+            this.BtnRegisterMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnRegisterMission.IconSize = 20;
+            this.BtnRegisterMission.Location = new System.Drawing.Point(35, -2);
+            this.BtnRegisterMission.Name = "BtnRegisterMission";
+            this.BtnRegisterMission.Size = new System.Drawing.Size(31, 27);
+            this.BtnRegisterMission.TabIndex = 6;
+            this.BtnRegisterMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnRegisterMission.UseVisualStyleBackColor = false;
+            this.BtnRegisterMission.Click += new System.EventHandler(this.BtnRegisterMission_Click);
             // 
             // BtnImportDocMission
             // 
@@ -110,7 +154,7 @@
             this.BtnImportDocMission.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(13)))));
             this.BtnImportDocMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnImportDocMission.IconSize = 20;
-            this.BtnImportDocMission.Location = new System.Drawing.Point(88, -2);
+            this.BtnImportDocMission.Location = new System.Drawing.Point(109, -2);
             this.BtnImportDocMission.Name = "BtnImportDocMission";
             this.BtnImportDocMission.Size = new System.Drawing.Size(31, 27);
             this.BtnImportDocMission.TabIndex = 5;
@@ -125,7 +169,7 @@
             this.BtnPrinterCarMission.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(34)))), ((int)(((byte)(4)))));
             this.BtnPrinterCarMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnPrinterCarMission.IconSize = 20;
-            this.BtnPrinterCarMission.Location = new System.Drawing.Point(58, -2);
+            this.BtnPrinterCarMission.Location = new System.Drawing.Point(72, -2);
             this.BtnPrinterCarMission.Name = "BtnPrinterCarMission";
             this.BtnPrinterCarMission.Size = new System.Drawing.Size(31, 27);
             this.BtnPrinterCarMission.TabIndex = 4;
@@ -153,7 +197,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(14, 61);
+            this.label1.Location = new System.Drawing.Point(12, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 19);
             this.label1.TabIndex = 1;
@@ -162,7 +206,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 107);
+            this.label2.Location = new System.Drawing.Point(12, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 19);
             this.label2.TabIndex = 2;
@@ -171,7 +215,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 150);
+            this.label3.Location = new System.Drawing.Point(12, 189);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 19);
             this.label3.TabIndex = 3;
@@ -180,7 +224,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 205);
+            this.label4.Location = new System.Drawing.Point(12, 244);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 19);
             this.label4.TabIndex = 4;
@@ -189,7 +233,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 260);
+            this.label5.Location = new System.Drawing.Point(12, 299);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 19);
             this.label5.TabIndex = 5;
@@ -238,7 +282,7 @@
             this.panMoyenDeplacement.Controls.Add(this.ChkAvionMission);
             this.panMoyenDeplacement.Controls.Add(this.ChkVehiPersoMission);
             this.panMoyenDeplacement.Controls.Add(this.ChkVehiSocMission);
-            this.panMoyenDeplacement.Location = new System.Drawing.Point(16, 331);
+            this.panMoyenDeplacement.Location = new System.Drawing.Point(14, 370);
             this.panMoyenDeplacement.Name = "panMoyenDeplacement";
             this.panMoyenDeplacement.Size = new System.Drawing.Size(457, 200);
             this.panMoyenDeplacement.TabIndex = 10;
@@ -350,7 +394,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Maroon;
-            this.label8.Location = new System.Drawing.Point(12, 309);
+            this.label8.Location = new System.Drawing.Point(10, 348);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(185, 20);
             this.label8.TabIndex = 11;
@@ -378,7 +422,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Maroon;
-            this.label12.Location = new System.Drawing.Point(479, 309);
+            this.label12.Location = new System.Drawing.Point(477, 348);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(99, 20);
             this.label12.TabIndex = 15;
@@ -396,7 +440,7 @@
             this.panSignture.Controls.Add(this.checkBoxSignDirecDepMission);
             this.panSignture.Controls.Add(this.checkBoxSignAgentSupMission);
             this.panSignture.Controls.Add(this.checkBoxSignAgentMission);
-            this.panSignture.Location = new System.Drawing.Point(483, 331);
+            this.panSignture.Location = new System.Drawing.Point(481, 370);
             this.panSignture.Name = "panSignture";
             this.panSignture.Size = new System.Drawing.Size(416, 200);
             this.panSignture.TabIndex = 14;
@@ -506,7 +550,7 @@
             this.cbxDemandeurMission.FormattingEnabled = true;
             this.cbxDemandeurMission.Items.AddRange(new object[] {
             ""});
-            this.cbxDemandeurMission.Location = new System.Drawing.Point(126, 53);
+            this.cbxDemandeurMission.Location = new System.Drawing.Point(124, 92);
             this.cbxDemandeurMission.Name = "cbxDemandeurMission";
             this.cbxDemandeurMission.Size = new System.Drawing.Size(347, 27);
             this.cbxDemandeurMission.TabIndex = 18;
@@ -514,7 +558,7 @@
             // 
             // TxtNameDemandeur
             // 
-            this.TxtNameDemandeur.Location = new System.Drawing.Point(126, 99);
+            this.TxtNameDemandeur.Location = new System.Drawing.Point(124, 138);
             this.TxtNameDemandeur.Name = "TxtNameDemandeur";
             this.TxtNameDemandeur.ReadOnly = true;
             this.TxtNameDemandeur.Size = new System.Drawing.Size(347, 27);
@@ -522,7 +566,7 @@
             // 
             // txtFirstNameDemandeur
             // 
-            this.txtFirstNameDemandeur.Location = new System.Drawing.Point(126, 147);
+            this.txtFirstNameDemandeur.Location = new System.Drawing.Point(124, 186);
             this.txtFirstNameDemandeur.Name = "txtFirstNameDemandeur";
             this.txtFirstNameDemandeur.ReadOnly = true;
             this.txtFirstNameDemandeur.Size = new System.Drawing.Size(347, 27);
@@ -530,7 +574,7 @@
             // 
             // TxtFonctionDemandeur
             // 
-            this.TxtFonctionDemandeur.Location = new System.Drawing.Point(126, 197);
+            this.TxtFonctionDemandeur.Location = new System.Drawing.Point(124, 236);
             this.TxtFonctionDemandeur.Name = "TxtFonctionDemandeur";
             this.TxtFonctionDemandeur.ReadOnly = true;
             this.TxtFonctionDemandeur.Size = new System.Drawing.Size(347, 27);
@@ -538,7 +582,7 @@
             // 
             // TxtDestinationMission
             // 
-            this.TxtDestinationMission.Location = new System.Drawing.Point(126, 252);
+            this.TxtDestinationMission.Location = new System.Drawing.Point(124, 291);
             this.TxtDestinationMission.Name = "TxtDestinationMission";
             this.TxtDestinationMission.Size = new System.Drawing.Size(347, 27);
             this.TxtDestinationMission.TabIndex = 21;
@@ -552,7 +596,7 @@
             this.panel4.Controls.Add(this.DateDebutMission);
             this.panel4.Controls.Add(this.DateFinMission);
             this.panel4.Controls.Add(this.label11);
-            this.panel4.Location = new System.Drawing.Point(858, 79);
+            this.panel4.Location = new System.Drawing.Point(856, 118);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(297, 153);
             this.panel4.TabIndex = 22;
@@ -562,7 +606,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Maroon;
-            this.label13.Location = new System.Drawing.Point(858, 56);
+            this.label13.Location = new System.Drawing.Point(856, 95);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(50, 20);
             this.label13.TabIndex = 23;
@@ -570,7 +614,7 @@
             // 
             // RtxtObjetMission
             // 
-            this.RtxtObjetMission.Location = new System.Drawing.Point(483, 78);
+            this.RtxtObjetMission.Location = new System.Drawing.Point(481, 117);
             this.RtxtObjetMission.Name = "RtxtObjetMission";
             this.RtxtObjetMission.Size = new System.Drawing.Size(362, 201);
             this.RtxtObjetMission.TabIndex = 24;
@@ -581,7 +625,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Maroon;
-            this.label14.Location = new System.Drawing.Point(479, 56);
+            this.label14.Location = new System.Drawing.Point(477, 95);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(140, 20);
             this.label14.TabIndex = 25;
@@ -589,7 +633,8 @@
             // 
             // TxtCodeMission
             // 
-            this.TxtCodeMission.Location = new System.Drawing.Point(990, 33);
+            this.TxtCodeMission.ForeColor = System.Drawing.Color.Black;
+            this.TxtCodeMission.Location = new System.Drawing.Point(988, 60);
             this.TxtCodeMission.Name = "TxtCodeMission";
             this.TxtCodeMission.Size = new System.Drawing.Size(165, 27);
             this.TxtCodeMission.TabIndex = 26;
@@ -602,51 +647,104 @@
             this.BtnPrimeMission.IconChar = FontAwesome.Sharp.IconChar.None;
             this.BtnPrimeMission.IconColor = System.Drawing.Color.Black;
             this.BtnPrimeMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnPrimeMission.Location = new System.Drawing.Point(896, 252);
+            this.BtnPrimeMission.Location = new System.Drawing.Point(894, 291);
             this.BtnPrimeMission.Name = "BtnPrimeMission";
             this.BtnPrimeMission.Size = new System.Drawing.Size(213, 51);
             this.BtnPrimeMission.TabIndex = 27;
             this.BtnPrimeMission.Text = "Cliquez ici pour calculer la prime de mission";
             this.BtnPrimeMission.UseVisualStyleBackColor = false;
+            this.BtnPrimeMission.Click += new System.EventHandler(this.BtnPrimeMission_Click);
             // 
-            // BtnRegisterMission
+            // menuStrip1
             // 
-            this.BtnRegisterMission.BackColor = System.Drawing.Color.White;
-            this.BtnRegisterMission.ForeColor = System.Drawing.Color.YellowGreen;
-            this.BtnRegisterMission.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.BtnRegisterMission.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(117)))), ((int)(((byte)(55)))));
-            this.BtnRegisterMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnRegisterMission.IconSize = 20;
-            this.BtnRegisterMission.Location = new System.Drawing.Point(28, -2);
-            this.BtnRegisterMission.Name = "BtnRegisterMission";
-            this.BtnRegisterMission.Size = new System.Drawing.Size(31, 27);
-            this.BtnRegisterMission.TabIndex = 6;
-            this.BtnRegisterMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnRegisterMission.UseVisualStyleBackColor = false;
-            this.BtnRegisterMission.Click += new System.EventHandler(this.BtnRegisterMission_Click);
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(255)))), ((int)(((byte)(179)))));
+            this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fichierToolStripMenuItem,
+            this.MenuJoindreDocMiss,
+            this.MenuRefresh,
+            this.rapportsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1166, 27);
+            this.menuStrip1.TabIndex = 28;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // BtnRefreshMission
+            // fichierToolStripMenuItem
             // 
-            this.BtnRefreshMission.BackColor = System.Drawing.Color.White;
-            this.BtnRefreshMission.ForeColor = System.Drawing.Color.YellowGreen;
-            this.BtnRefreshMission.IconChar = FontAwesome.Sharp.IconChar.C;
-            this.BtnRefreshMission.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(154)))), ((int)(((byte)(166)))));
-            this.BtnRefreshMission.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnRefreshMission.IconSize = 20;
-            this.BtnRefreshMission.Location = new System.Drawing.Point(120, -2);
-            this.BtnRefreshMission.Name = "BtnRefreshMission";
-            this.BtnRefreshMission.Size = new System.Drawing.Size(31, 27);
-            this.BtnRefreshMission.TabIndex = 7;
-            this.BtnRefreshMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnRefreshMission.UseVisualStyleBackColor = false;
-            this.BtnRefreshMission.Click += new System.EventHandler(this.BtnRefreshMission_Click);
+            this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SubMenuRegisterMiss,
+            this.SubMenuRegisterCloseMiss,
+            this.SubMenuCloseMiss});
+            this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(72, 23);
+            this.fichierToolStripMenuItem.Text = "Fichier";
+            // 
+            // SubMenuRegisterMiss
+            // 
+            this.SubMenuRegisterMiss.Name = "SubMenuRegisterMiss";
+            this.SubMenuRegisterMiss.Size = new System.Drawing.Size(220, 26);
+            this.SubMenuRegisterMiss.Text = "Enregistrer";
+            // 
+            // SubMenuRegisterCloseMiss
+            // 
+            this.SubMenuRegisterCloseMiss.Name = "SubMenuRegisterCloseMiss";
+            this.SubMenuRegisterCloseMiss.Size = new System.Drawing.Size(220, 26);
+            this.SubMenuRegisterCloseMiss.Text = "Enregistrer fermer";
+            // 
+            // SubMenuCloseMiss
+            // 
+            this.SubMenuCloseMiss.Name = "SubMenuCloseMiss";
+            this.SubMenuCloseMiss.Size = new System.Drawing.Size(220, 26);
+            this.SubMenuCloseMiss.Text = "Fermer";
+            // 
+            // MenuJoindreDocMiss
+            // 
+            this.MenuJoindreDocMiss.Name = "MenuJoindreDocMiss";
+            this.MenuJoindreDocMiss.Size = new System.Drawing.Size(107, 23);
+            this.MenuJoindreDocMiss.Text = "Joindre doc.";
+            // 
+            // MenuRefresh
+            // 
+            this.MenuRefresh.Name = "MenuRefresh";
+            this.MenuRefresh.Size = new System.Drawing.Size(92, 23);
+            this.MenuRefresh.Text = "Rafraichir";
+            // 
+            // rapportsToolStripMenuItem
+            // 
+            this.rapportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SubMenuFicheProjetMiss,
+            this.SubMenuOrdreMiss,
+            this.SubMenuDecisionMiss});
+            this.rapportsToolStripMenuItem.Name = "rapportsToolStripMenuItem";
+            this.rapportsToolStripMenuItem.Size = new System.Drawing.Size(84, 23);
+            this.rapportsToolStripMenuItem.Text = "Rapports";
+            // 
+            // SubMenuFicheProjetMiss
+            // 
+            this.SubMenuFicheProjetMiss.Name = "SubMenuFicheProjetMiss";
+            this.SubMenuFicheProjetMiss.Size = new System.Drawing.Size(277, 26);
+            this.SubMenuFicheProjetMiss.Text = "Fiche de projet de mission ";
+            // 
+            // SubMenuOrdreMiss
+            // 
+            this.SubMenuOrdreMiss.Name = "SubMenuOrdreMiss";
+            this.SubMenuOrdreMiss.Size = new System.Drawing.Size(277, 26);
+            this.SubMenuOrdreMiss.Text = "Fiche d\'odre de mission";
+            // 
+            // SubMenuDecisionMiss
+            // 
+            this.SubMenuDecisionMiss.Name = "SubMenuDecisionMiss";
+            this.SubMenuDecisionMiss.Size = new System.Drawing.Size(277, 26);
+            this.SubMenuDecisionMiss.Text = "Fiche décision de mission";
             // 
             // FormCreateDemandeMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            this.ClientSize = new System.Drawing.Size(1166, 557);
+            this.ClientSize = new System.Drawing.Size(1166, 603);
             this.Controls.Add(this.BtnPrimeMission);
             this.Controls.Add(this.TxtCodeMission);
             this.Controls.Add(this.label14);
@@ -668,9 +766,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormCreateDemandeMission";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -684,6 +784,8 @@
             this.panSignture.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -742,5 +844,16 @@
         private FontAwesome.Sharp.IconButton BtnPrimeMission;
         private FontAwesome.Sharp.IconButton BtnRegisterMission;
         private FontAwesome.Sharp.IconButton BtnRefreshMission;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SubMenuRegisterMiss;
+        private System.Windows.Forms.ToolStripMenuItem SubMenuRegisterCloseMiss;
+        private System.Windows.Forms.ToolStripMenuItem SubMenuCloseMiss;
+        private System.Windows.Forms.ToolStripMenuItem MenuJoindreDocMiss;
+        private System.Windows.Forms.ToolStripMenuItem MenuRefresh;
+        private System.Windows.Forms.ToolStripMenuItem rapportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SubMenuFicheProjetMiss;
+        private System.Windows.Forms.ToolStripMenuItem SubMenuOrdreMiss;
+        private System.Windows.Forms.ToolStripMenuItem SubMenuDecisionMiss;
     }
 }

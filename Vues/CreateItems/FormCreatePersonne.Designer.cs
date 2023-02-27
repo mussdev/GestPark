@@ -34,6 +34,7 @@ namespace GestPark
             this.BtnJoindreDoc = new FontAwesome.Sharp.IconButton();
             this.iconBtnSavedPerson = new FontAwesome.Sharp.IconButton();
             this.panelInformationPerson = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.txtFonctionPers = new System.Windows.Forms.TextBox();
             this.CbxServicePers = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -71,7 +72,8 @@ namespace GestPark
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.TxtCategPers = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.paneltitlePerson.SuspendLayout();
             this.panelInformationPerson.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -129,6 +131,8 @@ namespace GestPark
             // 
             this.panelInformationPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
             this.panelInformationPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelInformationPerson.Controls.Add(this.TxtCategPers);
+            this.panelInformationPerson.Controls.Add(this.label19);
             this.panelInformationPerson.Controls.Add(this.panel2);
             this.panelInformationPerson.Controls.Add(this.txtFonctionPers);
             this.panelInformationPerson.Controls.Add(this.CbxServicePers);
@@ -164,6 +168,15 @@ namespace GestPark
             this.panelInformationPerson.Name = "panelInformationPerson";
             this.panelInformationPerson.Size = new System.Drawing.Size(787, 502);
             this.panelInformationPerson.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 487);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(787, 15);
+            this.panel2.TabIndex = 22;
             // 
             // txtFonctionPers
             // 
@@ -649,7 +662,7 @@ namespace GestPark
             // textBoxNumPermisPers
             // 
             this.textBoxNumPermisPers.BackColor = System.Drawing.Color.White;
-            this.textBoxNumPermisPers.Location = new System.Drawing.Point(140, 353);
+            this.textBoxNumPermisPers.Location = new System.Drawing.Point(140, 363);
             this.textBoxNumPermisPers.Name = "textBoxNumPermisPers";
             this.textBoxNumPermisPers.Size = new System.Drawing.Size(234, 26);
             this.textBoxNumPermisPers.TabIndex = 9;
@@ -685,7 +698,7 @@ namespace GestPark
             // richTextBoxNotePers
             // 
             this.richTextBoxNotePers.BackColor = System.Drawing.Color.White;
-            this.richTextBoxNotePers.Location = new System.Drawing.Point(140, 404);
+            this.richTextBoxNotePers.Location = new System.Drawing.Point(140, 420);
             this.richTextBoxNotePers.Name = "richTextBoxNotePers";
             this.richTextBoxNotePers.Size = new System.Drawing.Size(596, 61);
             this.richTextBoxNotePers.TabIndex = 16;
@@ -695,7 +708,7 @@ namespace GestPark
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(4, 359);
+            this.label15.Location = new System.Drawing.Point(4, 369);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(125, 19);
             this.label15.TabIndex = 14;
@@ -705,7 +718,7 @@ namespace GestPark
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(7, 395);
+            this.label14.Location = new System.Drawing.Point(7, 420);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(52, 19);
             this.label14.TabIndex = 13;
@@ -801,14 +814,23 @@ namespace GestPark
             this.label1.TabIndex = 0;
             this.label1.Text = "Code :";
             // 
-            // panel2
+            // TxtCategPers
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 487);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(787, 15);
-            this.panel2.TabIndex = 22;
+            this.TxtCategPers.BackColor = System.Drawing.Color.White;
+            this.TxtCategPers.Location = new System.Drawing.Point(522, 366);
+            this.TxtCategPers.Name = "TxtCategPers";
+            this.TxtCategPers.Size = new System.Drawing.Size(214, 26);
+            this.TxtCategPers.TabIndex = 24;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(430, 373);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(85, 19);
+            this.label19.TabIndex = 23;
+            this.label19.Text = "Catégorie :";
             // 
             // FormCreatePersonne
             // 
@@ -877,5 +899,7 @@ namespace GestPark
         private System.Windows.Forms.ComboBox CbxServicePers;
         private System.Windows.Forms.TextBox txtFonctionPers;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox TxtCategPers;
+        private System.Windows.Forms.Label label19;
     }
 }

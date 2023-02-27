@@ -2,7 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +16,9 @@ namespace GestPark.Vues.Consult
 {
     public partial class FormMainMission : Form
     {
+        private SqlCommand SqlCmd;
+        private SqlDataReader MyReader;
+        private SqlDataAdapter SqlAda;
         public FormMainMission()
         {
             InitializeComponent();
@@ -76,5 +82,41 @@ namespace GestPark.Vues.Consult
             }
         }
 
+        private void BtnMissionGroupe_Click(object sender, EventArgs e)
+        {
+            Form MissionGroupe = new FormProjetDeMissionGroupe();
+            MissionGroupe.ShowDialog();
+        }
+
+        private void BtnSearchMiss_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
+                ConnectDB Conn = new ConnectDB(connectionString);
+                using (Conn.cn)
+                {
+                    if (Conn.IsConnection)
+                    {
+                        SqlCmd = new SqlCommand("SELECT * FROM MISSION AS M INNER JOIN PERSLINEMISS AS P ON M.ID_MISS=P.ID_MISS LEFT OUTER JOIN VEHICULE AS V ON M.ID_VEHI=V.ID_VEHICULE LEFT OUTER JOIN CONDUCTEURS AS COND ON COND.ID_COND=M.ID_CONDUC LEFT OUTER JOIN PERSONNELS AS PERS ON P.ID_PERS=PERS.ID_PERS ORDER BY CODE_MISS", Conn.cn);
+                        //sqlCmd.Parameters.Add("@NOM_PERS", string.Format("%{0}%", textBxSearchPers.Text));
+                        //sqlCmd.Parameters.Add("@PRENOM_PERS", string.Format("%{0}%", textBxSearchPers.Text));
+                        SqlAda = new SqlDataAdapter(SqlCmd);
+                        DataTable dtbl = new DataTable();
+                        SqlAda.Fill(dtbl);
+
+                        // Fill DataGridView
+                        dgvMission.AutoGenerateColumns = false;
+                        dgvMission.DataSource = dtbl;
+
+                    }
+                }
+                //TxtTotalPers.Text = $"Total = {DgvPerson.RowCount - 1}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -110,6 +110,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Vues\Consult\FormCategorieMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\Consult\FormCategorieMission.Designer.cs">
+      <DependentUpon>FormCategorieMission.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vues\Consult\FormDemandeVehicule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,12 @@
     </Compile>
     <Compile Include="Vues\Consult\FormMainMission.Designer.cs">
       <DependentUpon>FormMainMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vues\Consult\FormPeriodeMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\Consult\FormPeriodeMission.Designer.cs">
+      <DependentUpon>FormPeriodeMission.cs</DependentUpon>
     </Compile>
     <Compile Include="Vues\Consult\FormPersonnelUserModify.cs">
       <SubType>Form</SubType>
@@ -134,11 +146,29 @@
     <Compile Include="Vues\Consult\FormTraceGPSVehicule.Designer.cs">
       <DependentUpon>FormTraceGPSVehicule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vues\Consult\FormTypeMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\Consult\FormTypeMission.Designer.cs">
+      <DependentUpon>FormTypeMission.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vues\CreateItems\FormCreateDemandeMission.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vues\CreateItems\FormCreateDemandeMission.Designer.cs">
       <DependentUpon>FormCreateDemandeMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vues\CreateItems\FormOrdreDecision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\CreateItems\FormOrdreDecision.Designer.cs">
+      <DependentUpon>FormOrdreDecision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vues\CreateItems\FormProjetDeMissionGroupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\CreateItems\FormProjetDeMissionGroupe.Designer.cs">
+      <DependentUpon>FormProjetDeMissionGroupe.cs</DependentUpon>
     </Compile>
     <Compile Include="Vues\Imports\FormImportProvisionCarburant.cs">
       <SubType>Form</SubType>
@@ -741,11 +771,17 @@
     <Compile Include="Vues\Mains\TableauDeBord.Designer.cs">
       <DependentUpon>TableauDeBord.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vues\Consult\FormCategorieMission.resx">
+      <DependentUpon>FormCategorieMission.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vues\Consult\FormDemandeVehicule.resx">
       <DependentUpon>FormDemandeVehicule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vues\Consult\FormMainMission.resx">
       <DependentUpon>FormMainMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vues\Consult\FormPeriodeMission.resx">
+      <DependentUpon>FormPeriodeMission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vues\Consult\FormPersonnelUserModify.resx">
       <DependentUpon>FormPersonnelUserModify.cs</DependentUpon>
@@ -753,8 +789,17 @@
     <EmbeddedResource Include="Vues\Consult\FormTraceGPSVehicule.resx">
       <DependentUpon>FormTraceGPSVehicule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vues\Consult\FormTypeMission.resx">
+      <DependentUpon>FormTypeMission.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vues\CreateItems\FormCreateDemandeMission.resx">
       <DependentUpon>FormCreateDemandeMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vues\CreateItems\FormOrdreDecision.resx">
+      <DependentUpon>FormOrdreDecision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vues\CreateItems\FormProjetDeMissionGroupe.resx">
+      <DependentUpon>FormProjetDeMissionGroupe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vues\Imports\FormImportProvisionCarburant.resx">
       <DependentUpon>FormImportProvisionCarburant.cs</DependentUpon>

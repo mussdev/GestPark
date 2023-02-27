@@ -284,7 +284,7 @@ namespace GestPark
 
         private void ItemMenuDeleteDir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(string.Format("Voulez vous supprimer ce garage ?"), "ParcAuto: Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(string.Format("Voulez vous supprimer cette direction ?"), "Fleet: Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {

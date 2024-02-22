@@ -1,4 +1,5 @@
 ﻿using GestPark.Vues.CreateItems;
+using GestPark.Vues.ModifierItems;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace GestPark.Vues.Consult
         private SqlCommand SqlCmd;
         private SqlDataReader MyReader;
         private SqlDataAdapter SqlAda;
+        FormModifierProjetMission modifierProjetMission = new FormModifierProjetMission();
         public FormMainMission()
         {
             InitializeComponent();
@@ -116,6 +118,78 @@ namespace GestPark.Vues.Consult
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvMission_DoubleClick(object sender, EventArgs e)
+        {
+            ModifierProjetMiss();
+        }
+
+        /**
+         * 
+         * Methode qui affiche les informations sur la fenêtre pour une eventuelle modification
+         * 
+         */
+        private void ModifierProjetMiss()
+        {
+            modifierProjetMission.TxtCodeMissionMod.Text = this.dgvMission.CurrentRow.Cells["CODE_MISS"].Value?.ToString();
+            InfosDemandeur(modifierProjetMission.TxtCodeMissionMod.Text);
+            modifierProjetMission.cbxDemandeurMissionMod.Text = this.dgvMission.CurrentRow.Cells["DESCRIPTION_PERS"].Value?.ToString();
+            modifierProjetMission.TxtDestinationMissionMod.Text = this.dgvMission.CurrentRow.Cells["DESTINATION_MISS"].Value?.ToString();
+            modifierProjetMission.cbxImmatVehicule_missMod.Text = this.dgvMission.CurrentRow.Cells["IMMATRICULATION_VEHICULE"].Value?.ToString();
+            modifierProjetMission.cbxConducteurMissionMod.Text = this.dgvMission.CurrentRow.Cells["DESCRIPTION_COND"].Value?.ToString();
+            modifierProjetMission.TxtAutreMoyenDeplacMissionMod.Text = this.dgvMission.CurrentRow.Cells["AUTRE_MOYEN_DEPLAC"].Value?.ToString();
+            modifierProjetMission.RtxtObjetMissionMod.Text = this.dgvMission.CurrentRow.Cells["OBJET_MISS"].Value?.ToString();
+            modifierProjetMission.ChkAvionMissionMod.Checked = Convert.ToBoolean(this.dgvMission.CurrentRow.Cells["MOYEN_DEPLA_AVION_MISS"].Value);
+            modifierProjetMission.ChkVehiPersoMissionMod.Checked = Convert.ToBoolean(this.dgvMission.CurrentRow.Cells["MOYEN_DEPLA_VEHI_PERS_MISS"].Value);
+            modifierProjetMission.ChkVehiSocMissionMod.Checked = Convert.ToBoolean(this.dgvMission.CurrentRow.Cells["MOYEN_DEPLA_VEHI_SOC_MISS"].Value);
+            modifierProjetMission.checkBoxSignAgentMissionMod.Checked = Convert.ToBoolean(this.dgvMission.CurrentRow.Cells["SIGN_DEMANDEUR_MISS"].Value);
+            modifierProjetMission.checkBoxSignAgentSupMissionMod.Checked = Convert.ToBoolean(this.dgvMission.CurrentRow.Cells["SIGN_CHEF_SERV_MISS"].Value);
+            modifierProjetMission.checkBoxAnnulAgentSupMissionMod.Checked = Convert.ToBoolean(this.dgvMission.CurrentRow.Cells["ANNULE_SUP_HIERACHIQ"].Value);
+            modifierProjetMission.checkBoxSignDirecDepMissionMod.Checked = Convert.ToBoolean(this.dgvMission.CurrentRow.Cells["SIGN_DIR_MISS"].Value);
+            modifierProjetMission.checkBoxAnnulDirDepMissionMod.Checked = Convert.ToBoolean(this.dgvMission.CurrentRow.Cells["ANNULE_DIR_DEPART"].Value);
+            modifierProjetMission.checkBoxSignDarhMissionMod.Checked = Convert.ToBoolean(this.dgvMission.CurrentRow.Cells["SIGN_DARH_MISS"].Value);
+            modifierProjetMission.checkBoxAnnulDarhMissionMod.Checked = Convert.ToBoolean(this.dgvMission.CurrentRow.Cells["ANNULE_DARH"].Value);
+            modifierProjetMission.checkBoxSignDGMissionMod.Checked = Convert.ToBoolean(this.dgvMission.CurrentRow.Cells["SIGN_DG_MISS"].Value);
+            modifierProjetMission.checkBoxAnnulDGMissionMod.Checked = Convert.ToBoolean(this.dgvMission.CurrentRow.Cells["ANNULE_DG"].Value);
+            modifierProjetMission.DateRegisterMissionMod.Text = this.dgvMission.CurrentRow.Cells["DATEREGISTER_MISS"].Value?.ToString();
+            modifierProjetMission.DateDebutMissionMod.Text = this.dgvMission.CurrentRow.Cells["DATE_DEBUT_MISS"].Value?.ToString();
+            modifierProjetMission.DateFinMissionMod.Text = this.dgvMission.CurrentRow.Cells["DATE_FIN_MISS"].Value?.ToString();
+            modifierProjetMission.ShowDialog();
+        }
+
+
+        /**
+         * Methode qui renvoie les informations sur la personne qui fait la demande de mission
+         */
+        private void InfosDemandeur(String CodeMiss) {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["cn"].ConnectionString;
+                ConnectDB Conn = new ConnectDB(connectionString);
+                using (Conn.cn)
+                {
+                    if (Conn.IsConnection)
+                    {
+                        using (var Cmd = Conn.cn.CreateCommand())
+                        {
+                            Cmd.CommandText = "SELECT P.NOM_PERS, P.PRENOM_PERS, P.FONCTION_PERS FROM PERSONNELS AS P INNER JOIN PERSLINEMISS AS PLINE ON P.ID_PERS=PLINE.ID_PERS INNER JOIN MISSION AS M ON M.ID_MISS=PLINE.ID_MISS WHERE M.CODE_MISS='"+ CodeMiss + "'";
+                            MyReader = Cmd.ExecuteReader();
+                            
+                            while(MyReader.Read())
+                            {
+                                modifierProjetMission.TxtNameDemandeurMod.Text = MyReader["NOM_PERS"].ToString();
+                                modifierProjetMission.txtFirstNameDemandeurMod.Text = MyReader["PRENOM_PERS"].ToString();
+                                modifierProjetMission.TxtFonctionDemandeurMod.Text = MyReader["FONCTION_PERS"].ToString();
+                            }
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Fleet: Gestion des erreurs",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

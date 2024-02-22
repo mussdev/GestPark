@@ -291,12 +291,6 @@ namespace GestPark
             }
         }
 
-        private void BtnPrintCarbu_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
-
         private void JointDocConsoCarb_MouseHover(object sender, EventArgs e)
         {
             ToolTip ToolTipBtnJoinDocRaviCarbu = new ToolTip();

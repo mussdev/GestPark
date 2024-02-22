@@ -134,7 +134,6 @@ namespace GestPark
             this.BtnPrintCarbu.TabIndex = 3;
             this.BtnPrintCarbu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnPrintCarbu.UseVisualStyleBackColor = false;
-            this.BtnPrintCarbu.Click += new System.EventHandler(this.BtnPrintCarbu_Click);
             this.BtnPrintCarbu.MouseHover += new System.EventHandler(this.BtnPrintCarbu_MouseHover);
             // 
             // JointDocConsoCarb
@@ -329,11 +328,11 @@ namespace GestPark
             // 
             this.TxtTotalConsoCar.BackColor = System.Drawing.Color.White;
             this.TxtTotalConsoCar.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotalConsoCar.ForeColor = System.Drawing.Color.Maroon;
-            this.TxtTotalConsoCar.Location = new System.Drawing.Point(900, 57);
+            this.TxtTotalConsoCar.ForeColor = System.Drawing.Color.Red;
+            this.TxtTotalConsoCar.Location = new System.Drawing.Point(878, 57);
             this.TxtTotalConsoCar.Name = "TxtTotalConsoCar";
             this.TxtTotalConsoCar.ReadOnly = true;
-            this.TxtTotalConsoCar.Size = new System.Drawing.Size(90, 27);
+            this.TxtTotalConsoCar.Size = new System.Drawing.Size(112, 27);
             this.TxtTotalConsoCar.TabIndex = 41;
             this.TxtTotalConsoCar.Text = "0";
             this.TxtTotalConsoCar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -742,7 +741,7 @@ namespace GestPark
             // 
             this.TxtTotalAmountCard.BackColor = System.Drawing.Color.White;
             this.TxtTotalAmountCard.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotalAmountCard.ForeColor = System.Drawing.Color.Maroon;
+            this.TxtTotalAmountCard.ForeColor = System.Drawing.Color.Red;
             this.TxtTotalAmountCard.Location = new System.Drawing.Point(878, 154);
             this.TxtTotalAmountCard.Name = "TxtTotalAmountCard";
             this.TxtTotalAmountCard.ReadOnly = true;
@@ -755,7 +754,7 @@ namespace GestPark
             // 
             this.TotalPaieAppro.AutoSize = true;
             this.TotalPaieAppro.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalPaieAppro.ForeColor = System.Drawing.Color.Black;
+            this.TotalPaieAppro.ForeColor = System.Drawing.Color.Red;
             this.TotalPaieAppro.Location = new System.Drawing.Point(751, 159);
             this.TotalPaieAppro.Name = "TotalPaieAppro";
             this.TotalPaieAppro.Size = new System.Drawing.Size(121, 22);

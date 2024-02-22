@@ -42,8 +42,15 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ADODB1">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\ADODB.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LibExcel">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\LibExcel.dll</HintPath>
     </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
@@ -91,6 +98,63 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Stimulsoft.Base">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Blockly">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Blockly.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.BlocklyEditor.Wpf">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.BlocklyEditor.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Wpf">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Controls.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Data">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Database">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Design">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Map">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Map.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.MathFX">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.MathFX.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Web">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Report.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Svg">
+      <HintPath>..\..\..\Downloads\Stimulsoft-Reports.NET-2023.1.8\.NETFramework4.5.2\Stimulsoft.Svg.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -231,6 +295,12 @@
     </Compile>
     <Compile Include="Vues\Mains\MainMission.Designer.cs">
       <DependentUpon>MainMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vues\ModifierItems\FormModifierProjetMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\ModifierItems\FormModifierProjetMission.Designer.cs">
+      <DependentUpon>FormModifierProjetMission.cs</DependentUpon>
     </Compile>
     <Compile Include="Workflows\NiveauTransition\FormNiveauTransitionDemandeCar.cs">
       <SubType>Form</SubType>
@@ -827,6 +897,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vues\Mains\MainMission.resx">
       <DependentUpon>MainMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vues\ModifierItems\FormModifierProjetMission.resx">
+      <DependentUpon>FormModifierProjetMission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Workflows\NiveauTransition\FormNiveauTransitionDemandeCar.resx">
       <DependentUpon>FormNiveauTransitionDemandeCar.cs</DependentUpon>

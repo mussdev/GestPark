@@ -29,8 +29,13 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMission));
             this.panelTitleFormMouvt = new System.Windows.Forms.Panel();
             this.BtnMissionGroupe = new FontAwesome.Sharp.IconButton();
@@ -84,6 +89,7 @@
             this.ANNULE_DARH = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.SIGN_DG_MISS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ANNULE_DG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.DATEREGISTER_MISS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -490,34 +496,36 @@
             this.ANNULE_DARH,
             this.SIGN_DG_MISS,
             this.ANNULE_DG,
+            this.DATEREGISTER_MISS,
             this.Column8,
             this.Column9,
             this.Column10,
             this.Column11});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(255)))), ((int)(((byte)(179)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMission.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(255)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMission.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvMission.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMission.GridColor = System.Drawing.Color.White;
             this.dgvMission.Location = new System.Drawing.Point(0, 277);
             this.dgvMission.Name = "dgvMission";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(255)))), ((int)(((byte)(179)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMission.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(255)))), ((int)(((byte)(179)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMission.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvMission.RowHeadersWidth = 51;
             this.dgvMission.RowTemplate.Height = 24;
             this.dgvMission.Size = new System.Drawing.Size(1374, 429);
             this.dgvMission.TabIndex = 4;
+            this.dgvMission.DoubleClick += new System.EventHandler(this.dgvMission_DoubleClick);
             // 
             // ID_MISS
             // 
@@ -541,6 +549,8 @@
             // OBJET_MISS
             // 
             this.OBJET_MISS.DataPropertyName = "OBJET_MISS";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.OBJET_MISS.DefaultCellStyle = dataGridViewCellStyle2;
             this.OBJET_MISS.HeaderText = "Objet de mission";
             this.OBJET_MISS.MinimumWidth = 6;
             this.OBJET_MISS.Name = "OBJET_MISS";
@@ -550,6 +560,8 @@
             // DESCRIPTION_COND
             // 
             this.DESCRIPTION_COND.DataPropertyName = "DESCRIPTION_COND";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.DESCRIPTION_COND.DefaultCellStyle = dataGridViewCellStyle3;
             this.DESCRIPTION_COND.HeaderText = "Conducteur";
             this.DESCRIPTION_COND.MinimumWidth = 6;
             this.DESCRIPTION_COND.Name = "DESCRIPTION_COND";
@@ -559,6 +571,8 @@
             // DESCRIPTION_PERS
             // 
             this.DESCRIPTION_PERS.DataPropertyName = "DESCRIPTION_PERS";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.DESCRIPTION_PERS.DefaultCellStyle = dataGridViewCellStyle4;
             this.DESCRIPTION_PERS.HeaderText = "Demandeur";
             this.DESCRIPTION_PERS.MinimumWidth = 6;
             this.DESCRIPTION_PERS.Name = "DESCRIPTION_PERS";
@@ -568,6 +582,8 @@
             // DESTINATION_MISS
             // 
             this.DESTINATION_MISS.DataPropertyName = "DESTINATION_MISS";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.DESTINATION_MISS.DefaultCellStyle = dataGridViewCellStyle5;
             this.DESTINATION_MISS.HeaderText = "Destination";
             this.DESTINATION_MISS.MinimumWidth = 6;
             this.DESTINATION_MISS.Name = "DESTINATION_MISS";
@@ -577,6 +593,8 @@
             // IMMATRICULATION_VEHICULE
             // 
             this.IMMATRICULATION_VEHICULE.DataPropertyName = "IMMATRICULATION_VEHICULE";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.IMMATRICULATION_VEHICULE.DefaultCellStyle = dataGridViewCellStyle6;
             this.IMMATRICULATION_VEHICULE.HeaderText = "Vehicule";
             this.IMMATRICULATION_VEHICULE.MinimumWidth = 6;
             this.IMMATRICULATION_VEHICULE.Name = "IMMATRICULATION_VEHICULE";
@@ -744,6 +762,15 @@
             this.ANNULE_DG.ReadOnly = true;
             this.ANNULE_DG.Width = 150;
             // 
+            // DATEREGISTER_MISS
+            // 
+            this.DATEREGISTER_MISS.DataPropertyName = "DATEREGISTER_MISS";
+            this.DATEREGISTER_MISS.HeaderText = "Date saisie";
+            this.DATEREGISTER_MISS.MinimumWidth = 6;
+            this.DATEREGISTER_MISS.Name = "DATEREGISTER_MISS";
+            this.DATEREGISTER_MISS.ReadOnly = true;
+            this.DATEREGISTER_MISS.Width = 150;
+            // 
             // Column8
             // 
             this.Column8.HeaderText = "Créer le";
@@ -857,6 +884,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn ANNULE_DARH;
         private System.Windows.Forms.DataGridViewCheckBoxColumn SIGN_DG_MISS;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ANNULE_DG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATEREGISTER_MISS;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;

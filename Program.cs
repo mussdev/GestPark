@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +18,11 @@ namespace GestPark
             //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // new FormConnectionUser()
-            
+
+            CultureInfo.CurrentCulture = CultureInfo.CreateSpecificCulture("fr-CI");
+            CultureInfo.CurrentCulture.NumberFormat.CurrencyGroupSeparator = " ";
+            CultureInfo.CurrentCulture.NumberFormat.NumberGroupSeparator = " ";
+
             Application.Run(new FormConnectionUser());
             //Application.Run(new MainGestPark());
         }

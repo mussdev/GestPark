@@ -1,5 +1,7 @@
 ﻿using GestPark.Vues.Consult;
 using Microsoft.Office.Core;
+using Stimulsoft.Base;
+using Stimulsoft.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +28,7 @@ namespace GestPark.Vues.CreateItems
         private Guid KeyMission;
         private SqlDataAdapter SqlAda;
         private DataSet Ds;
-        public static string DemandeurMission;
+        //public static string DemandeurMission;
         public FormCreateDemandeMission()
         {
             InitializeComponent();
@@ -37,7 +39,7 @@ namespace GestPark.Vues.CreateItems
             //MessageBox.Show("Moyen de deplacement" + " Avoin : " + ChkAvionMission.Checked + " Voiture societe : " + ChkVehiSocMission.Checked + " Voiture personnel : " + ChkVehiPersoMission.Checked);
         }
 
-        private void ListVehicule()
+        public void ListVehicule()
         {
             try
             {
@@ -63,7 +65,7 @@ namespace GestPark.Vues.CreateItems
             }
         }
 
-        private void ListConducteur()
+        public void ListConducteur()
         {
             try
             {
@@ -89,7 +91,7 @@ namespace GestPark.Vues.CreateItems
             }
         }
 
-        private void ListPersonnel()
+        public void ListPersonnel()
         {
             try
             {
@@ -201,7 +203,6 @@ namespace GestPark.Vues.CreateItems
                                 TxtNameDemandeur.Text = MyReader["NOM_PERS"].ToString();
                                 txtFirstNameDemandeur.Text = MyReader["PRENOM_PERS"].ToString();
                                 TxtFonctionDemandeur.Text = MyReader["FONCTION_PERS"].ToString();
-                                DemandeurMission = cbxDemandeurMission.Text;
                             }
                         }
                     }
@@ -425,6 +426,48 @@ namespace GestPark.Vues.CreateItems
             FormPrime.ShowDialog();
         }
 
+        private void SubMenuFicheProjetMiss_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(TxtCodeMission.Text))
+            {
+                var reportFicheProjetMiss = new StiReport();
+                reportFicheProjetMiss.Load("FicheProjetMission.mrt");
+                reportFicheProjetMiss.Compile();
+                reportFicheProjetMiss["MainID"] = KeyMission ;
+                //report.Show();
+                //reportFicheProjetMiss.Dictionary.Synchronize();
+                //reportFicheProjetMiss.Compile();
+                //reportFicheProjetMiss.Show(true);
+                reportFicheProjetMiss.Design();
+            }
+            else
+            {
+                DemandeDeMission();
+                //MessageBox.Show("Id mission : " + KeyMission);
+                var reportFicheProjetMiss = new StiReport();
+                reportFicheProjetMiss.Load("FicheProjetMission.mrt");
+                reportFicheProjetMiss.Dictionary.Synchronize();
+                reportFicheProjetMiss.Compile();
+                reportFicheProjetMiss["MainID"] = KeyMission;
+                //reportFicheProjetMiss.Design();
+                //report.Show();
+                reportFicheProjetMiss.Show();
+            }
+            
+
+        }
+
+        private void SubMenuOrdreMiss_Click(object sender, EventArgs e)
+        {
+            var reportFicheOrdreMiss = new StiReport();
+            reportFicheOrdreMiss.Load("FicheOrdreMission.mrt");
+            //report.Show();
+            //reportFicheOrdreMiss.Dictionary.Synchronize();
+            //reportFicheOrdreMiss.Compile();
+            //reportFicheOrdreMiss.Show(true);
+            reportFicheOrdreMiss.Design();
+        }
+
         /**
          * Methode qui permet de soumettre un projet de mission !
          * **/
@@ -526,10 +569,10 @@ namespace GestPark.Vues.CreateItems
                                 {
                                     Cmd.CommandText = "UPDATE CONDUCTEURS SET DISPMISSION_COND='0' WHERE ID_COND='" + IdConducteurMission + "' ";
                                     Cmd.ExecuteNonQuery();
-                                    MessageBox.Show("Conducteur defini");
+                                    //MessageBox.Show("Conducteur defini");
                                 }
-                                else
-                                    MessageBox.Show("Conducteur non defini");
+                                //else
+                                //    MessageBox.Show("Conducteur non defini");
 
 
                                 MessageBox.Show("Votre projet de mission a été soumis avec succès !!!" + "\n" + "Veillez vous connecter regulièrement pour le suivi. Merci", "Fleet: Information", MessageBoxButtons.OK);
